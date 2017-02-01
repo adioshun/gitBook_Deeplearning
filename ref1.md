@@ -10,6 +10,30 @@ $$
 
 * 결국, 접선의 기울기 
  * x에 대한 기울기값f(x) 출력 - 함수역할 - __도함수__라 부름 
+ 
+```
+ 미분이라는 행위를 했을 때 나온 식이 도함수고 
+ 이를 함수라 표현한 이유가 어떤 값하나에 다른 하나의 식이 나오니까 도함수라 칭함
+```
+ 
+### 표기법 1
+* $$ \Delta x$$는 x의 변화, 미세한 x의 변화량 $$dx$$ 로 표시(d=differentiation)
+* $$ \frac{dy}{dx} $$ = y라는 함수를 x를 변수로 해서 미분 하시오 
+
+### 표기법 2
+$$ f^\prime (a) $$ = a에서 f의 미분값
+
+
+### 표기법 3 
+$$\Delta x$$를 h로 치환 
+![](/assets/def231.PNG)
+x의 변화량 h, 이때 y의 변화량은 $$ f(a+h) $$
+
+$$
+즉, \frac{dy}{dx} = f^\prime (a) = \lim_{h \rightarrow 0} \frac{f(a+h)-f(a)}{h} 
+
+$$
+
 
 
 ## 미분을 나타내는 방법
@@ -46,3 +70,4 @@ $$
 > 참고
 > * [모두를 위한 딥러닝 Lec9x: 10분안에 미분 정리하기](https://youtu.be/oZyvmtqLmLo?list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm)
 > * [꼼수학 : 미분의 기초](https://youtu.be/xXvnfqr5b3A)
+> * [장자윤 : 미분의 정의와 뜻](https://www.youtube.com/watch?v=cr_SVH27n4c)
