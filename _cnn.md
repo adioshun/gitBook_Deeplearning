@@ -67,6 +67,11 @@ https://youtu.be/2-75C-yZaoA?t=4m18s
 ### 4.5 CNN for Sentence Classification 
 * Yoon Kim, 2014
 * 텍스트 처리 
+
+### 4.6 DeepMind's AlphaGo
+* 19x19x48 input (바둑판)
+* CONV1 : 5x5 filter, Stride 1, pad 2
+* CONV2 : .....
 --- 
 
 ###### [참고] Pad 
