@@ -59,7 +59,7 @@ https://youtu.be/2-75C-yZaoA?t=4m18s
 ### 4.4 ResNet
 * He et al.,2015
 * ILSVRC 2015 winner (3.6% top 5 error)
-
+* Fast Forward 사용
 --- 
 
 ###### [참고] Pad 
