@@ -29,7 +29,7 @@ $$
 ## 미분과 기울기
 ![](/assets/decens.PNG)
 
-기울기 $$= \frac{높이}{밑변의 변화량} = \frac{f(b)-f(a)}{b-a} $$
+기울기 $$= \frac{높이}{밑변의 변화량} = \frac{f(b)-f(a)}{b-a} = \frac{\Delta y}{\Delta x}$$
 
 식 1과는 일치 
 
