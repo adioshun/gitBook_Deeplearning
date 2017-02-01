@@ -109,16 +109,16 @@ ___
 ###### 뉴럴네트워크를 이해하는데 필요한 미분 
 ![](/assets/qd_nn.PNG)
 * 상수를 미분하면 `0`
-* f(x)=x 를 미분하면, 1이되고, 앞에 상수는 그대($$x*1$$)로 따라 붙는다 
+* f(x)=x 를 미분하면, `1`이되고, 앞에 상수는 그대($$x*1$$)로 따라 붙는다 
 
 ###### Partial Derivative
 ![](/assets/qd_nn1.PNG)
-내가 관심(미분)있는것은 제외하고 나머지는 상수로 둔다 
-$$ f(x,y) = xy, \frac{\partial f}{\partial x} = y $$ ( x는 미분 대상, y는 상수 ) 
+* 내가 관심(미분)있는것은 제외하고 나머지는 상수로 둔다 
+* $$ f(x,y) = xy, \frac{\partial f}{\partial x} = y $$ ( x는 미분 대상, y는 상수 ) 
 
-
-###### Partial Derivative(응용)
-
+###### Chain rule
+* $$f(g(x)) = \frac{\partial f}{\partial g}*\frac{\partial g}{\partial x} $$
+* 복잡한 형태는 각각을 곱하면 된다
 
 ---
 
