@@ -42,7 +42,9 @@ https://youtu.be/2-75C-yZaoA?t=4m18s
 * 실시간 학습 결과를 확인 하여 CNN을 이해 하기 편함 
 
 ## 4. Case Study 
-[상세 설명 이미지 보기](https://youtu.be/KbNbWTnlYXs?list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm)
+* [상세 설명 이미지 보기](https://youtu.be/KbNbWTnlYXs?list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm)
+* 최종적으로 하나씩 파악 하기!!! 
+
 ### 4.1 LeNet-5
 * LeCun et al., 1998
 * 손글씨 인식에 사용 
@@ -51,6 +53,7 @@ https://youtu.be/2-75C-yZaoA?t=4m18s
 * Krzhevsky et al., 2101
 * 이미지 분석에 사용
 * First use of ReLU
+
 ### 4.3 GoogLeNet
 * Szegedy et.al., 2014
 * Inception module
@@ -60,6 +63,10 @@ https://youtu.be/2-75C-yZaoA?t=4m18s
 * He et al.,2015
 * ILSVRC 2015 winner (3.6% top 5 error)
 * Fast Forward 사용
+
+### 4.5 CNN for Sentence Classification 
+* Yoon Kim, 2014
+* 텍스트 처리 
 --- 
 
 ###### [참고] Pad 
