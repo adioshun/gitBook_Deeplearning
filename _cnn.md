@@ -44,6 +44,7 @@ https://youtu.be/2-75C-yZaoA?t=4m18s
 ## 4. Case Study 
 * [상세 설명 이미지 보기](https://youtu.be/KbNbWTnlYXs?list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm)
 * 최종적으로 하나씩 파악 하기!!! 
+* 새로운 나만의 CNN 만들기 
 
 ### 4.1 LeNet-5
 * LeCun et al., 1998
