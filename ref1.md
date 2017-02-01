@@ -2,7 +2,7 @@
 * 미분 : 미세한게 나누다 
 ![](/assets/def23.PNG)
 * 변화량과 변화량을 나누다  $$ \frac{\Delta y}{\Delta x} $$
-* 미세하게 나눈다 = $$ \Delta x \rightarrow 0$$으로 보낸다 =x의 변화량을 0처럼 미세하게 만들다 
+* 미세하게 나눈다 = $$ \Delta x \rightarrow 0$$으로 보낸다 =x의 변화량을 0처럼 미세하게 한계치($$\lim_{\Delta x \rightarrow 0}$$)까지로 만든다.  
 
 
 
