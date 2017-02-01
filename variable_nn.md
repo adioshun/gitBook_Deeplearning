@@ -1,4 +1,11 @@
-#
+# Feed forward 
+
+
+
+
+# Fast forward
+
+![](/assets/va3.PNG)
 
 
 
