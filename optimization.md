@@ -30,9 +30,9 @@
  
 
 ## Regularizaion : Dropout
-* 네트워크의 일부를 끊어서 학습[^4] 
-
-
+![](/assets/dropout.PNG)
+* 네트워크의 일부만 사용하여서 학습[^4] 
+* (조심) Training 시에만 dropout_rate를 `~0.9`미만으로 적용하고, Evaluation 할때는 dropout_rate를 `1`로 적용
 ---
 
 
