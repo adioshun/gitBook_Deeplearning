@@ -28,3 +28,13 @@ Layer가 깊어 질수록 초기의 weight와 Bias를 찾기 힘들다 (Marvin M
 ###### 위 치환 식 $$f(x) = g + b$$ 에서 
 * $$ \frac{\partial f}{\partial g} = 1$$
 * $$ \frac{\partial f}{\partial b} = 1$$
+
+> 위 도출된 값 4개만을 활용하여 값을 구할수 있음 
+
+![](/assets/bpn1.PNG)
+
+* 1. 이미 알고 있는 * $$ \frac{\partial f}{\partial g} , $$ \frac{\partial f}{\partial b} $$ 값 `1` 입력 
+
+
+
+* 2. 모르는 \frac{\partial f}{\partial w} , $$ \frac{\partial f}{\partial x} $$ 는 g를 사용하는 복합함수(=chain Rule) 확인 
