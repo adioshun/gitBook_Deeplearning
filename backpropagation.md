@@ -31,10 +31,13 @@ Layer가 깊어 질수록 초기의 weight와 Bias를 찾기 힘들다 (Marvin M
 
 > 위 도출된 값 4개만을 활용하여 값을 구할수 있음 
 
+
+
+Step 1. 이미 알고 있는 * $$ \frac{\partial f}{\partial g} ,  \frac{\partial f}{\partial b} $$ 값 `1` 입력 
 ![](/assets/bpn1.PNG)
 
-* 1. 이미 알고 있는 * $$ \frac{\partial f}{\partial g} , $$ \frac{\partial f}{\partial b} $$ 값 `1` 입력 
 
-
-
-* 2. 모르는 \frac{\partial f}{\partial w} , $$ \frac{\partial f}{\partial x} $$ 는 g를 사용하는 복합함수(=chain Rule) 확인 
+Step 2. 모르는 $$\frac{\partial f}{\partial w} , \frac{\partial f}{\partial x} $$ 는 g를 사용하는 복합함수 확인,chain Rule 사용
+ * $$ \frac{\partial f}{\partial w} $$를 chain Rule 사용 변환  $$ = \frac{\partial f}{\partial g} * \frac{\partial g}{\partial w} = 1 * x = 1* 5 = 5$$
+![](/assets/bpn2.PNG)
+ 
