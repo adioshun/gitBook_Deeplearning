@@ -38,10 +38,13 @@
     * 근접 레이어간 Pre-training(Forward/Backward)를 하면서 결과값을 비교 하면서 wight를 수정 
     * 이렇게 생성된 네트워크를 `Deep Belief Network`라 부름 
     * 연산이 오래 걸리고, 다른 좋은 방법들이 나와서 요즘 사용 안함
-3. Xavier Initialization/He's Initialization :입력과 아웃의 갯수를 사용하여 결정[^2][^3]
+3. Xavier Initialization/He's Initialization :입력과 아웃의 갯수를 사용하여 결정[^2],[^3]
     * Xavier : `random(fan_in, fan_out)/np.sqrt(fan_in)`
     * He : `random(fan_in, fan_out)/np.sqrt(fan_in/2)`
+4. Batch normalization 
+5. layer sequential Uniform variance 
 
+> Weight Initial는 아직 Active research area임 
 
 
 ---
