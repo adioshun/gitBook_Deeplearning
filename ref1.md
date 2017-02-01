@@ -4,6 +4,9 @@
 * 변화량과 변화량을 나누다  $$ \frac{\Delta y}{\Delta x} $$
 * 미세하게 나눈다 = $$ \Delta x \rightarrow 0$$으로 보낸다 =x의 변화량을 0처럼 미세하게 한계치($$\lim_{\Delta x \rightarrow 0}$$)까지로 만든다.  
 
+$$
+\lim_{h \rightarrow 0}\frac{\Delta y}{\Delta x} = 변화량과 변화량을 미세하게 나누어서 값을 구한다. 
+$$
 
 
 ## 미분을 나타내는 방법
