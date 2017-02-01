@@ -25,9 +25,10 @@ $$ f^\prime (a) $$ = a에서 f의 미분값
 
 
 ### 표기법 3 
-$$\Delta x$$를 h로 치환 
+
 ![](/assets/def231.PNG)
-x의 변화량 h, 이때 y의 변화량은 $$ f(a+h) $$
+1. $$\Delta x$$를 $$h$$로 치환 
+2. $$x$$의 변화량 $$h$$, 이때 $$y$$의 변화량은 $$ f(a+h) $$
 
 $$
 즉, \frac{dy}{dx} = f^\prime (a) = \lim_{h \rightarrow 0} \frac{f(a+h)-f(a)}{h} 
