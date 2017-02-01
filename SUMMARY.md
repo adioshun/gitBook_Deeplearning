@@ -5,4 +5,5 @@
 * [별첨\_미분](ref1.md)
 * [Backpropagation](backpropagation.md)
 * [ActivationFuction](activationfuction.md)
+* [Optimization](optimization.md)
 
