@@ -19,7 +19,7 @@
 
 
 # Dropout
-## 기존 Overfitting 문제 해결법 
+## 1. 기존 Overfitting 문제 해결법 
 1. More Training data
 2. Reduce the number of feature
 3. Regularization 
@@ -29,10 +29,19 @@
     * NN에서 Regularization 방법중 `__Dropout__`이 있음
  
 
-## Regularizaion : Dropout
+## 2. Regularizaion : Dropout
 ![](/assets/dropout.PNG)
 * 네트워크의 일부만 사용하여서 학습[^4] 
 * (조심) Training 시에만 dropout_rate를 `~0.9`미만으로 적용하고, Evaluation 할때는 dropout_rate를 `1`로 적용
+
+#Ensemble 
+* 여러 학습 모델을 생성하고 마지막에 합쳐서 결과를 산출
+* 2~4,5%까지 성능 향상 가능
+* 충분한 컴퓨팅 파워 필요 
+
+
+
+
 ---
 
 
