@@ -38,6 +38,8 @@ Step 1. 이미 알고 있는 * $$ \frac{\partial f}{\partial g} ,  \frac{\partia
 
 
 Step 2. 모르는 $$\frac{\partial f}{\partial w} , \frac{\partial f}{\partial x} $$ 는 g를 사용하는 복합함수 확인,chain Rule 사용
- * $$ \frac{\partial f}{\partial w} $$를 chain Rule 사용 변환  $$ = \frac{\partial f}{\partial g} * \frac{\partial g}{\partial w} = 1 * x = 1* 5 = 5$$
+ * $$ \frac{\partial f}{\partial w} $$를 chain Rule 사용 변환  $$ = \frac{\partial f}{\partial g} * \frac{\partial g}{\partial w} = 1 * x = 1* 5 = 5$$ (w가 1만큼 변하면 f는 5만큼 영향) 
+ * $$ \frac{\partial f}{\partial x} $$를 chain Rule 사용 변환 $$ = \frac{\partial f}{\partial g} * \frac{\partial g}{\partial x} = 1* -2 = -2$$ (x가 1만큼 변하면 f는 -2만큼 영향) 
+
 ![](/assets/bpn2.PNG)
  
