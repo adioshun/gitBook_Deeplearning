@@ -20,10 +20,10 @@
 
 
 ## Pooling Layer (=sampling)
-![](/assets/polling.PNG)
+![](/assets/maxpooling.PNG)
 * 4x4그림에서 2x2필터를 이용하여 2stride만큼 이용하면
 * 2x2의 결과 나옴, 이 결과를 어떻게 결정 하느냐가 Pooling(=sampling)
-* eg. 위 그림 예시는 Max Polling으로 가장 큰값을 선택 
+* eg. 위 그림 예시는 `Max Pooling`으로 가장 큰값을 선택 
     * 1,1,5,6 - 6
     * 2,4,7,8 - 8
     * 3,2,1,2 - 3
