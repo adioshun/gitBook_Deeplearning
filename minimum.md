@@ -10,3 +10,7 @@ FeedForward 신경망의 학습은 주어진 훈련데이터로 부터 계산되
 ## 3. 확률적 경사 하강법 
 * Stochastic gradient descent(SGD)
 * 샘플을 다르게 하여 w를 학습
+
+> Dropout과 같은것인가????
+
+
