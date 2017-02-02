@@ -16,6 +16,7 @@
 
 > Weight Initial는 아직 Active research area임 
 
+> 
 
 
 # Dropout
