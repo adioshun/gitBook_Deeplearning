@@ -1,10 +1,12 @@
+# Backpropagation
+![](/assets/bp.PNG)
 > How Can we learn $$w1, w2, b1, b2$$ from training data
 
 Layer가 깊어 질수록 초기의 weight와 Bias를 찾기 힘들다 (Marvin Minsky,1969)
 * Backpropagation으로 가능 (Paul1974, Hilton1986)
 
-# Backpropagation
-![](/assets/bp.PNG)
+
+
 미분 chain rule 활용
 
 1. $$ f(x) = wx + b$$를 도식화 한
