@@ -19,21 +19,42 @@
 > 
 
 
-# Dropout
-## 1. 기존 Overfitting 문제 해결법 
+# Overfitting 문제 해결법 
 1. More Training data
 2. Reduce the number of feature
-3. Regularization 
-    * weight에 너무 큰값 주지 않기 (큰값 = 구부려짐 커짐)
-    * L2Regulization = $$ cost + \rightthreetimes \sum w^2 $$
-    * TF코드 `l2reg=0.001*tf.reduce_sum(tf.square(w))`
-    * NN에서 Regularization 방법중 `__Dropout__`이 있음
- 
+3. Regularization (규제화)
 
-## 2. Regularizaion : Dropout
+## 1. Regularizaion
+
+### 1.1 Weight Decay(가중치 감쇠 )
+* 가중치에 어떤 제약을 가하는것
+    * 학습시 w에 대한 자유도 제약
+    * weight에 너무 큰값 주지 않기 (큰값 = 구부려짐 커짐)
+* 오차함수에 가중치의 제곱합(norm의 제곱)을 더한 뒤, 이를 최소화
+* $$ \rightthreetimes$$는 규제화의 강도를 제어하는 파라미터 
+    * $$ \rightthreetimes$$ = 0.01 ~0.00001 범위에서 선택 
+    * L2Regulization = $$ cost + \rightthreetimes \sum w^2 $$
+* 결과적으로 가중치는 자신의 크기에 비례하는 속도롤 항상 감쇠 
+* Weight Decay는 신경망의 가중치w에만 작용하며, 바이어스b에는 적용하지 않는다. 
+
+
+```
+TF코드 `l2reg=0.001*tf.reduce_sum(tf.square(w))`
+```
+
+### 1.2 가중치 상한 
+* 가중치 값의 상한을 통해 가중치를 제약하는 방법
+* 가중치 감쇠보다 나은 성능 보임 
+* Dropout 과 같이 사용 가능 
+
+
+
+### 1.3 Dropout
 ![](/assets/dropout.PNG)
 * 네트워크의 일부만 사용하여서 학습[^4] 
 * (조심) Training 시에만 dropout_rate를 `~0.9`미만으로 적용하고, Evaluation 할때는 dropout_rate를 `1`로 적용
+
+> 신경망의 일부를 학습 시에 랜덤으로 무효화 하는 유사 방법(트롭커넥트, 확률적 최대 풀링)들이 존재 하나, 사용 편의와 적용 범위로 볼때 DropOut이 효과적
 
 #Ensemble 
 * 여러 학습 모델을 생성하고 마지막에 합쳐서 결과를 산출
@@ -41,8 +62,26 @@
 * 충분한 컴퓨팅 파워 필요 
 
 
+# 미니배치(Minibatch)
+* 샘플한개 단위가 아니라 몇 개의 샘플을 하나의 작은 집합으로 묶은 집합 단위로 가중치를 업데이트 한다. 
+* 복수의 샘플을 묶은 작은 집합을 `미니배치`라고 부른다. 
 
 
+# 학습률 결정(Learning Rate)
+## 1. 인의적 결정
+
+### 1.1 
+학습 초기에 값을 크게 설정 했다가 학습의 진행과 함께 낮추어 감
+
+### 1.2 
+각 층마다 서로 다른 학습률을 적용 
+단, 램프함수에는 적합하지 않음 
+
+## 2. 자동 결정
+
+## 2.1 AdaGrad 
+* 자주 나타나는 기울기의 성분보다 드물게 나타나는 기울기 성분을 더 둥시해서 파라미터를 업데이트 
+* 현재 거의 일반적으로 사용됨 
 ---
 
 
