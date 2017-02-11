@@ -51,3 +51,4 @@
 
 
 ---
+[What is the Role of the Activation Function in a Neural Network?](http://www.kdnuggets.com/2016/08/role-activation-function-neural-network.html)
