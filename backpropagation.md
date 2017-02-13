@@ -44,4 +44,7 @@ Step 2. 모르는 $$\frac{\partial f}{\partial w} , \frac{\partial f}{\partial x
  * $$ \frac{\partial f}{\partial x} $$를 chain Rule 사용 변환 $$ = \frac{\partial f}{\partial g} * \frac{\partial g}{\partial x} = 1* -2 = -2$$ (x가 1만큼 변하면 f는 -2만큼 영향) 
 
 ![](/assets/bpn2.PNG)
+
+---
+* [A Step by Step Backpropagation Example](https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/)
  
