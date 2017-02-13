@@ -91,3 +91,6 @@ TF코드 `l2reg=0.001*tf.reduce_sum(tf.square(w))`
 [^2]: X.Glorot and Y.Bengio, "understanding the difficulty of training deep feedforward neural networks", 2010
 [^3]: K.He, "Delving Deep into Rectifiers:Surpassing Human-Level Performance on ImageNet Classification", 2015
 [^4]: Srivastava et al., "A Simple way to Prevent Neural Networks from Overfitting", 2014
+
+--- 
+* [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)
