@@ -47,4 +47,4 @@ Step 2. 모르는 $$\frac{\partial f}{\partial w} , \frac{\partial f}{\partial x
 
 ---
 * [A Step by Step Backpropagation Example](https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/)
- 
+* [Understanding the backward pass through Batch Normalization Layer](https://kratzert.github.io/2016/02/12/understanding-the-gradient-flow-through-the-batch-normalization-layer.html)
