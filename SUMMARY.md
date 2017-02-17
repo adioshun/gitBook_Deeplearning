@@ -12,4 +12,5 @@
 * [CNN](_cnn.md)
 * [오차최소화](minimum.md)
 * [Batch Normalization](batch-normalization.md)
+* [AutoEncoder](autoencoder.md)
 
