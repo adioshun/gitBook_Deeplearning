@@ -1,11 +1,32 @@
 # Autoencoder
 
+딥러닝은 크게 아래 두 Phase로 나눌수 있다. 
 
+1. unsupervised pretraining 페이즈 : Input을 reconstruction 할 수 있는 hidden units를 찾아내는 과정
+    * 대표적 모델 : 오토 인코더 & RBM
+2. supervised fine-tuning 페이즈
+
+```
+[RBM]
+- Generative model(에너지 모델을 차용하고 그 에너지 모델은 볼츠만 분포에 기반)
+- 확률분포에 기반하여 visible 변수들과 hidden 변수들간에 어떤 상관관계가 있고 어떻게 상호작용하는지를 파악하는 개념
+ * 인풋 (visible) 변수와 히든 변수의 joint probability distribution을 학습하고자 하는 것
+- 오토인코더와는 달리 찾아낸 확률분포로부터 새로운 데이터를 생성할 수 있다. 파라메터가 많은만큼 더욱 유연
+
+[오토 인코더]
+- Deterministic Model
+- 피처를 축소하는 심플한 개념
+- 오토인코더가 직관적일 뿐 아니라 구현하기도 더 쉽고 파라메터가 더 적어서 튜닝하기가 쉽다
+```
+
+
+
+###### 목적 
 
 * autoencoder는 기존의 Neural Network의 Unsupervised learning 버젼이다. 
 * 출력값 $$ \hat{x} $$를 입력값 $$ x $$와 유사하게 만들고자 하는걸 목표로 함
 
-* 종류 
+###### 종류 
     1  Auto-Encoder (Basic form)
     2. Stacked Auto-Encoder
     3. Sparse Auto-Encoder
@@ -59,3 +80,4 @@ Denoising Auto-Encoder는 데이터에 Noise 가 추가되었을 때, 이러한 
 ---
 [솔라리스의 인공지는 연구실](http://solarisailab.com/archives/113): AutoEncoders & Sparsity
 [위키독스의 Introduction Auto-Encoder](https://wikidocs.net/3413)
+[Autoencoder vs RBM (+ vs CNN)](http://khanrc.tistory.com/entry/Autoencoder-vs-RBM-vs-CNN)
