@@ -7,10 +7,10 @@
 * [ActivationFuction](activationfuction.md)
 * [Error\_function](error_function.md)
 * [Optimization](optimization.md)
-* [별첨\_다양한 네트워크 모델](variable_nn.md)
 * [RNN](rnn.md)
 * [CNN](_cnn.md)
 * [오차최소화](minimum.md)
 * [Batch Normalization](batch-normalization.md)
 * [AutoEncoder](autoencoder.md)
+* [별첨\_다양한 네트워크 모델](variable_nn.md)
 
