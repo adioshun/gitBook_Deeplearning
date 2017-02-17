@@ -68,20 +68,6 @@ Denoising Auto-Encoder는 데이터에 Noise 가 추가되었을 때, 이러한 
 ## 5. Stacked Denoising Auto-Encoder (SdA)
 ![](https://wikidocs.net/images/page/3413/sDA.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 [1]: http://untitledtblog.tistory.com/92 "[머신러닝] - Autoencoder" 
 
