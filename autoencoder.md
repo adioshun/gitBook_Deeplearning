@@ -4,7 +4,9 @@
 
 1. unsupervised pretraining 페이즈 : Input을 reconstruction 할 수 있는 hidden units를 찾아내는 과정
     * 대표적 모델 : 오토 인코더 & RBM
-2. supervised fine-tuning 페이즈
+2. supervised fine-tuning 페이즈 : SVM이나 softmax 등의 classifier를 학습
+
+
 
 ```
 [RBM]
