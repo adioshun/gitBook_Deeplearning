@@ -1,7 +1,12 @@
+# Batch normalization
 
+##### 개요 
 
-
-
+* 기본적으로 Gradient Vanishing / Gradient Exploding 이 일어나지 않도록 하는 아이디어 중의 하나이다.
+* 기존 해결법
+    * Activation 함수의 변화 (ReLU 등)
+    * Careful Initialization
+    * small learning rate 등
 
 
 
@@ -26,5 +31,6 @@ https://arxiv.org/abs/1702.03275
 
 ---
 
-1. [Batch Renormalization: Towards Reducing Minibatch Dependence in Batch-Normalized Models,2017](https://arxiv.org/abs/1702.03275)
-
+1. [Batch Normalization : Accelerating Deep Network Training by Reducing Internal Covariance Shift, 2015](http://arxiv.org/abs/1502.03167)
+2. [Batch normalization: Towards Reducing Minibatch Dependence in Batch-Normalized Models,2017](https://arxiv.org/abs/1702.03275)
+3. [Batch Normalization 설명 및 구현](https://shuuki4.wordpress.com/2016/01/13/batch-normalization-설명-및-구현/)
