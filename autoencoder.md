@@ -6,8 +6,6 @@
     * 대표적 모델 : 오토 인코더 & RBM
 2. supervised fine-tuning 페이즈 : SVM이나 softmax 등의 classifier를 학습
 
-
-
 ```
 [RBM]
 - Generative model(에너지 모델을 차용하고 그 에너지 모델은 볼츠만 분포에 기반)
@@ -21,12 +19,17 @@
 - 오토인코더가 직관적일 뿐 아니라 구현하기도 더 쉽고 파라메터가 더 적어서 튜닝하기가 쉽다
 ```
 
-
-
 ###### 목적 
-
 * autoencoder는 기존의 Neural Network의 Unsupervised learning 버젼이다. 
+* 오토인코더는 전형적인 FNN인데, 데이터셋을 압축적이고 분배된 표현(인코딩) 으로 학습하는 것을 목표
+* 기존에 대부분 데이터의 압축을 위해 활용되었으나, 최근에는 딥 러닝 (deep learning)에 대한 연구가 활발해지면서 입력 벡터의 차원 축소, 은닉층의 학습 등에 많이 이용
 * 출력값 $$ \hat{x} $$를 입력값 $$ x $$와 유사하게 만들고자 하는걸 목표로 함
+
+###### 구조 
+* 일반적인 FNN과 비슷 
+* 단, 입력층과 츨력층의 크기가 항상 같다[1]
+
+![](http://cfile9.uf.tistory.com/image/266B1740579DA3B3080567)
 
 ###### 종류 
     1  Auto-Encoder (Basic form)
@@ -80,6 +83,9 @@ Denoising Auto-Encoder는 데이터에 Noise 가 추가되었을 때, 이러한 
 
 
 ---
+[1]: http://untitledtblog.tistory.com/92 "[머신러닝] - Autoencoder" 
+
 [솔라리스의 인공지는 연구실](http://solarisailab.com/archives/113): AutoEncoders & Sparsity
 [위키독스의 Introduction Auto-Encoder](https://wikidocs.net/3413)
 [Autoencoder vs RBM (+ vs CNN)](http://khanrc.tistory.com/entry/Autoencoder-vs-RBM-vs-CNN)
+[번역: A Deep Learning Tutorial: From Perceptrons to Deep Networks](http://khanrc.tistory.com/entry/Deep-Learning-Tutorial)
