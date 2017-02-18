@@ -1,4 +1,4 @@
-# 리니어 리그레이션 
+# One Variable(리니어) Regression 
 * Hypothesis : 데이터에 잘 맞는 직선은 무엇인가? 
     * $$H(x) = wx+b$$
 * cost(loss) 함수 : 가설이 실제값에 얼마나 맞는가 검사 
@@ -17,7 +17,7 @@
 * $$ \frac{\partial}{\partial W} cost(w) $$ : 코스트 함수를 미분
 
 
-# Multi Variable
+# Multi Variable Regression
 * Hypthesis : 변수 수만 변함
     * $$H(x_1,x_2,x_3) = w_1x_1 + w_2x_2 + w_3x_2 +b  $$
 * cost(loss) 함수 : 변화 없음
@@ -30,5 +30,7 @@
 
  
   
+# Logistic Regression 
+* 딥러닝에 많이 사용되므로 중요
 
 
