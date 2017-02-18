@@ -1,6 +1,6 @@
 # 리니어 리그레이션 
 * Hypothesis : 데이터에 잘 맞는 직선은 무엇인가? 
-    * H(x) = wx+b
+    * $$H(x) = wx+b$$
 * cost(loss) 함수 : 가설이 실제값에 얼마나 맞는가 검사 
     * (가설값-실제값)의 제곱의 합 평균
 * 목적 : Cost함수를 최소화 하는 w,b 찾기 
@@ -17,8 +17,18 @@
 * $$ \frac{\partial}{\partial W} cost(w) $$ : 코스트 함수를 미분
 
 
+# Multi Variable
+* Hypthesis : 변수 수만 변함
+    * $$H(x_1,x_2,x_3) = w_1x_1 + w_2x_2 + w_3x_2 +b  $$
+* cost(loss) 함수 : 변화 없음
 
-# 머신러닝과 행렬 연산
+> Variable이 많을 경우 계산시 Matrix(행렬)연산 사용
 
 ![](/assets/multimatmal.PNG)
-https://youtu.be/MFAnsx1y9ZI?t=7m38s
+![](/assets/Screenshot from 2017-02-18 05-50-14.png)
+* Bias를 행렬에 포함시키기 위해 w의 앞에 b를 x의 위에 1을 입력
+
+ 
+  
+
+
