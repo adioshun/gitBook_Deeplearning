@@ -27,5 +27,19 @@
 2. 1969년 : XOR도 중요한 지표인데 기존(단층)뉴런으로는 해결 할수 없고 다층 뉴런을 사용하면 XOR도 해결 가능하다 by Minsky, MIT
     * 단, 다층 뉴런간의 W,B학습이 불가능 하다. 
     * No one on the earth had found a viable way to train
+    * 10~20년 1차 암흑기
+3. 1974,1982년 : Backpropagation 알고리즘 해결 가능 by Paul Werbos
+    * 1986년 Hilton교수에 의하여 재발견 및 알려짐 
+4. 1980년 : CNN알고리즘을 이용하면 이미지 인식에 큰 발전 가능 by LeCun
+    * [??] 86년에 Backpropagation이 알려졌는데 그럼 cNN은 backpropagatio이 없나?
+5. 1995년 Backpropagation은 2~3개의 레이어는 가능하지만, 깊은 층에서는 학습이 잘 되지 않음
+    * SVM, RF가 더 좋은 결과 보임 
+    * 2차 암흑기
+6. 2006년 깊은층의 학습을 위해서 아래의 내용들을 잘 정의 하면 가능하다.           by hilton, Bengio
+    * 초기값 설정 
+    * Deep Learning으로 재 명명 (뉴럴넷이 부정적 이미지가 많음)
+7. 2012년 ImageNet 경연대회에서 딥러닝기반 AlexNet으로 26.2% -> 15,3%로 떨어트림 by Hilton교수랩 Alex박사 과정 
+    
+    
 
 
