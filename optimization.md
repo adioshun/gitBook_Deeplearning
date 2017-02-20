@@ -19,6 +19,9 @@
 > 
 
 
+
+
+
 # Overfitting 문제 해결법 
 1. More Training data
 2. Reduce the number of feature
