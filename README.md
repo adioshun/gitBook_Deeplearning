@@ -20,3 +20,12 @@
 
 ## 텐서플로우
 * [파이썬_킴 블로그](http://pythonkim.tistory.com/category/%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C%EC%9A%B0)
+
+
+# 딥러닝의 역사 
+1. 1950년대 :뇌의 뉴런(단층)을 살펴 보니 간단(Wx+B)하고 이를 이용하여 AND / OR등(당시 중요 평가지표)의 문제 해결이 가능함 확인 
+2. 1969년 : XOR도 중요한 지표인데 기존(단층)뉴런으로는 해결 할수 없고 다층 뉴런을 사용하면 XOR도 해결 가능하다 by Minsky, MIT
+    * 단, 다층 뉴런간의 W,B학습이 불가능 하다. 
+    * No one on the earth had found a viable way to train
+
+
