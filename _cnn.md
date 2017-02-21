@@ -65,7 +65,7 @@ https://youtu.be/2-75C-yZaoA?t=4m18s
 * 손글씨 인식에 사용 
 
 ### 4.2 AlexNet  
-* Krzhevsky et al., 2001
+* Krzhevsky et al., 2012
 * 이미지 분석에 사용
 * First use of ReLU
 * ILSVRC 2012
@@ -76,20 +76,20 @@ https://youtu.be/2-75C-yZaoA?t=4m18s
 * ILSVRC 2014 winner
 
 ### 4.4 VGG
-* 19 Layer
 * ILSVRC 2014
+* 19 Layer
 
 ### 4.5 ResNet
 * He et al.,2015
 * ILSVRC 2015 winner (3.6% top 5 error)
+* 152 Layer
 * Fast Forward 적용
  * VGG보다 레이어가 많지만 더 따른 이유 
  * 8GPU로 2~3주 Training
-* 152 Layer
 
 ### 4.6 CNN for Sentence Classification 
 * Yoon Kim, 2014
-* 텍스트 처리 
+* 텍스트 처리 (일반적으로 RNN을 사용)
 
 ### 4.7 DeepMind's AlphaGo
 * 19x19x48 input (바둑판)
