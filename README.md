@@ -1,7 +1,7 @@
 # 출처
-*2017.02.21 Github/gitBook Sync
+* 2017.02.21 Github/gitBook Sync
 
-*2017.02.21 second sync
+* 2017.02.21 second sync
 
 ## 모두를 위한 딥러닝\(시즌1\)
 
