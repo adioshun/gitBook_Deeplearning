@@ -14,6 +14,7 @@ FeedForward 신경망의 학습은 주어진 훈련데이터로 부터 계산되
 ## 3. 확률적 경사 하강법 
 * Stochastic gradient descent(SGD)
 * 샘플을 다르게 하여 w를 학습
+* [참고:Stochastic Gradient Descent 자동 학습속도 조절 알고리즘 정리](http://keunwoochoi.blogspot.com/2016/12/stochastic-gradient-descent.html)
 
 
 
