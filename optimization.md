@@ -1,7 +1,9 @@
 # Overfitting 문제 해결법 
 1. More Training data
 2. Reduce the number of feature
-3. Regularization (규제화) 
+3. Regularization (규제화)  
+    * Weight
+    * Dropout 
 
 ## 1. Regularizaion
 
@@ -28,14 +30,12 @@ TF코드 `l2reg=0.001*tf.reduce_sum(tf.square(w))`
 
 
 
-### 1.3 Dropout
+### 1.3 Dropout 
 ![](/assets/dropout.PNG)
 * 네트워크의 일부만 사용하여서 학습[^4] 
 * (조심) Training 시에만 dropout_rate를 `~0.9`미만으로 적용하고, Evaluation 할때는 dropout_rate를 `1`로 적용
 
 > 신경망의 일부를 학습 시에 랜덤으로 무효화 하는 유사 방법(트롭커넥트, 확률적 최대 풀링)들이 존재 하나, 사용 편의와 적용 범위로 볼때 DropOut이 효과적
-
-
 
 
 
