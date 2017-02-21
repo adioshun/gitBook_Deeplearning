@@ -1,28 +1,9 @@
-# Weight Initial 하기 
-```
-기존 : Initial weight를 초기값을 램덤하게 설정
-* Deep-wide Network가 정확도가 안 맞는 2번째 이유 
-```
-1. 0이 아닌 값으로 선정 
-2. RBM(restricted boltzmann machine﻿)을 이용[^1] 
-    * 근접 레이어간 Pre-training(Forward/Backward)를 하면서 결과값을 비교 하면서 wight를 수정 
-    * 이렇게 생성된 네트워크를 `Deep Belief Network`라 부름 
-    * 연산이 오래 걸리고, 다른 좋은 방법들이 나와서 요즘 사용 안함
-3. Xavier Initialization/He's Initialization :입력과 아웃의 갯수를 사용하여 결정[^2],[^3]
-    * Xavier : `random(fan_in, fan_out)/np.sqrt(fan_in)`
-    * He : `random(fan_in, fan_out)/np.sqrt(fan_in/2)`
-4. Batch normalization 
-5. layer sequential Uniform variance 
-
-> Weight Initial는 아직 Active research area임 
-
-> 
-
-
 # Overfitting 문제 해결법 
 1. More Training data
 2. Reduce the number of feature
-3. Regularization (규제화)
+3. Regularization (규제화)  
+    * Weight
+    * Dropout 
 
 ## 1. Regularizaion
 
@@ -49,39 +30,15 @@ TF코드 `l2reg=0.001*tf.reduce_sum(tf.square(w))`
 
 
 
-### 1.3 Dropout
+### 1.3 Dropout 
 ![](/assets/dropout.PNG)
 * 네트워크의 일부만 사용하여서 학습[^4] 
 * (조심) Training 시에만 dropout_rate를 `~0.9`미만으로 적용하고, Evaluation 할때는 dropout_rate를 `1`로 적용
 
 > 신경망의 일부를 학습 시에 랜덤으로 무효화 하는 유사 방법(트롭커넥트, 확률적 최대 풀링)들이 존재 하나, 사용 편의와 적용 범위로 볼때 DropOut이 효과적
 
-#Ensemble 
-* 여러 학습 모델을 생성하고 마지막에 합쳐서 결과를 산출
-* 2~4,5%까지 성능 향상 가능
-* 충분한 컴퓨팅 파워 필요 
 
 
-# 미니배치(Minibatch)
-* 샘플한개 단위가 아니라 몇 개의 샘플을 하나의 작은 집합으로 묶은 집합 단위로 가중치를 업데이트 한다. 
-* 복수의 샘플을 묶은 작은 집합을 `미니배치`라고 부른다. 
-
-
-# 학습률 결정(Learning Rate)
-## 1. 인의적 결정
-
-### 1.1 
-학습 초기에 값을 크게 설정 했다가 학습의 진행과 함께 낮추어 감
-
-### 1.2 
-각 층마다 서로 다른 학습률을 적용 
-단, 램프함수에는 적합하지 않음 
-
-## 2. 자동 결정
-
-## 2.1 AdaGrad 
-* 자주 나타나는 기울기의 성분보다 드물게 나타나는 기울기 성분을 더 둥시해서 파라미터를 업데이트 
-* 현재 거의 일반적으로 사용됨 
 ---
 
 
