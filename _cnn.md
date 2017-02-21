@@ -14,12 +14,18 @@
 ![](/assets/CNN.PNG)
 
 ### 2.1 Conv Layer
+![](/assets/onenum.png)
 1. 7x7(색상) 전체 이미지 준비 
 2. 3x3의 filter를 이용해서 이미지의 일부부만 입력 받아 `하나의 값(=Wx+b)`으로 변환
 3. 같은 filter(w값이 같음)를 가지고 이미지의 다른 부분도 입력 받음
     * Pad를 이용하여 이미지 작아짐 문제 해결 
 4. 다른 filter(w값이 다름)을 이용하여 이미지의 다른 부분도 입력 받음
 5. Activation map구성 
+
+###### 최종 구하게 되는 값의 크기는?
+![](/assets/outputsize.png)
+
+
 
 ### 2.2 RELU Layer
 
