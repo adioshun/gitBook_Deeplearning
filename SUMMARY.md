@@ -17,4 +17,5 @@
 * [Esemble](esemble.md)
 * [Minibatch](minibatch.md)
 * [Learning Rate](learning-rate.md)
+* [GAN](gan.md)
 
