@@ -38,7 +38,7 @@
    * SVM, RF가 더 좋은 결과 보임 
    * Vanishing Gradient
    * 2차 암흑기 (1986-2006)
-6. 2006년 깊은층의 학습을 위해서 아래의 내용들을 잘 정의 하면 가능하다.           by hilton, Bengio
+6. 2006년 깊은층의 학습을 위해서 아래의 내용들을 해결 하면 가능하다. by hilton, Bengio
    * Our labeled datasets ware thousands of times too small
    * Our computers were million of times too slow
    * We initialized the weight in a stupid way (RBM, DDeep Belief Network)

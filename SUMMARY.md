@@ -6,7 +6,7 @@
 * [출력층 설계](design_layer.md)
 * [ActivationFuction](activationfuction.md)
 * [Error\_function](error_function.md)
-* [Optimization](optimization.md)
+* [Overfitting](optimization.md)
 * [RNN](rnn.md)
 * [CNN](_cnn.md)
 * [오차최소화](minimum.md)
@@ -14,4 +14,7 @@
 * [AutoEncoder](autoencoder.md)
 * [별첨\_다양한 네트워크 모델](variable_nn.md)
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
+* [Esemble](esemble.md)
+* [Minibatch](minibatch.md)
+* [Learning Rate](learning-rate.md)
 
