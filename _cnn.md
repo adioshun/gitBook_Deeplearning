@@ -20,18 +20,25 @@
 3. 같은 filter(w값이 같음)를 가지고 이미지의 다른 부분도 입력 받음
     * Pad를 이용하여 이미지 작아짐 문제 해결 
 4. 다른 filter(w값이 다름)을 이용하여 이미지의 다른 부분도 입력 받음
-5. Activation map구성 
+5. Activation map구성(각 필터를 통해 생성된 값들)
 
 ###### 최종 구하게 되는 값의 크기는?
-![](/assets/outputsize.png)
+![](/assets/stride.PNG)
+* Filter의 이동하는 크기(=Stride)에 따라서 뽑아 낼수 있는 수의 갯수가 달라짐 
+* stride의 크기가 증가 할수록 Output이 작아짐(=정보를 잃어버림)
 
+###### Pad를 통해 최종 구하는 값의 크기를 동일시 하기
+* Pad(테두리를 0으로)을 이용하여 문제 해결 
+* Activation Maps크기 
 
+![](/assets/pad.PNG)
 
 ### 2.2 RELU Layer
+* 기존 자료 참고 
 
 ### 2.3 Pooling Layer (=sampling)
 ![](/assets/maxpooling.PNG)
-* 4x4그림에서 2x2필터를 이용하여 2stride만큼 이용하면
+* 4x4그림에서 2x2필터를 이용하여 2 stride만큼 이용하면
 * 2x2의 결과 나옴, 이 결과를 어떻게 결정 하느냐가 Pooling(=sampling)
 * eg. 위 그림 예시는 `Max Pooling`으로 가장 큰값을 선택 
     * 1,1,5,6 - 6
@@ -58,35 +65,37 @@ https://youtu.be/2-75C-yZaoA?t=4m18s
 * 손글씨 인식에 사용 
 
 ### 4.2 AlexNet  
-* Krzhevsky et al., 2101
+* Krzhevsky et al., 2001
 * 이미지 분석에 사용
 * First use of ReLU
+* ILSVRC 2012
 
 ### 4.3 GoogLeNet
 * Szegedy et.al., 2014
 * Inception module
 * ILSVRC 2014 winner
 
-### 4.4 ResNet
+### 4.4 VGG
+* 19 Layer
+* ILSVRC 2014
+
+### 4.5 ResNet
 * He et al.,2015
 * ILSVRC 2015 winner (3.6% top 5 error)
-* Fast Forward 사용
+* Fast Forward 적용
+ * VGG보다 레이어가 많지만 더 따른 이유 
+ * 8GPU로 2~3주 Training
+* 152 Layer
 
-### 4.5 CNN for Sentence Classification 
+### 4.6 CNN for Sentence Classification 
 * Yoon Kim, 2014
 * 텍스트 처리 
 
-### 4.6 DeepMind's AlphaGo
+### 4.7 DeepMind's AlphaGo
 * 19x19x48 input (바둑판)
 * CONV1 : 5x5 filter, Stride 1, pad 2
 * CONV2 : .....
+
+
 --- 
 
-###### [참고] Pad 
-* Filter의 이동하는 크기(=Stride)에 따라서 뽑아 낼수 있는 수의 갯수가 달라짐 
-![](/assets/stride.PNG)
-
-* stride의 크기가 증가 할수로 Output이 작아짐(=정보를 잃어버림)
-* Pad(테두리를 0으로)을 이용하여 문제 해결 
-
-![](/assets/pad.PNG)
