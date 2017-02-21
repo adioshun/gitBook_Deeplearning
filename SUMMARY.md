@@ -13,4 +13,5 @@
 * [Batch Normalization](batch-normalization.md)
 * [AutoEncoder](autoencoder.md)
 * [별첨\_다양한 네트워크 모델](variable_nn.md)
+* [RBM\_DBNetwork](rbm_dbnetwork.md)
 

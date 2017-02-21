@@ -41,7 +41,7 @@
 6. 2006년 깊은층의 학습을 위해서 아래의 내용들을 잘 정의 하면 가능하다.           by hilton, Bengio
    * Our labeled datasets ware thousands of times too small
    * Our computers were million of times too slow
-   * We initialized the weight in a stupid way (초기값 재 설정으로 해결)
+   * We initialized the weight in a stupid way (RBM, DDeep Belief Network)
    * We used the wrong type of non-Linearity (Sigmoid -> Relu로 해결)
    > Deep Learning으로 재 명명 \(뉴럴넷이 부정적 이미지가 많음\)
 7. 2012년 ImageNet 경연대회에서 딥러닝기반 AlexNet으로 26.2% -&gt; 15,3%로 떨어트림 by Hilton교수랩 Alex박사 과정 
