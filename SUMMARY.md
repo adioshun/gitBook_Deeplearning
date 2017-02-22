@@ -18,4 +18,5 @@
 * [Minibatch](minibatch.md)
 * [Learning Rate](learning-rate.md)
 * [GAN](gan.md)
+* [Reinforcement Learning](reinforcement-learning.md)
 
