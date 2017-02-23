@@ -1,13 +1,15 @@
 # Overfitting 문제 해결법 
 1. More Training data
 2. Reduce the number of feature
-3. Regularization (규제화)  
+3. __Regularization (규제화)__ : 학습시 가중치의 자유도 제약 
     * Weight
     * Dropout 
+    
+
 
 ## 1. Regularizaion
 
-### 1.1 Weight Decay(가중치 감쇠 )
+### 1.1 Weight Decay(가중치 감쇠)
 * 가중치에 어떤 제약을 가하는것
     * 학습시 w에 대한 자유도 제약
     * weight에 너무 큰값 주지 않기 (큰값 = 구부려짐 커짐)
@@ -32,7 +34,7 @@ TF코드 `l2reg=0.001*tf.reduce_sum(tf.square(w))`
 
 ### 1.3 Dropout 
 ![](/assets/dropout.PNG)
-* 네트워크의 일부만 사용하여서 학습[^4] 
+* 네트워크의 일부만 사용하여서 학습[1] 
 * (조심) Training 시에만 dropout_rate를 `~0.9`미만으로 적용하고, Evaluation 할때는 dropout_rate를 `1`로 적용
 
 > 신경망의 일부를 학습 시에 랜덤으로 무효화 하는 유사 방법(트롭커넥트, 확률적 최대 풀링)들이 존재 하나, 사용 편의와 적용 범위로 볼때 DropOut이 효과적
@@ -44,10 +46,8 @@ TF코드 `l2reg=0.001*tf.reduce_sum(tf.square(w))`
 
 
 
-[^1]: Hinton et al.,"A Fast Learning Algorithm for Deep Belief Nets", 2006
-[^2]: X.Glorot and Y.Bengio, "understanding the difficulty of training deep feedforward neural networks", 2010
-[^3]: K.He, "Delving Deep into Rectifiers:Surpassing Human-Level Performance on ImageNet Classification", 2015
-[^4]: Srivastava et al., "A Simple way to Prevent Neural Networks from Overfitting", 2014
+
+[1]: Srivastava et al., "A Simple way to Prevent Neural Networks from Overfitting", 2014
 
 --- 
 * [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/)
