@@ -4,7 +4,7 @@
 2. 2015년 human level control
 3. 2016년 AphaGo
 
-## 2. Q-Learning
+## 2. Q-Learning (for deterministic world)
 Q(state, Action)을 이용한 문제 해결 
 
 * $$ Max_a {Q(S_1,a)} = Q가 a를 바꿈으로써 얻을수 있는 최대값 $$
@@ -52,6 +52,36 @@ E&E(Exploit-현재값 이용 & Exploration-탐험적 도전찾음)
 > 김성훈 교수 설명 [Youtube](https://youtu.be/MQ-3QScrFSI?t=13m44s)
 
 
+## 3. Q-Learning for Non-deterministic(=Stochastic) world
+미끄러운 얼음판 처럼 목적대로 움직이지 않는 경우 
+
+### 3.1 기본 알고리즘 + Learning rate
+* Q의 의견은 참조(=Learning rate,$$\alpha$$)만 하고, 내가 가고 싶은 방향($$1-\alpha$$)으로 간다. 
+
+* $$ Q(S,a) = (1-\alpha) * Q(S,a) + \alpha *  [r + Max_{a^1}Q(S^1, a^1)]  $$
+
+## 4. Q-Network
+* Q-learning의 경우 Table형태의 작은 배열크기는 가능하지만, 픽셀을 인지하여 겜임을 하는 경우는 크기가 커져 사용이 어려움
+* Q -Network를 이용하여 해결 가능 - 딥마인드의 Atari게임 핵심 알고리즘 
+
+### 4.1 네트워크 모델 1
+![](/assets/qNet1.png)
+* S 와 a를 주고 맞는 Q Value를 도출
+
+### 4.3 네트워크 모델 2
+![](/assets/qNet2.png)
+* S를 주고 a에 따른 Q value를 도출 
+
+* Linear Regression의 방식과 비슷 ,Cost함수만 변경
+$$ 
+Cost(w) = (Ws-y)^2 $$일때 $$ y= r + \gamma maxQ(s`) 
+$$
+
+> Q Network는 Convergence가 안되고 Diverges(학습이 안됨)됨<-???
+> * 이유 1 : Correlation between samples
+> * 이유 2 : Non-Stationary Targets
+> 
+> 이를 해결한 알고리즘이 __DQN__임 
 
 
 
