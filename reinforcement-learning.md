@@ -88,4 +88,34 @@ $$
 * Tensorflow Q network 코드 설명 [[Youtube]](https://youtu.be/Fcmgl8ow2Uc?list=PLlMkM4tgfjnKsCWav-Z2F-MMFRx-2gMGG)
 
 
+## 5. DQN 
+* DQN Paper : www.nature.com/articles/nature14236
+* DQN Code : sites.google.com/a/deepmind.com/dqn
+
+### 5.1 기본 방식의 문제점 
+#### A. Correlation between samples
+* 입력으로 활용되는 환경(샘플)들이 상당히 유사하다. Correlation이 크다. 
+
+
+
+
+
+
+
+
+#### B. Non-Stationary Targets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
