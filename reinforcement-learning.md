@@ -92,18 +92,36 @@ $$
 * DQN Paper : www.nature.com/articles/nature14236
 * DQN Code : sites.google.com/a/deepmind.com/dqn
 
-### 5.1 기본 방식의 문제점 
+### 5.1 기본 방식의 문제점 및 해결책
 #### A. Correlation between samples
 * 입력으로 활용되는 환경(샘플)들이 상당히 유사하다. Correlation이 크다. 
 
-
-
-
-
-
+###### 해결책 : `Capture and replay`로 해결(일명,Experience replay)
+![](/assets/ereplay.png)
+1. Action을 수행하고 이에 대한 결과값 S,R들을 바로 학습에 사용하지 않고 버퍼에 보관
+2. 보관된 버퍼의 값중 일부를 Random하게 선택하여 학습 수행 
 
 
 #### B. Non-Stationary Targets
+Target이 움직임 
+![](/assets/Nonstar.png)
+1. Q-Net의 기본 알고리즘의 목적은 예측($$\hat{Y}$$)과의 값을 최소화 하는것임 target($$Y$$)
+2. 문제는 각 알고리즘에서 쓰인(업데이트하는) $$\theta$$가 양쪽에서 모두 쓰임
+3. 즉, 화살을 쏘는데 과녁판이 움직이는 것과 같음 
+
+###### 해결책 : Separate Networks: Create a target network
+* 네트워크를 하나 더 만듬 
+![](/assets/thelta.png)
+* 기존 공식의 $$\theta$$를 양쪽에서 쓰는것이 아닌, 새로운 $$\overline{\theta}$$를 사용 
+* 두개가 서로 다른 네트워크임 
+
+
+
+
+
+
+
+
 
 
 
