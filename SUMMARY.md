@@ -13,7 +13,6 @@
 * [Batch Normalization](batch-normalization.md)
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
 * [AutoEncoder](autoencoder.md)
-* [Learning Rate](learning-rate.md)
 * [Generatvie Adversarial Networks](gan.md)
 * [Reinforcement Learning](reinforcement-learning.md)
 * [ref1\_다양한 네트워크 모델](variable_nn.md)
