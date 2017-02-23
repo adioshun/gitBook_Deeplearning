@@ -30,15 +30,13 @@
  1. `e= 0.1 / (i+1) # for i in range (1000)`
  2. 학습 초기에는 랜덤 비율이 높게, 학습 후반으로 갈수록 랜덤 비율이 작게
 
-
 * 구현 방법 3 : Add random noise 
  1. `a=argmax(Q(s,a) + random_values)`
- 2. 
 
 * 구현 방법 4 : Add random noise with decaying
  1. `a=argmax(Q(s,a) + random_values/(i+1)) # for i in range (1000)`
 
-
+> E-greedy방식 대비 Random의 장점은 앞의 Q(s,a)의 값이 고려 되어 선택이 가능 
 
 
 
