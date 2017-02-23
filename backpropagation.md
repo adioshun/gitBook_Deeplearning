@@ -1,4 +1,6 @@
 # Backpropagation
+`공식 유도 자료: 딥러닝 제대로 시작하기 4장 (미분 공부 후 다시) `
+
 ![](/assets/bp.PNG)
 > How Can we learn $$w1, w2, b1, b2$$ from training data
 
