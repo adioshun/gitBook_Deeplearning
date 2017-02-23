@@ -64,6 +64,8 @@ E&E(Exploit-현재값 이용 & Exploration-탐험적 도전찾음)
 * Q-learning의 경우 Table형태의 작은 배열크기는 가능하지만, 픽셀을 인지하여 겜임을 하는 경우는 크기가 커져 사용이 어려움
 * Q -Network를 이용하여 해결 가능 - 딥마인드의 Atari게임 핵심 알고리즘 
 
+> Reinforcement Learning + Deep Learning 방식
+
 ### 4.1 네트워크 모델 1
 ![](/assets/qNet1.png)
 * S 와 a를 주고 맞는 Q Value를 도출
@@ -77,12 +79,13 @@ $$
 Cost(w) = (Ws-y)^2 $$일때 $$ y= r + \gamma maxQ(s`) 
 $$
 
-> Q Network는 Convergence가 안되고 Diverges(학습이 안됨)됨<-???
+> Q Network는 Convergence가 안되고 Diverges(학습이 안됨)됨<-무슨말인지 ??
 > * 이유 1 : Correlation between samples
 > * 이유 2 : Non-Stationary Targets
 > 
 > 이를 해결한 알고리즘이 __DQN__임 
 
 * Tensorflow Q network 코드 설명 [[Youtube]](https://youtu.be/Fcmgl8ow2Uc?list=PLlMkM4tgfjnKsCWav-Z2F-MMFRx-2gMGG)
+
 
 
