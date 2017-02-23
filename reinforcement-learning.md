@@ -30,6 +30,7 @@ E&E(Exploit-현재값 이용 & Exploration-탐험적 도전찾음)
 ###### 구현 방법 2 : Decaying E-greedy 
  1. `e= 0.1 / (i+1) # for i in range (1000)`
  2. 학습 초기에는 랜덤 비율이 높게, 학습 후반으로 갈수록 랜덤 비율이 작게
+![](/assets/decaying_E-greedy.png)
 
 ###### 구현 방법 3 : Add random noise 
  1. `a=argmax(Q(s,a) + random_values)`
@@ -44,11 +45,11 @@ E&E(Exploit-현재값 이용 & Exploration-탐험적 도전찾음)
 현재 방법은 위 그림 중 (1)과 (2)중 어느것이 좋은줄 판단 어려움 (2가 좋음)
 
 ###### 구현 방법 : Discount Future Reward
-현재 받는것은 값을 크게 받고, 이후에 받는같은 $$\gamma$$을 곱해서 받고, 그 이후는 $$\gamma$$의 $$\gamma$$을 곱해서 받음
+ 1. 현재 받는것은 값을 크게 받고, 이후에 받는같은 $$\gamma$$을 곱해서 받고, 그 이후는 $$\gamma$$의 $$\gamma$$을 곱해서 받음
 
 * $$ Q(S,a) = r + \gamma * Max_{a^1}Q(S^1, a^1)  $$
 
-
+> 김성훈 교수 설명 [Youtube](https://youtu.be/MQ-3QScrFSI?t=13m44s)
 
 
 
