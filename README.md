@@ -4,6 +4,7 @@
 * 2017.02.21 second sync
 
 * 3rd sync
+* 4th sync 
 
 ## 모두를 위한 딥러닝\(시즌1\)
 
