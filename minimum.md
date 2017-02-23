@@ -10,11 +10,15 @@ FeedForward 신경망의 학습은 주어진 훈련데이터로 부터 계산되
 
 ## 2. 뉴턴법
 * 목적함수의 2차 미분을 이용 
+* 속도가 느림 
 
 ## 3. 확률적 경사 하강법 
 * Stochastic gradient descent(SGD)
 * 샘플을 다르게 하여 w를 학습
+* 장점: 속도가 빠르다. 온라인 학습[^1]에 적용가능 
 * [참고:Stochastic Gradient Descent 자동 학습속도 조절 알고리즘 정리](http://keunwoochoi.blogspot.com/2016/12/stochastic-gradient-descent.html)
 
 
 
+---
+[^1]: 훈련데이터의 수집과 최적화가 동시에 진행되는 방식 
