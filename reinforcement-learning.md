@@ -83,5 +83,6 @@ $$
 > 
 > 이를 해결한 알고리즘이 __DQN__임 
 
+* Tensorflow Q network 코드 설명 [[Youtube]](https://youtu.be/Fcmgl8ow2Uc?list=PLlMkM4tgfjnKsCWav-Z2F-MMFRx-2gMGG)
 
 
