@@ -36,19 +36,20 @@
    * 단, 다층 뉴런간의 W,B학습이 불가능 하다.
    * No one on the earth had found a viable way to train
    * 10~20년 1차 암흑기
-3. 1974,1982년 : Backpropagation 알고리즘 해결 가능 by Paul Werbos
+3. 1974,1982년 : W,B학습은 Backpropagation 알고리즘 통해 해결 가능 by Paul Werbos
    * 1986년 Hilton교수에 의하여 재발견 및 알려짐
-4. 1980년 : CNN알고리즘을 이용하면 이미지 인식에 큰 발전 가능 by LeCun
-   * \[??\] 86년에 Backpropagation이 알려졌는데 그럼 cNN은 backpropagatio이 없나?
-5. 1995년 Backpropagation은 2~3개의 레이어는 가능하지만, 깊은 층에서는 학습이 잘 되지 않음
+4. 1980년 후반 : CNN알고리즘은 5개층까지도 학습이 가능 하여 이미지 인식에 큰 발전 가능 
+   * Yann LeCun은 CNN에 역전파를 적용하여 필기 인식에 응용 
+5. 1995년 Backpropagation은 2~3개의 레이어는 가능하지만, 깊은 층에서는 학습이 잘 되지 않음, 오버피팅 문제 존재
    * SVM, RF가 더 좋은 결과 보임
    * Vanishing Gradient
    * 2차 암흑기 (1986-2006)
 6. 2006년 깊은층의 학습을 위해서 아래의 내용들을 해결 하면 가능하다. by hilton, Bengio
    * Our labeled datasets ware thousands of times too small
    * Our computers were million of times too slow
-   * We initialized the weight in a stupid way (RBM, DDeep Belief Network)
+   * We initialized the weight in a stupid way (RBM, DBN, 오토인코더)
    * We used the wrong type of non-Linearity (Sigmoid -> Relu로 해결)
    > Deep Learning으로 재 명명 \(뉴럴넷이 부정적 이미지가 많음\)
 7. 2012년 ImageNet 경연대회에서 딥러닝기반 AlexNet으로 26.2% -&gt; 15,3%로 떨어트림 by Hilton교수랩 Alex박사 과정
 8. 2015년 인간에러 5% 보다 좋은 성능 보임
+> CNN은 일반적으로 Pre-Training(DBN, 오토인코더)절차를 사용하지 않음 

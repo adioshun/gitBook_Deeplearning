@@ -9,7 +9,7 @@
     * 근접 레이어간 Pre-training(Forward/Backward)를 하면서 결과값을 비교 하면서 wight를 수정 
     * 이렇게 생성된 네트워크를 `Deep Belief Network`라 부름 
     * 연산이 오래 걸리고, 다른 좋은 방법들이 나와서 요즘 사용 안함 -> Xavier Initialization/He's Initialization 
-    * 이러한 연산을 오토 인코더/오토 디코더라고도 함
+    * DBN/RBM보다 단순한 `오토 인코더`를 이용하여도 사전 훈련이 가능
 3. Xavier Initialization/He's Initialization :입력과 아웃의 갯수를 사용하여 결정[^2],[^3]
     * W 정의시 input(fan_in)으로 Output(fan_out)으로 정의 하는것만으로도 RBM과 같은 성능 보임[[Youtbue설명](https://youtu.be/4rC0sWrp3Uw?t=10m42s)
     * Xavier : `random(fan_in, fan_out)/np.sqrt(fan_in)`
