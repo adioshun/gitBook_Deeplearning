@@ -19,7 +19,7 @@
 - 오토인코더가 직관적일 뿐 아니라 구현하기도 더 쉽고 파라메터가 더 적어서 튜닝하기가 쉽다
 ```
 
-###### 목적 
+## 1. 목적 
 * autoencoder는 기존의 Neural Network의 Unsupervised learning 버젼이다. 
 * 오토인코더는 전형적인 FNN인데, 데이터셋을 압축적이고 분배된 표현(인코딩) 으로 학습하는 것을 목표
 * 기존에 대부분 데이터의 압축을 위해 활용되었으나, 최근에는 딥 러닝 (deep learning)에 대한 연구가 활발해지면서 입력 벡터의 차원 축소, 은닉층의 학습 등에 많이 이용
@@ -29,13 +29,36 @@
 > 자기부호화기(오토인코더)는 목표 출력 없이 입력만으로 구성된 훈련 데이터로 비지도학습을 수행하여 데이터의 특징을 잘 나타내는, 더 나은 표현을 얻는것이 목표인 신경망이다. 
 > * 딥 네트워크의 사전훈련, 즉 그 가중치의 좋은 초기값을 얻는 목적으로 사용된다. 
 
-###### 구조 
+### 1.1 데이터를 나타내는 특징을 학습 
+
+### 1.2 주성분 분석과의 관계
+
+### 1.3 
+
+
+## 2. 구조 
 * 일반적인 FNN과 비슷 
 * 단, 입력층과 츨력층의 크기가 항상 같다[1]
 
 ![](http://cfile9.uf.tistory.com/image/266B1740579DA3B3080567)
 
-###### 종류 
+### 2.1 오토인코더 설계
+
+#### A. 출력층의 활성화 함수
+* 중간층의 활성화 함수($$ f $$) : 자유롭게 변경 가능, 통상적으로 비선형함수
+
+* 출력층의 활성화 함수($$ \tilde{f}$$) : 입력 데이터의 유형에 따라 선택 
+    * 실수값 : 항등사항
+    * 이진값 : 로지스틱
+    
+ > 신경망의 목표 출력이 입력한 자신이 될수 있도록 
+
+#### B. 출력층의 오차 함수
+* 출력층의 활성화 함수에 따라 오차 함수 결정 
+    * 실수값 : 입력/출력값의 차에 대한 제곱합
+    * 이진값 : 교차 엔트로피 
+    
+## 3. 종류 
     1  Auto-Encoder (Basic form)
     2. Stacked Auto-Encoder
     3. Sparse Auto-Encoder
@@ -43,7 +66,7 @@
     5. Stacked Denoising Auto-Encoder (SdA)
 
 
-## 1  Auto-Encoder (Basic form)
+### 3.1  Auto-Encoder (Basic form)
 
 ![오토인코더 Basic Form](https://wikidocs.net/images/page/3413/AE.png)
 
@@ -52,24 +75,24 @@
     2. SGD(Stochastic Gradient Descent)알고리즘 
 
 
-## 2. Stacked Auto-Encoder
+### 3.2 Stacked Auto-Encoder
 ![](https://wikidocs.net/images/page/3413/stackedAE.png)
 * Stacked Autoencoder가 Autoencoder에 비해 갖는 가장 큰 차이점은 DBN(Deep Belief Network) [Hinton 06] 의 구조라는 것이다.
 
 
-## 3. Sparse Auto-Encoder
+### 3.3 Sparse Auto-Encoder
 ![](https://wikidocs.net/images/page/3413/sparseAE.png)
 
 * Dropout이 이건가? 
 
 
-## 4. Denoising Auto-Encoder (dA)
+### 3.4 Denoising Auto-Encoder (dA)
 ![](https://wikidocs.net/images/page/3413/denoisingAE.png)
 
 Denoising Auto-Encoder는 데이터에 Noise 가 추가되었을 때, 이러한 Noise를 제거하여 원래의 데이터를 Extraction하는 모델이다.
 실제 사물 인식이라든지, Vision을 연구하는 분야에서는 고의적으로 input data에 noise를 추가하고, 추가된 노이즈를 토대로 학습된 데이터에서 나오는 결과값이, 내가 노이즈를 삽입하기 전의 pure input 값인지를 확인한다.
 
-## 5. Stacked Denoising Auto-Encoder (SdA)
+### 3.5 Stacked Denoising Auto-Encoder (SdA)
 ![](https://wikidocs.net/images/page/3413/sDA.png)
 
 ---
