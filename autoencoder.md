@@ -87,14 +87,16 @@
 ### 3.3 Sparse Auto-Encoder
 ![](https://wikidocs.net/images/page/3413/sparseAE.png)
 
-* Dropout이 이건가? 
-
+> 추가 설명 : 라온피플 블로그 [Sparse coding](http://m.blog.naver.com/laonple/220914873095), [Sparse Autoencoding](http://m.blog.naver.com/laonple/220943887634)
+> 딥러닝 제대로 시작하기 80page
 
 ### 3.4 Denoising Auto-Encoder (dA)
 ![](https://wikidocs.net/images/page/3413/denoisingAE.png)
 
 Denoising Auto-Encoder는 데이터에 Noise 가 추가되었을 때, 이러한 Noise를 제거하여 원래의 데이터를 Extraction하는 모델이다.
 실제 사물 인식이라든지, Vision을 연구하는 분야에서는 고의적으로 input data에 noise를 추가하고, 추가된 노이즈를 토대로 학습된 데이터에서 나오는 결과값이, 내가 노이즈를 삽입하기 전의 pure input 값인지를 확인한다.
+
+> 추가 설명 : [라온피플 블로그](http://m.blog.naver.com/laonple/220891144201)
 
 ### 3.5 Stacked Denoising Auto-Encoder (SdA)
 ![](https://wikidocs.net/images/page/3413/sDA.png)
