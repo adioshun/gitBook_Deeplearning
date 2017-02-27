@@ -51,6 +51,18 @@
 https://youtu.be/2-75C-yZaoA?t=4m18s
 
 
+### 2.5 정규화층
+이미지 정규화 방법 
+* 통계적 처리
+* Local Contrast Normalization(국소 콘트라스트 정규화)
+
+#### A. 국소 콘트라스트 정규화 
+###### 감산 정규화 
+딥러닝 제대로 시작하기 116page
+
+###### 제산 정규화 
+딥러닝 제대로 시작하기 
+
 ## 3. 데모 
 * CIFAR-10를 이용한 [데모 사이트](http://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html) 
 * 실시간 학습 결과를 확인 하여 CNN을 이해 하기 편함 
