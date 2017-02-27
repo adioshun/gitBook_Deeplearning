@@ -19,6 +19,8 @@
 - 오토인코더가 직관적일 뿐 아니라 구현하기도 더 쉽고 파라메터가 더 적어서 튜닝하기가 쉽다
 ```
 
+> Unsupervised Pretraining : 2006년 이후로 심층네트워크 대한 학습방법의 정석으로 인정 되었지만, 2010년이 되면서 ReLu, Dropout, Maxout, Batch Normalization등의 방법을 이용하여도 성능이 좋아 사용 하지 않음 (굳이 PreTraining을 하지 않아도 Supervised방식으로도 좋은 성과 보임)
+
 ## 1. 목적 
 * autoencoder는 기존의 Neural Network의 Unsupervised learning 버젼이다. 
 * 오토인코더는 전형적인 FNN인데, 데이터셋을 압축적이고 분배된 표현(인코딩) 으로 학습하는 것을 목표
@@ -61,7 +63,7 @@
     
 ## 3. 종류 
     1  Auto-Encoder (Basic form)
-    2. Stacked Auto-Encoder
+    2. Stacked Auto-Encoder : Hidden 레이어를 여러개 쌓아서 구현 
     3. Sparse Auto-Encoder
     4. Denoising Auto-Encoder (dA)
     5. Stacked Denoising Auto-Encoder (SdA)
@@ -79,7 +81,8 @@
 ### 3.2 Stacked Auto-Encoder
 ![](https://wikidocs.net/images/page/3413/stackedAE.png)
 * Stacked Autoencoder가 Autoencoder에 비해 갖는 가장 큰 차이점은 DBN(Deep Belief Network) [Hinton 06] 의 구조라는 것이다.
-
+* AE를 여러개 쌓아 놓은 형태가 된다. 가장 압축된 레이어를 Bottleneck hidden layer라고 한다. 
+* 학습 방법 : [Greedy layer-wise Training](http://m.blog.naver.com/laonple/220884698923#)
 
 ### 3.3 Sparse Auto-Encoder
 ![](https://wikidocs.net/images/page/3413/sparseAE.png)
@@ -103,3 +106,4 @@ Denoising Auto-Encoder는 데이터에 Noise 가 추가되었을 때, 이러한 
 [위키독스의 Introduction Auto-Encoder](https://wikidocs.net/3413)
 [Autoencoder vs RBM (+ vs CNN)](http://khanrc.tistory.com/entry/Autoencoder-vs-RBM-vs-CNN)
 [번역: A Deep Learning Tutorial: From Perceptrons to Deep Networks](http://khanrc.tistory.com/entry/Deep-Learning-Tutorial)
+[라오피플 블로그 : AutoEnoder 1~5](http://m.blog.naver.com/laonple/220880813236)
