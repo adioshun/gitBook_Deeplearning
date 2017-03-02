@@ -82,7 +82,8 @@
 
 > 참고 : 딥러닝 제대로 시작하기 35P
 
-
+---
+* [Improving the way neural networks learn](http://neuralnetworksanddeeplearning.com/chap3.html)
 
 
 
