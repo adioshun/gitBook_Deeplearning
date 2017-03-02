@@ -1,3 +1,5 @@
+![](https://cdn-images-1.medium.com/max/800/1*I6P-PiQEQnPt1EhxAKOqYQ.png)
+
 # Backpropagation
 `공식 유도 자료: 딥러닝 제대로 시작하기 4장 (미분 공부 후 다시) `
 
@@ -52,3 +54,4 @@ Step 2. 모르는 $$\frac{\partial f}{\partial w} , \frac{\partial f}{\partial x
 * [Understanding the backward pass through Batch Normalization Layer](https://kratzert.github.io/2016/02/12/understanding-the-gradient-flow-through-the-batch-normalization-layer.html)
 * [This tutorial teaches backpropagation via a very simple toy example](https://iamtrask.github.io/2015/07/12/basic-python-network/)
 * [CNN 역전파를 이해하는 가장 쉬운 방법](https://metamath1.github.io/cnn/index.html) : 2017년 1월 23일 조준우 작성글
+* [Yes you should understand backprop](https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b#.jwbl282mm)
