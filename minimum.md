@@ -5,8 +5,10 @@ FeedForward 신경망의 학습은 주어진 훈련데이터로 부터 계산되
 * 비선형함수의 최소화 방법 중 가장 단순한 방법
 
 > 모멘텀(Momentum) : 경사 하강법 성능 향상 기법 
+
 > * 가중치의 업데이트 값에 이전 업데이트 값의 일정 비율을 거하는 방법 
-> * 
+
+> 참고 : [An overview of gradient descent optimization algorithms](http://sebastianruder.com/optimizing-gradient-descent/index.html), [arXiv](https://arxiv.org/abs/1609.04747)
 
 ## 2. 뉴턴법
 * 목적함수의 2차 미분을 이용 
