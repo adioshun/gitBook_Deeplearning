@@ -1,4 +1,5 @@
 ![](https://cdn-images-1.medium.com/max/800/1*I6P-PiQEQnPt1EhxAKOqYQ.png)
+[슬라이드 한장으로 보는 backprop](https://docs.google.com/presentation/d/1_ZmtfEjLmhbuM_PqbDYMXXLAqeWN0HwuhcSKnUQZ6MM/edit#slide=id.p6) : 김성훈 교수 작성 
 
 # Backpropagation
 `공식 유도 자료: 딥러닝 제대로 시작하기 4장 (미분 공부 후 다시) `
