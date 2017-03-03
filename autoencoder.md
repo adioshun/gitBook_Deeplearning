@@ -109,3 +109,4 @@ Denoising Auto-Encoder는 데이터에 Noise 가 추가되었을 때, 이러한 
 [Autoencoder vs RBM (+ vs CNN)](http://khanrc.tistory.com/entry/Autoencoder-vs-RBM-vs-CNN)
 [번역: A Deep Learning Tutorial: From Perceptrons to Deep Networks](http://khanrc.tistory.com/entry/Deep-Learning-Tutorial)
 [라오피플 블로그 : AutoEnoder 1~5](http://m.blog.naver.com/laonple/220880813236)
+[Keras를 이용한 Autoencoder구현 코드](https://byeongkijeong.github.io/Keras-Autoencoder/)
