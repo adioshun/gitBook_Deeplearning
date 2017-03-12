@@ -55,6 +55,8 @@
 ## 9. 그외 Activation Function 
 ![](/assets/acode.PNG)
 
+[참고] [DIFFERENCE BETWEEN SOFTMAX FUNCTION AND SIGMOID FUNCTION](http://dataaspirant.com/2017/03/07/difference-between-softmax-function-and-sigmoid-function/)
+
 
 
 
