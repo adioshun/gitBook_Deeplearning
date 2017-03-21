@@ -15,3 +15,6 @@ Generative Adversarial Networks](https://arxiv.org/pdf/1701.00160v1.pdf)
 ![](https://2.bp.blogspot.com/-2AA2ws2s6xc/WHjzFO5zBbI/AAAAAAAABKw/g91OEkkxPHYKPTsfKYC5yzXn3CmH6gi_ACK4B/s400/%25EA%25B7%25B8%25EB%25A6%25BC6.PNG)
 
 
+GAN의 가장 큰 약점은 만드는 쪽과 구별하는 쪽을 균형 있게 훈련시키기가 기존의 최적화에 비해 매우 어렵다는 것이다. 
+
+게임을 하는 두 사람 간의 실력 차가 크다면 서로의 발전을 기대하기는 어렵다. GAN의 학습도 이러한 ‘실력 차’에 의한 불균형이 종종 발생해 훈련을 어렵게 하곤 한다.
