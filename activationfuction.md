@@ -4,6 +4,7 @@
     1. 회귀 문제 = 항등사상 
     2. 분류 문제 = 소프트맥스 
 
+> 활성화 함수로 선형 함수를 사용 하면 안되는가? ->  은닉층의 효과가 없어 지므로 사용 하면 안됨
 
 ## 1. Sigmoid 함수
 * Logistic sigmoid function = Logistic function 
