@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [기초 학습](chapter1.md)
 * [Backpropagation](backpropagation.md)
-* [출력층 설계](design_layer.md)
+* [네트워크 설계](design_layer.md)
 * [ActivationFuction](activationfuction.md)
 * [Error\_function](error_function.md)
 * [Overfitting](optimization.md)
