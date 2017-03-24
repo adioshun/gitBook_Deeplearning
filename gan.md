@@ -32,3 +32,5 @@ arg min G: 이 말은 목적함수를 극소화하는 생성망 G를 찾자는 �
 - G는 두번째 항에만 포함되어있다.
 - 전체 함수를 극소화하는 G는,  둘째 항을 극소화하는 G이고, 결국 D(G(z))를 극대화하는 G이다.
 - 결과적으로, 구별망을 속이는 생성망 G를 열심히 학습시켜보자는 이야기다.
+
+![](https://4.bp.blogspot.com/-2piuSDKxkkk/WGYRZECArDI/AAAAAAABWQU/9Ezk7b1wP8g_BSktQ5yDLUBiB9ZeBhPaACLcB/s400/gan.png)
