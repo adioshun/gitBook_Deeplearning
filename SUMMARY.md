@@ -12,6 +12,7 @@
 * [Batch Normalization](batch-normalization.md)
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
 * [AutoEncoder](autoencoder.md)
+  * [Autoencoder.py](autoencoder/autoencoderpy.md)
 * [Generatvie Adversarial Networks](gan.md)
 * [Reinforcement Learning](reinforcement-learning.md)
 * [Overfitting](optimization.md)
