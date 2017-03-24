@@ -20,3 +20,15 @@ W2 = tf.Variable(tf.random_uniform([10, 3], -1., 1.))
 
 b1 은 히든 레이어의 뉴런 갯수로 : `b1 = tf.Variable(tf.zeros([10]))`
 b2 는 최종 결과값 즉, 분류 갯수인 3으로 설정 : `b2 = tf.Variable(tf.zeros([3]))`
+
+
+## 3. CNN 설계
+### 3.1 Conv 네트워크 
+
+
+
+
+## 4. RNN 설계
+
+
+## 5. GAN 설계 
