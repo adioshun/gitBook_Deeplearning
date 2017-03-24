@@ -2,11 +2,10 @@
 
 * [Introduction](README.md)
 * [기초 학습](chapter1.md)
-* [Backpropagation](backpropagation.md)
 * [네트워크 설계](design_layer.md)
+* [Backpropagation](backpropagation.md)
 * [ActivationFuction](activationfuction.md)
 * [Error\_function](error_function.md)
-* [Overfitting](optimization.md)
 * [RNN](rnn.md)
 * [CNN](_cnn.md)
 * [오차최소화](minimum.md)
@@ -15,6 +14,7 @@
 * [AutoEncoder](autoencoder.md)
 * [Generatvie Adversarial Networks](gan.md)
 * [Reinforcement Learning](reinforcement-learning.md)
+* [Overfitting](optimization.md)
 * [ref1\_다양한 네트워크 모델](variable_nn.md)
 * [ref2\_학습 성능 높이는 법](ref2_.md)
 
