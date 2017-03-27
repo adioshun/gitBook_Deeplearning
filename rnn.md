@@ -16,13 +16,25 @@
 ### 1.1 Vanilla RNN 
 ![](http://i.imgur.com/SmXtkHi.png)
 
+$$ h_t = \tanh(W(h_{t-1}, x_t)+b) $$
+- $$h$$ = 현재의 은닉 상태
+- $$x$$ = 현재의 입력 
 
 ### 1.2 LSTM(Long short term memory)
 - Vanilla RNN도 깊어 지면 학습이 어려워 짐으로 최근에는 LSTM 을 많이 사용 
 - 셀상태라는 새로운 연산값 필요
-    - 삭제 게이트: 이전 셀 상태 값중에서 삭제해야 하는 정보를 학습하기 위한 게이트 
-    - 입력 게이트: 새롭게 추가 되어야 하는 정보를 학습하기 위한 게이트 
+    - 삭제 게이트$$(f_t)$$: 이전 셀 상태 값중에서 삭제해야 하는 정보를 학습하기 위한 게이트 
+    - 입력 게이트$$(i_t)$$: 새롭게 추가 되어야 하는 정보를 학습하기 위한 게이트 
 
+![](https://cdn-images-1.medium.com/max/800/1*laH0_xXEkFE0lKJu54gkFQ.png)
+
+$$ f_t = C_{t-1} \times sigmoid(p_t) $$
+- C = 셀상태 ($$ f_t + i_t $$)
+- $$ p =  W(h_{t-1}, x_t)+b $$
+
+$$ i_t = sigmoid(p_i) \times tanh(p_j) $$
+
+$$ h_t(은닉상태) = tanh(c_t) \times sigmoid(p_o) $$
 
 ### 1.3 GRU by Cho (2014)
 
