@@ -72,15 +72,20 @@ $$ i_t = sigmoid(p_i) \times tanh(p_j) $$
 
 $$ h_t(은닉상태) = tanh(c_t) \times sigmoid(p_o) $$
 
-######  오버피팅 문제 
+## 3. RNN Regularizations (오버피팅 문제)
+### 3.1 
 ![](http://i.imgur.com/2MP1BaQ.png)
 
 드랍 아웃 기법 적용 
 - 순환 신경망의 출력 값의 흐름 중 `수직`방향에 대해서만 드랍아웃을 적용
 - [조심] 순환되는 데이터에는 드랍아웃을 적용하지 않음 
 
+### 3.2 
 
-## 3. 응용
+추천 : [꼭 읽어 보기](http://nmhkahn.github.io/RNN-Regularizations)
+
+
+## 4. 응용
 ![](/assets/list_of_RNN.png)
 - One-to-One : Vanilla Neural Networks
 - One-to-Many : Image Captioning (Image -> Sequence of words)
