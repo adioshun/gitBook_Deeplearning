@@ -17,7 +17,7 @@
 ![](http://i.imgur.com/SmXtkHi.png)
 
 
-### 1.2 LSTM 
+### 1.2 LSTM(Long short term memory)
 - Vanilla RNN도 깊어 지면 학습이 어려워 짐으로 최근에는 LSTM 을 많이 사용 
 
 
