@@ -58,3 +58,4 @@ Step 2. 모르는 $$\frac{\partial f}{\partial w} , \frac{\partial f}{\partial x
 * [CNN 역전파를 이해하는 가장 쉬운 방법](https://metamath1.github.io/cnn/index.html) : 2017년 1월 23일 조준우 작성글
 * [Yes you should understand backprop](https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b#.jwbl282mm)
 - [Backpropagation 설명 예제와 함께 완전히 이해하기](http://jaejunyoo.blogspot.com/2017/01/backpropagation.html): Jaejun Yoo블로그
+- [A Derivation of Backpropagation in Matrix Form](http://sudeepraja.github.io/Neural/)
