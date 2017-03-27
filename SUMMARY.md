@@ -8,6 +8,7 @@
 * [Error\_function](error_function.md)
 * [RNN](rnn.md)
   * [RNN1.py](rnn/rnn1py.md)
+  * [RNN2.py](rnn/rnn2py.md)
 * [CNN](_cnn.md)
 * [오차최소화](minimum.md)
 * [Batch Normalization](batch-normalization.md)
