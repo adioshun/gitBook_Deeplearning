@@ -16,6 +16,13 @@
 ### 1.1 Vanilla RNN 
 ![](http://i.imgur.com/SmXtkHi.png)
 
+
+### 1.2 LSTM 
+- Vanilla RNN도 깊어 지면 학습이 어려워 짐으로 최근에는 LSTM 을 많이 사용 
+
+
+### 1.3 GRU by Cho (2014)
+
 ## 2. 구조 
 
 
