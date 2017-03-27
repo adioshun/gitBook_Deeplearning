@@ -1,3 +1,6 @@
+![](https://cdn-images-1.medium.com/max/800/1*vI-O4LpRsj3Ac-9lRYGxDQ.png)
+- GAN방식과 다른 방식의 분류 
+
 ### Generative Adversarial Nets
 
 > 출처 : [초짜 대학원생 입장에서 이해하는 Generative Adversarial Nets](http://jaejunyoo.blogspot.com/2017/01/generative-adversarial-nets-1.html)
