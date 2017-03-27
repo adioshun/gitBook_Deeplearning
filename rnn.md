@@ -2,7 +2,9 @@
 # RNN (Recurrent Neural Networks)
 ![](https://cdn-images-1.medium.com/max/800/1*laH0_xXEkFE0lKJu54gkFQ.png)
 
-추후 학습 : [모두를 위한 딥러닝 강좌:RNN](https://youtu.be/-SHPG_KMUkQ?list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm0)
+출처 
+- [모두를 위한 딥러닝 강좌:RNN](https://youtu.be/-SHPG_KMUkQ?list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm0)
+* [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/): colah, [번역](https://brunch.co.kr/@chris-song/9)
 
 ## 1. 기본 개념 
 * Sequence Data 처리 (eg. 음성)
