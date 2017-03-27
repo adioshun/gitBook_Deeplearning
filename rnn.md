@@ -9,9 +9,22 @@
 
 ![](/assets/rnn1.PNG)
 
+
+![](http://i.imgur.com/vBpftAL.png)
+
+
+### 1.1 Vanilla RNN 
+![](http://i.imgur.com/SmXtkHi.png)
+
 ## 2. 구조 
 
 
 ## 3. 데모 
 
 ## 4. Case Study 
+![](/assets/list_of_RNN.png)
+- One-to-One : Vanilla Neural Networks
+- One-to-Many : Image Captioning (Image -> Sequence of words)
+- Many-to-One : Sentiment Classification (Sequence of words -> Sentiment)
+- Many-to-Many : Machine Translation (Seq of words -> seq of words)
+- Many-to-many : Video Classification on frame level
