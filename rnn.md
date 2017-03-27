@@ -27,6 +27,7 @@ $$ h_t = \tanh(W(h_{t-1}, x_t)+b) $$
     - 입력 게이트$$(i_t)$$: 새롭게 추가 되어야 하는 정보를 학습하기 위한 게이트 
 
 ![](https://cdn-images-1.medium.com/max/800/1*laH0_xXEkFE0lKJu54gkFQ.png)
+![](http://i.imgur.com/nHQGkpq.png)
 
 $$ f_t = C_{t-1} \times sigmoid(p_t) $$
 - C = 셀상태 ($$ f_t + i_t $$)
@@ -35,6 +36,13 @@ $$ f_t = C_{t-1} \times sigmoid(p_t) $$
 $$ i_t = sigmoid(p_i) \times tanh(p_j) $$
 
 $$ h_t(은닉상태) = tanh(c_t) \times sigmoid(p_o) $$
+
+#### A. 오버피팅 문제 
+![](http://i.imgur.com/2MP1BaQ.png)
+
+드랍 아웃 기법 적용 
+- 순환 신경망의 출력 값의 흐름 중 `수직`방향에 대해서만 드랍아웃을 적용
+- [조심] 순환되는 데이터에는 드랍아웃을 적용하지 않음 
 
 ### 1.3 GRU by Cho (2014)
 
