@@ -56,7 +56,11 @@ Pool     ->(?, 14, 14, 32)
 ```
 
 
-> 신 버젼 변경 rnn_cell->tf.nn.rnn_cell / rnn.rnn->tf.nn.rnn﻿
+> 신 버젼 변경 
+
+> rnn_cell->tf.nn.rnn_cell -> tf.contrib.rnn
+
+> rnn.rnn->tf.nn.rnn﻿ -> tf.contrib.rnn
 
 ### 4.1 셀 정의 
 `rnn_cell=tf.nn.rnn_cell.BasicRNNCell(num_units=num_units)`
