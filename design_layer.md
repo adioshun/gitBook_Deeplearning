@@ -76,4 +76,24 @@ Pool     ->(?, 14, 14, 32)
 
 tf.Tensor 'splilt:0 shape=(배치사이즈, 단어수) dtype=float32
 
+
+### 4.4 Cost 정의 
+`sequence_loss_by_example([logits=예측값], [targets=정답], [weights=보통1])`
+
+- logits: list of 2D Tensors of shape [batch_size x num_decoder_symbols].
+    - `logits = tf.reshape(tf.concat(1, outputs), [-1, rnn_size])`
+
+
+- targets: list of 1D batch-sized int32 Tensors of the same length as logits.
+    - `targets = tf.reshape(sample[1:], [-1])`
+
+
+- weights: list of 1D batch-sized float-Tensors of the same length as logits.
+    - `weights = tf.ones([time_step_size * batch_size])`
+
+```
+loss = tf.nn.seq2seq.sequence_loss_by_example([logits], [targets], [weights])
+cost = tf.reduce_sum(loss) / batch_size
+train_op = tf.train.RMSPropOptimizer(0.01, 0.9).minimize(cost)
+```
 ## 5. GAN 설계 
