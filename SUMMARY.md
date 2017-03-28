@@ -20,6 +20,7 @@
   * [gan2.py](gan/gan2py.md)
   * [gan3.py](gan/gan3py.md)
 * [Reinforcement Learning](reinforcement-learning.md)
+* [Transfer Learning](transfer-learning.md)
 * [Overfitting](optimization.md)
 * [ref1\_다양한 네트워크 모델](variable_nn.md)
 * [ref2\_학습 성능 높이는 법](ref2_.md)
