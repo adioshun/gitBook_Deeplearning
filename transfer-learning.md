@@ -23,6 +23,10 @@ fine-tune을 할 때 한가지 팁은 새로 추가한 레이어의 learning_rat
 
 
 ####  PathNet
+인공지능은 전이학습을 통해 이전의 학습에서 배운 지식을 완전히 새로운 과제에 활용할 수 있음.
+
+- 이전의 지식을 활용함으로써 인공지능은 새로운 과제에 새로이 신경망을 구축할 필요가 없으며, 전이학습은 과제 이행의 질과 시간적 효율성을 높여줌.
+
 전이학습은 신경망을 구축하고 학습하는데 있어서 가장 큰 과제이며, DeepMind는 PathNet을 통해 이를 해결하기 위해 노력중임.
 - PathNet이란 SGD(stochastic gradient descent)와 유전 선발방법(genetic selection method)을 사용하여 학습한 신경망 네트워크를 뜻함.
 - PathNet은 여러 층(layer)의 모듈로 이루어져 있으며, 각각의 모듈은 다양한 형태의 신경망임(예: 나선형(convolutional), 피드포워드(feedforward) 또는 반복되는(recurrent) 형태).
