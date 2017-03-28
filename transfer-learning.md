@@ -1,5 +1,11 @@
 # Transfer Learning
 
+## 역사??
+- 1. 1995년 NIPS workshop에서 "Learning to learn"이라는 주제로 소개
+- 2. Domain Adaptation : knowledge transfer
+- 3. Transfer learning
+
+
 ![](http://nmhkahn.github.io/assets/CNN-Practice/vggnet.png)
 
 위 이미지와 같은 VGGNet을 어떤 도메인에 사용해야 할 경우가 있다고 생각해보자. 맨땅에 VGGNet을 학습시키기 위해서는 매우매우 많은 데이터가 필요하고, 학습하는데 걸리는 시간도 매우 긴 것은 사실이다 (2~3주 걸린 것으로 알고 있다). 하지만 VGGNet의 pre-train된 모델을 구할 수 있다면 (Caffe model zoo) 이를 갖다가 사용하면 문제가 매우 쉬워진다.
@@ -45,3 +51,6 @@ fine-tune을 할 때 한가지 팁은 새로 추가한 레이어의 learning_rat
 - A3C는 이전지식이 지워지지 않도록 이전과제의 최적경로가 수정되지 않도록 함.
 
 > 출처 : [미래금융연구센터](http://www.kcft.or.kr/2017/02/2120)
+
+---
+[A Survey on Transfer Learning - SJ Pan et al. 2010](https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf)
