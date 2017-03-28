@@ -47,13 +47,31 @@ Pool     ->(?, 14, 14, 32)
 - FC 레이어: 입력값 7x7x64 -> 출력값 256
 
 ## 4. RNN 설계
+```
+1. rnn_cell = rnn_cell.BasicRNNCell(rnn_size)
+2. state = tf.zeros([batch_size, rnn_cell.state_size])
+3. X_split = tf.split(0,time_step_size, x_data)
+4. outputs, state = rnn.rnn(rnn_cell, X_split, state)
+```
 
-tf.RNN에서 hidden layer == output으로 보기 때문에 지금 예시같은 경우에는 
+> 신 버젼 변경 rnn_cell->tf.nn.rnn_cell / rnn.rnn->tf.nn.rnn﻿
 
-
+### 4.1 셀 정의 
 `rnn_cell=tf.nn.rnn_cell.BasicRNNCell(num_units=num_units)`
+- tf.RNN에서 hidden layer == output으로 보기 때문에 지금 예시같은 경우에는 
 - 여기서 num_units는 그냥 뉴럴넷에서 히든레이어 노드 수라고 보면됩니다, h,e,l,o니까 4개 또는 length입니다
 
+### 4.2 Initial state
+`hidden_state_initial=rnn_cell.zero_state(batch_size,dtype=tf.float32)`
+- 또한 RNN은 t=0을 시작이라고 했을때 t=-1일때의 initial state가 필요하기 때문에 셀의 크기에 맞춰 다 0으로 초기화 해놓습니다
+- 또한 지금 input_x는 4x4 행렬인데 이를 1x4씩 시간에 따라 넣어줘야하기 때문에 tf.split(split_dim, num_split, value, name='split')
+    - split_dim 기준으로 num_split 등분해주는 함수입니다
 
+
+### 4.3 RNN정의 
+` output, state = rnn.rnn(rnn_cell, X-Split, state)
+- 각셀을 옆으로 몇개(X-Split) 이어서 구성할것인지 정의 (=Time Stamp)
+
+tf.Tensor 'splilt:0 shape=(배치사이즈, 단어수) dtype=float32
 
 ## 5. GAN 설계 
