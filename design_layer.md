@@ -47,12 +47,14 @@ Pool     ->(?, 14, 14, 32)
 - FC 레이어: 입력값 7x7x64 -> 출력값 256
 
 ## 4. RNN 설계
+
 ```
 1. rnn_cell = rnn_cell.BasicRNNCell(rnn_size)
 2. state = tf.zeros([batch_size, rnn_cell.state_size])
 3. X_split = tf.split(0,time_step_size, x_data)
 4. outputs, state = rnn.rnn(rnn_cell, X_split, state)
 ```
+
 
 > 신 버젼 변경 rnn_cell->tf.nn.rnn_cell / rnn.rnn->tf.nn.rnn﻿
 
