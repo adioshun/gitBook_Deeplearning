@@ -48,5 +48,12 @@ Pool     ->(?, 14, 14, 32)
 
 ## 4. RNN 설계
 
+tf.RNN에서 hidden layer == output으로 보기 때문에 지금 예시같은 경우에는 
+
+
+`rnn_cell=tf.nn.rnn_cell.BasicRNNCell(num_units=num_units)`
+- 여기서 num_units는 그냥 뉴럴넷에서 히든레이어 노드 수라고 보면됩니다, h,e,l,o니까 4개 또는 length입니다
+
+
 
 ## 5. GAN 설계 
