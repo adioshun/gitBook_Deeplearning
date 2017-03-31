@@ -3,7 +3,16 @@
 > 출처 : [KIM BEOMSU 블로그](https://shuuki4.wordpress.com/2016/01/13/batch-normalization-설명-및-구현/)
 > 참고 : [번역_Batch Normalization (ICML 2015)](http://sanghyukchun.github.io/88/)
 
-##### 개요 
+![](http://spawk.fish/images/posts/2016-02/policy-network/adapter.png)
+
+## 1. 개요 
+각층의 활성화를 적당히 퍼트리도록 강제하는 기법 
+
+- 장점1 : 학습 속도 개선
+- 장점2 : 초기값에 크게 의존하지 않는다. (초기값 선택의 문제 해결)
+- 장점3 : 오버피팅을 억제 (드랍아웃등의 필요성 감소)
+
+> 보통 활성함수 앞에 위치, 활성함수 뒤에 위치하는 방법도 연구중 
 
 * 기본적으로 Gradient Vanishing / Gradient Exploding 이 일어나지 않도록 하는 아이디어 중의 하나이다.
 * 기존 해결법
