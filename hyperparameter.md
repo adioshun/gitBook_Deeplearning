@@ -11,3 +11,10 @@
 
 ## 1. 직관에 의한 방법 
 - 반복 수행을 통해서 범위를 줄여 나감.  
+
+
+
+## 2. 베이즈 최적화 
+- 참고 : Practical bayesian optimization of machine learning algorithm
+
+  
