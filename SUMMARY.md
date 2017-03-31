@@ -24,4 +24,5 @@
 * [Overfitting](optimization.md)
 * [ref1\_다양한 네트워크 모델](variable_nn.md)
 * [ref2\_학습 성능 높이는 법](ref2_.md)
+* [Hyper\_Parameter](hyperparameter.md)
 
