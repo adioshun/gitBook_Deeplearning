@@ -7,9 +7,7 @@
     
 
 
-## 1. Regularizaion
-
-### 1.1 Weight Decay(가중치 감쇠)
+## 1. 규제화 방법 #1 : Weight Decay(가중치 감쇠)
 * 가중치에 어떤 제약을 가하는것
     * 학습시 w에 대한 자유도 제약
     * weight에 너무 큰값 주지 않기 (큰값 = 구부려짐 커짐)
@@ -25,14 +23,14 @@
 TF코드 `l2reg=0.001*tf.reduce_sum(tf.square(w))`
 ```
 
-### 1.2 가중치 상한 
+## 2. 규제화 방법 #2 : 가중치 상한 
 * 가중치 값의 상한을 통해 가중치를 제약하는 방법
 * 가중치 감쇠보다 나은 성능 보임 
 * Dropout 과 같이 사용 가능 
 
 
 
-### 1.3 Dropout 
+## 3. 규제화 방법 #3 : Dropout 
 ![](/assets/dropout.PNG)
 * 네트워크의 일부만 사용하여서 학습[1] 
 * (조심) Training 시에만 dropout_rate를 `~0.9`미만으로 적용하고, Evaluation 할때는 dropout_rate를 `1`로 적용
