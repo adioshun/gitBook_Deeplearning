@@ -76,6 +76,7 @@ https://arxiv.org/abs/1702.03275
 [^1]: Internal Covariance Shift: Network의 각 층이나 Activation 마다 input의 distribution이 달라지는 현상
 [^2]: Whitening : 기본적으로 들어오는 input의 feature들을 uncorrelated 하게 만들어주고, 각각의 variance를 1로 만들어주는 작업 
 
+- [Where do I call the BatchNormalization function in Keras?](http://stackoverflow.com/questions/34716454/where-do-i-call-the-batchnormalization-function-in-keras)
 
 
 
