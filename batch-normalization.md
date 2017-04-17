@@ -79,6 +79,11 @@ https://arxiv.org/abs/1702.03275
 - [Where do I call the BatchNormalization function in Keras?](http://stackoverflow.com/questions/34716454/where-do-i-call-the-batchnormalization-function-in-keras)
 
 
+[참고코드](https://www.facebook.com/groups/TensorFlowKR/permalink/447827285558335/)
+
+
+
+
 
 
 
