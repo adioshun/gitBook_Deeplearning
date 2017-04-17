@@ -5,21 +5,6 @@
 
 > [구현코드](https://www.facebook.com/groups/TensorFlowKR/permalink/447827285558335/)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![](http://spawk.fish/images/posts/2016-02/policy-network/adapter.png)
 
 ## 1. 개요 
