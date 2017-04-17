@@ -3,6 +3,23 @@
 > 출처 : [KIM BEOMSU 블로그](https://shuuki4.wordpress.com/2016/01/13/batch-normalization-설명-및-구현/)
 > 참고 : [번역_Batch Normalization (ICML 2015)](http://sanghyukchun.github.io/88/)
 
+- [구현코드](https://www.facebook.com/groups/TensorFlowKR/permalink/447827285558335/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![](http://spawk.fish/images/posts/2016-02/policy-network/adapter.png)
 
 ## 1. 개요 
@@ -78,8 +95,6 @@ https://arxiv.org/abs/1702.03275
 
 - [Where do I call the BatchNormalization function in Keras?](http://stackoverflow.com/questions/34716454/where-do-i-call-the-batchnormalization-function-in-keras)
 
-
-[참고코드](https://www.facebook.com/groups/TensorFlowKR/permalink/447827285558335/)
 
 
 
