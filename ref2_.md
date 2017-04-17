@@ -82,6 +82,8 @@
 
 > 참고 : 딥러닝 제대로 시작하기 35P
 
+> [텐서플로우 배치 처리](http://bcho.tistory.com/1170)
+
 ---
 * [Improving the way neural networks learn](http://neuralnetworksanddeeplearning.com/chap3.html)
 
