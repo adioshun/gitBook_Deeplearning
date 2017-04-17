@@ -3,7 +3,7 @@
 > 출처 : [KIM BEOMSU 블로그](https://shuuki4.wordpress.com/2016/01/13/batch-normalization-설명-및-구현/)
 > 참고 : [번역_Batch Normalization (ICML 2015)](http://sanghyukchun.github.io/88/)
 
-- [구현코드](https://www.facebook.com/groups/TensorFlowKR/permalink/447827285558335/)
+> [구현코드](https://www.facebook.com/groups/TensorFlowKR/permalink/447827285558335/)
 
 
 
