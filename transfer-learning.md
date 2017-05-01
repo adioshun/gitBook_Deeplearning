@@ -50,6 +50,18 @@ fine-tune을 할 때 한가지 팁은 새로 추가한 레이어의 learning_rat
 1.  시뮬레이션을 통한 학습 : Objects in the simulation and the source look different
     - eg) 무인자동차 운전 (Self Driving Car)
 
+2. Adapting to new domains: 
+
+3. Transferring knowledge across language
+
+# Transfer Learning Methods
+- Using pre-trained CNN features
+- Learning domain-invariant representations
+- Making representations more similar
+- Confusing domains
+
+
+> 출처 : http://sebastianruder.com/transfer-learning/index.html
 
 ####  PathNet
 인공지능은 전이학습을 통해 이전의 학습에서 배운 지식을 완전히 새로운 과제에 활용할 수 있음.
