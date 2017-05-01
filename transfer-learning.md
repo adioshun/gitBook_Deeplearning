@@ -12,8 +12,6 @@
 - 2. Domain Adaptation : knowledge transfer
 - 3. Transfer learning
 
-<img id="image_canv" src="http://nmhkahn.github.io/assets/CNN-Practice/vggnet.png" rotate="70">
-
 ![](http://nmhkahn.github.io/assets/CNN-Practice/vggnet.png)
 
 위 이미지와 같은 VGGNet을 어떤 도메인에 사용해야 할 경우가 있다고 생각해보자. 맨땅에 VGGNet을 학습시키기 위해서는 매우매우 많은 데이터가 필요하고, 학습하는데 걸리는 시간도 매우 긴 것은 사실이다 (2~3주 걸린 것으로 알고 있다). 하지만 VGGNet의 pre-train된 모델을 구할 수 있다면 (Caffe model zoo) 이를 갖다가 사용하면 문제가 매우 쉬워진다.
@@ -34,6 +32,23 @@ fine-tune을 할 때 한가지 팁은 새로 추가한 레이어의 learning_rat
 
 
 > 출처 : http://nmhkahn.github.io/CNN-Practice
+
+# Transfer Learning Scenarios
+
+1. XS≠XTXS≠XT. The feature spaces of the source and target domain are different, e.g. the documents are written in two different languages. In the context of natural language processing, this is generally referred to as cross-lingual adaptation.
+
+2. P(XS)≠P(XT)P(XS)≠P(XT). The marginal probability distributions of source and target domain are different, e.g. the documents discuss different topics. This scenario is generally known as domain adaptation.
+
+3. YS≠YTYS≠YT. The label spaces between the two tasks are different, e.g. documents need to be assigned different labels in the target task. In practice, this scenario usually occurs with scenario 4, as it is extremely rare for two different tasks to have different label spaces, but exactly the same conditional probability distributions.
+
+4. P(YS|XS)≠P(YT|XT)P(YS|XS)≠P(YT|XT). The conditional probability distributions of the source and target tasks are different, e.g. source and target documents are unbalanced with regard to their classes. This scenario is quite common in practice and approaches such as over-sampling, under-sampling, or SMOTE are widely used.
+
+> 출처 : http://sebastianruder.com/transfer-learning/index.html
+
+# 적용 분야 
+
+1.  시뮬레이션을 통한 학습 : Objects in the simulation and the source look different
+    - eg) 무인자동차 운전 (Self Driving Car)
 
 
 ####  PathNet
