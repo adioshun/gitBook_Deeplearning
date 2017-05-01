@@ -2,6 +2,8 @@
 
 만약 이미지셋이 100만개보다 적다면 pre-train 모델을 사용하라!!!
 
+
+
 ![](http://sebastianruder.com/content/images/2017/03/andrew_ng_drivers_ml_success-1.png)
 
 > "Transfer learning will be the next driver of ML success", Andrew NG, NIPS 2016
@@ -39,6 +41,8 @@ Since modern ConvNets take 2-3 weeks to train across multiple GPUs on ImageNet, 
 
 > 출처 : http://cs231n.github.io/transfer-learning, [[번역]](http://ishuca.tistory.com/entry/CS231n-Transfer-Learning-and-Finetuning-Convolutional-Neural-Networks-%ED%95%9C%EA%B5%AD%EC%96%B4-%EB%B2%88%EC%97%AD)
 
+> CIFAR10의 60,000개의 데이터는 많다고 판단, CIFAR10 & ImageNet는 같은 도메인이라고 판단
+
 ### 1. 도메인이 기존 데이터셋과 비슷하고, 데이터가 적다
 끝 레이어(top layer)에 도메인에 맞는 레이어를 추가하고 추가한 레이어만 학습한다.
 
@@ -51,6 +55,7 @@ Since modern ConvNets take 2-3 weeks to train across multiple GPUs on ImageNet, 
 
 - 추가 데이터가 생긴것과 비슷
 - 더 많은 자료를 가졌기 때문에, 전체 망을 통해 Fine-tune을 시도한다면 과적합 없는 더 신뢰를 가질 수 있다.
+- More High layer의 일부를 적절 제거 한후 새로 합습 한다. (FC 무조건 재 학습)
 
     
 ### 3. 도메인이 기존 데이터셋과 매우 다르고, 데이터가 적다
