@@ -35,6 +35,11 @@ fine-tune을 할 때 한가지 팁은 새로 추가한 레이어의 learning_rat
 
 # Transfer Learning Scenarios
 
+## 도메인이 기존 데이터셋과 비슷하고, 데이터가 적다
+- 끝 레이어(top layer)에 도메인에 맞는 레이어를 추가하고 추가한 레이어만 학습한다.
+
+
+
 1. XS≠XTXS≠XT. The feature spaces of the source and target domain are different, e.g. the documents are written in two different languages. In the context of natural language processing, this is generally referred to as cross-lingual adaptation.
 
 2. P(XS)≠P(XT)P(XS)≠P(XT). The marginal probability distributions of source and target domain are different, e.g. the documents discuss different topics. This scenario is generally known as domain adaptation.
