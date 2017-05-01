@@ -1,5 +1,9 @@
 # Transfer Learning
 
+만약 이미지셋이 100만개보다 적다면 pre-train 모델을 사용하라!!!
+
+
+
 ## 역사??
 - 1. 1995년 NIPS workshop에서 "Learning to learn"이라는 주제로 소개
 - 2. Domain Adaptation : knowledge transfer
@@ -23,7 +27,7 @@ fine-tune을 할 때 한가지 팁은 새로 추가한 레이어의 learning_rat
 - 도메인이 기존 데이터셋과 매우 다르고, 데이터가 많다 : 많은 레이어를 fine-tune 한다.
 
 뉴럴넷의 얕은 레이어(입력 이미지와 가까운 레이어)는 edge나 texture를 검출하는 등의 역할을 하는 이미지에 대해 매우 포괄적으로 사용 가능한 레이어이다. 반면에 깊은 레이어는 학습에 사용된 데이터셋에 specfic하기 때문에 얕은 레이어도 fine-tune하면 물론 좋지만, 꼭 그럴 필요는 없다.
-마지막으로 transfer learning에 대해 요약하면, 만약 이미지셋이 100만개보다 적다면 pre-train 모델을 사용하라 로 요약할 수 있겠다.
+
 
 > 출처 : http://nmhkahn.github.io/CNN-Practice
 
