@@ -7,13 +7,12 @@
 > "Transfer learning will be the next driver of ML success", Andrew NG, NIPS 2016
 
 
-
-
 ## 역사??
 - 1. 1995년 NIPS workshop에서 "Learning to learn"이라는 주제로 소개
 - 2. Domain Adaptation : knowledge transfer
 - 3. Transfer learning
 
+<img id="image_canv" src="http://nmhkahn.github.io/assets/CNN-Practice/vggnet.png" rotate="180">
 
 ![](http://nmhkahn.github.io/assets/CNN-Practice/vggnet.png)
 
