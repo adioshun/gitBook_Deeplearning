@@ -23,26 +23,37 @@ fine-tune을 할 때 한가지 팁은 새로 추가한 레이어의 learning_rat
 
 뉴럴넷의 얕은 레이어(입력 이미지와 가까운 레이어)는 edge나 texture를 검출하는 등의 역할을 하는 이미지에 대해 매우 포괄적으로 사용 가능한 레이어이다. 반면에 깊은 레이어는 학습에 사용된 데이터셋에 specfic하기 때문에 얕은 레이어도 fine-tune하면 물론 좋지만, 꼭 그럴 필요는 없다.
 
-# Transfer Learning Scenarios
+## Transfer Learning Scenarios 분류
+
+### 1. ConvNet as fixed feature extractor
+Take a ConvNet pretrained on ImageNet, remove the last fully-connected layer (this layer’s outputs are the 1000 class scores for a different task like ImageNet), then treat the rest of the ConvNet as a fixed feature extractor for the new dataset. In an AlexNet, this would compute a 4096-D vector for every image that contains the activations of the hidden layer immediately before the classifier. We call these features CNN codes. It is important for performance that these codes are ReLUd (i.e. thresholded at zero) if they were also thresholded during the training of the ConvNet on ImageNet (as is usually the case). Once you extract the 4096-D codes for all images, train a linear classifier (e.g. Linear SVM or Softmax classifier) for the new dataset.
+
+### 2. Fine-tuning the ConvNet
+The second strategy is to not only replace and retrain the classifier on top of the ConvNet on the new dataset, but to also fine-tune the weights of the pretrained network by continuing the backpropagation. It is possible to fine-tune all the layers of the ConvNet, or it’s possible to keep some of the earlier layers fixed (due to overfitting concerns) and only fine-tune some higher-level portion of the network. This is motivated by the observation that the earlier features of a ConvNet contain more generic features (e.g. edge detectors or color blob detectors) that should be useful to many tasks, but later layers of the ConvNet becomes progressively more specific to the details of the classes contained in the original dataset. In case of ImageNet for example, which contains many dog breeds, a significant portion of the representational power of the ConvNet may be devoted to features that are specific to differentiating between dog breeds.
+
+### 3. Pretrained models
+Since modern ConvNets take 2-3 weeks to train across multiple GPUs on ImageNet, it is common to see people release their final ConvNet checkpoints for the benefit of others who can use the networks for fine-tuning. For example, the Caffe library has a Model Zoo where people share their network weights.
+
+## Transfer Learning Scenarios 결정 기준 
 > 출처 : http://nmhkahn.github.io/CNN-Practice
 
 > 출처 : http://cs231n.github.io/transfer-learning, [[번역]](http://ishuca.tistory.com/entry/CS231n-Transfer-Learning-and-Finetuning-Convolutional-Neural-Networks-%ED%95%9C%EA%B5%AD%EC%96%B4-%EB%B2%88%EC%97%AD)
 
-## 1. 도메인이 기존 데이터셋과 비슷하고, 데이터가 적다
+### 1. 도메인이 기존 데이터셋과 비슷하고, 데이터가 적다
 끝 레이어(top layer)에 도메인에 맞는 레이어를 추가하고 추가한 레이어만 학습한다.
 
 - 데이터양이 적기 때문에 Fine Tune을 할경우 Overfitting될 우려가 있다. 
 - 데이터가 기본 데이터셋과 비슷하므로 ConvNet의 Higher-Lever의 특징이 비슷하다고 가정 할수 있음 
 - [결론] train a linear classifier on the CNN codes.
 
-## 2. 도메인이 기존 데이터셋과 비슷하고, 데이터가 많다
+### 2. 도메인이 기존 데이터셋과 비슷하고, 데이터가 많다
 추가한 레이어와 몇개 레이어를 fine-tune 한다.
 
 - 추가 데이터가 생긴것과 비슷
 - 더 많은 자료를 가졌기 때문에, 전체 망을 통해 Fine-tune을 시도한다면 과적합 없는 더 신뢰를 가질 수 있다.
 
     
-## 3. 도메인이 기존 데이터셋과 매우 다르고, 데이터가 적다
+### 3. 도메인이 기존 데이터셋과 매우 다르고, 데이터가 적다
 큰일이다…..
 
 - 데이터가 적기 때문에 only train a linear classifier하는것이 최선이다. 
@@ -51,14 +62,14 @@ fine-tune을 할 때 한가지 팁은 새로 추가한 레이어의 learning_rat
     - 비추 : train the classifier form the top of the network(=more dataset-specific features)
 
 
-## 4. 도메인이 기존 데이터셋과 매우 다르고, 데이터가 많다
+### 4. 도메인이 기존 데이터셋과 매우 다르고, 데이터가 많다
 많은 레이어를 fine-tune 한다.
 
 - 충분한 데이터가 있으므로 그냥 처음부터 학습 하는게 좋을수 있다. 
 - 그러나 현실에서는 전체 층에 대해서 Fine-Tune을 수행 한다. 
 
 ---
-1. XS≠XTXS≠XT. The feature spaces of the source and target domain are different, e.g. the documents are written in two different languages. In the context of natural language processing, this is generally referred to as cross-lingual adaptation.
+1. [도메인이 기존 데이터셋과 매우 다르]XS≠XTXS≠XT. The feature spaces of the source and target domain are different, e.g. the documents are written in two different languages. In the context of natural language processing, this is generally referred to as cross-lingual adaptation.
 
 2. P(XS)≠P(XT)P(XS)≠P(XT). The marginal probability distributions of source and target domain are different, e.g. the documents discuss different topics. This scenario is generally known as domain adaptation.
 
@@ -87,6 +98,10 @@ fine-tune을 할 때 한가지 팁은 새로 추가한 레이어의 learning_rat
 
 
 > 출처 : http://sebastianruder.com/transfer-learning/index.html
+
+# Trasfer Learing 제약 
+- 함부로 기존 네트워크를 변경 할수 없다. 하지만 일부 항목들은 가능한다(eg. 이미지 크기)
+- Learging rate를 기본의 값보다 작게 가져라 [[출처]](http://ishuca.tistory.com/entry/CS231n-Transfer-Learning-and-Finetuning-Convolutional-Neural-Networks-%ED%95%9C%EA%B5%AD%EC%96%B4-%EB%B2%88%EC%97%AD)
 
 ####  PathNet
 인공지능은 전이학습을 통해 이전의 학습에서 배운 지식을 완전히 새로운 과제에 활용할 수 있음.
