@@ -21,29 +21,43 @@
 도메인의 데이터셋이 적당히 있다면 추가한 레이어와 그 위 몇개 레이어를 (그 위 maxpool과 conv 2개 정도?) fine-tune한다. 데이터가 많으면 많을 수록 fine-tune하는 레이어를 늘려도 괜찮고 데이터가 꽤 많으면 모든 레이어를 학습시키는 것도 고려할 수 있다.
 fine-tune을 할 때 한가지 팁은 새로 추가한 레이어의 learning_rate는 기존 네트워크에서 사용한 것 보다 10배 작게, 중간 레이어들은 100배 작게 learning_rate를 사용하는 게 좋다고 한다.
 
-정리하자면 다음과 같다.
-
-- 도메인이 기존 데이터셋과 비슷하고, 데이터가 적다 : 끝 레이어(top layer)에 도메인에 맞는 레이어를 추가하고 추가한 레이어만 학습한다.
-- 도메인이 기존 데이터셋과 비슷하고, 데이터가 많다 : 추가한 레이어와 몇개 레이어를 fine-tune 한다.
-- 도메인이 기존 데이터셋과 매우 다르고, 데이터가 적다 : 큰일이다…..
-- 도메인이 기존 데이터셋과 매우 다르고, 데이터가 많다 : 많은 레이어를 fine-tune 한다.
-
 뉴럴넷의 얕은 레이어(입력 이미지와 가까운 레이어)는 edge나 texture를 검출하는 등의 역할을 하는 이미지에 대해 매우 포괄적으로 사용 가능한 레이어이다. 반면에 깊은 레이어는 학습에 사용된 데이터셋에 specfic하기 때문에 얕은 레이어도 fine-tune하면 물론 좋지만, 꼭 그럴 필요는 없다.
 
-
+# Transfer Learning Scenarios
 > 출처 : http://nmhkahn.github.io/CNN-Practice
 
-# Transfer Learning Scenarios
+> 출처 : http://cs231n.github.io/transfer-learning, [[번역]](http://ishuca.tistory.com/entry/CS231n-Transfer-Learning-and-Finetuning-Convolutional-Neural-Networks-%ED%95%9C%EA%B5%AD%EC%96%B4-%EB%B2%88%EC%97%AD)
 
 ## 1. 도메인이 기존 데이터셋과 비슷하고, 데이터가 적다
-- 끝 레이어(top layer)에 도메인에 맞는 레이어를 추가하고 추가한 레이어만 학습한다.
+끝 레이어(top layer)에 도메인에 맞는 레이어를 추가하고 추가한 레이어만 학습한다.
 
-## 2. 도메인이 기존 데이터셋과 비슷하고, 데이터가 많다 : 추가한 레이어와 몇개 레이어를 fine-tune 한다.
-## 3. 도메인이 기존 데이터셋과 매우 다르고, 데이터가 적다 : 큰일이다…..
-## 4. 도메인이 기존 데이터셋과 매우 다르고, 데이터가 많다 : 많은 레이어를 fine-tune 한다.
+- 데이터양이 적기 때문에 Fine Tune을 할경우 Overfitting될 우려가 있다. 
+- 데이터가 기본 데이터셋과 비슷하므로 ConvNet의 Higher-Lever의 특징이 비슷하다고 가정 할수 있음 
+- [결론] train a linear classifier on the CNN codes.
+
+## 2. 도메인이 기존 데이터셋과 비슷하고, 데이터가 많다
+추가한 레이어와 몇개 레이어를 fine-tune 한다.
+
+- 추가 데이터가 생긴것과 비슷
+- 더 많은 자료를 가졌기 때문에, 전체 망을 통해 Fine-tune을 시도한다면 과적합 없는 더 신뢰를 가질 수 있다.
+
+    
+## 3. 도메인이 기존 데이터셋과 매우 다르고, 데이터가 적다
+큰일이다…..
+
+- 데이터가 적기 때문에 only train a linear classifier하는것이 최선이다. 
+- 데이터가 기존 데이터셋과 다르므로 
+    - 추천 : train the SVM classifier from activations somewhere earlier in the network
+    - 비추 : train the classifier form the top of the network(=more dataset-specific features)
 
 
+## 4. 도메인이 기존 데이터셋과 매우 다르고, 데이터가 많다
+많은 레이어를 fine-tune 한다.
 
+- 충분한 데이터가 있으므로 그냥 처음부터 학습 하는게 좋을수 있다. 
+- 그러나 현실에서는 전체 층에 대해서 Fine-Tune을 수행 한다. 
+
+---
 1. XS≠XTXS≠XT. The feature spaces of the source and target domain are different, e.g. the documents are written in two different languages. In the context of natural language processing, this is generally referred to as cross-lingual adaptation.
 
 2. P(XS)≠P(XT)P(XS)≠P(XT). The marginal probability distributions of source and target domain are different, e.g. the documents discuss different topics. This scenario is generally known as domain adaptation.
@@ -53,6 +67,8 @@ fine-tune을 할 때 한가지 팁은 새로 추가한 레이어의 learning_rat
 4. P(YS|XS)≠P(YT|XT)P(YS|XS)≠P(YT|XT). The conditional probability distributions of the source and target tasks are different, e.g. source and target documents are unbalanced with regard to their classes. This scenario is quite common in practice and approaches such as over-sampling, under-sampling, or SMOTE are widely used.
 
 > 출처 : http://sebastianruder.com/transfer-learning/index.html
+
+---
 
 # 적용 분야 
 
