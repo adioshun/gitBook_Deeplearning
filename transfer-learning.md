@@ -12,7 +12,7 @@
 - 2. Domain Adaptation : knowledge transfer
 - 3. Transfer learning
 
-<img id="image_canv" src="http://nmhkahn.github.io/assets/CNN-Practice/vggnet.png" rotate="360">
+<img id="image_canv" src="http://nmhkahn.github.io/assets/CNN-Practice/vggnet.png" rotate="70">
 
 ![](http://nmhkahn.github.io/assets/CNN-Practice/vggnet.png)
 
