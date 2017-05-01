@@ -107,6 +107,7 @@ Since modern ConvNets take 2-3 weeks to train across multiple GPUs on ImageNet, 
 # Trasfer Learing 제약 
 - 함부로 기존 네트워크를 변경 할수 없다. 하지만 일부 항목들은 가능한다(eg. 이미지 크기)
 - Learging rate를 기본의 값보다 작게 가져라 [[출처]](http://ishuca.tistory.com/entry/CS231n-Transfer-Learning-and-Finetuning-Convolutional-Neural-Networks-%ED%95%9C%EA%B5%AD%EC%96%B4-%EB%B2%88%EC%97%AD)
+- FC만 변경하여 학습 해도 시간이 많이 걸린다면 [Bottlenecking](https://medium.com/@galen.ballew/transferlearning-b65772083b47)기법 적용
 
 ####  PathNet
 인공지능은 전이학습을 통해 이전의 학습에서 배운 지식을 완전히 새로운 과제에 활용할 수 있음.
