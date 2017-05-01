@@ -1,3 +1,7 @@
+![](http://sebastianruder.com/content/images/2017/03/andrew_ng_drivers_ml_success-1.png)
+
+> "Transfer learning will be the next driver of ML success", Andrew NG, NIPS 2016
+
 # Transfer Learning
 
 만약 이미지셋이 100만개보다 적다면 pre-train 모델을 사용하라!!!
