@@ -50,7 +50,9 @@ Since modern ConvNets take 2-3 weeks to train across multiple GPUs on ImageNet, 
 - 데이터가 기본 데이터셋과 비슷하므로 ConvNet의 Higher-Lever의 특징이 비슷하다고 가정 할수 있음 
 - [결론] train a linear classifier on the CNN codes.
 
+
 ```
+
 for layer in model.layers:
    layer.trainable = False
 #Now we will be training only the classifiers (FC layers)
