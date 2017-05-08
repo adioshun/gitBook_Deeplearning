@@ -74,6 +74,8 @@ https://arxiv.org/abs/1702.03275
 3. [Batch Normalization 설명 및 구현](https://shuuki4.wordpress.com/2016/01/13/batch-normalization-설명-및-구현/)
 
 
+[머신러닝 깊이 파기-batch normalization](http://eyeofneedle.tistory.com/category/머신러닝%20깊이%20파기)
+
 ---
 [^1]: Internal Covariance Shift: Network의 각 층이나 Activation 마다 input의 distribution이 달라지는 현상
 [^2]: Whitening : 기본적으로 들어오는 input의 feature들을 uncorrelated 하게 만들어주고, 각각의 variance를 1로 만들어주는 작업 
