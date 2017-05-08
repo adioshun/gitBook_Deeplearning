@@ -10,6 +10,21 @@
 
 정규화는 데이터의 진폭을 제거 하여 분포의 모양에 초점을 맞추는 것 Normalization is performed on data to remove amplitude variation and only focus on the underlying distribution shape.
 
+
+### 정규화 방법 
+
+> 출처 : [A.I. SERIES PART 1 - NORMALIZING DATA]](https://www.skcript.com/svr/normalizing-data-artificial-intelligence/)
+
+
+1. Min Max Normalization
+2. Max Normalization
+3. L1 Normalization (Least Absolute Deviation or LAD)
+4. L2 Normalization (Least Square Error or LSE)
+5. Z-Score
+
+
+
+
 ## 2. 표준화
 ![](/assets/stamd.png)
 * 평균을 기준으로 얼마나 떨어져 있는지 관찰
