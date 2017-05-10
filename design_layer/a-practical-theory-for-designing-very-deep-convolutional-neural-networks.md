@@ -40,6 +40,16 @@ The objective is __maximizing the depth of the target convolutional neural netwo
 
 2. the receptive field of the topmost convolutional layer in the feature-level should no larger than image size.
 
-> CNN은 설계는 깊이는 최대화 하면서 2가지 제약을 만족(subjecting)하는 constrained optimization problem과 같다. 
+> CNN은 설계는 깊이는 최대화 하면서 2가지 제약을 만족(subjecting)하는 **constrained optimization problem**과 같다. 
 
+It is worth noting that our theory is task independent. The architecture of the designed convolutional neural network only depends on the raw image size and the fixed filter size.
+
+> 제안 이론은 Task Independent하다는 점에서 주목할만 하다. Dependent는 `raw 이미지 크기`와 고정된 `필터 크기` 뿐이다. 
+
+그 증거는 최근의 VGG, GooleNet이 여러 Task에 의존없이 좋은 성능을 보이는 것이다. (제안 이론과 비슷한 하므로)
+
+
+Of course, we believe better architectures can be designed by incorporating task specific knowledge, such as the `cyclic pooling` and `rolling network`
+
+> 물론 incorporating task specific knowledge로 설계된 아키텍쳐는 더 좋은 성과를 낼것이다. eg. `cyclic pooling` and `rolling network`
 
