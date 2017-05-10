@@ -53,3 +53,12 @@ Of course, we believe better architectures can be designed by incorporating task
 
 > 물론 incorporating task specific knowledge로 설계된 아키텍쳐는 더 좋은 성과를 낼것이다. eg. `cyclic pooling` and `rolling network`
 
+## The design of classifier level
+
+- 기본적 방법 : The common design in classifier level is two fully connected layers with dropout on each of them. 
+    - However we found this design is prone to over-fitting if the training set is not sufficiently large.
+
+> two fully connected layers + dropout를 이용하는 방법이다. 하지만, 이 방법은 데이터가 적으면 오버피팅되는 경향이 있다. 
+
+
+
