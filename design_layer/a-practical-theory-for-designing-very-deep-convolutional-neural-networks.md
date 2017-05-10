@@ -28,8 +28,8 @@ In this work, we propose a practical theory for designing very deep convolutiona
 |Classifier Level |Feature Level|
 |-|-|
 |small feature map | 본 논문에서 다룸 |
-|Large Conv Kernel| |
-|Identical for All Nets| |
+|Large Conv Kernel|본 논문에서 다룸 |
+|Identical for All Nets|본 논문에서 다룸 |
 
 We cast(간주하다??)  the design of deep convolutional neural network into a constrained optimization problem.
 
