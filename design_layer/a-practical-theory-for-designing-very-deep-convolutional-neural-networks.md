@@ -151,3 +151,6 @@ This constraint implies that the receptive field of the top-most convolutional l
 - If the receptive field of the topmost layer is much smaller the image region, we can add one more layer to improve our objective (i.e. increase the depth) without violating the constraint. From another perspective, if the receptive field is much smaller the image size, the network will lose the opportunity to see and learn the high-level patterns/features, which is suboptimal to the performance.
 > 크기가 많이 작으면 레이어를 더 추가 하면 된다. 크기가 많이 작다는건 다른 관점에서는 네트워크가 고차원의 패턴을 학습할 기회를 잃어 버리는 것을 의미 한다. 
 
+For some tasks, there is no meaningful or discriminative patterns/features in a certain range of receptive field, thus no necessity of using many layers for learning 
+    - i.e. maximizing the depth of entire network is no longer valid.
+> tasks에 따라서 이러한 패턴에 의미가 없거나 큰 차이가 없을수 있다. 이럴경우 많은 레이어를 사용할 필요가 없다. 
