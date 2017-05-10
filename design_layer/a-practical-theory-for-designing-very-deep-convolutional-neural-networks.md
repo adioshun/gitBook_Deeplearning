@@ -58,7 +58,18 @@ Of course, we believe better architectures can be designed by incorporating task
 - 기본적 방법 : The common design in classifier level is two fully connected layers with dropout on each of them. 
     - However we found this design is prone to over-fitting if the training set is not sufficiently large.
 
-> two fully connected layers + dropout를 이용하는 방법이다. 하지만, 이 방법은 데이터가 적으면 오버피팅되는 경향이 있다. 
+> 기본적 방법 : two fully connected layers + dropout를 이용하는 방법이다. 하지만, 이 방법은 데이터가 적으면 오버피팅되는 경향이 있다. 
+
+- 제안 방법 :  it is better to...
+    1. down sample the input feature map to a small size (6x6, 7x7 or 8x8),
+    2. and then apply two 5x5 convolutional layers, 
+    3. finally max pool the feature map into a vector and dropout this vector.
+
+As kernel size is very large relative to the feature map,herein the convolutional layers are more like fully connected layers. 
+> 피쳐맵에 비하여 커널 크기가 큰데, 이로인해서 conv 레이어는 일종의 FC 레이어처럼 된다. 
+
+One perspective of understanding this design is it conduct dense sliding window test (used in VGG’s work) and aggregate the final results by max pooling.
+> 이런 설계 방식은 VGG처럼 `Dense 슬라이딩 윈도우 테스트`를 수행하고 마지막 결과를 `max pooling`하여 합친다. 
 
 
 
