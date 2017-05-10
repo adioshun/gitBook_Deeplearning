@@ -88,5 +88,11 @@ In Figure 2(b), we show a simple case when a convolutional layer fail to learn a
 
 > 그림 2(b)는 complex pattern 학습에 실패 한것을 표현하고 있음. 이 경우 filter size가 패턴 A ~ B의 간격보다 작기 때문에 발생한다. 다시 말해 필터가 A와 B의 `패턴`과 `공간적 관계(spatial relationship)`특징을 탐지 하지 한것이다. 
 
+To regain the capacity of learning, we can either use larger convolutional kernel, or cut the responses distance by half via down sampling with stride 2.
+> 해결 방법은 (1) 더 큰 filter를 사용하거나, (2)Stride2로 다운 샘플링 하여 responses간의 거리를 반으로 줄이는 것이다. 
+
+
+The odds(가능성) of the learning failure grows, as a convolutional neural network goes deep without down sampling, because the sizes of the detected patterns and their meaningful spatial relationships grows layer by layer.
+> 다운 샘플링 없이 CNN을 깊게만 하면 학습실패 확률이 증가 한다. 왜냐 하면, `detected patterns`의 크기와 패턴의 공간적 관계(spatial relationship)`의 크기가 레이어가 깊어질수록 커지기 때문이다. 
 
 
