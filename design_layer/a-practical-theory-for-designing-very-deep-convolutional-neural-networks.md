@@ -145,3 +145,4 @@ Empirically, we found adding many layers after the saturation of receptive field
 |The receptive field size of the topmost convolutional layer should be no larger than the image size|
 |최상위 Conv레이어의 receptive field size는 이미지 크기 보다 작아야 한다|
 
+
