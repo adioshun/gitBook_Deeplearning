@@ -23,6 +23,7 @@
     * small learning rate 등
 
 
+
 ###### 목적 
 * 위의 기존의 간접적인 해결법 보다는 training 하는 과정 자체를 전체적으로 안정화하여 학습 속도를 가속시킬 수 있는 근본적인 방법을 찾고싶어 했다
 * 불안정화가 일어 나는 이유 : Internal Covariance Shift[^1]
