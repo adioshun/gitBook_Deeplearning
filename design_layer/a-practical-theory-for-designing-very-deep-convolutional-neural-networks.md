@@ -80,8 +80,8 @@ The difference is that we found it is better to use large convolutional kernels 
 The functionality of a convolutional layer is composing more complex patterns from input patterns.
 > Conv레이어는 기능은 입력 패턴에선 더 복잡한 패턴을 Composing하는 것이다. 
 
-![](http://imgur.com/7OUIlY5)
-학습률(Learning Capacity)를 표현한그림. Exemplar(a)가 (b)보다 좋은 효과를 보임. `파란박스`는 Conv filter/kernel
+![](http://i.imgur.com/7OUIlY5.png)
+[학습률(Learning Capacity)를 표현한그림. Exemplar(a)가 (b)보다 좋은 효과를 보임. `파란박스`는 Conv filter/kernel]
 
 In Figure 2(b), we show a simple case when a convolutional layer fail to learn a more complex pattern. In this case, the `filter size` is smaller than the `distance between the responses of pattern A and B`, 
 - in other words, it can not detect both pattern A and B as well as their spatial relationship, therefore fail to learn the more complex pattern AB.
