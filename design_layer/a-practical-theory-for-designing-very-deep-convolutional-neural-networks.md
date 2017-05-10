@@ -117,8 +117,13 @@ $$
 ![](blob:http://imgur.com/9c83d30d-a161-4ad0-88e9-0f780461a2ba)
 [Receptive field size 도식화/ size = `matlab-style arrays`] 
 
-eg. 40: 8: 64 represents [40, 48,56, 64]. 입력 이미지 크기는 64x64
+eg. 40: 8: 64 represents [40, 48, 56, 64]. 입력 이미지 크기는 64x64
 - We subtract an annoying small constant ”1” when calculating the receptive field sizes in order to make the description and subsequent derivation more concise.
 
+> [중요] spatial relationships는 측정이 불가능하기 때문에 대신 `receptive field size`를 사용하였음. 
 
-Figure 3 shows how the receptive fields grows in an exemplar convolutional neural network.
+|the first constraint 요약|
+|-|
+|the c-value of each convolutional layer should be larger than a minimum value t. We empirically found t = 1/6 is a good lower bound of c-value for all convolutional layers in various tasks.|
+|`c-value`는 최소값 t(=1/6)보다 커야 한다|
+
