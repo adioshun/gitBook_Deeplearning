@@ -101,6 +101,7 @@ Once the spatial relationships of the majority input patterns exceed the filter 
 학습 능력을 정적으로 측정하기 위해서 `c-value` 정의 하였다. 
 
 $$
+
 c-value = \frac{Real Filter Size}{Receptive Field Size}
 
 $$
@@ -115,6 +116,7 @@ $$
 > Receptive field size는 이미지의 최대 뉴론 수이다. 
 
 ![](blob:http://imgur.com/9c83d30d-a161-4ad0-88e9-0f780461a2ba)
+
 [Receptive field size 도식화/ size = `matlab-style arrays`] 
 
 eg. 40: 8: 64 represents [40, 48, 56, 64]. 입력 이미지 크기는 64x64
