@@ -98,16 +98,28 @@ The odds(가능성) of the learning failure grows, as a convolutional neural net
 Once the spatial relationships of the majority input patterns exceed the filter size of a convolutional layer, this convolutional layer will lose its capacity of learning more complex patterns.
 > 입력 패턴 중에서 대부분의 공간적 관계(spatial relationship)가 filter size를 초과 하게 되면, 이 Conv 레이어는 학습 능력을 잃게 된다. 
 
-학습 능력을 정략적으로 측정하기 위해서 `c-value` 정의 하였다. 
-$$$
+학습 능력을 정적으로 측정하기 위해서 `c-value` 정의 하였다. 
 
+$$
 c-value = \frac{Real Filter Size}{Receptive Field Size}
 
-$$$
+$$
+- Real filter size of a k-by-k convolutional layer is k if there is no down sampling, it **doubles** after each down sampling 
+    - i.e. 2k after one down sampling and 4k after two down sampling etc. 
+
+> Real filter size는 매 다운 샘플링 시 2배 증가 한다. 
+
+- Receptive field size is defined as the `maximum size of a neuron` can see on the **raw image**.
+    - It grows proportionally as the convolutional neural network goes deep. 
+
+> Receptive field size는 이미지의 최대 뉴론 수이다. 
+
+![](blob:http://imgur.com/9c83d30d-a161-4ad0-88e9-0f780461a2ba)
+[Receptive field size 도식화] 
+
+The receptive field sizes are matlab-style arrays for clarity. 
+- eg. 40: 8: 64 represents [40, 48,56, 64]. 입력 이미지 크기는 64x64
+    - We subtract an annoying small constant ”1” when calculating the receptive field sizes in order to make the description and subsequent derivation more concise.
 
 
-
-
-To quantitatively measure the learning capacity of a con-
-volutional layer we define the c-value of a convolutional
-layer as follows.
+Figure 3 shows how the receptive fields grows in an exemplar convolutional neural network.
