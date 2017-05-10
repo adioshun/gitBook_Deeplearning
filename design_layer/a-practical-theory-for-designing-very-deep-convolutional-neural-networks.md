@@ -33,14 +33,13 @@ In this work, we propose a practical theory for designing very deep convolutiona
 
 We cast(간주하다??)  the design of deep convolutional neural network into a constrained optimization problem.
 
-> CNN은 설계는 constrained optimization problem과 같다. 
+The objective is __maximizing the depth of the target convolutional neural network__, subjecting to two constraints: 
 
-The objective is maximizing the depth of the target convolutional neural network, subjecting to two constraints: 
+1. the c-value of each layer should not be too small
+    - c-value is a metric for measuring the capacity of learning more complex patterns; 
 
-1. (1) the c-value of each layer should not be too small, c-value is a metric for mea-
-suring the capacity of learning more complex patterns; 
-the receptive field of the topmost convolutional layer in the
-feature-level should no larger than image size.
+2. the receptive field of the topmost convolutional layer in the feature-level should no larger than image size.
 
+> CNN은 설계는 깊이는 최대화 하면서 2가지 제약을 만족(subjecting)하는 constrained optimization problem과 같다. 
 
 
