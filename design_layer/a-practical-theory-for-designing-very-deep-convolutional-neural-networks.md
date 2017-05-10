@@ -115,11 +115,10 @@ $$
 > Receptive field size는 이미지의 최대 뉴론 수이다. 
 
 ![](blob:http://imgur.com/9c83d30d-a161-4ad0-88e9-0f780461a2ba)
-[Receptive field size 도식화] 
+[Receptive field size 도식화/ size = `matlab-style arrays`] 
 
-The receptive field sizes are matlab-style arrays for clarity. 
-- eg. 40: 8: 64 represents [40, 48,56, 64]. 입력 이미지 크기는 64x64
-    - We subtract an annoying small constant ”1” when calculating the receptive field sizes in order to make the description and subsequent derivation more concise.
+eg. 40: 8: 64 represents [40, 48,56, 64]. 입력 이미지 크기는 64x64
+- We subtract an annoying small constant ”1” when calculating the receptive field sizes in order to make the description and subsequent derivation more concise.
 
 
 Figure 3 shows how the receptive fields grows in an exemplar convolutional neural network.
