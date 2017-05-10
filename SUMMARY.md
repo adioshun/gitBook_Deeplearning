@@ -12,7 +12,6 @@
   * [RNN2.py](rnn/rnn2py.md)
 * [CNN](_cnn.md)
 * [오차최소화](minimum.md)
-* [Batch Normalization](batch-normalization.md)
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
 * [AutoEncoder](autoencoder.md)
   * [Autoencoder.py](autoencoder/autoencoderpy.md)
@@ -24,8 +23,4 @@
 * [Transfer Learning](transfer-learning.md)
   * [paper\_Transfer\_Learning](transfer-learning/papertransfer-learning.md)
 * [Overfitting](optimization.md)
-* [ref1\_다양한 네트워크 모델](variable_nn.md)
-* [ref2\_학습 성능 높이는 법](ref2_.md)
-  * [Normalization](ref2_/normalization.md)
-* [Hyper\_Parameter](hyperparameter.md)
 
