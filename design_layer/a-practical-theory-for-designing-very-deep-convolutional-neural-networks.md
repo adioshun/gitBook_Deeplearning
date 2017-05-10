@@ -128,7 +128,7 @@ eg. 40: 8: 64 represents [40, 48, 56, 64]. 입력 이미지 크기는 64x64
 |-|-|-|
 |The first constraint 요약|the c-value of each convolutional layer should be larger than a minimum value t. We empirically found t = 1/6 is a good lower bound of c-value for all convolutional layers in various tasks.|`c-value`는 최소값 t(=1/6)보다 커야 한다|
 
-# Necessity of learning – the second constraint
+# 3. Necessity of learning – the second constraint
 
 As the receptive field grows, new and more complex patterns are constantly emerging. In the process, we need additional layers to learn the newly emerged patterns as the receptive field grows. 
 > receptive field가 커질수록 새롭고 복잡한 패턴 역시 계속 발생 하며 이러한 패턴을 학습하기 위한 새 레이어가 필요 하다. 
@@ -157,3 +157,29 @@ For some tasks, there is no meaningful or discriminative patterns/features in a 
 > tasks에 따라서 이러한 패턴에 의미가 없거나 큰 차이가 없을수 있다. 이럴경우 많은 레이어를 사용할 필요가 없다. 
     
     - i.e. maximizing the depth of entire network is no longer valid.
+    
+    
+    
+# 4. The mathematical formulation
+
+## The formulation
+
+|기호|의미|기타|
+|-|-|-|
+|z|Image size||
+|k|Filter size||
+|t|Min c-value||
+
+The Architecture of deep model 
+
+|기호|의미|기타|
+|-|-|-|
+|n|Total number of stage||
+|$a_1$|Number of layer||
+
+eg. n=3, 
+
+
+
+
+
