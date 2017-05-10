@@ -124,10 +124,9 @@ eg. 40: 8: 64 represents [40, 48, 56, 64]. 입력 이미지 크기는 64x64
 
 > [중요] spatial relationships는 측정이 불가능하기 때문에 대신 `receptive field size`를 사용하였음. 
 
-|The first constraint 요약|
-|-|
-|the c-value of each convolutional layer should be larger than a minimum value t. We empirically found t = 1/6 is a good lower bound of c-value for all convolutional layers in various tasks.|
-|`c-value`는 최소값 t(=1/6)보다 커야 한다|
+||원문|해석|
+|-|-|-|
+|The first constraint 요약|the c-value of each convolutional layer should be larger than a minimum value t. We empirically found t = 1/6 is a good lower bound of c-value for all convolutional layers in various tasks.|`c-value`는 최소값 t(=1/6)보다 커야 한다|
 
 # Necessity of learning – the second constraint
 
@@ -140,10 +139,13 @@ However when the receptive field reach the image size (i.e. neurons have seen th
 Empirically, we found adding many layers after the saturation of receptive field does not help the performance in general, what is worse, it increase the risk of over-fitting and hurt the performance in most cases.
 > 지금까지 살펴본 봐로는 `receptive field`가 `saturation(=이미지와 같은크기?)`되면 레이어를 추가 하는것은 성능향상에 도움이 되지 않으며 오히려 오버피팅 위험 증가나 성능 저하를 가져 오기도 한다. 
 
-|The Second constraint 요약|
-|-|
-|The receptive field size of the topmost convolutional layer should be no larger than the image size|
-|최상위 Conv레이어의 receptive field size는 이미지 크기 보다 작아야 한다|
+||원문|해석|
+|-|-|-|
+|The Second constraint 요약|The receptive field size of the topmost convolutional layer should be no larger than the image size|최상위 Conv레이어의 receptive field size는 이미지 크기 보다 작아야 한다|
+
+
+
+
 
 This constraint implies that the receptive field of the top-most convolutional layer must be around the entire image region. 
 > 의미를 다시 생각해보면, 최상위 Conv레이어의 receptive field size는 entire image region와 비슷하면 되다. 
