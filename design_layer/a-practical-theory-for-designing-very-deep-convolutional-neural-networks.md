@@ -73,3 +73,20 @@ One perspective of understanding this design is it conduct dense sliding window 
 
 The difference is that we found it is better to use large convolutional kernels relative to the feature map and replace the <del>average pooling</del> with `max pooling`.
 > 제안 방식은 GoogleNet에서 영감을 얻었으며 기존 방법과 대비하여 다른점은 이 방식이 Feature map 대비 큰 conv커널을 사용하는데 좋다. Average pooling -> max Pooling을 사용하였다. 
+
+
+# 2. Capacity of learning – the first constraint
+
+The functionality of a convolutional layer is composing more complex patterns from input patterns.
+> Conv레이어는 기능은 입력 패턴에선 더 복잡한 패턴을 Composing하는 것이다. 
+
+![](http://imgur.com/7OUIlY5)
+학습률(Learning Capacity)를 표현한그림. Exemplar(a)가 (b)보다 좋은 효과를 보임. `파란박스`는 Conv filter/kernel
+
+In Figure 2(b), we show a simple case when a convolutional layer fail to learn a more complex pattern. In this case, the `filter size` is smaller than the `distance between the responses of pattern A and B`, 
+- in other words, it can not detect both pattern A and B as well as their spatial relationship, therefore fail to learn the more complex pattern AB.
+
+> 그림 2(b)는 complex pattern 학습에 실패 한것을 표현하고 있음. 이 경우 filter size가 패턴 A ~ B의 간격보다 작기 때문에 발생한다. 다시 말해 필터가 A와 B의 `패턴`과 `공간적 관계(spatial relationship)`특징을 탐지 하지 한것이다. 
+
+
+
