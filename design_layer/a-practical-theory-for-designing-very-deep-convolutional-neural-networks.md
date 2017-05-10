@@ -129,3 +129,12 @@ eg. 40: 8: 64 represents [40, 48, 56, 64]. 입력 이미지 크기는 64x64
 |the c-value of each convolutional layer should be larger than a minimum value t. We empirically found t = 1/6 is a good lower bound of c-value for all convolutional layers in various tasks.|
 |`c-value`는 최소값 t(=1/6)보다 커야 한다|
 
+# Necessity of learning – the second constraint
+
+As the receptive field grows, new and more complex patterns are constantly emerging. In the process, we need additional layers to learn the newly emerged patterns as the receptive field grows. 
+> receptive field가 커질수록 새롭고 복잡한 패턴 역시 계속 발생 하며 이러한 패턴을 학습하기 위한 새 레이어가 필요 하다. 
+
+However when the receptive field reach the image size (i.e. neurons have seen the entire image region), it stops emerging new and more complex patterns, the driven force for adding new layers no longer exists.
+> 하지만, receptive field가 계속 커져서 이미지 크기와 같아 지면(즉, neurons = image region) 더이상 새 패턴은 발생 하지 않는다. _the driven force for adding new layers no longer exists.(??)_
+_
+
