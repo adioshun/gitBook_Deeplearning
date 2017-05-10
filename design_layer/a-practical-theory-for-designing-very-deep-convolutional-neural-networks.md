@@ -4,3 +4,4 @@ we  propose  two  novel constrains in the design of deep structure to guarantee 
 
 2. Secondly, the receptive field of the topmost layer should be no larger than the image region
 
+위 두가지 제안 제약을 통해 다음이 가능하다. : we cast the task of designing deep convolutional neural network into a constrained opti-mization problem
