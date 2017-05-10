@@ -95,4 +95,19 @@ To regain the capacity of learning, we can either use larger convolutional kerne
 The odds(가능성) of the learning failure grows, as a convolutional neural network goes deep without down sampling, because the sizes of the detected patterns and their meaningful spatial relationships grows layer by layer.
 > 다운 샘플링 없이 CNN을 깊게만 하면 학습실패 확률이 증가 한다. 왜냐 하면, `detected patterns`의 크기와 패턴의 공간적 관계(spatial relationship)`의 크기가 레이어가 깊어질수록 커지기 때문이다. 
 
+Once the spatial relationships of the majority input patterns exceed the filter size of a convolutional layer, this convolutional layer will lose its capacity of learning more complex patterns.
+> 입력 패턴 중에서 대부분의 공간적 관계(spatial relationship)가 filter size를 초과 하게 되면, 이 Conv 레이어는 학습 능력을 잃게 된다. 
 
+학습 능력을 정략적으로 측정하기 위해서 `c-value` 정의 하였다. 
+$$$
+
+c-value = \frac{Real Filter Size}{Receptive Field Size}
+
+$$$
+
+
+
+
+To quantitatively measure the learning capacity of a con-
+volutional layer we define the c-value of a convolutional
+layer as follows.
