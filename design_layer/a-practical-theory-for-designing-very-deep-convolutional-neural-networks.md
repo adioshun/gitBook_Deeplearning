@@ -71,5 +71,5 @@ As kernel size is very large relative to the feature map,herein the convolutiona
 One perspective of understanding this design is it conduct dense sliding window test (used in VGG’s work) and aggregate the final results by max pooling.
 > 이런 설계 방식은 VGG처럼 `Dense 슬라이딩 윈도우 테스트`를 수행하고 마지막 결과를 `max pooling`하여 합친다. 
 
-The difference is that we found it is better to use large convolutional kernels relative to the feature map and replace the average pooling with max pooling.
+The difference is that we found it is better to use large convolutional kernels relative to the feature map and replace the <del>average pooling</del> with `max pooling`.
 > 제안 방식은 GoogleNet에서 영감을 얻었으며 기존 방법과 대비하여 다른점은 이 방식이 Feature map 대비 큰 conv커널을 사용하는데 좋다. Average pooling -> max Pooling을 사용하였다. 
