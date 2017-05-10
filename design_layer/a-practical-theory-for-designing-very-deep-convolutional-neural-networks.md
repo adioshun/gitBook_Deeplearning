@@ -115,7 +115,7 @@ $$
 
 > Receptive field size는 이미지의 최대 뉴론 수이다. 
 
-![](blob:http://imgur.com/9c83d30d-a161-4ad0-88e9-0f780461a2ba)
+![](http://i.imgur.com/bpHiA2j.png)
 
 [Receptive field size 도식화/ size = `matlab-style arrays`] 
 
