@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [기초 학습](chapter1.md)
 * [네트워크 설계](design_layer.md)
+  * [A practical theory for designing very deep convolutional neural networks](design_layer/a-practical-theory-for-designing-very-deep-convolutional-neural-networks.md)
 * [Backpropagation](backpropagation.md)
 * [ActivationFuction](activationfuction.md)
 * [Error\_function](error_function.md)
