@@ -145,4 +145,9 @@ Empirically, we found adding many layers after the saturation of receptive field
 |The receptive field size of the topmost convolutional layer should be no larger than the image size|
 |최상위 Conv레이어의 receptive field size는 이미지 크기 보다 작아야 한다|
 
+This constraint implies that the receptive field of the top-most convolutional layer must be around the entire image region. 
+> 의미를 다시 생각해보면, 최상위 Conv레이어의 receptive field size는 entire image region와 비슷하면 되다. 
+
+- If the receptive field of the topmost layer is much smaller the image region, we can add one more layer to improve our objective (i.e. increase the depth) without violating the constraint. From another perspective, if the receptive field is much smaller the image size, the network will lose the opportunity to see and learn the high-level patterns/features, which is suboptimal to the performance.
+> 크기가 많이 작으면 레이어를 더 추가 하면 된다. 크기가 많이 작다는건 다른 관점에서는 네트워크가 고차원의 패턴을 학습할 기회를 잃어 버리는 것을 의미 한다. 
 
