@@ -184,7 +184,40 @@ A recent paper (Alain & Bengio (2016)) showed in an experiment that using an ide
 |Design Pattern 9|**Normalize Layer Inputs** is another way to make a layer’s job easier|
 |-|-|
 
-Normalization of layer inputs has been shown to improve training and accuracy but the underlying reasons are not clear (Ioffe & Szegedy 2015, Ba et al. 2016, Salimans & Kingma 2016). The Batch Normalization paper (Ioffe & Szegedy 2015) attributes the benefits to handling internal covariate shift, while the authors of streaming normalization (Liao et al. 2016) express that it might be otherwise.  We feel that normalization puts all the layer’s input samples on more equal footing (analogous to a units conversion scaling), which allows back-propagation to train more effectively. 
+Normalization of layer inputs has been shown to improve training and accuracy but the underlying reasons are not clear (Ioffe & Szegedy 2015, Ba et al. 2016, Salimans & Kingma 2016). 
+> layer inputs을 Normalization하면 학습 정확도가 향상 되지만 그 원인에 대하여는 알려져 있지 않다. 
+
+The Batch Normalization paper (Ioffe & Szegedy 2015) attributes the benefits to handling internal covariate shift, while the authors of streaming normalization (Liao et al. 2016) express that it might be otherwise. 
+> 'Batch Normalization'논문의 저자는 내부 covariate shift를 조작하기 때문에 정확도 향상이 가능한것으로 보고 있으며, `streaming normalization` 논문의 저자는 다른 이유가 있을것으로 보고 있다. 
+
+
+We feel that normalization puts all the layer’s input samples on more equal footing (analogous to a units conversion scaling), which allows back-propagation to train more effectively. 
+> `normalization`은 모든 레이어의 입력 샘플들을 동일한 선상에 놓게 함으로써 백프로파게이션을 통한 학습이 효율적이 되는것 같다. 
+
+
+Some research, such as Wide ResNets (Zagoruyko & Komodakis 2016), has shown that increasing the number of channels improves performance but there are additional costs with extra channels. 
+> `Wide ResNets` 연구를 보면 Channel 수가 증가 하면 성능은 증가 하지만 additional costs with extra channels(??)이 존재한다. 
+
+The input data for many of the benchmark datasets have 3 channels (i.e.,  RGB). 
+> 대부분의 데이터셋의 입력 channel은 3이다(eg. RGB). 
+
+
+|Design Pattern 10|**Input Transition** is based on the common occurrence that the output from the first layer of a CNN significantly increases the number of channels from 3. |
+|-|-|
+
+A few examples of this increase in channels/outputs at the first layer for ImageNet are AlexNet (96 channels), Inception (32), VGG (224), and ResNets (64). 
+> 첫번째 레이어에서 channel/output의 중가에 대한 몇가지 예가 AlexNet (96 channels), Inception (32), VGG (224), and ResNets (64)이다. 
+
+Intuitively it makes sense to increase the number of channels from 3 in the first layer as it allows the input data to be examined many ways but it is not clear how many outputs are best. 
+> 직감적으로 입력 데이터를 가지고 많은 실험을 할수 있으므로 첫번째 레이어에서 체널수를 증가 하는게 make sense하다. 하지만 얼마로 할지는 아직 밝혀 지지 않았다. 
+
+Here, the trade-off is that of cost versus accuracy. 
+
+Costs include the number of parameters in the network, which directly affects the computational and storage costs of training and inference. 
+
+Design Pattern 11: Available Resources Guide Layer Widths is based on balancing costs against an application’s requirements.  
+
+Choose the number of outputs of the first layer based on memory and computational resources and desired accuracy. 
 
 
 
