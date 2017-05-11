@@ -212,12 +212,13 @@ Intuitively it makes sense to increase the number of channels from 3 in the firs
 > 직감적으로 입력 데이터를 가지고 많은 실험을 할수 있으므로 첫번째 레이어에서 체널수를 증가 하는게 make sense하다. 하지만 얼마로 할지는 아직 밝혀 지지 않았다. 
 
 Here, the trade-off is that of cost versus accuracy. 
+> 이때의 트레이드 오프는 Cost Vs. Accuracy이다. 
 
-Costs include the number of parameters in the network, which directly affects the computational and storage costs of training and inference. 
-
-Design Pattern 11: Available Resources Guide Layer Widths is based on balancing costs against an application’s requirements.  
+|Design Pattern 11|**Available Resources Guide Layer Widths** is based on balancing costs against an application’s requirements. |
+|-|-|
 
 Choose the number of outputs of the first layer based on memory and computational resources and desired accuracy. 
+> 첫 레이어의 output을 정하는것은 컴퓨터 자원(메모리)와 목표로 하는 정확도를 가지고 정할수 있다. 
 
 
 
