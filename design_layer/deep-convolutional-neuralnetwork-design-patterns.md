@@ -143,11 +143,21 @@ It is universal in all convolutional neural networks that the activations are do
 Another trade-off in deep learning is training accuracy versus the ability of the network to generalizeto non-seen cases. 
 
 The ability to generalize is an important virtue of deep neural networks. 
-Reg-ularization is commonly used to improve generalization, which includes methods such as dropout(Srivastava et al. 2014a) and drop-path (Huang et al. 2016b). 
+
+Regularization is commonly used to improve generalization, which includes methods such as dropout(Srivastava et al. 2014a) and drop-path (Huang et al. 2016b). 
+
 As noted by Srivastava et al. 2014b,dropout improves generalization by injecting noise in the architecture. 
-We believe regularizationtechniques and prudent noise injection during training improves generalization (Srivastava et al.2014b, Gulcehre et al. 2016). 
-Design Pattern 6: Over-train includes any training method wherethe network is trained on a harder problem than necessary to improve generalization performanceof inference. 
-Design Pattern 7: Cover the Problem Space with the training data is another way toimprove generalization (e.g., Ratner et al. 2016, Hu et al. 2016, Wong et al. 2016, Johnson-Robersonet al. 2016). 
+
+We believe regularization techniques and prudent noise injection during training improves generalization (Srivastava et al.2014b, Gulcehre et al. 2016). 
+
+|Design Pattern 6|Over-train includes any training method where the network is trained on a harder problem than necessary to improve generalization performance of inference. |
+|-|-|
+
+|Design Pattern 7|Cover the Problem Space with the training data is another way to improve generalization|
+|-|-|
+
+e.g., Ratner et al. 2016, Hu et al. 2016, Wong et al. 2016, Johnson-Robersonet al. 2016). 
+
 Related to regularization methods, cover the problem space includes the use of noise(Rasmus et al. 2015, Krause et al. 2015, Pezeshki et al. 2015) and data augmentation, such as randomcropping, flipping, and varying brightness, contrast, and the like.
 
 
