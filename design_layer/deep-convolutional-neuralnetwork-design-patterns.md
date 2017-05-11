@@ -222,7 +222,12 @@ Choose the number of outputs of the first layer based on memory and computationa
 
 
 
+### 3.2.1  JOINING BRANCHES: CONCATENATION,SUMMATION/MEAN, MAXOUT 
 
+When there are multiple branches, three methods have been used to combine the outputs; concatenation, summation (or mean), or Maxout. 
+> 여러개 가지(branch)가 있을때는 Output을 합치기 위해 concatenation, summation (or mean), Maxout를 사용할 수 있다. 
+
+It seems that different researchers have their favorites and there hasn’t been any motivation for using one in preference to another. In this Section, we propose some rules for deciding how to combine branches. 
 
 
 
