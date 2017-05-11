@@ -171,12 +171,15 @@ Use  of  very  deep  networks  is  an  example  because  any  single  layer  onl
 Also, this concept is part of the motivation behind design pattern 2 but it extends beyond that. 
 > 이 컨셉은 Pattern 2의 연장선에 있다. 
 
+### each layer’s “job”  easier하는 첫번째 방법
+
 |Design Pattern 8|**Incremental Feature Construction** recommends using short skip lengths in ResNets.| 짧은 Skip Length사용할것을 추천|
 |-|-|-|
 
 A recent paper (Alain & Bengio (2016)) showed in an experiment that using an identity skip length of 64 in a network of depth 128 led to the first portion of the network not being trained. 
 > 최근 연구에 따르면 128층의 레이어에서 skip length 64를 쓰는것은 레이어의 첫번째 위치한 것은 학습이 일어 나지 않았다. 
 
+### each layer’s “job”  easier하는 두번째 방법
 
 |Design Pattern 9|**Normalize Layer Inputs** is another way to make a layer’s job easier|
 |-|-|
