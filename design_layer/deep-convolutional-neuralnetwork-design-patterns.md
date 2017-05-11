@@ -145,21 +145,43 @@ Another trade-off in deep learning is training accuracy versus the ability of th
 
 Regularization is commonly used to improve generalization, which includes methods such as `dropout`(Srivastava et al. 2014a) and `drop-path` (Huang et al. 2016b). 
 We believe regularization techniques and prudent noise injection during training improves generalization (Srivastava et al.2014b, Gulcehre et al. 2016). 
-
 > dropout(일부로 Noise추가)과 drop-path같은 Regularization 기법들은 모델의 일반화를 증가 시킨다. 
 
 |Design Pattern 6|**Over-train** includes any training method where the network is trained on a harder problem than necessary to improve generalization performance of inference. |
 |-|-|
 
+
+
 |Design Pattern 7|**Cover the Problem Space** with the training data is another way to improve generalization|
 |-|-|
+
 
 e.g., Ratner et al. 2016, Hu et al. 2016, Wong et al. 2016, Johnson-Robersonet al. 2016). 
 
 Related to regularization methods, cover the problem space includes the use of noise(Rasmus et al. 2015, Krause et al. 2015, Pezeshki et al. 2015) and data augmentation, such as randomcropping, flipping, and varying brightness, contrast, and the like.
+> `cover the problem space`는 Noise와 Data augmentation을 사용한다. 
+
+## 3.2 DETAILED ARCHITECTURE DESIGN
+
+A common thread throughout many of the more successful architectures is to make each layer’s “job”  easier.   
+> 대부분의 좋은 성능을 보이는 네트워크들은 각 Layer의 'Job'을 Easier하게 하였다. 
+
+Use  of  very  deep  networks  is  an  example  because  any  single  layer  only  needs  to incrementally modify the input, and this partially explains the success of Residual Networks, since in very deep networks, a layer’s output is likely similar to the input; hence adding the input to the layer’s output makes the layer’s job incremental. 
+
+Also, this concept is part of the motivation behind design pattern 2 but it extends beyond that. 
+> 이 컨셉은 Pattern 2의 연장선에 있다. 
+
+|Design Pattern 8|**Incremental Feature Construction** recommends using short skip lengths in ResNets.| 짧은 Skip Length사용할것을 추천|
+|-|-|-|
+
+A recent paper (Alain & Bengio (2016)) showed in an experiment that using an identity skip length of 64 in a network of depth 128 led to the first portion of the network not being trained. 
+> 최근 연구에 따르면 128층의 레이어에서 skip length 64를 쓰는것은 레이어의 첫번째 위치한 것은 학습이 일어 나지 않았다. 
 
 
+|Design Pattern 9|**Normalize Layer Inputs** is another way to make a layer’s job easier|
+|-|-|
 
+Normalization of layer inputs has been shown to improve training and accuracy but the underlying reasons are not clear (Ioffe & Szegedy 2015, Ba et al. 2016, Salimans & Kingma 2016). The Batch Normalization paper (Ioffe & Szegedy 2015) attributes the benefits to handling internal covariate shift, while the authors of streaming normalization (Liao et al. 2016) express that it might be otherwise.  We feel that normalization puts all the layer’s input samples on more equal footing (analogous to a units conversion scaling), which allows back-propagation to train more effectively. 
 
 
 
