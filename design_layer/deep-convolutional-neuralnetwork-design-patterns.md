@@ -144,16 +144,14 @@ Another trade-off in deep learning is training accuracy versus the ability of th
 > 트레이드 오프 2: 학습 정확도(training accuracy) Vs. 일반화(Generalize to non-seen cases)
 
 Regularization is commonly used to improve generalization, which includes methods such as `dropout`(Srivastava et al. 2014a) and `drop-path` (Huang et al. 2016b). 
-> dropout과 drop-path같은 Regularization 기법들은 모델의 일반화를 증가 시킨다. 
-
-As noted by Srivastava et al. 2014b,dropout improves generalization by injecting noise in the architecture. 
-
 We believe regularization techniques and prudent noise injection during training improves generalization (Srivastava et al.2014b, Gulcehre et al. 2016). 
 
-|Design Pattern 6|Over-train includes any training method where the network is trained on a harder problem than necessary to improve generalization performance of inference. |
+> dropout(일부로 Noise추가)과 drop-path같은 Regularization 기법들은 모델의 일반화를 증가 시킨다. 
+
+|Design Pattern 6|**Over-train** includes any training method where the network is trained on a harder problem than necessary to improve generalization performance of inference. |
 |-|-|
 
-|Design Pattern 7|Cover the Problem Space with the training data is another way to improve generalization|
+|Design Pattern 7|**Cover the Problem Space** with the training data is another way to improve generalization|
 |-|-|
 
 e.g., Ratner et al. 2016, Hu et al. 2016, Wong et al. 2016, Johnson-Robersonet al. 2016). 
