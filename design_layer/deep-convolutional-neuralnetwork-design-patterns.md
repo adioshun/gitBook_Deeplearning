@@ -106,18 +106,22 @@ It is also apparent(명백한) that **multiplying the number of paths through th
 
 
 
-|Design Pattern 2|Proliferate Paths is based on the idea that ResNets can be an exponentialensemble of networks with different lengths. |
+|Design Pattern 2|Proliferate(증식,확산) Paths is based on the idea that ResNets can be an exponential ensemble of networks with different lengths. |
 |-|-|
 
 
 
-One proliferates paths by including a multiplicity ofbranches in the architecture. 
+One proliferates paths by including a multiplicity of branches in the architecture. 
+
 Recent examples include FractalNet (Larsson et al. 2016), Xception(Chollet 2016), and Decision Forest Convolutional Networks (Ioannou et al. 2016). 
+
 Scientists have embraced simplicity/parsimony for centuries. 
+
 Simplicity was exemplified in thepaper ”Striving for Simplicity” (Springenberg et al. 2014) by achieving state-of-the-art results withfewer types of units. 
 
 
-Design Pattern 3: Strive for Simplicity suggests using fewer types of unitsand keeping the network as simple as possible. 
+|Design Pattern 3|Strive(분투하다) for Simplicity suggests using fewer types of unitsand keeping the network as simple as possible. |
+|-|-|
 
 We also noted a special degree of elegance inthe FractalNet (Larsson et al. 2016) design, which we attributed to the symmetry of its structure.
 
