@@ -177,9 +177,24 @@ The Architecture of deep model
 |n|Total number of stage||
 |$a_1$|Number of layer||
 
-eg. n=3, 
+eg. $$ n=3이고,  a_1, a_2, a_3 = 4,3,2  $$ 의 의미는 
+-  Stage가 3개이고 첫번째 스테이지는 4개 레이어, 두번째 스페이지는 3개 레이어, 세번째 스페이지는 2개의 레이어로 구성 
+
+### 목적 : 깊은 네트워크 구성 = Layer수 최대화 = $$ \sum_i {a_i} $$
+
+The first constrain requires the c-values of all layers are no smaller than the minimum c-value t. 
+> 모든 레이어의 c-values는 t값보다 작아햐 함 
+
+As the receptive field keep growing, and the real filter size in one stage stay the same, the c-value of the last layer in one stage is the smallest. 
+
+Therefore the first constrain is equivalent to ensuring the c-value of the last layer in each stage no smaller than the minimum c-value t, which can be translated into a set of inequations,
 
 
 
+# 5. Some exemplar networks(성능평가)
+
+## 5.1. Networks for cifar10/cifar100
+
+## 5.2. Networks for national data science bowl
 
 
