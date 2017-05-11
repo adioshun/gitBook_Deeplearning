@@ -124,11 +124,15 @@ Simplicity was exemplified(대표적 예) in the paper ”Striving for Simplicit
 We also noted a special degree of elegance in the FractalNet (Larsson et al. 2016) design, which we attributed to the symmetry of its structure.
 
 
-In addition to its symmetry, FractalNets also adheres to the Proliferate Paths design pattern. > 간결성 이외에도 **FractalNets**는 Proliferate Paths design pattern도 포함 하고 있다. 
+In addition to its symmetry, FractalNets also adheres to the Proliferate Paths design pattern. 
+> 간결성 이외에도 **FractalNets**는 Proliferate Paths design pattern도 포함 하고 있다. 
+
 
 An essential element of design patterns is the examination of trade-offs in an effort to understand the relevant forces. 
+> 디자인 패턴의 중요 요소중 하나는 
 
 One fundamental trade-off is the maximization of representational power versus elimination of redundant and non-discriminating information. 
+> 중요한 트레이드 오프중 
 
 It is universal in all convolutional neural networks that the activations are downsampled and the number of channels increased from the input to the final layer, which is exemplified in Deep Pyramidal Residual Networks (Han et al. (2016)). 
 
