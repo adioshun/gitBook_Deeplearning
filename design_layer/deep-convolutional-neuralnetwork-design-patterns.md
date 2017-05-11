@@ -21,6 +21,9 @@ design patterns to the architecture of object-oriented software[[2]](#Gamma)
 > 위 2개의 기존 연구를 기반으로 본 연구는 진행 되었다. 모든 네트워크의 패턴을 다 살펴 보기는 어려우니 본 논문에서는 **"CNN"**의 **"Classification"**에 초점을 맞추었다. 
 
 
+|Design Pattern 1|Architectural Structure follows the Application|
+|-|-|
+
 # 2 RELATED WORK
 
 - ”Neural Networks: Tricks of the Trade” (Orr & Müller, 2003) **contains recommendations for network models** but without reference to the vast amount of research in the past few years
@@ -96,8 +99,31 @@ we focus on recent innovations in convolutional neural networks architectures an
 
 ## 3.1 HIGH LEVEL ARCHITECTURE DESIGN
 
+It is also apparent(명백한) that **multiplying the number of paths through the network** is a recent trend that is illustrated in the progression from Alexnet to Inception to ResNets. 
+        - For example, Veit et al. (2016)show that ResNets can be considered to be an exponential ensemble of networks with different lengths. 
+
+> 최근 트렌드는 **multiplying the number of paths**    
 
 
+
+|Design Pattern 2|Proliferate Paths is based on the idea that ResNets can be an exponentialensemble of networks with different lengths. |
+|-|-|
+
+
+
+One proliferates paths by including a multiplicity ofbranches in the architecture. 
+Recent examples include FractalNet (Larsson et al. 2016), Xception(Chollet 2016), and Decision Forest Convolutional Networks (Ioannou et al. 2016). 
+Scientists have embraced simplicity/parsimony for centuries. 
+Simplicity was exemplified in thepaper ”Striving for Simplicity” (Springenberg et al. 2014) by achieving state-of-the-art results withfewer types of units. 
+
+
+Design Pattern 3: Strive for Simplicity suggests using fewer types of unitsand keeping the network as simple as possible. 
+
+We also noted a special degree of elegance inthe FractalNet (Larsson et al. 2016) design, which we attributed to the symmetry of its structure.
+
+Design Pattern 4: Increase Symmetry is derived from the fact that architectural symmetry is typicallyconsidered a sign of beauty and quality. 
+
+In addition to its symmetry, FractalNets also adheres to theProliferate Paths design pattern so we used it as the baseline of our experiments in Section 4.
 
 
 
