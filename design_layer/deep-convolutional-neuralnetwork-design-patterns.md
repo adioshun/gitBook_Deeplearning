@@ -29,6 +29,58 @@ design patterns to the architecture of object-oriented software[[2]](#Gamma)
 > 본 논문과 가장 유사한 내용을 포함하고 있음 
 
 
+we focus on recent innovations in convolutional neural networks architectures and, in particular, on **Residual Networks**(He et al., 2015) and its recent family of variants. 
+
+- We start with Network In Networks (Lin et al.,2013), which describes a hierarchical network with a small network design repeatedly embedded in the overall architecture. 
+
+- Szegedy et al. (2015a) incorporated this idea into their Inception ar-chitecture. 
+    - Later, these authors proposed modifications to the original Inception design (Szegedyet al., 2015b). 
+
+- A similar concept was contained in the multi-scale convolution architecture (Liao &Carneiro, 2015). 
+
+- In the meantime, Batch Normalization (Ioffe & Szegedy, 2015) was presented as a unit within the network that makes training faster and easier.
+
+- Before the introduction of Residual Networks, a few papers suggested skip connections. 
+    - Skip connections were proposed by Raiko et al. (2012). 
+    - Highway Networks (Srivastava et al., 2015) use a **gating mechanism** to decide whether to combine the input with the layer’s output and showed how these networks allowed the training of very deep networks. 
+    - The DropIn technique (Smith et al.,2015; 2016) also trains very deep networks by allowing a layer’s input to skip the layer. 
+
+- The concept of stochastic depth via a drop-path method was introduced by Huang et al. (2016b).
+
+- Residual Networks were introduced by He et al. (2015), where the authors describe their network that won the 2015 ImageNet Challenge. 
+    - They were able to extend the depth of a network from tensto hundreds of layers and in doing so, improve the network’s performance. 
+    - The authors followed up with another paper (He et al., 2016) where they investigate why identity mappings help and report results for a network with more than a thousand layers. 
+    
+- The research community took notice of this architecture and many modifications to the original design were soon proposed.
+
+- The Inception-v4 paper (Szegedy et al., 2016) describes the impact of residual connections on their Inception architecture and compared these results with the results from an updated Inception design.
+
+- The Resnet in Resnet paper (Targ et al., 2016) suggests a duel stream architecture. 
+    -Veit et al. (2016)provided an understanding of Residual Networks as an ensemble of relatively shallow networks.
+    - These authors illustrated how these residual connections allow the input to follow an exponential number of paths through the architecture. 
+    
+- At the same time, the FractalNet paper (Larsson et al.,2016) demonstrated training deep networks with a symmetrically repeating architectural pattern.
+
+- As described later, we found the symmetry introduced in their paper intriguing. 
+
+- In a similar vein,Convolutional Neural Fabrics (Saxena & Verbeek, 2016) introduces a three dimensional network,where the usual depth through the network is the first dimension.
+
+- Wide Residual Networks (Zagoruyko & Komodakis, 2016) demonstrate that simultaneously increasing both depth and width leads to improved performance. 
+
+- In Swapout (Singh et al., 2016), each layer can be dropped, skipped, used normally, or combined with a residual. 
+
+- Deeply Fused Nets (Wanget al., 2016) proposes networks with multiple paths. 
+
+- In the Weighted Residual Networks paper (Shen& Zeng, 2016), the authors recommend a weighting factor for the output from the convolutional layers, which gradually introduces the trainable layers. 
+
+- Convolutional Residual Memory Networks(Moniz & Pal, 2016) proposes an architecture that combines a convolutional Residual Network with an LSTM memory mechanism. 
+
+- For Residual of Residual Networks (Zhang et al., 2016), the authors propose adding a hierarchy of skip connections where the input can skip a layer, a module, or any number of modules. 
+
+DenseNets (Huang et al., 2016a) introduces a network where each module isdensely connected; that is, the output from a layer is input to all of the other layers in the module. 
+Inthe Multi-Residual paper (Abdi & Nahavandi, 2016), the authors propose expanding a residual blockwidth-wise to contain multiple convolutional paths. 
+Our Appendix A describes the close relationshipbetween many of these Residual Network variants.
+
 
 ---
 
