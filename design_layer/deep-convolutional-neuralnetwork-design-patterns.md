@@ -138,9 +138,10 @@ One fundamental trade-off is the maximization of representational power versus e
 |-|-|
 
 It is universal in all convolutional neural networks that the activations are downsampled and the number of channels increased from the input to the final layer, which is exemplified in Deep Pyramidal Residual Networks (Han et al. (2016)). 
-> CNN에서 일반적으로 마지막 레이어 전에는 `Activation은 다운샘플링` 하고 `Channel의 수는 증가` 시킨다. 이것은  `Deep Pyramidal Residual Networks`를 통해 설명 할 수 있다. 
+> CNN에서 일반적으로 마지막 레이어 전에는 `Activation은 다운샘플링` 하고 `Channel의 수는 증가` 시킨다. 이것은  `Deep Pyramidal Residual Networks`에 잘 나타나 있다. 
 
-Another trade-off in deep learning is training accuracy versus the ability of the network to generalizeto non-seen cases. 
+Another trade-off in deep learning is training accuracy versus the ability of the network to generalize to non-seen cases. 
+> 트레이드 오프 2: 학습 정확도(training accuracy) Vs. 일반화(Generalize to non-seen cases)
 
 The ability to generalize is an important virtue of deep neural networks. 
 
