@@ -143,9 +143,8 @@ It is universal in all convolutional neural networks that the activations are do
 Another trade-off in deep learning is training accuracy versus the ability of the network to generalize to non-seen cases. 
 > 트레이드 오프 2: 학습 정확도(training accuracy) Vs. 일반화(Generalize to non-seen cases)
 
-The ability to generalize is an important virtue of deep neural networks. 
-
-Regularization is commonly used to improve generalization, which includes methods such as dropout(Srivastava et al. 2014a) and drop-path (Huang et al. 2016b). 
+Regularization is commonly used to improve generalization, which includes methods such as `dropout`(Srivastava et al. 2014a) and `drop-path` (Huang et al. 2016b). 
+> dropout과 drop-path같은 Regularization 기법들은 모델의 일반화를 증가 시킨다. 
 
 As noted by Srivastava et al. 2014b,dropout improves generalization by injecting noise in the architecture. 
 
