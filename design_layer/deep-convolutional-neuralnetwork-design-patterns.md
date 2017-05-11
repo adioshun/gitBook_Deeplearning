@@ -133,12 +133,12 @@ An essential element of design patterns is the examination of trade-offs in an e
 One fundamental trade-off is the maximization of representational power versus elimination of redundant and non-discriminating information. 
 > 트레이드 오프 1 : 표현력 극대화(maximization of representational power) Vs. 비 식별 정보 제거 (elimination of non-discriminating information.)
 
-It is universal in all convolutional neural networks that the activations are downsampled and the number of channels increased from the input to the final layer, which is exemplified in Deep Pyramidal Residual Networks (Han et al. (2016)). 
-> CNN에서 일반적으로 받아 들여 지는 점은 
 
 |Design Pattern 5|**Pyramid Shape** says there should be an overall smooth down sampling combined with an increase in the number of channels throughout the architecture.|
 |-|-|
 
+It is universal in all convolutional neural networks that the activations are downsampled and the number of channels increased from the input to the final layer, which is exemplified in Deep Pyramidal Residual Networks (Han et al. (2016)). 
+> CNN에서 일반적으로 마지막 레이어 전에는 `Activation은 다운샘플링` 하고 `Channel의 수는 증가` 시킨다. 이것은  `Deep Pyramidal Residual Networks`를 통해 설명 할 수 있다. 
 
 Another trade-off in deep learning is training accuracy versus the ability of the network to generalizeto non-seen cases. 
 
