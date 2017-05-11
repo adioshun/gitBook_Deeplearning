@@ -228,11 +228,52 @@ When there are multiple branches, three methods have been used to combine the ou
 > 여러개 가지(branch)가 있을때는 Output을 합치기 위해 concatenation, summation (or mean), Maxout를 사용할 수 있다. 연구원들이 이 셋중에서 하나를 선택 할때 딱히 선호하는 이유가 있는것 같지는 않다. 본 Section에서는 3가지 방법 중 선택의 가이드를 제공하려 한다. 
 
 
+#### Summation & mean
+
+|Design Pattern 12|Summation Joining is where the joining is performed by summation/mean|
+|-|-|
+
+Summation is one of the most common ways of combining branches. 
+> Summation는 가장 일반적인 가지 합치는 방법이다. 
+
+Summation is the preferred joining mechanism for Residual Networks because it allows each branch to compute corrective terms (i.e.,residuals) rather than the entire approximation. 
+> `Residual Networks`에서는 **summation**방법을 선호 하는데 그 이유는 이 방법은 각 branch를 'entire approximation'가 아닌 'corrective terms(=residual)'로 계산 하기 때문이다. 
+
+The difference between summation and mean (i.e.,fractal-join) is best understood by considering drop-path (Huang et al. 2016b). 
+> summation와 mean 사이의 차이점은 best understood by considering drop-path(??)
+
+In a Residual Network where the input skip connection is always present, summation causes the layers to learn the residual (the difference from the input). 
+> `Residual Network`에는 항상 input skip connection을 항상 사용하는데 summation는 레이어가 'input과의 residual 차이점'를 학습하게 한다. 
 
 
+On the other hand, in networks with several branches, where any branch can be dropped (e.g., FractalNet (Larsson et al. (2016))), using the mean is preferable as it keeps the output smooth as branches are randomly dropped.
+> 반면에, `branch가 dropped되는 네트워크`는 **mean**을 선호 한다. 그 이유는 Branch가 drooped되더라도  keeps the output smooth하기 때문이다. 
 
- 
 
+#### concatenation 
+
+Some researchers seem to prefer concatenation (e.g., Szegedy et al. (2015a)).
+
+|Design Pattern 13|**Down-sampling Transition** recommends using concatenation joining for increasing the number of outputs when pooling|풀링시 output 수 증가를 위해 concatenation joining을 사용하는것을 추천한다.|
+|-|-|-|
+
+That is, when down-sampling by pooling or using a stride greater than 1, a good way to combine branches is to concatenate the output channels, hence smoothly accomplishing both joining and an increase in the number of channels that typically accompanies down-sampling.
+> Pooling을 통해 다운샘플링되거나 1보다 큰 stride 를 쓸때 branch를 합치는 좋은 방법은 Output 채널을 concatenate 하는것이다. 이렇게 함으로써 `joining`과 `increase in the number of channels` 모두 달성 할수 있다. 
+
+
+#### Maxout
+
+Maxout has been used for competition, as in locally competitive networks (Srivastava et al. 2014b) and competitive multi-scale networks Liao & Carneiro (2015). 
+> Maxout은 "competition"에 이용되었다. 
+
+|Design Pattern 14|**Maxout for Competition** is based on Maxout choosing only one of the activations|
+
+Maxout choosing only one of the activations, which is in contrast to summation or mean where the activations are “cooperating”; here, there is a “competition” with only one “winner”.| 
+> Maxout 이 activations중 하나를 선택 하는것은 summation/mean 과는 반대이다. summation/mean에서 activations은 cooperating이다. 
+
+
+For example, when each branch is composed of different sized kernels, Maxout is useful for incorporating scale invariance in an analogous way to how max pooling enables translation invariance.
+> 예를 들어 서로 다른 크기의 Kernel로 구성된 Branch가 있다면 Maxout???
 
 
 
