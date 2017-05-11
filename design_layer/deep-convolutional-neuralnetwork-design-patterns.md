@@ -103,16 +103,15 @@ we focus on recent innovations in convolutional neural networks architectures an
 |-|-|
 
 
-
 It is also apparent(명백한) that **multiplying the number of paths through the network** is a recent trend that is illustrated in the progression from Alexnet to Inception to ResNets. 
         - For example, Veit et al. (2016)show that ResNets can be considered to be an exponential ensemble of networks with different lengths. 
 
-> 최근 트렌드는 **multiplying the number of paths**    
+> 최근 트렌드는 **multiplying the number of paths** 이다.  
 
 예" FractalNet (Larsson et al. 2016), Xception(Chollet 2016), and Decision Forest Convolutional Networks (Ioannou et al. 2016). 
 
 
-|Design Pattern 3|Strive(분투하다) for Simplicity suggests using fewer types of unitsand keeping the network as simple as possible. |
+|Design Pattern 3|**Strive(분투하다) for Simplicity** suggests using fewer types of units and keeping the network as simple as possible. |
 |-|-|
 
 Simplicity was exemplified(대표적 예) in the paper ”Striving for Simplicity” (Springenberg et al. 2014) by achieving state-of-the-art results with fewer types of units. 
@@ -129,14 +128,15 @@ In addition to its symmetry, FractalNets also adheres to the Proliferate Paths d
 
 
 An essential element of design patterns is the examination of trade-offs in an effort to understand the relevant forces. 
-> 디자인 패턴의 중요 요소중 하나는 
+> 디자인 패턴의 중요 요소중 하나는 examination of **trade-offs** in an effort to understand the relevant forces. 
 
 One fundamental trade-off is the maximization of representational power versus elimination of redundant and non-discriminating information. 
-> 중요한 트레이드 오프중 
+> 트레이드 오프 1 : 표현력 극대화(maximization of representational power) Vs. 비 식별 정보 제거 (elimination of non-discriminating information.)
 
 It is universal in all convolutional neural networks that the activations are downsampled and the number of channels increased from the input to the final layer, which is exemplified in Deep Pyramidal Residual Networks (Han et al. (2016)). 
+> CNN에서 일반적으로 받아 들여 지는 점은 
 
-|Design Pattern 5|Pyramid Shape says there should be an overall smooth down sampling combined with an increase in the number of channels throughout the architecture.|
+|Design Pattern 5|**Pyramid Shape** says there should be an overall smooth down sampling combined with an increase in the number of channels throughout the architecture.|
 |-|-|
 
 
