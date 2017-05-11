@@ -99,39 +99,52 @@ we focus on recent innovations in convolutional neural networks architectures an
 
 ## 3.1 HIGH LEVEL ARCHITECTURE DESIGN
 
-It is also apparent(명백한) that **multiplying the number of paths through the network** is a recent trend that is illustrated in the progression from Alexnet to Inception to ResNets. 
-        - For example, Veit et al. (2016)show that ResNets can be considered to be an exponential ensemble of networks with different lengths. 
-
-> 최근 트렌드는 **multiplying the number of paths**    
-
-
-
 |Design Pattern 2|Proliferate(증식,확산) Paths is based on the idea that ResNets can be an exponential ensemble of networks with different lengths. |
 |-|-|
 
 
 
-One proliferates paths by including a multiplicity of branches in the architecture. 
+It is also apparent(명백한) that **multiplying the number of paths through the network** is a recent trend that is illustrated in the progression from Alexnet to Inception to ResNets. 
+        - For example, Veit et al. (2016)show that ResNets can be considered to be an exponential ensemble of networks with different lengths. 
 
-Recent examples include FractalNet (Larsson et al. 2016), Xception(Chollet 2016), and Decision Forest Convolutional Networks (Ioannou et al. 2016). 
+> 최근 트렌드는 **multiplying the number of paths**    
 
-Scientists have embraced simplicity/parsimony for centuries. 
-
-Simplicity was exemplified in thepaper ”Striving for Simplicity” (Springenberg et al. 2014) by achieving state-of-the-art results withfewer types of units. 
+예" FractalNet (Larsson et al. 2016), Xception(Chollet 2016), and Decision Forest Convolutional Networks (Ioannou et al. 2016). 
 
 
 |Design Pattern 3|Strive(분투하다) for Simplicity suggests using fewer types of unitsand keeping the network as simple as possible. |
 |-|-|
 
-We also noted a special degree of elegance inthe FractalNet (Larsson et al. 2016) design, which we attributed to the symmetry of its structure.
-
-Design Pattern 4: Increase Symmetry is derived from the fact that architectural symmetry is typicallyconsidered a sign of beauty and quality. 
-
-In addition to its symmetry, FractalNets also adheres to theProliferate Paths design pattern so we used it as the baseline of our experiments in Section 4.
+Simplicity was exemplified(대표적 예) in the paper ”Striving for Simplicity” (Springenberg et al. 2014) by achieving state-of-the-art results with fewer types of units. 
 
 
+|Design Pattern 4|Increase Symmetry(대칭) is derived from the fact that architectural symmetry is typically considered a sign of beauty and quality.|
+|-|-|
+
+We also noted a special degree of elegance in the FractalNet (Larsson et al. 2016) design, which we attributed to the symmetry of its structure.
 
 
+In addition to its symmetry, FractalNets also adheres to the Proliferate Paths design pattern. > 간결성 이외에도 **FractalNets**는 Proliferate Paths design pattern도 포함 하고 있다. 
+
+An essential element of design patterns is the examination of trade-offs in an effort to understand the relevant forces. 
+
+One fundamental trade-off is the maximization of representational power versus elimination of redundant and non-discriminating information. 
+
+It is universal in all convolutional neural networks that the activations are downsampled and the number of channels increased from the input to the final layer, which is exemplified in Deep Pyramidal Residual Networks (Han et al. (2016)). 
+
+|Design Pattern 5|Pyramid Shape says there should be an overall smooth down sampling combined with an increase in the number of channels throughout the architecture.|
+|-|-|
+
+
+Another trade-off in deep learning is training accuracy versus the ability of the network to generalizeto non-seen cases. 
+
+The ability to generalize is an important virtue of deep neural networks. 
+Reg-ularization is commonly used to improve generalization, which includes methods such as dropout(Srivastava et al. 2014a) and drop-path (Huang et al. 2016b). 
+As noted by Srivastava et al. 2014b,dropout improves generalization by injecting noise in the architecture. 
+We believe regularizationtechniques and prudent noise injection during training improves generalization (Srivastava et al.2014b, Gulcehre et al. 2016). 
+Design Pattern 6: Over-train includes any training method wherethe network is trained on a harder problem than necessary to improve generalization performanceof inference. 
+Design Pattern 7: Cover the Problem Space with the training data is another way toimprove generalization (e.g., Ratner et al. 2016, Hu et al. 2016, Wong et al. 2016, Johnson-Robersonet al. 2016). 
+Related to regularization methods, cover the problem space includes the use of noise(Rasmus et al. 2015, Krause et al. 2015, Pezeshki et al. 2015) and data augmentation, such as randomcropping, flipping, and varying brightness, contrast, and the like.
 
 
 
