@@ -46,27 +46,24 @@ we focus on recent innovations in convolutional neural networks architectures an
 - In the meantime, Batch Normalization (Ioffe & Szegedy, 2015) was presented as a unit within the network that makes training faster and easier.
 
 
-- Before the introduction of Residual Networks, a few papers suggested skip connections. 
-    - Skip connections were proposed by Raiko et al. (2012). 
+- Residual Networks외에 skip connections을 제안하고 있는 다른 논문들 
+    - **Skip connections** were proposed by Raiko et al. (2012). 
     - Highway Networks (Srivastava et al., 2015) use a **gating mechanism** to decide whether to combine the input with the layer’s output and showed how these networks allowed the training of very deep networks. 
-    - The DropIn technique (Smith et al.,2015; 2016) also trains very deep networks by allowing a layer’s input to skip the layer. 
-
+    - The **DropIn technique** (Smith et al.,2015; 2016) also trains very deep networks by allowing a layer’s input to skip the layer. 
 
 - The concept of stochastic depth via a drop-path method was introduced by Huang et al. (2016b).
 
-
-- Residual Networks were introduced by He et al. (2015), where the authors describe their network that won the 2015 ImageNet Challenge. 
-    - They were able to extend the depth of a network from tensto hundreds of layers and in doing so, improve the network’s performance. 
+- **Residual Networks** were introduced by He et al. (2015), where the authors describe their network that won the 2015 ImageNet Challenge. 
+    - They were able to extend the depth of a network from tens to hundreds of layers and in doing so, improve the network’s performance. 
     - The authors followed up with another paper (He et al., 2016) where they investigate why identity mappings help and report results for a network with more than a thousand layers. 
     
 
-
 - The research community took notice of this architecture and many modifications to the original design were soon proposed.
 
-- The Inception-v4 paper (Szegedy et al., 2016) describes the impact of residual connections on their Inception architecture and compared these results with the results from an updated Inception design.
+- The **Inception-v4** paper (Szegedy et al., 2016) describes the impact of residual connections on their Inception architecture and compared these results with the results from an updated Inception design.
 
 
-- The Resnet in Resnet paper (Targ et al., 2016) suggests a duel stream architecture. 
+- The **Resnet** in Resnet paper (Targ et al., 2016) suggests a **duel stream** architecture. 
     -Veit et al. (2016)provided an understanding of Residual Networks as an ensemble of relatively shallow networks.
     - These authors illustrated how these residual connections allow the input to follow an exponential number of paths through the architecture. 
     
