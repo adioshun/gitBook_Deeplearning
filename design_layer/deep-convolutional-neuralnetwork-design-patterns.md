@@ -27,7 +27,7 @@ design patterns to the architecture of object-oriented software[[2]](#Gamma)
 # 2 RELATED WORK
 
 - ”Neural Networks: Tricks of the Trade” (Orr & Müller, 2003) **contains recommendations for network models** but without reference to the vast amount of research in the past few years
-> 모델 설계에 대한 방대한 양(700p) 다루고 있지만, 최근 내용을 다루고 있지는 않다. 
+> 모델 설계에 대한 방대한 양(700p) 다루고 있지만, 최근 내용을 다루고 있지는 않다. (초판 2003, 2012년 updated)
 
 - Szegedy et al. (2015b) where those authors describe a few design principles based on their experiences.
 > 본 논문과 가장 유사한 내용을 포함하고 있음 
