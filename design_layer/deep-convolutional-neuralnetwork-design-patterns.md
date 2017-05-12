@@ -21,12 +21,13 @@ design patterns to the architecture of object-oriented software[[2]](#Gamma)
 > 위 2개의 기존 연구를 기반으로 본 연구는 진행 되었다. 모든 네트워크의 패턴을 다 살펴 보기는 어려우니 본 논문에서는 **"CNN"**의 **"Classification"**에 초점을 맞추었다. 
 
 
-|Design Pattern 1|Architectural Structure follows the Application|
-|-|-|
+|Design Pattern 1|Architectural Structure follows the Application|Application에 따라 아키텍쳐는 다르다|
+|-|-|-|
 
 # 2 RELATED WORK
 
 - ”Neural Networks: Tricks of the Trade” (Orr & Müller, 2003) **contains recommendations for network models** but without reference to the vast amount of research in the past few years
+> 모델 설계에 대한 방대한 양(700p) 다루고 있지만, 최근 내용을 다루고 있지는 않다. 
 
 - Szegedy et al. (2015b) where those authors describe a few design principles based on their experiences.
 > 본 논문과 가장 유사한 내용을 포함하고 있음 
@@ -92,8 +93,6 @@ we focus on recent innovations in convolutional neural networks architectures an
 
 - In the Multi-Residual paper (Abdi & Nahavandi, 2016), the authors propose expanding a residual blockwidth-wise to contain multiple convolutional paths. 
 
-> Appendix A에서 위 내용들을 정리 하였다. 
-
 
 # 3 DESIGN PATTERNS
 
@@ -101,7 +100,6 @@ we focus on recent innovations in convolutional neural networks architectures an
 
 |Design Pattern 2|Proliferate(증식,확산) Paths is based on the idea that ResNets can be an exponential ensemble of networks with different lengths. |
 |-|-|
-
 
 It is also apparent(명백한) that **multiplying the number of paths through the network** is a recent trend that is illustrated in the progression from Alexnet to Inception to ResNets. 
         - For example, Veit et al. (2016)show that ResNets can be considered to be an exponential ensemble of networks with different lengths. 
