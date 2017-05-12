@@ -1,5 +1,7 @@
 # Deep Convolutional Neural Network Design Patterns 
 
+> [영문 정리 버젼](http://www.topbots.com/14-design-patterns-improve-convolutional-neural-network-cnn-architecture/)
+
 > Abs. 최근 많은 네트워크들이 개발되고 있지만 이를 사용하는 활용자의 관련 지식 미흡으로 개발과 적용의 기술적 갭이 존재 한다. 본 논문에서는 갭 해결을 위한 정보 제공과 몇가지 새 네트워크를 제안 하려 합니다. [[Github]](https://github.com/iPhysicist/CNNDesignPatterns)
 
 # 1. INTRODUCTION
