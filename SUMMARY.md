@@ -5,6 +5,7 @@
 * [네트워크 설계](design_layer.md)
   * [A practical theory for designing very deep convolutional neural networks](design_layer/a-practical-theory-for-designing-very-deep-convolutional-neural-networks.md)
   * [DEEP CONVOLUTIONAL NEURALNETWORK DESIGN PATTERNS](design_layer/deep-convolutional-neuralnetwork-design-patterns.md)
+  * [Rethinking the Inception Architecture for Computer Vision](design_layer/rethinking-the-inception-architecture-for-computer-vision.md)
 * [Backpropagation](backpropagation.md)
 * [ActivationFuction](activationfuction.md)
 * [Error\_function](error_function.md)
