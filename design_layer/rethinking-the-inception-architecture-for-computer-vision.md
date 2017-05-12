@@ -49,7 +49,9 @@ Given that these signals should be easily compressible, the dimension reduction 
 > 네트워크의 깊이와 넓이의 균형을 유지 하라 
 
 Optimal performance of the network can be reached by balancing the number of filters per stage and the depth of the network. 
-> 
+> 최적의 성능은 각 stage의 필터수와 Depth의 균형에서 이루어 진다. 
 
 Increasing both the width and the depth of the network can contribute to higher quality networks.However, the optimal improvement for a constant amount of computation can be reached if both are increased in parallel. 
+> 네트워크의 깊이와 넓이가 증가는 성능 향상에 기여 한다. 깊이와 넓이가 평행적(parallel)으로 증가 한다면 최적의 결과를 가져 올것이다. 
+
 The computational budget should therefore be distributed in a balanced way between the depth and width of the network.
