@@ -262,6 +262,7 @@ Maxout has been used for competition, as in locally competitive networks (Srivas
 > Maxout은 "competition"에 이용되었다. 
 
 |Design Pattern 14|**Maxout for Competition** is based on Maxout choosing only one of the activations|
+|-|
 
 Maxout choosing only one of the activations, which is in contrast to summation or mean where the activations are “cooperating”; here, there is a “competition” with only one “winner”.| 
 > Maxout 이 activations중 하나를 선택 하는것은 summation/mean 과는 반대이다. summation/mean에서 activations은 cooperating이다. 
