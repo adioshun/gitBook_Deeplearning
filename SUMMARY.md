@@ -26,4 +26,8 @@
 * [Transfer Learning](transfer-learning.md)
   * [paper\_Transfer\_Learning](transfer-learning/papertransfer-learning.md)
 * [Overfitting](optimization.md)
+* [TIP](tip.md)
+  * [Batch normalization](tip/batch-normalization.md)
+  * [Normalization](tip/normalization.md)
+  * [Hyper Parameter](tip/hyper-parameter.md)
 
