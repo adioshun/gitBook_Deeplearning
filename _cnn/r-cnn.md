@@ -9,6 +9,13 @@
 
 
 
+|R-CNN Series|YOLO/SSD|
+|-|-|
+|2-step|1-Step Process|
+|process of region proposal and object recognition|Do region proposal and classification at same time|
+
+> 출처 : [Recent Progress on Object Detection_20170331](https://www.slideshare.net/JihongKang/recent-progress-on-object-detection20170331)
+
 # YOLO
 
 - Super fast detector (21~155 fps)
