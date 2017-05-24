@@ -19,8 +19,11 @@
 # YOLO
 
 - Super fast detector (21~155 fps)
+
 - Finding objects at each grid __in parallel__
+
 - 성능 : Fast R-CNN < YOLO < Faster R-CNN 
+
 
 
 
@@ -32,4 +35,5 @@
     - Detect small objects on lower level, large objects on higher level
     
 - End-to-End training/testing 
+
 
