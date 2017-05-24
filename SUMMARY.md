@@ -14,6 +14,7 @@
   * [RNN1.py](rnn/rnn1py.md)
   * [RNN2.py](rnn/rnn2py.md)
 * [CNN](_cnn.md)
+  * [R-CNN](_cnn/r-cnn.md)
 * [오차최소화](minimum.md)
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
 * [AutoEncoder](autoencoder.md)
