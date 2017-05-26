@@ -99,6 +99,8 @@ We can actually divide aleatoric into two further sub-categories:
 #### 2.2.1 Data-dependant or Heteroscedastic uncertainty
 Data-dependant or Heteroscedastic uncertainty is aleatoric uncertainty which depends on the input data and is predicted as a model output.
 
+>입력데이터에 의존적이고, 모델 아웃풋으로 예측 가능??(is predicted as a model output)
+
 #### 2.2.1 Task-dependant or Homoscedastic uncertainty 
 Task-dependant or Homoscedastic uncertainty is aleatoric uncertainty which is not dependant on the input data. 
 It is not a model output, rather it is a quantity which stays constant for all input data and varies between different tasks. 
