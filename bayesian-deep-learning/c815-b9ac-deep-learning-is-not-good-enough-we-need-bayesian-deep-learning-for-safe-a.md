@@ -141,13 +141,22 @@ For regression tasks, we typically train with something like a Euclidean/L2  los
 |-|-|-|
 |Regression|$$Loss =\parallel y- \hat{y} \parallel _2 $$|$$ Loss = \frac{\parallel y- \hat{y} \parallel _2}{2\sigma^2} + \log\sigma^2$$|
 
+- where the model predicts a mean $$ \hat{y} $$ and variance $$\sigma^2 $$. 
+- if the model predicts something very wrong, then it will be encouraged to attenuate the residual term, by increasing uncertainty $$\sigma^2 $$. 
+- However, the $$\log\sigma^2$$ prevents the uncertainty term growing infinitely large. 
+This can be thought of as learned loss attenuation.
 
 
-where the model predicts a mean ŷ y^ and variance σ2σ2. As you can see from this equation, if the model predicts something very wrong, then it will be encouraged to attenuate the residual term, by increasing uncertainty σ2σ2. However, the logσ2log⁡σ2 prevents the uncertainty term growing infinitely large. This can be thought of as learned loss attenuation.
 
 Homoscedastic aleatoric uncertainty can be modelled in a similar way, however the uncertainty parameter will no longer be a model output, but a free parameter we optimise.
+> Homoscedastic aleatoric uncertainty도 비슷한 방법으로 모델링 할수 있다. 하지만, 불확실성 파라미터는 no longer be a model output, but a free parameter we optimise.
 
-On the other hand, epistemic uncertainty is much harder to model. This requires us to model distributions over models and their parameters which is much harder to achieve at scale. A popular technique to model this is Monte Carlo dropout sampling which places a Bernoulli distribution over the network’s weights.
+On the other hand, epistemic uncertainty is much harder to model. This requires us to model distributions over models and their parameters which is much harder to achieve at scale. 
+> 반면에, epistemic uncertainty는 더 모델링 하기 어렵다. epistemic uncertainty는 distributions over models해야 하고, parameters is harder to achieve at scale하다. 
+
+A popular technique to model this is Monte Carlo dropout sampling which places a Bernoulli distribution over the network’s weights.
+
+> 자주 사용되는 방법은 `Monte Carlo dropout sampling`기술 이다. 이것은 `Bernoulli distribution`을 네트워크 weight에 위치 시킨다. 
 
 In practice, this means we can train a model with dropout. Then, at test time, rather than performing model averaging, we can stochastically sample from the network with different random dropout masks. The statistics of this distribution of outputs will reflect the model’s epistemic uncertainty.
 
