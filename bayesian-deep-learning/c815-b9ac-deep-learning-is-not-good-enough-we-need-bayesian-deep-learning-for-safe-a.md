@@ -24,9 +24,6 @@ In this post I’m going to introduce a resurging field known as Bayesian deep l
 > - Different types of uncertainty
 > - Uncertainty를 이용하여 weight losses할수 있는 방법
 
-
-더 자세한 내용은 
-
 The material for this blog post is mostly taken from my two recent papers: 
 - What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision? Alex Kendall and Yarin Gal, 2017. (.pdf)
 - Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics. Alex Kendall, Yarin Gal and Roberto Cipolla, 2017. (.pdf)
