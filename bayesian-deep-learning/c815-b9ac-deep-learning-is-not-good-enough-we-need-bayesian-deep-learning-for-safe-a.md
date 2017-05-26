@@ -60,7 +60,7 @@ Epistemic uncertainty is really important to model for:
 - Safety-critical applications, because epistemic uncertainty is required to understand examples which are different from training data,
 - Small datasets where the training data is sparse.
 
-> Epistemic uncertainty은 아래 두가지 상황을 모델링 할때 중요 하다. 
+> Epistemic uncertainty은 아래 두가지 상황을 모델링 할때 중요하다. 
 > - 자율 주행 등의 Safety-critical서비스 
 > - 학습 데이터가 Sparse된 적은양의 데이터 
 
@@ -71,16 +71,40 @@ Epistemic uncertainty is really important to model for:
 
 
 ### 2.2 Aleatoric uncertainty(우연적 불확실성)
-Aleatoric uncertainty captures our uncertainty with respect to information which our data cannot explain. For example, aleatoric uncertainty in images can be attributed to occlusions (because cameras can’t see through objects) or lack of visual features or over-exposed regions of an image, etc. It can be explained away with the ability to observe all explanatory variables with increasing precision. Aleatoric uncertainty is very important to model for:
+Aleatoric uncertainty captures our uncertainty with respect to information which our data cannot explain. 
+- For example, aleatoric uncertainty in images can be attributed to occlusions (because cameras can’t see through objects) or lack of visual features or over-exposed regions of an image, etc. 
+It can be explained away with the ability to observe all explanatory variables with increasing precision. 
 
-고유의 변동성에 의해 존재
+> `Aleatoric uncertainty`는 데이터로도 설명할수 없는 정보에 대한 불확실성에 기인한다. (=고유의 변동성으로 인해 존재)
+> - 예를 들어 카메라로는 측적이 어려운  occlusions나 lack of visual features 나 over-exposed regions가 있다.
 
+> all explanatory variables에 대한 자세한 관찰을 통해 해결 할수 있다. 
+
+
+For example, aleatoric uncertainty in images can be attributed to occlusions (because cameras can’t see through objects) or lack of visual features or over-exposed regions of an image, etc. It can be explained away with the ability to observe all explanatory variables with increasing precision. 
+Aleatoric uncertainty is very important to model for:
 - Large data situations, where epistemic uncertainty is mostly explained away,
 - Real-time applications, because we can form aleatoric models as a deterministic function of the input data, without expensive Monte Carlo sampling.
+
+> Aleatoric uncertainty은 아래 두가지 상황을 모델링 할때 중요하다. 
+> - Large data
+> - Real-time applications
 
 > 추가 : 우연적 불확실성을 처리하기 위한 전통적 접근법으로는 과거자료에 근거한 확률론적 분석, 즉 빈도주의적 접근법(frequentist approach)이 주로 사용 
 
 
+We can actually divide aleatoric into two further sub-categories:
+> `Aleatoric uncertainty`는 다시 두개의 서브 카테고리로 나눌수 있다. 
+
+#### 2.2.1 Data-dependant or Heteroscedastic uncertainty
+Data-dependant or Heteroscedastic uncertainty is aleatoric uncertainty which depends on the input data and is predicted as a model output.
+
+#### 2.2.1 Task-dependant or Homoscedastic uncertainty 
+Task-dependant or Homoscedastic uncertainty is aleatoric uncertainty which is not dependant on the input data. 
+It is not a model output, rather it is a quantity which stays constant for all input data and varies between different tasks. 
+It can therefore be described as task-dependant uncertainty. 
+
+Later in the post I’m going to show how this is really useful for multi-task learning.
 
 
 
