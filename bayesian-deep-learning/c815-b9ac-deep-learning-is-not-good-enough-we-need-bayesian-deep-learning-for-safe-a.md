@@ -127,7 +127,6 @@ In this section I’m going to briefly discuss how we can model both epistemic a
 
 > 본 장에서는 BDL모델을 이용하여 epistemic and aleatoric uncertainty를 모데링 하는 법을 알아 보곘다.
 
-#### 1단계 
 Firstly, we can model Heteroscedastic aleatoric uncertainty just by changing our loss functions. 
 > 간단히 loss functions을 수정하여 이분산성 우연적 불확실성을 모델링 한다. 
 
@@ -146,8 +145,6 @@ For regression tasks, we typically train with something like a Euclidean/L2  los
 - However, the $$\log\sigma^2$$ prevents the uncertainty term growing infinitely large. 
 This can be thought of as learned loss attenuation.
 
-
-
 Homoscedastic aleatoric uncertainty can be modelled in a similar way, however the uncertainty parameter will no longer be a model output, but a free parameter we optimise.
 > Homoscedastic aleatoric uncertainty도 비슷한 방법으로 모델링 할수 있다. 하지만, 불확실성 파라미터는 no longer be a model output, but a free parameter we optimise.
 
@@ -158,8 +155,15 @@ A popular technique to model this is Monte Carlo dropout sampling which places a
 
 > 자주 사용되는 방법은 `Monte Carlo dropout sampling`기술 이다. 이것은 `Bernoulli distribution`을 네트워크 weight에 위치 시킨다. 
 
-In practice, this means we can train a model with dropout. Then, at test time, rather than performing model averaging, we can stochastically sample from the network with different random dropout masks. The statistics of this distribution of outputs will reflect the model’s epistemic uncertainty.
+In practice, this means we can train a model with dropout. Then, at test time, rather than performing model averaging, we can stochastically sample from the network with different random dropout masks. 
 
+The statistics of this distribution of outputs will reflect the model’s epistemic uncertainty.
 
+In the previous section, I explained the properties that define aleatoric and epistemic uncertainty. One of the exciting results in our paper was that we could show that this formulation gives results which satisfy these properties. 
 
+Here’s a quick summary of some results of a monocular depth regression model on two datasets:
+
+These results show that when we train on less data, or test on data which is significantly different from the training set, then our epistemic uncertainty increases drastically. 
+
+However, our aleatoric uncertainty remains relatively constant, which it should because it is tested on the same problem with the same sensor.
 
