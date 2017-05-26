@@ -46,18 +46,33 @@ Thankfully, the Bayesian deep learning model is also aware it is wrong and exhib
 
 ## 2. Types of uncertainty
 The first question I’d like to address is what is uncertainty? There are actually different types of uncertainty and we need to understand which types are required for different applications. I’m going to discuss the two most important types – epistemic and aleatoric uncertainty.
+> uncertainty란 무었일까? 사실 uncertainty에는 두가지 종류가 있다. 
 
-### 2.1 Epistemic uncertainty
-Epistemic uncertainty captures our ignorance about which model generated our collected data. This uncertainty can be explained away given enough data, and is often referred to as model uncertainty. Epistemic uncertainty is really important to model for:
+### 2.1 Epistemic uncertainty(지식의 불확실성_
+Epistemic uncertainty captures our ignorance about which model generated our collected data. This uncertainty can be explained away given enough data, and is often referred to as model uncertainty. 
+> `Epistemic uncertainty`는 정보 부족에 의해서 발생한다. __model uncertainty__라고도 불리우는데 충분한 데이터가 있으면 uncertainty을 알수 있다. 
 
+Epistemic uncertainty is really important to model for:
 - Safety-critical applications, because epistemic uncertainty is required to understand examples which are different from training data,
 - Small datasets where the training data is sparse.
+> Epistemic uncertainty은 아래 두가지 상황을 모델링 할때 중요 하다. 
+> - 자율 주행 등의 Safety-critical서비스 
+> - 학습 데이터가 Sparse된 적은양의 데이터 
+> 추가 : 지식의 불확실성을 처리하기 위한 기존의 접근법으로는 베이지안 접근법(Bayesian approach)이 널리 사용되고 있다.
 
-### 2.2 Aleatoric uncertainty
+
+
+
+
+### 2.2 Aleatoric uncertainty(우연적 불확실성)
 Aleatoric uncertainty captures our uncertainty with respect to information which our data cannot explain. For example, aleatoric uncertainty in images can be attributed to occlusions (because cameras can’t see through objects) or lack of visual features or over-exposed regions of an image, etc. It can be explained away with the ability to observe all explanatory variables with increasing precision. Aleatoric uncertainty is very important to model for:
+
+고유의 변동성에 의해 존재
 
 - Large data situations, where epistemic uncertainty is mostly explained away,
 - Real-time applications, because we can form aleatoric models as a deterministic function of the input data, without expensive Monte Carlo sampling.
+
+> 추가 : 우연적 불확실성을 처리하기 위한 전통적 접근법으로는 과거자료에 근거한 확률론적 분석, 즉 빈도주의적 접근법(frequentist approach)이 주로 사용 
 
 
 
