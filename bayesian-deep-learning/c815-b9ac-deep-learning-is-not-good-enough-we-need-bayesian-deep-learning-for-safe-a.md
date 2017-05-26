@@ -2,6 +2,8 @@
 
 > 출처 : [Alex Kendall](http://alexgkendall.com/computer_vision/bayesian_deep_learning_for_safe_ai/)
 
+> [SegNet and Bayesian SegNet Tutorial](https://github.com/alexgkendall/SegNet-Tutorial)
+
 ## 1. 개요 
 Understanding what a model does not know is a critical part of many machine learning systems. Unfortunately, today’s deep learning algorithms are usually unable to understand their uncertainty. These models are often taken blindly and assumed to be accurate, which is not always the case. For example, in two recent situations this has had disastrous consequences.
 - In May 2016 we tragically experienced the first fatality from an assisted driving system. According to the manufacturer’s blog, “Neither Autopilot nor the driver noticed the white side of the tractor trailer against a brightly lit sky, so the brake was not applied.”
