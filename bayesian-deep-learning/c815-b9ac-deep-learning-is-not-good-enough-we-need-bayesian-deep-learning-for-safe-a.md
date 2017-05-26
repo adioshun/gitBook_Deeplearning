@@ -102,14 +102,21 @@ Data-dependant or Heteroscedastic uncertainty is aleatoric uncertainty which dep
 >입력데이터에 의존적이고, 모델 아웃풋으로 예측 가능??(is predicted as a model output)
 
 #### 2.2.1 Task-dependant or Homoscedastic uncertainty 
-Task-dependant or Homoscedastic uncertainty is aleatoric uncertainty which is not dependant on the input data. 
-It is not a model output, rather it is a quantity which stays constant for all input data and varies between different tasks. 
+Task-dependant or Homoscedastic uncertainty is aleatoric uncertainty which is not dependant on the input data. It is not a model output, rather it is a quantity which stays constant for all input data and varies between different tasks. 
+
+> 입력데이터에 무의존적이고, 
+
 It can therefore be described as task-dependant uncertainty. 
 
 Later in the post I’m going to show how this is really useful for multi-task learning.
 
 
+## 3. Bayesian deep learning
+> 이번장에서는 Bayesian deep learning을 이용해서 uncertainty을 측정할수 있는 모델을 만들어 보겠다. 
 
+Bayesian deep learning is a field at the intersection between deep learning and Bayesian probability theory. It offers principled uncertainty estimates from deep learning architectures. These deep architectures can model complex tasks by leveraging the hierarchical representation power of deep learning, while also being able to infer complex multi-modal posterior distributions. Bayesian deep learning models typically form uncertainty estimates by either placing distributions over model weights, or by learning a direct mapping to probabilistic outputs. In this section I’m going to briefly discuss how we can model both epistemic and aleatoric uncertainty using Bayesian deep learning models.
+
+Firstly, we can model Heteroscedastic aleatoric uncertainty just by changing our loss functions. Because this uncertainty is a function of the input data, we can learn to predict it using a deterministic mapping from inputs to model outputs. For regression tasks, we typically train with something like a Euclidean/L2 loss: Loss=||y−ŷ ||2Loss=||y−y^||2 . To learn a Heteroscedastic uncertainty model, we simply can replace the loss function with the following:
 
 
 
