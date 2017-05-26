@@ -2,3 +2,70 @@
 
 > 출처 : [Alex Kendall](http://alexgkendall.com/computer_vision/bayesian_deep_learning_for_safe_ai/)
 
+## 1. 개요 
+Understanding what a model does not know is a critical part of many machine learning systems. Unfortunately, today’s deep learning algorithms are usually unable to understand their uncertainty. These models are often taken blindly and assumed to be accurate, which is not always the case. For example, in two recent situations this has had disastrous consequences.
+- In May 2016 we tragically experienced the first fatality from an assisted driving system. According to the manufacturer’s blog, “Neither Autopilot nor the driver noticed the white side of the tractor trailer against a brightly lit sky, so the brake was not applied.”
+- In July 2015, an image classification system erroneously identified two African American humans as gorillas, raising concerns of racial discrimination. See the news report here.
+> Model이 알지 못하는 것을 예측하는 것은 머신러닝의 큰 문제점 중에 하나 이다. 불행이도, 일반적인 딥러닝 알고리즘들은 자신의 불확실성(Uncertainty)를 알지 못한다. 이러한 문제점으로 최근 아래 두가지 문제가 발생 하였었다. 
+> - 2016: 자율 주행 차량이 트랙터의 옆면의 밝은 부분을 도로로 인식하여 발생한 교통 사고 
+> - 2015: 구글 이미지 검색에서 고릴라를 검색하면 흑인의 사진이 나온 사건 
+
+And I’m sure there are many more interesting cases too! If both these algorithms were able to assign a high level of uncertainty to their erroneous predictions, then each system may have been able to make better decisions and likely avoid disaster.
+> 만일 위 두 알고리즘이 `able to assign a high level of uncertainty to their erroneous predictions` 있었다면 이러한 문제점을 해결 할수 있었을 것이다. 
+
+It is clear to me that understanding uncertainty is important. So why doesn’t everyone do it? The main issue is that traditional machine learning approaches to understanding uncertainty, such as Gaussian processes, do not scale to high dimensional inputs like images and videos. To effectively understand this data, we need deep learning. But deep learning struggles to model uncertainty.
+> uncertainty가 이렇게 중요 한데 왜 연구가 활성화 되지 않았을까? 이유는 기존의 머신러닝 알고리즘들이 uncertainty를 이해 하는 방식(eg. Gaussian processes)은 고차원(이미지, 비디오)데이터 처리에 적합하지 않기 때문이다. 
+
+In this post I’m going to introduce a resurging field known as Bayesian deep learning (BDL), which provides a deep learning framework which can also model uncertainty. BDL can achieve state-of-the-art results, while also understanding uncertainty. I’m going to explain the different types of uncertainty and show how to model them. Finally, I’ll discuss a recent result which shows how to use uncertainty to weight losses for multi-task deep learning. 
+> 본 투고글에서 uncertainty를 모델링 할수 알수 있는 `Bayesian deep learning (BDL)`에 대하여 알아 보겠다.
+> - Different types of uncertainty
+> - Uncertainty를 이용하여 weight losses할수 있는 방법
+
+
+더 자세한 내용은 
+
+The material for this blog post is mostly taken from my two recent papers: 
+- What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision? Alex Kendall and Yarin Gal, 2017. (.pdf)
+- Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry and Semantics. Alex Kendall, Yarin Gal and Roberto Cipolla, 2017. (.pdf)
+> 본 투고글의 내용은 위 두 논문의 내용을 기반으로 하였다. 
+
+
+#### 예시 : Depth estimation에 uncertainty가 중요한 이유 
+
+![](http://i.imgur.com/pyUh2Jn.png)
+An example of why it is really important to understand uncertainty for depth estimation. 
+- The first image is an example input into a Bayesian neural network which estimates depth, as shown by the second image. 
+- The third image shows the estimated uncertainty. 
+You can see the model predicts the wrong depth on difficult surfaces, such as the red car’s reflective and transparent windows. 
+Thankfully, the Bayesian deep learning model is also aware it is wrong and exhibits increased uncertainty.
+
+> 두번째 이미지를 BNL을 이용하여 깊이 측정을 한것이다. 3번째 그림은 estimated uncertainty를 나타낸다. 빨간차의 반사 부분이나 투명한 창문은 잘 구분하지 못한다. 
+> 하지만, BNL을 사용하면 이러한 문제점을 해결 할수 있다. 
+
+
+
+## 2. Types of uncertainty
+The first question I’d like to address is what is uncertainty? There are actually different types of uncertainty and we need to understand which types are required for different applications. I’m going to discuss the two most important types – epistemic and aleatoric uncertainty.
+
+### 2.1 Epistemic uncertainty
+Epistemic uncertainty captures our ignorance about which model generated our collected data. This uncertainty can be explained away given enough data, and is often referred to as model uncertainty. Epistemic uncertainty is really important to model for:
+
+- Safety-critical applications, because epistemic uncertainty is required to understand examples which are different from training data,
+- Small datasets where the training data is sparse.
+
+### 2.2 Aleatoric uncertainty
+Aleatoric uncertainty captures our uncertainty with respect to information which our data cannot explain. For example, aleatoric uncertainty in images can be attributed to occlusions (because cameras can’t see through objects) or lack of visual features or over-exposed regions of an image, etc. It can be explained away with the ability to observe all explanatory variables with increasing precision. Aleatoric uncertainty is very important to model for:
+
+- Large data situations, where epistemic uncertainty is mostly explained away,
+- Real-time applications, because we can form aleatoric models as a deterministic function of the input data, without expensive Monte Carlo sampling.
+
+
+
+
+
+
+
+
+
+
+
