@@ -31,4 +31,6 @@
   * [Batch normalization](tip/batch-normalization.md)
   * [Normalization](tip/normalization.md)
   * [Hyper Parameter](tip/hyper-parameter.md)
+* [Bayesian Deep Learning](bayesian-deep-learning.md)
+  * [정리\_Deep Learning Is Not Good Enough,  We Need Bayesian Deep Learning for Safe A](bayesian-deep-learning/c815-b9ac-deep-learning-is-not-good-enough-we-need-bayesian-deep-learning-for-safe-a.md)
 
