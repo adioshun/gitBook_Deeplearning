@@ -114,11 +114,42 @@ Later in the post I’m going to show how this is really useful for multi-task l
 ## 3. Bayesian deep learning
 > 이번장에서는 Bayesian deep learning을 이용해서 uncertainty을 측정할수 있는 모델을 만들어 보겠다. 
 
-Bayesian deep learning is a field at the intersection between deep learning and Bayesian probability theory. It offers principled uncertainty estimates from deep learning architectures. These deep architectures can model complex tasks by leveraging the hierarchical representation power of deep learning, while also being able to infer complex multi-modal posterior distributions. Bayesian deep learning models typically form uncertainty estimates by either placing distributions over model weights, or by learning a direct mapping to probabilistic outputs. In this section I’m going to briefly discuss how we can model both epistemic and aleatoric uncertainty using Bayesian deep learning models.
+Bayesian deep learning is a field at the intersection between deep learning and Bayesian probability theory. It offers principled uncertainty estimates from deep learning architectures. These deep architectures can model complex tasks by leveraging the hierarchical representation power of deep learning, while also being able to infer complex multi-modal posterior distributions.
 
-Firstly, we can model Heteroscedastic aleatoric uncertainty just by changing our loss functions. Because this uncertainty is a function of the input data, we can learn to predict it using a deterministic mapping from inputs to model outputs. For regression tasks, we typically train with something like a Euclidean/L2 loss: Loss=||y−ŷ ||2Loss=||y−y^||2 . To learn a Heteroscedastic uncertainty model, we simply can replace the loss function with the following:
+> BDL은 딥러닝과 베이지안 확률 이론의 중간 정도에 위치하고 있다. 주요 기능은 deep learning architectures의 uncertainty를 측정 하는 것이다.  
+  
+Bayesian deep learning models typically form uncertainty estimates by either placing distributions over model weights, or by learning a direct mapping to probabilistic outputs. 
+
+> BDL이 Uncertainty 측정은 placing distributions over model weights하거나 learning a direct mapping to probabilistic outputs을 통해서 가능하다. 
 
 
+In this section I’m going to briefly discuss how we can model both epistemic and aleatoric uncertainty using Bayesian deep learning models.
+
+> 본 장에서는 BDL모델을 이용하여 epistemic and aleatoric uncertainty를 모데링 하는 법을 알아 보곘다.
+
+#### 1단계 
+Firstly, we can model Heteroscedastic aleatoric uncertainty just by changing our loss functions. 
+> 간단히 loss functions을 수정하여 이분산성 우연적 불확실성을 모델링 한다. 
+
+Because this uncertainty is a function of the input data, we can learn to predict it using a deterministic mapping from inputs to model outputs. 
+> 왜냐 하면 이 불확실성은 입력 데이터에 대한 함수 이기 때문에 deterministic mapping from inputs to model outputs을 통해 알수 있다. 
+
+
+For regression tasks, we typically train with something like a Euclidean/L2  loss: $$ Loss =\parallel y- \hat{y} \parallel _2 $$ . To learn a Heteroscedastic uncertainty model, we simply can replace the loss function with the following:
+
+||기존|BDL|
+|-|-|-|
+|Regression|$$Loss =\parallel y- \hat{y} \parallel _2 $$|$$ Loss = \frac{\parallel y- \hat{y} \parallel _2}{2\sigma^2} + \log\sigma^2$$|
+
+
+
+where the model predicts a mean ŷ y^ and variance σ2σ2. As you can see from this equation, if the model predicts something very wrong, then it will be encouraged to attenuate the residual term, by increasing uncertainty σ2σ2. However, the logσ2log⁡σ2 prevents the uncertainty term growing infinitely large. This can be thought of as learned loss attenuation.
+
+Homoscedastic aleatoric uncertainty can be modelled in a similar way, however the uncertainty parameter will no longer be a model output, but a free parameter we optimise.
+
+On the other hand, epistemic uncertainty is much harder to model. This requires us to model distributions over models and their parameters which is much harder to achieve at scale. A popular technique to model this is Monte Carlo dropout sampling which places a Bernoulli distribution over the network’s weights.
+
+In practice, this means we can train a model with dropout. Then, at test time, rather than performing model averaging, we can stochastically sample from the network with different random dropout masks. The statistics of this distribution of outputs will reflect the model’s epistemic uncertainty.
 
 
 
