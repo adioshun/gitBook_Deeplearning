@@ -80,7 +80,7 @@
 
 
 
-- ‪[SNN(Self-Normalizations Neural Networks)](https://github.com/bioinf-jku/SNNs)
+- SNN(Self-Normalizations Neural Networks):[논문](https://arxiv.org/abs/1706.02515v1) ,[구현](https://github.com/bioinf-jku/SNNs)
 
 - [SELU 활성화 함수](https://github.com/shaohua0116/Activation-Visualization-Histogram/blob/master/README.md)
 
