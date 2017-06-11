@@ -71,6 +71,19 @@
 
 \[참고\] [DIFFERENCE BETWEEN SOFTMAX FUNCTION AND SIGMOID FUNCTION](http://dataaspirant.com/2017/03/07/difference-between-softmax-function-and-sigmoid-function/)
 
+
+
+
+
+## 최근 트랜드 함수 
+
+
+
+
+- ‪SNN(Self-Normalizations Neural Networks)
+
+- [SELU 활성화 함수](https://github.com/shaohua0116/Activation-Visualization-Histogram/blob/master/README.md)
+
 ---
 
 [What is the Role of the Activation Function in a Neural Network?](http://www.kdnuggets.com/2016/08/role-activation-function-neural-network.html)
