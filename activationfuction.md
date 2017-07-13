@@ -65,6 +65,8 @@
   * 어떤 가설도 0 또는 음의 가중치를 가질 수 없습니다. 
   * 그런 뒤 소프트맥스는 가중치를 정규화한 후, 모두 합하면 1이 되는 확률 분포로 만듭니다 [참고](http://neuralnetworksanddeeplearning.com/chap3.html#softmax)
 
+> Softmax 미분 유도 [공식들](https://www.facebook.com/groups/TensorFlowKR/permalink/502663916741338/) 
+
 ## 9. 그외 Activation Function
 
 ![](/assets/acode.PNG)
