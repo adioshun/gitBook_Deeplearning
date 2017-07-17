@@ -96,7 +96,7 @@ $$
 
 - 즉, 두 확률분포가 얼마나 유사한지를 나타내 줍니다. 
 
-이산확률변수(discrete random variable)의 경우에 대한 식은 아래와 같습니다. 
+###### Step 1. 이산확률변수(discrete random variable)의 경우에 대한 식은 아래와 같습니다. 
 
 $$
 D_{KL}(P,Q) = D_{KL}(P \parallel Q) = \sum_i p_i\log\frac{p_i}{q_i}
@@ -108,4 +108,35 @@ $$
 - p,q가 완전히 동일(분포가 동일)하다면 D=0 
     - 목표 : 정답과 예측값의 확률 분포가 같도록 만들기
 
+###### Step 2. p는 외부에서 주어지는 고정된 값(c)이므로 
 
+$$
+D_{KL}(P,Q) = \sum_i p_i\log\frac{p_i}{q_i} = \sum_i p_i\log p_i - \sum_i p_i\log q_i (로그의 뺼셈 성질)
+
+
+$$
+$$
+= C- \sum_i p_i\log q_i 
+$$
+
+###### Step 3. 최종식 도출 (교차 엔트로피:cross entropy)
+$$
+L = - \sum_i p_i\log q_i   
+$$
+
+> 가능도(likelihood)를 통해 서도 식을 유추 할수 있어 `음수 로그 가능도(negative log-likelihood)`라도고 함 
+
+### 4.2 Entropy Loss for Binary
+- y가 0 혹은 1만 되는 경우(즉, 이진 분류 문제인 경우)
+
+$$
+L = - t\log y - (1-t) \log (1-y)
+$$
+
+
+### 4.3 Entropy Loss for Categorical 
+- y가 여러 클래스를 갖는 경우
+
+$$
+L = -\sum_{i=1}^C t_i \log y_i
+$$
