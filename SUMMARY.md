@@ -9,7 +9,7 @@
   * [An Analysis of Deep Neural Network Models for Practical Applications](design_layer/an-analysis-of-deep-neural-network-models-for-practical-applications.md)
 * [Backpropagation](backpropagation.md)
 * [ActivationFuction](activationfuction.md)
-* [Error\_function](error_function.md)
+* [Loss\_Cost\_Error\_함수](error_function.md)
 * [RNN](rnn.md)
   * [RNN1.py](rnn/rnn1py.md)
   * [RNN2.py](rnn/rnn2py.md)
