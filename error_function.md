@@ -1,8 +1,3 @@
-학습을 통해 직접적으로 줄이고자 하는 값을 손실(loss), 에러(error), 혹은 코스트(cost)라고 합니다.
-
-학습을 통해 목표를 얼마나 잘(못) 달성했는지를 나타내는 값을 척도(metric)라고 합니다
-
-http://deepestdocs.readthedocs.io/en/latest/002_deep_learning_part_1/0023/
 
 # 오차 함수와 출력층의 설계
 
@@ -54,24 +49,17 @@ $$
 ### 2.3 오차함수 
 
 
-
-
-
-
 * 선형관계에 놓여 있지 않은 일반화 선형모형에서는 `최대우도법`활용 
 $$
 E(w) = -\sum_{n=1}^{N}[d_n \log y(x_n;w) + (1+d_n) \log{1-y(x_n;w)}] 
 $$
 
-```
-보통 모수와 모집단이 이미 알려져있고 여기서 어떤 현상이 관찰될 가능성을 확률이라고 하는데, 우도는 반대의 개념이다. 관측치가 고정되고, 그러한 관측치가 나오게 하는 가장 그럴 듯한 모수값을 추정하는 것이다. 이 때 '이 관측치가 관찰될 가능성'을 '우도'라고 하고, 함수로 표현하며, 우도가 가장 높아지게 하여 모수를 추정하는 방법이 최대우도법이다. 
-
-```
 
 ## 3. 다클래스 
 ### 3.1 정의 
 * 손글씨 분류등의 문제 (0~9까지 숫자)
 * 출력층에 분류하려는 클래스 수(L)과 같은 수의 유닛을 구성 
+
 ### 3.2 활성화 함수
 * 소프트맥스 함수 
     * 각 결과 확률값을 출력, 가장 높은 확률을 결과로 선택 
@@ -82,9 +70,9 @@ $$
 $$
 E(w) = -\sum_{n=1}^{N}\sum_{k=1}^{K} d_{nk} \log y_k(x_n;w)
 $$
-* The cross-entropy is a performance measure used in classification. The cross-entropy is a continuous function that is always positive and if the predicted output of the model exactly matches the desired output then the cross-entropy equals zero. The goal of optimization is therefore to minimize the cross-entropy so it gets as close to zero as possible by changing the weights and biases of the model.`nn.softmax_cross_entropy_with_logits`
 
-- [[동영상]참고_왜 크로스-엔트로피를 쓸까?](https://youtu.be/srdDQr07sGg): 머신/딥러닝에서 크로스-엔트로피를 코스트함수로 사용하는 이유 중 두개를 소개
+
+> [왜 크로스-엔트로피를 쓸까?](https://youtu.be/srdDQr07sGg): 크로스-엔트로피를 코스트함수로 사용하는 이유 중 두개를 소개
 
 ## 4. 이진분류 + 다클래스 분류 : Entrpy Loss 이용 
 
@@ -108,7 +96,7 @@ $$
 - p,q가 완전히 동일(분포가 동일)하다면 D=0 
     - 목표 : 정답과 예측값의 확률 분포가 같도록 만들기
 
-###### Step 2. p는 외부에서 주어지는 고정된 값(c)이므로 
+###### Step 2. p는 외부에서 주어지(정답확률 분포)는 고정된 값(C)이므로 
 
 $$
 D_{KL}(P,Q) = \sum_i p_i\log\frac{p_i}{q_i} = \sum_i p_i\log p_i - \sum_i p_i\log q_i (로그의 뺼셈 성질)
@@ -125,6 +113,7 @@ L = - \sum_i p_i\log q_i
 $$
 
 > 가능도(likelihood)를 통해 서도 식을 유추 할수 있어 `음수 로그 가능도(negative log-likelihood)`라도고 함 
+> cf. 유도식이 다른것 살펴 보기 
 
 ### 4.2 Entropy Loss for Binary
 - y가 0 혹은 1만 되는 경우(즉, 이진 분류 문제인 경우)
@@ -140,3 +129,35 @@ $$
 $$
 L = -\sum_{i=1}^C t_i \log y_i
 $$
+
+- log는 밑이 e인 자연로그 
+- $$y_i$$: 신경망의 출력 
+- $$t_i$$: 정답 레이블 (One-hot-encording:정답에 해당하는 인덱스만 1, 나머지는 0)
+
+###### [예제] 손글씨 탐지 문제 
+
+- t = 1일때는 $$-\sum 1 \log y_i$$ 계산값 출력 
+- t = 0일때는 $$-\sum 0 \log y_i$$이므로 0을 곱하여 모두 0이 됨
+
+
+
+|분류|1|2|3|4|5|6|7|8|9|10|
+|-|-|-|-|-|-|-|-|-|-|
+|$$t$$|0|0|1|0|0|0|0|0|0|0|
+|$$y_{정답}$$|0.1|0.05|0.6|0.0|0.05|0.1|0.0|0.1|0.0|0.0|
+|$$-\sum t_i \log y_i$$|0|0|0.51|0|0|0|0|0|0|0|
+> 3번째를 60%확률로 정답이라고 판단. 
+
+|분류|1|2|3|4|5|6|7|8|9|10|
+|-|-|-|-|-|-|-|-|-|-|
+|$$t$$|0|0|1|0|0|0|0|0|0|0|
+|$$y_{오답}$$|0.1|0.05|0.1|0.0|0.05|0.1|0.0|0.6|0.0|0.0|
+|$$-\sum t_i \log y_i$$|0|0|2.30|0|0|0|0|0|0|0|
+> 8번째를 60%확률로 정답이라고 판단
+
+정답은 3번째 로그값이므로 오답일때가 값이 더 큼 2.30 > 0.51 
+
+
+
+   
+ 
