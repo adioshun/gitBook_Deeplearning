@@ -22,13 +22,14 @@ $$|
     * 목표함수가 임의의 실수($$ -\infty:\infty $$) = 항등사상
 
 
-### 1.3 오차함수 (Square Loss)
-> 평균이라는 점 때문에 평균 제곱차 손실(mean-squared error, MSE)라고 불리기도 함
+### 1.3 오차함수 (Square Loss) or 평균 제곱 오차(mean-squared error, MSE)
 
-* 제곱오차 사용
 $$
-E(w) = \frac{1}{2} \sum_{n=1}^n\parallel d-y(x;w)\parallel^2
+E(w) = \frac{1}{2} \sum_{k}(y_k - t_k)^2
 $$
+- $$y_k$$: 출력값(예상값)
+- $$t_k$$: 정답(원래값)
+- k = 데이터의 차원수 
 
 > $$ \frac{1}{2} $$를 하는 이유는 미분시 2가 곱해지는걸 상쇄 하기 위함 
 
