@@ -1,3 +1,12 @@
+Loss가 일정 이상 줄어들지 않는다
+- CNN 구조를 더 복잡하게, filter를 더 많이 써본다.
+
+Training Loss가 줄어드는데 Test 성능은 좋아지지 않는다.
+- Overfitting의 가능성이 높으므로 CNN구조를 간단하게, filter 개수를 줄여본다.
+
+초반에 loss가 줄어드는데 오래 걸린다
+- Initialization에 문제가 있다.
+
 
 # 데이터의 백색화(Whitening)
 * 정규화 보다 수준 높은 데이터의 `경향`을 제거 하는 작업
@@ -81,7 +90,3 @@
 
 ---
 * [Improving the way neural networks learn](http://neuralnetworksanddeeplearning.com/chap3.html)
-
-
-
-
