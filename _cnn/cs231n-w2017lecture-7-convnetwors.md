@@ -1,5 +1,7 @@
 # Convolutional Neural Networks
 
+> 출처 : [CS231n Winter 2016: Lecture 7: Convolutional Neural Networks](https://youtu.be/LxfUGhug-iQ?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC), [발표자료](http://cs231n.stanford.edu/slides/2016/winter1516_lecture7.pdf), [강의노트](http://cs231n.github.io/convolutional-networks/)
+
 ## 1. 기본 동작 
 ###### Step 1. 입력 이미지, 필터 정의 
 
