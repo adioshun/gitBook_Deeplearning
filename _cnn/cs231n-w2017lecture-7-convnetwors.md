@@ -17,6 +17,9 @@
 Convolve연산 방법 : 필터 5x5x3(w)$$\cdot$$ 이미지의 5x5x3영역(x) + b
 Convolve연산 목표 : 1개의 값 출력 = $$Activation함수(w^Tx+b)$$
 
+> 원(뉴론)을 Reception Filed라고 부르기도 함 
+> “5x5 filter” -> “5x5 receptive field for each neuron
+
 ###### Step 3. Convolve연산 수행 (6개중 1개의 필터)
 
 ![](http://i.imgur.com/h2zRBF2.png)
@@ -81,4 +84,24 @@ ConvNet is a sequence of Convolutional Layers, interspersed with activation func
 
 ![](http://i.imgur.com/cxadXWV.png)
 
-###### Step 
+## 4. The brain/neuron view of CONV Layer
+
+![](http://i.imgur.com/OeTuXZH.png)
+
+All of them share parameters = 동일한 필터(값)을 사용하므로 
+- $$w^Tx +b$$에서 $$w^T$$값은 동일 
+
+![](http://i.imgur.com/pEsXGaN.png)
+
+일반적으로 여러개의 필터(eg.5개)를 사용함
+즉, 이미지의 한 영역에 대하여 5개의 값(뉴론)을 가지고 있음
+
+## 5. Pooling Layer 
+
+> shrink안되는 레이어를 다운 샘플링 하여 관리효율 증대 
+
+- makes the representations smaller and more manageable
+- operates over each activation map independently(Depth변화 없음)
+
+![](http://i.imgur.com/AKNuYzd.png)
+ 2 x 2 필터(stide2)로 1/2 크기로 줄일수 있음 
