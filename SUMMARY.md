@@ -21,6 +21,7 @@
   * [Hyper Parameter](tip/hyper-parameter.md)
 * [Reinforcement Learning](reinforcement-learning.md)
 * [CNN](_cnn.md)
+  * [CS231n w2017\_Lecture 7\_ConvNetwors](_cnn/cs231n-w2017lecture-7-convnetwors.md)
 * [RNN](rnn.md)
   * [RNN1.py](rnn/rnn1py.md)
   * [RNN2.py](rnn/rnn2py.md)
