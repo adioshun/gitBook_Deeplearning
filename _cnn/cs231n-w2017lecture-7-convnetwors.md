@@ -15,7 +15,7 @@
 
 
 Convolve연산 방법 : 필터 5x5x3(w)$$\cdot$$ 이미지의 5x5x3영역(x) + b
-Convolve연산 목표 : 1개의 값 출력
+Convolve연산 목표 : 1개의 값 출력 = $$Activation함수(w^Tx+b)$$
 
 ###### Step 3. Convolve연산 수행 (6개중 1개의 필터)
 
