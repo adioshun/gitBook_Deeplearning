@@ -1,47 +1,96 @@
 # Overfitting 문제 해결법 
+
 1. More Training data
+
 2. Reduce the number of feature
-3. __Regularization (규제화)__ : 학습시 가중치의 자유도 제약 
-    * Weight
-    * Dropout 
+
+3. __Regularization (정규화,일반화)__
+    * Weight : error 함수 또는 cost 함수를 변형하여 penalty를 활용하는 방안  
+    * Dropout : 망 자체를 변화(부분 생략)하는 방안 
     
 
+    
+## 1. More Training data = Image augmentation
+|Affine Transform|Elastic Distortion|
+|-|-|
+|![](http://i.imgur.com/LBbeVKF.png)|![](http://i.imgur.com/eDqAdPG.png)|
+|Affine Transform의 4가지 연산 이용|다양한 방향으로의 displacement vector를 만들어내고<br> 그것을 통해 좀 더 복잡한 형태의 훈련 데이터 생성|
 
-## 1. 규제화 방법 #1 : Weight Decay(가중치 감쇠)
-* 가중치에 어떤 제약을 가하는것
-    * 학습시 w에 대한 자유도 제약
-    * weight에 너무 큰값 주지 않기 (큰값 = 구부려짐 커짐)
-* 오차함수에 가중치의 제곱합(norm의 제곱)을 더한 뒤, 이를 최소화
-* $$ \rightthreetimes$$는 규제화의 강도를 제어하는 파라미터 
-    * $$ \rightthreetimes$$ = 0.01 ~0.00001 범위에서 선택 
-    * L2Regulization = $$ cost + \rightthreetimes \sum w^2 $$
+
+## 2. Reduce the number of feature
+
+## 3. Regularization
+
+### 3.1 Weight Decay(가중치 감쇠)
+L2 Regularization 
+
+$$
+C = C_0 + \frac{\lambda}{2n}\sum_w w^2
+$$
+
+- C: 원래의 Cost 함수 
+- n: 훈력 개수 
+- $$\lambda$$: regularization 변수, 규제화의 강도, 0.01 ~0.00001 범위 
+- w : 가중치 
+
+새 Cost 함수의 목적 
+* 학습시 w에 대한 자유도 제약(w 값들 역시 최소가 되는 방향으로 진행)
+    - w가 작아지도록 학습 = “local noise”가 학습에 큰 영향을 끼치지 않는다는 것
+* weight에 너무 큰값 주지 않기 (큰값 = 구부려짐 커짐)
 * 결과적으로 가중치는 자신의 크기에 비례하는 속도롤 항상 감쇠 
 * Weight Decay는 신경망의 가중치w에만 작용하며, 바이어스b에는 적용하지 않는다. 
 
 
-```
-TF코드 `l2reg=0.001*tf.reduce_sum(tf.square(w))`
-```
+###### [참고] L1 Regularization 
 
-## 2. 규제화 방법 #2 : 가중치 상한 
+L1 regularization은 2차항 대신에 1차항 사용 
+
+$$
+C = C_0 + \frac{\lambda}{n}\sum_w \mid w\mid
+$$
+
+방법 : weight 값 자체를 줄이는 것이 아니라, w의 부호에 따라 상수 값을 빼주는 방식으로 regularization을 수행한다.
+
+특징 : 작은 가중치들은 거의 0으로 수렴이 되어, 몇 개의 중요한 가중치들만 남게 된다
+
+장점 : “sparse model(coding)”에 적합
+
+단점 : 미분이 불가능한 점이 있기 때문에 gradient-based learning에 적용할 때는 주의가 필요하다.
+
+###### [참고] 가중치 상한 
 * 가중치 값의 상한을 통해 가중치를 제약하는 방법
 * 가중치 감쇠보다 나은 성능 보임 
 * Dropout 과 같이 사용 가능 
 
 
 
-## 3. 규제화 방법 #3 : Dropout 
+### 3.2 Dropout 
 ![](/assets/dropout.PNG)
 * 네트워크의 일부만 사용하여서 학습[1] 
 * (조심) Training 시에만 dropout_rate를 `~0.9`미만으로 적용하고, Evaluation 할때는 dropout_rate를 `1`로 적용
 
 신경망의 일부를 학습 시에 랜덤으로 무효화 하는 유사 방법(트롭커넥트, 확률적 최대 풀링)들이 존재 하나, 사용 편의와 적용 범위로 볼때 DropOut이 효과적
 
-> 기계 학습의 `앙상블`과 드랍아웃은 밀접한 관계 있음 
-> - Ensemble
->     * 여러 학습 모델을 생성하고 마지막에 합쳐서 결과를 산출
->     * 2~4,5%까지 성능 향상 가능
->     * 충분한 컴퓨팅 파워 필요
+#### A.  Voting 효과
+
+- Dropout을 하는 첫 번째 이유는 투표(voting) 효과 때문이다.
+
+- 일정한 mini-batch 구간 동안 줄어든 망을 이용해 학습을 하게 되면, 그 망은 그 망 나름대로 overfitting이 되며, 다른 mini-batch 구간 동안 다른 망에 대해 학습을 하게 되면,그 망에 대해 다시 일정 정도 overfitting이 된다.
+
+- 이런 과정을 무작위로 반복을 하게 되면, voting에 의한 평균 효과를 얻을 수 있기 때문에,결과적으로 regularization과 비슷한 효과를 얻을 수 있게 되는 것이다.
+
+#### B. Co-adaptation을 피하는 효과
+
+- 특정 뉴런의 바이어스나 가중치가 큰 값을 갖게 되면 그것의 영향이 커지면서 다른 뉴런들의 학습 속도가 느려지거나 학습이 제대로 진행이 되지 못하는 경우가 있다.
+
+- 하지만 dropout을 하면서 학습을 하게 되면, 결과적으로 어떤 뉴런의 가중치나 바이어스가 특정 뉴런의 영향을 받지 않기 때문에 결과적으로 뉴런들이 서도 동조화(co-adaptation)이 되는 것을 피할 수 있다.
+
+
+
+###### [참고] 앙상블 &  드랍아웃 비슷한점 
+* 여러 학습 모델을 생성하고 마지막에 합쳐서 결과를 산출
+* 2~4,5%까지 성능 향상 가능
+* 충분한 컴퓨팅 파워 필요
 
 
 ---
