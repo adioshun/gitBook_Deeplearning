@@ -17,11 +17,10 @@
   * [Normalization](tip/normalization.md)
   * [Hyper Parameter](tip/hyper-parameter.md)
 
-Network Zoo
+## Network\_Zoo
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
 * [AutoEncoder](autoencoder.md)
   * [Autoencoder.py](autoencoder/autoencoderpy.md)
-
 * [Reinforcement Learning](reinforcement-learning.md)
 * [CNN](_cnn.md)
   * [CS231n w2017\_Lecture 7\_ConvNetwors](_cnn/cs231n-w2017lecture-7-convnetwors.md)
