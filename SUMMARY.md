@@ -12,15 +12,15 @@
 * [Loss\_Cost\_Error\_함수](error_function.md)
 * [Optimization\_최적화](minimum.md)
 
-## 성능 향상 밥업 
+## 성능 향상 방법 
 * [TIP](tip.md)
 * [Batch normalization](tip/batch-normalization.md)
 * [Overfitting](optimization.md)
 * [Normalization](tip/normalization.md)
 * [Hyper Parameter](tip/hyper-parameter.md)
+* [Debugging\_Training](debuggingtraining.md)
 
 ## Network\_Zoo
-
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
 * [AutoEncoder](autoencoder.md)
   * [Autoencoder.py](autoencoder/autoencoderpy.md)
@@ -39,5 +39,5 @@
   * [gan1.py](gan/gan1py.md)
   * [gan2.py](gan/gan2py.md)
   * [gan3.py](gan/gan3py.md)
-* [Debugging\_Training](debuggingtraining.md)
+
 
