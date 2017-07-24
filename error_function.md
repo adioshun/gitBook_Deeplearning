@@ -1,7 +1,8 @@
-학습시 정확도 대시 손실함수를 사용하는 이유??
+```
+학습시 정확도 대신 손실함수를 사용하는 이유??
 - 교재 밑바닥부터 시작하는 딥러닝, 119P. 
 - 최적화 부분과 연계 하여 학습 하기 
-
+```
 
 
 # 오차 함수와 출력층의 설계
@@ -12,6 +13,10 @@
 $$|
 |이진분류|로지스틱 함수|$$ E(w) = -\sum_{n=1}^{N}[d_n \log y(x_n;w) + (1+d_n) \log{1-y(x_n;w)}] $$|
 |다클래스|소프트맥스함수|교차엔트로피 = $$ E(w) = -\sum_{n=1}^{N}\sum_{k=1}^{K} d_{nk} \log y_k(x_n;w) $$|
+
+>  교차엔트로피를 ACE(Average Cross-Entropy)라고 부르기도 함
+> - 제곱오차식(MSE)와 비슷하게 표현하기 위해
+
 ## 1. 회귀 
 ### 1.1 정의 
 * 출력값이 연속값을 같는 함수 대상
@@ -167,3 +172,10 @@ $$
 [참고: About loss functions, regularization and joint losses : multinomial logistic, cross entropy, square errors, euclidian, hinge, Crammer and Singer, one versus all, squared hinge, absolute value, infogain, L1 / L2 - Frobenius / L2,1 norms, connectionist temporal classification loss](http://christopher5106.github.io/deep/learning/2016/09/16/about-loss-functions-multinomial-logistic-logarithm-cross-entropy-square-errors-euclidian-absolute-frobenius-hinge.html)
    
  
+---
+
+###### [참고] Cross-Entropy(ACE)와 학습 속도 향상 
+- 기존 방식(MSE + Sigmoid함수) : 오차가 클수록 학습 속도가 빨라야 할 것 같은데 그렇지 못하다
+- 개선 방식(ACE + Sigmoid함수) : 오차 비례하는 결과를 얻을 수 있음
+
+> 자세한 내용은 라온피플 블로그 참고 : [Class 14](http://laonple.blog.me/220489989951), [Class 15](http://laonple.blog.me/220489989951)
