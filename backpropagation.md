@@ -59,3 +59,4 @@ Step 2. 모르는 $$\frac{\partial f}{\partial w} , \frac{\partial f}{\partial x
 * [Yes you should understand backprop](https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b#.jwbl282mm)
 - [Backpropagation 설명 예제와 함께 완전히 이해하기](http://jaejunyoo.blogspot.com/2017/01/backpropagation.html): Jaejun Yoo블로그
 - [A Derivation of Backpropagation in Matrix Form](http://sudeepraja.github.io/Neural/)
+- [Class 8 : Backpropagation for Neural Network(역전파)](http://laonple.blog.me/220489989951): 라온 블로그 

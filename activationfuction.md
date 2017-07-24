@@ -1,38 +1,55 @@
 # Activation Function
 
+## 0. 개요 
+
+### 0.1 역사
+
+1957년에 Rosenbalt는 “Perceptron”이라는 용어 및 개념을 발표 : Step function(계단함수)
+- 단점, Weigth 학습을 위해 역전파시 미세한 변화에도 출력층에 변화를 만들어 내야 하는데 계단함수는 0,1 극단적인 결과라 미세한 변화에 반응이 없음 
+- 해결책 : 연속적 출력값을 가지도록 함 
+  - ‘linear’ : 디폴트 값, 입력뉴런과 가중치로 계산된 결과값이 그대로 출력으로 나옵니다.
+  - ‘relu’ : rectifier 함수, 은익층에 주로 쓰입니다.
+  - ‘sigmoid’ : 시그모이드 함수, 이진 분류 문제에서 출력층에 주로 쓰입니다.
+  - ‘softmax’ : 소프트맥스 함수, 다중 클래스 분류 문제에서 출력층에 주로 쓰입니다.
+
+
+
+### 0.2 활용 
+
 * 일반적으로 단조증가\(Monotone increasing\)하는 비선형함수가 사용됨다. 
 * 하지만, 목적에 따라서 선형 사상을 사용 하기도 함
   1. 회귀 문제 = 항등사상 
   2. 분류 문제 = 소프트맥스 
 
-> 활성화 함수로 선형 함수를 사용 하면 안되는가? -&gt;  은닉층의 효과가 없어 지므로 사용 하면 안됨
+> 활성화 함수로 선형 함수를 사용 하면 안되는가?  은닉층의 효과가 없어 지므로 사용 하면 안됨
 
-  
+![](/assets/acode.PNG)
+
+\[참고\] [DIFFERENCE BETWEEN SOFTMAX FUNCTION AND SIGMOID FUNCTION](http://dataaspirant.com/2017/03/07/difference-between-softmax-function-and-sigmoid-function/)
 
 
-‘linear’ : 디폴트 값, 입력뉴런과 가중치로 계산된 결과값이 그대로 출력으로 나옵니다.
 
-‘relu’ : rectifier 함수, 은익층에 주로 쓰입니다.
 
-‘sigmoid’ : 시그모이드 함수, 이진 분류 문제에서 출력층에 주로 쓰입니다.
 
-‘softmax’ : 소프트맥스 함수, 다중 클래스 분류 문제에서 출력층에 주로 쓰입니다.
-
-## 
 
 ## 1. Sigmoid 함수
 
 * Logistic sigmoid function = Logistic function
 
+
+$$
+\sigma(z) \equiv \frac{1}{1+e^{-z}}
+$$
+- z는 각각의 입력(x1, x2, x3, …)과 가중치(w1, w2, w3, ..)를 곱한 값에 bias를 더한 값
+
+
+### 1.1 단점 
+
 * Vanishing gradient문제 발생: Deep-wide 네트워크에서 Back propagation할경우 sigmoid의 0~1의 문제로 제대로 Input Layer까지 전달 안됨 [\[Youtube 추가설명\]](https://youtu.be/cKtg_fpw88c?t=7m9s)
 
 * 너무 커질경우 0이나 1이 되어 버림 
 
-![Vanishing gradien](/assets/vgpro.PNG)
-
-> sigmoid 함수를 개선한 tanh\(탄젠트\) 함수 사용
->
-> 최종 산출이 임의의 실수 \($$ [-1:1] $$\)를 가지는 경우
+- 해결책 : sigmoid 함수를 개선한 tanh\(탄젠트\) 함수 사용, 최종 산출이 임의의 실수 \($$ [-1:1] $$\)를 가지는 경우
 
 ## 2. ReLu\(Rectified Linear Unit\)
 
@@ -67,11 +84,8 @@
 
 > Softmax 미분 유도 [공식들](https://www.facebook.com/groups/TensorFlowKR/permalink/502663916741338/) 
 
-## 9. 그외 Activation Function
 
-![](/assets/acode.PNG)
 
-\[참고\] [DIFFERENCE BETWEEN SOFTMAX FUNCTION AND SIGMOID FUNCTION](http://dataaspirant.com/2017/03/07/difference-between-softmax-function-and-sigmoid-function/)
 
 
 
