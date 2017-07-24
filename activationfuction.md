@@ -43,7 +43,7 @@ $$
 - z는 각각의 입력(x1, x2, x3, …)과 가중치(w1, w2, w3, ..)를 곱한 값에 bias를 더한 값
 
 
-### 1.1 단점 
+###### 단점 
 
 * Vanishing gradient문제 발생: Deep-wide 네트워크에서 Back propagation할경우 sigmoid의 0~1의 문제로 제대로 Input Layer까지 전달 안됨 [\[Youtube 추가설명\]](https://youtu.be/cKtg_fpw88c?t=7m9s)
 
@@ -77,12 +77,42 @@ $$
 ## 7. 소프트 맥스
 
 * 클래스 분류를 목적으로 하는 신경망에서는 출력층으로 소프트맥스 함수 사용 
-* 소프트맥스는 입력값을 지수화한 뒤 정규화 하는 과정 [\[설명\]](https://tensorflowkorea.gitbooks.io/tensorflow-kr/content/g3doc/tutorials/mnist/beginners/)
+ - logistic regression이라고도 불린다
+
+### 7.1 수식  
+$$
+\sigma(z)_j = \frac{e^{\approx j}}{\sum^{k}_{k=1}e^{\approx k}} ... for j = 1,...,k 
+$$
+- K-차원을 갖는 벡터 z를 (0,1) 범위를 갖는 σ(z)로 치환시키는 것
+- Zk에 대해 편미분을 실시하면, j = k 일 때는 양수이고, j ≠ k 일 때는 음수가 된다.
+  - 즉, Zk를 증가시키면 해당 뉴런의 출력값 σ(z)는 증가하고, 다른 뉴런의 출력값은 감소하게 되는 성질을 갖게 된다.
+
+> Softmax 미분 유도 [공식들](https://www.facebook.com/groups/TensorFlowKR/permalink/502663916741338/) 
+
+
+### 7.2 특징 
+
+* 소프트맥스는 입력값을 지수화한 뒤 정규화(=합이 1이므로) 하는 과정 [\[설명\]](https://tensorflowkorea.gitbooks.io/tensorflow-kr/content/g3doc/tutorials/mnist/beginners/)
   * 지수화란 증거값을 하나 더 추가하면 어떤 가설에 대해 주어진 가중치를 곱으로 증가시키는 것을 의미합니다. 또한 반대로, 증거값의 갯수가 하나 줄어든다는 것은 가설의 가중치가 기존 가중치의 분수비로 줄어들게 된다는 뜻입니다. 
   * 어떤 가설도 0 또는 음의 가중치를 가질 수 없습니다. 
   * 그런 뒤 소프트맥스는 가중치를 정규화한 후, 모두 합하면 1이 되는 확률 분포로 만듭니다 [참고](http://neuralnetworksanddeeplearning.com/chap3.html#softmax)
 
-> Softmax 미분 유도 [공식들](https://www.facebook.com/groups/TensorFlowKR/permalink/502663916741338/) 
+
+###### [참고] Sigmoid Vs. Softmax 
+- Sigmoid : 해당 뉴런으로 들어오는 입력 & 바이어스에 의해 출력이 결정되는 구조 
+- Softmax : Sigmoid 구조 +  다른 뉴런의 출력값과의 상대적인 비교 (합이 1이되게) = non-locality라고 부름 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
