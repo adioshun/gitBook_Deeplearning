@@ -11,13 +11,16 @@
 * [ActivationFuction](activationfuction.md)
 * [Loss\_Cost\_Error\_함수](error_function.md)
 * [Optimization\_최적화](minimum.md)
-* [Overfitting](optimization.md)
+
+## 성능 향상 밥업 
 * [TIP](tip.md)
-  * [Batch normalization](tip/batch-normalization.md)
-  * [Normalization](tip/normalization.md)
-  * [Hyper Parameter](tip/hyper-parameter.md)
+* [Batch normalization](tip/batch-normalization.md)
+* [Overfitting](optimization.md)
+* [Normalization](tip/normalization.md)
+* [Hyper Parameter](tip/hyper-parameter.md)
 
 ## Network\_Zoo
+
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
 * [AutoEncoder](autoencoder.md)
   * [Autoencoder.py](autoencoder/autoencoderpy.md)
