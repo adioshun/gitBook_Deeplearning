@@ -11,14 +11,17 @@
 * [ActivationFuction](activationfuction.md)
 * [Loss\_Cost\_Error\_함수](error_function.md)
 * [Optimization\_최적화](minimum.md)
-* [RBM\_DBNetwork](rbm_dbnetwork.md)
-* [AutoEncoder](autoencoder.md)
-  * [Autoencoder.py](autoencoder/autoencoderpy.md)
 * [Overfitting](optimization.md)
 * [TIP](tip.md)
   * [Batch normalization](tip/batch-normalization.md)
   * [Normalization](tip/normalization.md)
   * [Hyper Parameter](tip/hyper-parameter.md)
+
+Network Zoo
+* [RBM\_DBNetwork](rbm_dbnetwork.md)
+* [AutoEncoder](autoencoder.md)
+  * [Autoencoder.py](autoencoder/autoencoderpy.md)
+
 * [Reinforcement Learning](reinforcement-learning.md)
 * [CNN](_cnn.md)
   * [CS231n w2017\_Lecture 7\_ConvNetwors](_cnn/cs231n-w2017lecture-7-convnetwors.md)
