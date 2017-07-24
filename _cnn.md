@@ -1,6 +1,20 @@
 # CNN 
 
-## 1. 기본 개념 
+## 1. 개요 
+
+### 1.1 기존 네트워크(MLP)의 문제점 
+
+- MLP는 모든 입력이 위치와 상관없이 동일한 수준의 중요도를 갖는다고 보기 때문
+
+- 이미지가 조금만 변해도(크기, 회전, 변형) 새로운 학습 데이터로 처리를 해줘야 하는 문제점
+
+- 기존의 MLP(multi-layered neural network)이용 이미지 처리시 아래 문제 발생 
+    - 학습 시간(Training time)
+    - 망의 크기(Network size)
+    - 변수의 개수(Number of free parameters)
+
+### 1.2 해결책 
+
 * 입력을 나누어서 받음- 이미지의 일부부만(filter) 받음
 
 ```
@@ -9,6 +23,21 @@
 * 이미지에 따라서 활성화 되는 뉴런들이 다름 확인(=입력을 나누어서 받음)
 * 이를 NN에 적용한것이 CNN
 ```
+
+
+### 1.3 CNN 특징 
+
+- Locality(Local Connectivity): receptive field와 유사하게 local 정보를 활용
+
+- Shared Weights : 동일한 filter를 전체 영상에 반복적으로 적용
+    - 장점 : 변수의 수 감소,  topology 변화에 무관한 항상성(invariance)를 얻을 수 있음 
+
+- 이동이나 변형 등에 무관한(= global한 특징) 학습 결과 : (convolution + sub-sampling) 과정을 여러 번 반복 
+    - feature map의 크기가 작아지면서 전체를 대표할 수 있는 강인한 특징들만 남게 된다.
+
+>  수용영역(Receptive Field): 외부 자극이 전체 영향을 끼치는 것이 아니라 특정 영역에만 영향을 준다는 뜻
+
+
 
 ## 2. 구조 
 ![](/assets/CNN.PNG)
