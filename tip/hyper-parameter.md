@@ -61,6 +61,60 @@
  - r은 input layer에 있는 뉴런의 개수 제곱의 역수가 된다. 
  - eg. 가령 입력 뉴런의 개수가 6이라면, [-1/36, 1/36] 범위 내에서 무작위로 설정을 한다.
 
+
+#### 1.8 Filter의 수 (CNN 한정) 
+
+$$
+
+T_c = N_p \times N_f \times T_k 
+
+$$
+
+- $$T_c$$: 각 layer에서의 연산시간,
+- $$N_p$$: 출력 pixel의 수
+- $$N_f$$: 전체feature map의 개수
+- $$T_k$$: 각 filter 당 연산 시간
+
+각 단에서의 연산 시간/량을 비교적 일정하게 유지하여 시스템의 균형을 맞추는 것
+- 각 layer에서 feature map의 개수와 pixel 수의 곱을 대략적으로 일정하게 유지시킨다.
+ - 그 이유는 위 식에서 살펴본 것처럼 convolutional layer에서의 연산 시간이 픽셀의 수와 feature map의 개수에 따라 결정이 되기 때문이다.
+ - 보통 pooling layer를 거치면서 2x2 sub-sampling을 하게 되는데, 이렇게 되면 convolutional layer 단을 지날 때마다, pixel의 수가 1/4로 줄어들기 때문에 feature map의 개수는 대략 4배 정도로 증가시키면 될 것이라는 것은 감을 잡을 수가 있을 것이다.
+ - Feature map의 개수는 가중치와 바이어스와 같은 free parameter의 개수를 결정하며, 학습 샘플의 개수 및 수행하고자 하는 과제의 복잡도에 따라 결정이 된다.
+ 
+
+
+#### 1.8 Filter의 형태 (CNN 한정) 
+
+학습에 사용하는 학습 데이터 집합에 따라 적절하게 선택
+- 작은 크기(32x32나 28x28과)의 입력 영상 :  5x5 필터
+- 큰 크기 입력 OR 1 단계 필터 : 11x11 OR 15x15 필터 
+- 3단계 이상 : 3x3 필터 (Krizhevsky의 논문)
+
+큰 kernel 크기를 갖는 필터 1개 Vs. 작은 크기를 갖는 filter 여러 개
+- 여러 개의 작은 크기의 필터를 중첩해서 사용하는 것이 좋다
+
+
+#### 1.9 Stride 값 (CNN 한정) 
+
+Stride는 convolution을 수행할 때, 건너 뛸 픽셀의 개수
+- LeCun의 논문은 stride를 1을 사용했지만,
+- Krizhevsky의 논문에서는 1단계 convolution에서는 stride 값을 4를 사용
+
+Stride는 입력 영상의 크기가 큰 경우, 연산량을 줄이기 위한 목적으로 입력단과 가까운 쪽에만 적용
+
+통상적으로 보았을 때는 stride를 1로 하고, pooling을 통해 적절한 sub-sampling 과정을 거치는 것이 결과가 좋다
+
+> 출처 : [라온피플 블로그](http://laonple.blog.me/220571820368)
+
+#### 1.10 Zero-padding 지원 여부 (CNN 한정)
+
+아래의 장점으로 인하여 사용 하는것이 좋음 
+ - 영상의 크기를 동일하게 유지
+ - 경계면의 정보까지 살릴 수가 있음
+ 
+ 
+
+
 ---
 ## 2. 최적화 방법 
 

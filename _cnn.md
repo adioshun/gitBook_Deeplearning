@@ -32,6 +32,7 @@
 - Shared Weights : 동일한 filter를 전체 영상에 반복적으로 적용
     - 장점 : 변수의 수 감소,  topology 변화에 무관한 항상성(invariance)를 얻을 수 있음 
 
+
 - 이동이나 변형 등에 무관한(= global한 특징) 학습 결과 : (convolution + sub-sampling) 과정을 여러 번 반복 
     - feature map의 크기가 작아지면서 전체를 대표할 수 있는 강인한 특징들만 남게 된다.
 
