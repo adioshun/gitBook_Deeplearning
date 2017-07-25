@@ -51,6 +51,23 @@ AlexNet의 hyper-parameter를 수정하여 성능을 좀 더 개선을 하였으
 
 영향이 미미 하다고 하여 그냥 Skip 
 
+#### C. Filter 
+
+inverse filter 연산을 수행: 이 과정은 가역이 가능한 과정이기 때문에 특별히 문제가 될 것이 없다.
+
+
+#### D. Feature map
+
+시각화 해야 하는 대상 
+
+eg. AlexNet (5개의 Conv 레이어) 
+
+|Layer 1, 2|![](http://i.imgur.com/ZrE4ScP.png)|주로 영상의 코너나 edge 혹은 컬러와 같은 low level feature를 탐지|
+|-|-|-|
+|Layer 3|![](http://i.imgur.com/uiKqBgN.png)|비슷한 외양(texture)를 갖고 있는 특징을 추출|
+|Layer 4,5|![](http://i.imgur.com/ygfdhAO.png)|Layer4에서는 사물이나 개체의 일부분<br>ayer5에서는 위치나 자세 변화|
+
+
 
 
 --- 
