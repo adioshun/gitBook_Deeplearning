@@ -158,7 +158,46 @@ Local receptive field에서 더 다양한 feature를 추출하기 위해 여러 
 
 큰 필터 크기를 갖는 convolution 커널을 인수 분해 하면, 작은 커널 여러 개로 구성된 deep network를 만들 수 있으며, 이렇게 되면 parameter의 수가 더 줄어들면서 망은 깊어지는 효과를 얻을 수 있다.
 
-||||
+|Before|5x5 Convolution $$\rightarrow$$2개의 3x3 Convolution|After|
 |-|-|-|
 |![](http://i.imgur.com/3wjrfwY.png)|![](http://i.imgur.com/vTe8aGS.png)|![](http://i.imgur.com/KwDQunl.png)|
+|Parameter = 25||Parameter =9+9=18|
+eg. 7x7 convolution의 경우도 위 경우와 마찬가지로 3 단의 3x3 convolution으로 대응이 가능
+
+> 자세한 내용은 [라온피플 블로그](http://laonple.blog.me/220692793375) 참고
+
+--- 
+## 4. 효과적으로 Layer 크기 줄이는 법 
+
+
+![](http://i.imgur.com/5BE9sNx.png)
+35x35x320 $$\rightarrow$$ 17x17x640 으로 줄이는 2가지 방법 
+
+### 3.1  Pooling -> Inception
+계산 부하 적음, Pooling 단계를 거치면서, 원 feature-map에 있는 숨어 있는 정 (representational concept)가 사라지게 될 가능성 있음
+
+### 3.2 Inception -> Pooling
+ Inception 적용하였기 때문에 계산 부하 4배, Pooling전에 Inception을 적용 하였기 떄문에 숨은 특징을 더 잘 찾아낼 가능성은 높아진다.
+
+### 3.3 Szegedy(GoogLeNet 설계자중 한 명) 제안 방법 2가지 
+
+> Rethinking the inception architecture for computer vision
+
+![](http://i.imgur.com/XzGmkzA.png)
+
+#### A. (왼쪽)
+
+- 5x5, 3x3 convolution을 통해 local feature를 추출하면서 stride 2를 통해 크기가 줄고, 
+
+- 또한 pooling layer를 통해서도 크기를 줄이고 그 결과를 결합하는 방식
+
+#### B. (오른쪽) 
+
+- 좀 더 단순한 방법, 효율성과 연산량의 절감을 동시에 달성
+
+- stride 2를 갖는 convolution을 통해 320개의 feature-map을 추출하고 
+
+- pooling layer를 통해 다시 320개의 feature-map을 추출
+
+
 
