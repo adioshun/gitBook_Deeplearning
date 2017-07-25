@@ -67,7 +67,13 @@ eg. AlexNet (5개의 Conv 레이어)
 |Layer 3|![](http://i.imgur.com/uiKqBgN.png)|비슷한 외양(texture)를 갖고 있는 특징을 추출|
 |Layer 4,5|![](http://i.imgur.com/ygfdhAO.png)|Layer4에서는 사물이나 개체의 일부분<br>ayer5에서는 위치나 자세 변화|
 
+이렇게 시각화(Visualizing)를 수행하게 되면,
 
+- 특정 단계에서 얻어진 feature-map 들이 고르게 확보되어 있는지 혹은 특정 feature 쪽으로 쏠려 있는지,
+
+- 개체의 pose나 기타 invariance 등을 잘 반영하는지 등등을 파악
+
+학습의 결과에 대한 양호 여부를 판단할 수도 있고, 결과적으로 CNN의 구조가 적절했는지 등을 판단하기에 좋다.
 
 
 --- 
