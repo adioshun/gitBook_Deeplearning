@@ -87,4 +87,16 @@ AlexNet에서는 fully connected layer의 처음 2개 layer에 대해서만 적�
 
 
 
-### 3.6 2개의 GPU 사용이라고 볼 수 있다.
+### 3.6 2개의 GPU 사용
+
+> Krizhevsky, "One weird trick for parallelizing convolutional neural networks",  2014
+
+
+![](http://i.imgur.com/R7jZ5xQ.png)
+
+요즘의 Deep CNN은 크게 2개로 구성이 되었다고 볼 수 있다.
+- convolutional layer : 전체 연산량의 90~95%를 차지하지만, free parameter의 개수는 5% 정도 
+    - Data Parallelism, filter 연산(=matrix multiplication) 수행 
+- fully connected layer : 전체 연산량의 5~10%를 차지하지만, free parameter의 개수는 95% 정도
+    - Model Parallelism 
+
