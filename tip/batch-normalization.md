@@ -23,6 +23,18 @@
     * small learning rate 등
 
 
+BN을 추가하는 것 만으로 성능 개선이 엄청나게 일어나는 것은 아니며 다음과 같은 parameter tunning이 추가로 필요하다고 한다. 
+- learning rate 값을 키운다 (0.0075 -> 0.045, 5) 
+- drop out을 제거한다 (BN이 regularization 효과가 있기 때문이라고 한다) 
+- l2 weight regularization을 줄인다 (BN이 regularization 효과가 있기 때문이라고 한다) 
+- learning rate decay를 accelerate한다 (6배 더 빠르게 가속한다) 
+- local response normalization을 제거한다 (BN에는 적합하지 않다고 한다) 
+- training example의 per-batch shuffling을 추가한다 (BN이 regularization 효과를 증폭시키기 위함이다) 
+- photometric distortion을 줄인다 (BN이 속도가 더 빠르고 더 적은 train example을 보게 되기 때문에 실제 데이터에 더 집중한다고 한다)
+
+> [출처] [ttseven](http://blog.naver.com/ttseven/220706644103)
+
+
 ###### 목적 
 * 위의 기존의 간접적인 해결법 보다는 training 하는 과정 자체를 전체적으로 안정화하여 학습 속도를 가속시킬 수 있는 근본적인 방법을 찾고싶어 했다
 * 불안정화가 일어 나는 이유 : Internal Covariance Shift[^1]

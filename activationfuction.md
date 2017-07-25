@@ -53,9 +53,14 @@ $$
 
 ## 2. ReLu\(Rectified Linear Unit\)
 
+- sigmoid , tanh은 느린 학습 속도 문제 해결. 약 6배 속도 향상 
+
 * 램프\(ramp function, rectified linear function\)를 이용 
+
 * 0보다 작으면 off, 0보다 크면 계속 증가 \(ReLu\)
+
 * 단순하지만, 계산량이 적으며 학습이 빠르고 결과도 좋음 
+
 
 > ReLu를 사용하더라라도 구현시 마지막 레이어에서는 0~1사이의 값이어야 하므로 Sigmoid 사용
 >
