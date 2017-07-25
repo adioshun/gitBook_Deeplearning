@@ -12,7 +12,8 @@
 * [Loss\_Cost\_Error\_함수](error_function.md)
 * [Optimization\_최적화](minimum.md)
 
-## 성능 향상 방법 
+## 성능 향상 방법
+
 * [TIP](tip.md)
 * [Batch normalization](tip/batch-normalization.md)
 * [Overfitting](optimization.md)
@@ -21,6 +22,7 @@
 * [Debugging\_Training](debuggingtraining.md)
 
 ## Network\_Zoo
+
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
 * [AutoEncoder](autoencoder.md)
   * [Autoencoder.py](autoencoder/autoencoderpy.md)
@@ -30,6 +32,7 @@
   * [1990\_LeNet](_cnn/1990_lenet.md)
   * [2012\_AlexNet](_cnn/2012alexnet.md)
   * [2013\_ZFNet](_cnn/2013zfnet.md)
+  * [2014\_GoogLeNet](_cnn/2014googlenet.md)
   * [2014\_VGGNet](_cnn/2014vggnet.md)
   * [2015\_ResNet](_cnn/2015resnet.md)
 * [RNN](rnn.md)
@@ -39,5 +42,4 @@
   * [gan1.py](gan/gan1py.md)
   * [gan2.py](gan/gan2py.md)
   * [gan3.py](gan/gan3py.md)
-
 
