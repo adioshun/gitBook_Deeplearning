@@ -27,7 +27,7 @@
 * [AutoEncoder](autoencoder.md)
   * [Autoencoder.py](autoencoder/autoencoderpy.md)
 * [Reinforcement Learning](reinforcement-learning.md)
-* [CNN](_cnn.md)
+* [CNN\_Classification](_cnn.md)
   * [CS231n w2017\_Lecture 7\_ConvNetwors](_cnn/cs231n-w2017lecture-7-convnetwors.md)
   * [1990\_LeNet](_cnn/1990_lenet.md)
   * [2012\_AlexNet](_cnn/2012alexnet.md)
