@@ -74,5 +74,7 @@ Identity shortcut 연결의 장점
 
 ## 3. 특징 
 
+- ResNet에서는 image detection/localization의 성능을 위해, Faster R-CNN 방법을 적용
+
 ## 4. 학습/테스트 
 
