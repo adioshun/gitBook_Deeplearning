@@ -58,12 +58,22 @@ Identity shortcut 연결의 장점
 
 ### 2.1 Deeper Bottleneck Architecture
 
+![](http://i.imgur.com/undefined.png)
+
 학습 속도 향상을 위해 (50- /101-/152-layer)
 - Bottleneck적용 
 
 - residual function은 1x1, 3x3, 1x1
 
 ![](http://i.imgur.com/Qqcpcie.png)
+
+우측 그림 
+- 처음 1x1 convolution은 dimension을 줄이기 위한 목적
+    - NIN(Network-in-Network)이나 GoogLeNet의 Inception 구조에서 살펴본 것처럼
+- 3x3 convolution을 수행 한 후,
+- 마지막 1x1 convolution은 다시 dimension을 확대
+
+결과적으로 3x3 convolution 2개를 곧바로 연결시킨 구조에 비해 연산량을 절감시킬 수 있게 된다.
 
 ## 3. 특징 
 
