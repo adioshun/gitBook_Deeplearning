@@ -7,8 +7,6 @@ ILSVRC 2015년 대회에서 우승을 한 구조로 마이크로소프트의 Kai
 쉽게 할 수 있도록 해주는 residual framework 개념을 도입했다.
 
 
-![](http://i.imgur.com/nbOpQGv.png)
-
 ## 1. 개요 
 
 ### 1.1 깊은 망의 문제점 
@@ -54,26 +52,25 @@ Identity shortcut 연결의 장점
 
 - 매 2개의 convolutional layer마다 shortcut connection이 연결되도록 하였다.
 
-![](http://i.imgur.com/undefined.png)
 
 ### 2.1 Deeper Bottleneck Architecture
 
-![](http://i.imgur.com/undefined.png)
+![](http://i.imgur.com/5WIZm2X.png)
 
-학습 속도 향상을 위해 (50- /101-/152-layer)
-- Bottleneck적용 
-
-- residual function은 1x1, 3x3, 1x1
+##### Bottleneck적용 (residual function을 1x1, 3x3, 1x1로 구성)
 
 ![](http://i.imgur.com/Qqcpcie.png)
 
-우측 그림 
+
 - 처음 1x1 convolution은 dimension을 줄이기 위한 목적
     - NIN(Network-in-Network)이나 GoogLeNet의 Inception 구조에서 살펴본 것처럼
 - 3x3 convolution을 수행 한 후,
 - 마지막 1x1 convolution은 다시 dimension을 확대
 
-결과적으로 3x3 convolution 2개를 곧바로 연결시킨 구조에 비해 연산량을 절감시킬 수 있게 된다.
+목적: 결과적으로 3x3 convolution 2개를 곧바로 연결시킨 구조에 비해 연산량을 절감시킬 수 있게 된다.
+
+
+> Bottleneck 명명이유 :  차원을 줄였다가 뒤에서 차원을 늘리는 모습이 병목처럼 보이기 때문
 
 ## 3. 특징 
 
