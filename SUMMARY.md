@@ -35,6 +35,7 @@
   * [2014\_GoogLeNet](_cnn/2014googlenet.md)
   * [2014\_VGGNet](_cnn/2014vggnet.md)
   * [2015\_ResNet](_cnn/2015resnet.md)
+  * [2016\_ResNet\_Inception-V4\(작성중\)](_cnn/2016resnet-v2.md)
 * [RNN](rnn.md)
   * [RNN1.py](rnn/rnn1py.md)
   * [RNN2.py](rnn/rnn2py.md)
