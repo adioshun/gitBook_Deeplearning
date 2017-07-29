@@ -3,6 +3,8 @@
 > Visualizing Convolutional Neural Networks for Image Classification (2015, Danel Brukner)
 > Delving Deep into Convolutional Nets (2014, Ken Chatfield)
 
+> 자세한 내용(한글) : [Back-Projecting High-Level Activations](https://blog.lunit.io/2017/04/09/back-projecting-mid-level-activations/)
+
 ## 1. 개요 
 
 ILSVRC 2013년 대회에서 우승을 한 구조로 뉴욕대의Matthew Zeiler와 Rob Fergus에 의해서 개발이 되었다.
