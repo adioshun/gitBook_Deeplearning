@@ -1,5 +1,7 @@
 # Summary
+
 ## Deep Learning
+
 * [Introduction](README.md)
 * [기초 학습](chapter1.md)
 * [네트워크 설계](design_layer.md)
@@ -25,7 +27,6 @@
 
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
 * [AutoEncoder](autoencoder.md)
-  * [Autoencoder.py](autoencoder/autoencoderpy.md)
 * [Reinforcement Learning](reinforcement-learning.md)
 * [CNN\_Classification](_cnn.md)
 * [RNN](rnn.md)
