@@ -34,4 +34,5 @@
   * [gan1.py](gan/gan1py.md)
   * [gan2.py](gan/gan2py.md)
   * [gan3.py](gan/gan3py.md)
+  * [GAN\_SimGAN](gansimgan.md)
 
