@@ -131,7 +131,7 @@ $$
 
 
 
-- SNN(Self-Normalizations Neural Networks):[논문](https://arxiv.org/abs/1706.02515v1) ,[구현](https://github.com/bioinf-jku/SNNs)
+- SNN(Self-Normalizations Neural Networks):[논문](https://arxiv.org/abs/1706.02515v1) ,[구현#1](https://github.com/bioinf-jku/SNNs), [구현#2](https://gist.github.com/eamartin/d7f1f71e5ce54112fe05e2f2f17ebedf)
   - 배치 normalization은 명확한 normalization을 필요로하지만 SNNs는 저절로 0으로 수렴해 간다고 하는데, 이를 위해 도입한 것이 SELUs(scaled exponential linear units) 입니다
   
 - [SELU 활성화 함수](https://github.com/shaohua0116/Activation-Visualization-Histogram/blob/master/README.md)
