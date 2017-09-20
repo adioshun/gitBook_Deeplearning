@@ -28,3 +28,5 @@ FeedForward 신경망의 학습은 주어진 훈련데이터로 부터 계산되
 - [simple_gradient_descent.py](https://gist.github.com/chris-chris/808d383f19f74c537d9b4476b019c59a)
 - [Gradient Descent Overview](https://brunch.co.kr/@chris-song/50)
 - [참고 : 계산 그래프로 역전파 이해하기](https://brunch.co.kr/@chris-song/22)
+
+- [Gentle Introduction to the Adam Optimization Algorithm for Deep Learning](https://machinelearningmastery.com/adam-optimization-algorithm-for-deep-learning/)
