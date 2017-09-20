@@ -24,3 +24,7 @@ FeedForward 신경망의 학습은 주어진 훈련데이터로 부터 계산되
 
 ---
 [^1]: 훈련데이터의 수집과 최적화가 동시에 진행되는 방식 
+
+[simple_gradient_descent.py](https://gist.github.com/chris-chris/808d383f19f74c537d9b4476b019c59a)
+[Gradient Descent Overview](https://brunch.co.kr/@chris-song/50)
+[참고 : 계산 그래프로 역전파 이해하기](https://brunch.co.kr/@chris-song/22)
