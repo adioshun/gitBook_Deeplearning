@@ -60,3 +60,6 @@ Step 2. 모르는 $$\frac{\partial f}{\partial w} , \frac{\partial f}{\partial x
 - [Backpropagation 설명 예제와 함께 완전히 이해하기](http://jaejunyoo.blogspot.com/2017/01/backpropagation.html): Jaejun Yoo블로그
 - [A Derivation of Backpropagation in Matrix Form](http://sudeepraja.github.io/Neural/)
 - 라온 블로그_Backpropagation for Neural Network(역전파): [Class 8](http://laonple.blog.me/220489989951),  [Class 9](http://laonple.blog.me/220489989951)
+
+
+- Vanishing Gradient Problem : [원문](https://ayearofai.com/rohan-4-the-vanishing-gradient-problem-ec68f76ffb9b), [번역](https://brunch.co.kr/@chris-song/39)
