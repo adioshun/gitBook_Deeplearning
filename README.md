@@ -2,7 +2,7 @@
 
 ## Paper
 
-
+[Efficient Processing of Deep Neural Networks: A Tutorial and Survey](https://arxiv.org/abs/1703.09039v2)
 
 ## 동영상
 
