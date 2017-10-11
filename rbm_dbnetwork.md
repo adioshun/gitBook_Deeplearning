@@ -31,12 +31,25 @@
 > 부호함수(sign function) : 
 
 
-[ppt](http://kowon.dongseo.ac.kr/~dkkang/AI2011Fall/W0607.pdf): 42 slide
-
+- [ppt](http://kowon.dongseo.ac.kr/~dkkang/AI2011Fall/W0607.pdf): 42 slide
+- [홉필드 네트워크(Hopfield Network)](http://untitledtblog.tistory.com/7)
+- [Hopfield Network를 이용한 패턴 인식#1](http://secmem.tistory.com/268)
+- [Hopfield Network를 이용한 패턴 인식#2](http://secmem.tistory.com/270)
+- [Hopfield Network를 Python으로 구 ](http://trampkiwi.blog.me/221012687142)
 ---
 
 ## 2. 볼츠만 
 
+- 홉필드 망(Hopfield net)
+  존 홉필드에 의해 개발된 신경망 모델.
+  뉴런의 작용을 단지 임계값의 작용으로 보고 훈련에 의한 정보가 연결강도에 의해 표현된다는 간단한 이론에 기초함.
+  연상기억 이나 최적화 문제를 해결하는데 있어 매우 유용.
+  하지만 지역 최소값에 빠져 문제를 해결하지 못하는 경우도 종종 발생한다.
+
+- 볼츠만 머신(Boltzman machine)
+  홉필드 망의 일반화된 모델 이라고도 함.
+  홉필드 망이나 역전파 망에서는 그라디언트가 아래로만 향하는 방식으로 학습했지만,
+  볼츠만 머신에서는 확률적으로 증가하는 경우도 있어서 지역 최소값에서 벗어날 수 있게 되었다.
 
 
 
