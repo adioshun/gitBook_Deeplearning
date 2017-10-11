@@ -33,9 +33,13 @@
 
 - [강의 자료 일부ppt](http://kowon.dongseo.ac.kr/~dkkang/AI2011Fall/W0607.pdf): 42 slide
 - [홉필드 네트워크(Hopfield Network)](http://untitledtblog.tistory.com/7)
+- [지능시스템론 9. 인공 신경망](http://blog.daum.net/kimjaehun12/184) : 다층신경망, 홉필드, BAM, SOM
+- [홉필드 네트워크](http://www.aistudy.co.kr/neural/hopfield_kim.htm): aistudy
 - [Hopfield Network를 이용한 패턴 인식#1](http://secmem.tistory.com/268)
 - [Hopfield Network를 이용한 패턴 인식#2](http://secmem.tistory.com/270)
 - [Hopfield Network를 Python으로 구 ](http://trampkiwi.blog.me/221012687142)
+- [BAM을 이용한 패턴 인식#1](http://secmem.tistory.com/335) : BAM은 Hopfield Network와 비슷, 양방향으로 패턴을 연상할 수 있음
+
 ---
 
 ## 2. 볼츠만 
