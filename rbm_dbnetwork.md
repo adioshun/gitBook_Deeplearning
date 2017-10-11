@@ -31,7 +31,7 @@
 > 부호함수(sign function) : 
 
 
-- [ppt](http://kowon.dongseo.ac.kr/~dkkang/AI2011Fall/W0607.pdf): 42 slide
+- [강의 자료 일부ppt](http://kowon.dongseo.ac.kr/~dkkang/AI2011Fall/W0607.pdf): 42 slide
 - [홉필드 네트워크(Hopfield Network)](http://untitledtblog.tistory.com/7)
 - [Hopfield Network를 이용한 패턴 인식#1](http://secmem.tistory.com/268)
 - [Hopfield Network를 이용한 패턴 인식#2](http://secmem.tistory.com/270)
