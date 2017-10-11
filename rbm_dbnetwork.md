@@ -1,28 +1,43 @@
-# Weight Initial 하기 
-> Hilton 교수의 3번째 제안
-```
-기존 : Initial weight를 초기값을 램덤하게 설정
-* Deep-wide Network가 정확도가 안 맞는 2번째 이유 
-```
-1. 0이 아닌 값으로 선정 
-2. RBM(restricted boltzmann machine﻿)을 이용[1] 
-    * 근접 레이어간 Pre-training(Forward/Backward)를 하면서 결과값을 비교 하면서 wight를 수정 
-    * 이렇게 생성된 네트워크를 `Deep Belief Network`라 부름 
-    * 연산이 오래 걸리고, 다른 좋은 방법들이 나와서 요즘 사용 안함 -> Xavier Initialization/He's Initialization 
-    * DBN/RBM보다 단순한 `오토 인코더`를 이용하여도 사전 훈련이 가능
-3. Xavier Initialization/He's Initialization :입력과 아웃의 갯수를 사용하여 결정[2],[3]
-    * W 정의시 input(fan_in)으로 Output(fan_out)으로 정의 하는것만으로도 RBM과 같은 성능 보임[[Youtbue설명](https://youtu.be/4rC0sWrp3Uw?t=10m42s)
-    * Xavier : `random(fan_in, fan_out)/np.sqrt(fan_in)`
-    * He : `random(fan_in, fan_out)/np.sqrt(fan_in/2)`
-4. Batch normalization 
-5. layer sequential Uniform variance 
+# 제약 볼츠만 머신 
 
-> Weight Initial는 아직 Active research area임 
+네트워크 종류 
+- 계층형 네트워크 
+    - 활용 : 패턴 인식
+    - 종류 : CNN
 
-# 연구 결과들 (초기값 설정)
-![](/assets/Screenshot from 2017-02-21 05-32-14.png)
+- 상호 결합형 네트워크`(그래프 모형을 기원으로 하는 신경망)`
+    - 특징 : 층이 없고 유닛끼리 양방향으로 결합. 유닛이 갖는 값에 의해 어떤 상태를 기억 할수 있음
+    - 활용 : 최적화 문제, 노이즈 제거, 연상기억 
+        - 불완전한 일부의 데이터로부터 나머지 전체의 데이터를 기억(인식) 해 낼 수 있다
+    - 종류 : 홉필드 네트워크(1982), 볼츠만, 제약 볼츠만 
+
+> 연산기억 : 어떤 정보를 다른 정보와 연관하여 지어 기억 하는것 eg. 바나나-노랑
+
+
+
+## 1. 홉필드 네트워크 
+
+![](https://i.imgur.com/aXzW4Yy.png)
+
+
+홉필드가 제앆핚 홉필드 싞경망은 계산 요소로서 부호 활성화 함수를 따른 맥클록-피츠뉴런을 사용한다.
+
+### 1.1 부호 활성화 함수
+- 부호 함수와 비슷하게 동작한다.
+- 뉴런의 가중 입력이 0 보다 작으면 출력은 -1 이고, 0 보다 크면 출력은 +1이다.
+- 0이면 출력은 바뀌지 않는다. 뉴런이 이젂 출력이 +1이었든 -1이었든 상관 없이 이전상태로 남는다. 
+
+
+> 부호함수(sign function) : 
+
+
+[ppt](http://kowon.dongseo.ac.kr/~dkkang/AI2011Fall/W0607.pdf): 42 slide
 
 ---
-[1]: Hinton et al.,"A Fast Learning Algorithm for Deep Belief Nets", 2006
-[2]: X.Glorot and Y.Bengio, "understanding the difficulty of training deep feedforward neural networks", 2010
-[3]: K.He, "Delving Deep into Rectifiers:Surpassing Human-Level Performance on ImageNet Classification", 2015
+
+## 2. 볼츠만 
+
+
+
+
+## 3. 제약 볼츠만 
