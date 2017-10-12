@@ -89,6 +89,9 @@
 
 - RBM은 확률모델의 계산이 Intractable 하기 때문에, 학습시 근사법인 MCMC나 또는 제프리 힌튼 교수가 발견한 CD(Contrastive Divergence)를 사용하는데, RBM의 모델의 간단함에서 오는 추론에 대한 이점은 샘플링 근간의 학습법이 실용적인 문제에 적용되는데 기여했다.
 
+- RBM 은 주어진 입력과 똑 같은 출력을 생성하도록 하는 **오토인코딩** 과제를 수행하는 모델
+
+- 무감독학습 신경망 모델
 
 ### 3.2 구조 
 
@@ -134,8 +137,9 @@ RBM도 마찬가지로 log-likelihood의 gradient descent를 수행함으로써 
 
 - RBM은 우선 DBN(DBN, Deep Belief Network)이라고 하는 딥러닝의 일종인 심층신뢰신경망을 구성하는 기본적인 요소이다. 즉 RBM을 여러겹 쌓아서 심층신뢰신경망을 만든다.
 
+- 2006 년에 최초로 컨볼루션 연산을 사용하지 않고 심층 구조 상에서 학습을 성공시킨 모델
 
 
 
 ###### [참고자료] 
-- [서울대 강의 자료](https://bi.snu.ac.kr/Courses/ML2016/LectureNote/LectureNote_ch5.pdf)
+- [서울대 강의 자료](https://bi.snu.ac.kr/Courses/ML2016/LectureNote/LectureNote_ch5.pdf): 장병탁교수 
