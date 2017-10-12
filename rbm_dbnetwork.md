@@ -139,7 +139,13 @@ RBM도 마찬가지로 log-likelihood의 gradient descent를 수행함으로써 
 
 - 2006 년에 최초로 컨볼루션 연산을 사용하지 않고 심층 구조 상에서 학습을 성공시킨 모델
 
+- 오차 소멸 문제 해결을 위해 층별 선훈련 (layerwise pre-training)과정 수행 : 아래층에 대해서 가중치를 먼저 학습한 후 이 가중치를 고정한 다음 그 다음 층의 가중치를
+학습
+
+- 딥빌리프네트워크는 크게 두 가지로 구분된다. 
+    - 하나는 입력과 같은 출력을 재생성하도록 하는 오토인코더 (무감독 학습)
+    - 다른 하나는 분류기로 사용하는 것이다.(감독학습)
 
 
 ###### [참고자료] 
-- [서울대 강의 자료](https://bi.snu.ac.kr/Courses/ML2016/LectureNote/LectureNote_ch5.pdf): 장병탁교수 
+- [서울대 강의 자료](https://bi.snu.ac.kr/Courses/ML2016/LectureNote/LectureNote_ch5.pdf): 장병탁교수, 식 유도 과정 설명  
