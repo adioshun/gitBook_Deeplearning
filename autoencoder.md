@@ -21,16 +21,13 @@ Autoencoder는 기존의 Neural Network의 **Unsupervised learning** 버젼이�
 출력값 $$ \hat{x} $$를 입력값 $$ x $$와 유사하게 만들고자 하는걸 목표로 함
   * 학습의 목표는 입력을 부호화한 뒤, 이어 다시 복호화 했을 때 원래의 입력을 되도록 충실히 재현할 수 있는 부호화 방법을 찾는것이다. 
 
-### 1.1 특징 표현력을 가진 신경망
+##### 목적1 : 특징 표현력을 가진 신경망
 
 - 손글씨등 개인 차이 혹은 노이즈가 포함된 상태에서도 바르게 인식 할수 있는 특징으로 변환 할수 있음 
   - 압축/복원이 가능할 정도로 특징 표현력을 가진 신경망 구축 
   - 노이즈 제거 
 
-
-
-
-### 1.2 초기 파라미터 값 획득
+##### 목적2 : 초기 파라미터 값 획득
 
 - 딥 네트워크의 사전훈련, 즉 그 가중치의 좋은 초기값을 얻는 목적으로 사용된다.
 
@@ -47,7 +44,6 @@ Autoencoder는 기존의 Neural Network의 **Unsupervised learning** 버젼이�
 * 중간층의 활성화 함수\($$ f $$\) : 자유롭게 변경 가능, 통상적으로 비선형함수
 
 * 출력층의 활성화 함수\($$ \tilde{f}$$\) : 입력 데이터의 유형에 따라 선택 \(신경망의 목표 출력이 입력한 자신이 될수 있도록\)
-
   * 실수값 : 항등사항
   * 이진값 : 로지스틱
 
@@ -61,9 +57,9 @@ Autoencoder는 기존의 Neural Network의 **Unsupervised learning** 버젼이�
 
 ```
 1  Auto-Encoder (Basic form)
-2. Stacked Auto-Encoder : Hidden 레이어를 여러개 쌓아서 구현 
-3. Sparse Auto-Encoder
-4. Denoising Auto-Encoder (dA)
+2. Stacked Auto-Encoder : 적층 자기 부호화기, 초기 파라미터 획 
+3. Sparse Auto-Encoder : 희소 자기 부호화기 
+4. Denoising Auto-Encoder (dA) : 노이즈 제거 
 5. Stacked Denoising Auto-Encoder (SdA)
 ```
 
