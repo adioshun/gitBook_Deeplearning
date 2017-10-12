@@ -39,6 +39,8 @@ Autoencoder는 기존의 Neural Network의 **Unsupervised learning** 버젼이�
 
 ### 2.1 오토인코더 설계
 
+![](https://i.imgur.com/a6rKEqU.png)
+
 #### A. 출력층의 활성화 함수
 
 * 중간층의 활성화 함수\($$ f $$\) : 자유롭게 변경 가능, 통상적으로 비선형함수
@@ -58,7 +60,7 @@ Autoencoder는 기존의 Neural Network의 **Unsupervised learning** 버젼이�
 ```
 1  Auto-Encoder (Basic form)
 2. Stacked Auto-Encoder : 적층 자기 부호화기, 초기 파라미터 획 
-3. Sparse Auto-Encoder : 희소 자기 부호화기 
+3. Sparse Auto-Encoder : 희소 자기 부호화기  
 4. Denoising Auto-Encoder (dA) : 노이즈 제거 
 5. Stacked Denoising Auto-Encoder (SdA)
 ```
