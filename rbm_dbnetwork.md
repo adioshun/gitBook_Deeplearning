@@ -20,7 +20,7 @@
 ![](https://i.imgur.com/aXzW4Yy.png)
 
 
-홉필드가 제앆핚 홉필드 싞경망은 계산 요소로서 부호 활성화 함수를 따른 맥클록-피츠뉴런을 사용한다.
+홉필드가 제안(1982년)한 홉필드 신경망은 계산 요소로서 부호 활성화 함수를 따른 맥클록-피츠뉴런을 사용한다.
 
 ### 1.1 부호 활성화 함수
 - 부호 함수와 비슷하게 동작한다.
@@ -48,16 +48,40 @@
 ---
 
 ## 2. 볼츠만 머신(Boltzman machine, BM)
- 
+
+### 2.1 개요
+-  신경망과 시뮬레이티드 어닐링 성질들을 결합시킨 모델, 힌튼 제안(1984년)
 
 - 정의 : 홉필드 망의 일반화된 모델/홉필드 네트워크의 동작 규칙을** 확률적인** 동작 규칙으로 확장
 - 특징 : 국소해 문제 해결
     - 홉필드 망이나 역전파 망에서는 그라디언트가 아래(에너지가 감소)로만 향하는 방식으로 학습했지만, 볼츠만 머신에서는 확률적으로 증가(에너지가 증가)하는 경우도 있어서 지역 최소값에서 벗어날 수 있게 되었다.
 
 
+### 2.2 구조 
+
+![](https://i.imgur.com/bQuFI5M.png)
+
+- 각각 하나의 visible layer와 hidden layer로 구성
+
+> Energy Based Model :  E(x,y)  주어진 데이터(x)에 대해서 가능한 모든 출력변수(y)들의 배열들{(x, y)....}의 에너지,  변수들 사이의 상관관계, 최소화 하는 방향으로 학습 진행 
+
+
+### 2.3 학습 
+
+이 네트워크를 하나의 에너지 모델로 간주합니다. visible layer와 hidden layer가 학습과정에서 에너지 함수를 이용하여 학습
+
+### 2.4 단점 
+
+- unconstrained connectivity(fully connected) 때문에 weight를 구하는 계산과정이 너무 복잡하고 그로 인해 기계학습이나 추론 분야에서 실제적인 문제를 해결하는데 유용하지 않음
+
+- 해결법 : 연결에 제약을 둠 -> 제약 볼츠만
+
+
 ---
 
 ## 3. 제약 볼츠만 (Restricted Boltzmann Machine, RBM)
+
+### 3.1 개요 
 
 - BM에서 층간 연결을 없앤 형태의 모습이다.
 
@@ -67,6 +91,8 @@
 
 
 ### 3.2 구조 
+
+![](https://i.imgur.com/RJyQFAw.png)
 
 - 2개층 구조 : 관찰 가능한 가시층(visible layer)과 은닉층(hidden)으로만 구성된다
 
@@ -91,13 +117,25 @@
 
 3. 에너지를 최소화하는 방향으로 가충치를 학습
 
+
+RBM도 마찬가지로 log-likelihood의 gradient descent를 수행함으로써 네트워크를 학습합니다. 학습 과정에서 Markov chain을 수렴할 때까지 반복함으로써 p(x)로부터의 표본들을 구하는 Gibbs sampling을 사용합니다. 하지만 표본을 추출하기 위해 sampling을 수렴할 때 까지 반복하는 것은 비효율적이기 때문에, 표본 추출 시 속도 개선을 위해 contrastive divergence 방식을 사용합니다.
+
+
 ###### [참고자료]
+- [제한 볼츠만 머신 초보자 튜토리얼](http://blog.naver.com/rupy400/220793514761)
 - [RBM (제한된 볼츠만 머신) 이해](http://www.tbacking.com/?p=351)
 - [제한된 볼츠만 기계 (리스트릭티드 볼츠만 머신, RBM)](http://neuralix.blogspot.com/2014/02/draft.html)
+- [Restricted Boltzmann Machine #1 (Korean)](http://junya906.blogspot.com/2016/06/restricted-boltzmann-machine-1-korean.html)
 - Asja Fischer, [An Introduction to Restricted Boltzmann Machines](http://image.diku.dk/igel/paper/AItRBM-proof.pdf), CIARP 2012
-- 
+
 ---
 
 ## 4. Deep Belief Network
 
 - RBM은 우선 DBN(DBN, Deep Belief Network)이라고 하는 딥러닝의 일종인 심층신뢰신경망을 구성하는 기본적인 요소이다. 즉 RBM을 여러겹 쌓아서 심층신뢰신경망을 만든다.
+
+
+
+
+###### [참고자료] 
+- [서울대 강의 자료](https://bi.snu.ac.kr/Courses/ML2016/LectureNote/LectureNote_ch5.pdf)
