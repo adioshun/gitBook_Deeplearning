@@ -51,8 +51,17 @@
 
   - [PART1](http://suriyadeepan.github.io/2017-01-07-unfolding-rnn/): Concepts and Architectures
   - [PART2](http://suriyadeepan.github.io/2017-02-13-unfolding-rnn-2/): Vanilla, GRU, LSTM RNNs from scratch in Tensorflow
+  
+  
+  - [Building Your Own Neural Machine Translation System in TensorFlow.](https://github.com/tensorflow/nmt)
+
+- [신경망번역을 위한 seq2seq 영문 튜토리얼](https://www.facebook.com/groups/TensorFlowKR/permalink/496962010644862/)
+
 
 # Tutorial
+
+
+- [신경망번역을 위한 seq2seq 영문 튜토리얼](https://www.facebook.com/groups/TensorFlowKR/permalink/496962010644862/)
 
 - [음성인식 관련 텐서플로우 RNN Tutorial](https://svds.com/tensorflow-rnn-tutorial/): TensorFlow RNN Tutorial, 2017.03.23
 
