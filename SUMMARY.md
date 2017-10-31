@@ -16,6 +16,7 @@
 
 ## 성능 향상 방법
 
+* [-ToRead\_HowToEnhance](-toreadhowtoenhance.md)
 * [TIP](tip.md)
 * [Batch normalization](tip/batch-normalization.md)
 * [Overfitting](optimization.md)
