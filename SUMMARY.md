@@ -25,39 +25,28 @@
 
 ## AE
 
-* -ToREAD_AE
+* -ToREAD\_AE
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
 * [AutoEncoder](autoencoder.md)
 
+---
 
-## 
-
-* -ToREAD_RL
+* -ToREAD\_RL
 * [Reinforcement Learning](reinforcement-learning.md)
-
-
-
 
 ## CNN
 
-* -ToRead_CNN
+* -ToRead\_CNN
 * [CNN](_cnn.md)
-
-
-
-
 
 ## RNN
 
-* -ToREAD_RNN
+* [-ToREAD\_RNN](-toreadrnn.md)
 * [RNN](rnn.md)
-
-
-
 
 ## GAN
 
-* -ToREAD_GAN
+* [-ToREAD\_GAN](-toreadgan.md)
 * [GAN](gan.md)
   * [gan1.py](gan/gan1py.md)
   * [gan2.py](gan/gan2py.md)
