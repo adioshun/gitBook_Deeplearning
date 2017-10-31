@@ -22,6 +22,7 @@
 * [Normalization](tip/normalization.md)
 * [Hyper Parameter](tip/hyper-parameter.md)
 * [Debugging\_Training](debuggingtraining.md)
+* [TransferLearning](transferlearning.md)
 
 ## AE
 
