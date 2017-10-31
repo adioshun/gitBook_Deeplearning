@@ -1,6 +1,44 @@
+# GAN
+
+## 1. List
 - [List of GAN Implementation](https://github.com/wiseodd/generative-models): wiseodd, 설명 [BLog](http://wiseodd.github.io/techblog/)
 
 - [List of really-awesome-gan](https://github.com/nightrome/really-awesome-gan)
+
+
+## 2. Paper
+
+
+
+## 3. Article (Post, blog, etc.)
+
+
+
+## 3. Tutorial (Series, )
+
+
+- [초보자를 위한 GAN 튜토리얼입니다.](https://www.facebook.com/groups/TensorFlowKR/permalink/489007728106957/)
+
+
+## 4. Youtube
+
+- [1시간만에 GAN(Generative Adversarial Network) 완전 정복하기](http://tv.naver.com/v/1947034)
+
+
+- [CycleGAN](https://youtu.be/Fkqf3dS9Cqw): 한글, [ppt](https://www.slideshare.net/NaverEngineering/finding-connections-among-images-using-cyclegan)
+
+## 6. Material (Pdf, ppt)
+
+
+
+## 7. Implementation (Project)
+
+
+## 8. Research Group / Conference 
+
+
+---
+
 
 # Article / Blog
 
@@ -41,7 +79,7 @@
 
 # Article
 
-- [초보자를 위한 GAN 튜토리얼입니다.](https://www.facebook.com/groups/TensorFlowKR/permalink/489007728106957/)
+
 
 ### 초짜 대학원생 입장에서 이해하는
 
