@@ -7,41 +7,16 @@
 
 
 ## 2. Paper
+* [Learning from Simulated and Unsupervised Images through Adversarial Training](https://arxiv.org/pdf/1612.07828v1.pdf) : Ashish Shrivastava, Apple, 216
+ * the blueprint for training state-of-the-art neural nets from only __synthetic__ and unlabelled data
+ * 영문 정리 글 : [SimGANs - a game changer in unsupervised learning, self driving cars, and more](https://medium.com/waya-ai/simgans-applied-to-autonomous-driving-5a8c6676e36b#.tcbuo9za5)
+- Improved Techniques for Training GANs: [논문](https://arxiv.org/abs/1606.03498)
+
+
 
 
 
 ## 3. Article (Post, blog, etc.)
-
-
-
-## 3. Tutorial (Series, )
-
-
-- [초보자를 위한 GAN 튜토리얼입니다.](https://www.facebook.com/groups/TensorFlowKR/permalink/489007728106957/)
-
-
-## 4. Youtube
-
-- [1시간만에 GAN(Generative Adversarial Network) 완전 정복하기](http://tv.naver.com/v/1947034)
-
-
-- [CycleGAN](https://youtu.be/Fkqf3dS9Cqw): 한글, [ppt](https://www.slideshare.net/NaverEngineering/finding-connections-among-images-using-cyclegan)
-
-## 6. Material (Pdf, ppt)
-
-
-
-## 7. Implementation (Project)
-
-
-## 8. Research Group / Conference 
-
-
----
-
-
-# Article / Blog
-
 - 지적 대화를 위한 깊고 넓은 딥러닝 (Feat. TensorFlow): [[추천]: youtube](https://youtu.be/soJ-wDOSCf4?t=1m47s), 김태훈, PyCon APAC 2016
 
 - [TensorFlowKR_PR12모임 GAN 설명](https://www.facebook.com/groups/TensorFlowKR/permalink/456848987989498/)
@@ -66,22 +41,8 @@
 
 * NIPS 2016 Tutorial:Generative Adversarial Networks: [논문](https://arxiv.org/pdf/1701.00160v1.pdf),[youtube](http://fbsight.com/t/goodfellow-gan-nips-2016-tutorial/59058), 논문 및 저자 설명
 
-- [유투브 강의:How to Generate Images with Tensorflow (LIVE) ](https://www.youtube.com/watch?v=iz-TZOEKXzA&feature=youtu.be)
 
-- [Youtube: 1시간만에 GAN(Generative Adversarial Network) 완전 ](http://tv.naver.com/v/1947034)
-
-# 논문
-* [Learning from Simulated and Unsupervised Images through Adversarial Training](https://arxiv.org/pdf/1612.07828v1.pdf) : Ashish Shrivastava, Apple, 216
- * the blueprint for training state-of-the-art neural nets from only __synthetic__ and unlabelled data
- * 영문 정리 글 : [SimGANs - a game changer in unsupervised learning, self driving cars, and more](https://medium.com/waya-ai/simgans-applied-to-autonomous-driving-5a8c6676e36b#.tcbuo9za5)
-- Improved Techniques for Training GANs: [논문](https://arxiv.org/abs/1606.03498)
-
-
-# Article
-
-
-
-### 초짜 대학원생 입장에서 이해하는
+######  [초짜 대학원생 입장에서 이해하는 시리즈]
 
 - Generative Adversarial Nets논문 분석 : [# 1](http://jaejunyoo.blogspot.com/2017/01/generative-adversarial-nets-1.html), [# 2](http://jaejunyoo.blogspot.com/2017/01/generative-adversarial-nets-2.html)
 
@@ -92,13 +53,33 @@
 - Unrolled Generative Adversarial Networks: [#1](http://jaejunyoo.blogspot.com/2017/02/unrolled-generative-adversarial-network-1.html), [#2](http://jaejunyoo.blogspot.com/2017/02/unrolled-generative-adversarial-network-2.html)
 
 
-# Material (pdf, ppt)
+
+
+## 3. Tutorial (Series, )
+
+
+- [초보자를 위한 GAN 튜토리얼입니다.](https://www.facebook.com/groups/TensorFlowKR/permalink/489007728106957/)
+
+
+## 4. Youtube
+
+- [1시간만에 GAN(Generative Adversarial Network) 완전 정복하기](http://tv.naver.com/v/1947034)
+
+
+- [CycleGAN](https://youtu.be/Fkqf3dS9Cqw): 한글, [ppt](https://www.slideshare.net/NaverEngineering/finding-connections-among-images-using-cyclegan)
+
+- [유투브 강의:How to Generate Images with Tensorflow (LIVE) ](https://www.youtube.com/watch?v=iz-TZOEKXzA&feature=youtu.be)
+
+- [Youtube: 1시간만에 GAN(Generative Adversarial Network) 완전 ](http://tv.naver.com/v/1947034)
+
+
+## 6. Material (Pdf, ppt)
 
 - [Generative Adversarial Network and its Variations](http://people.ee.duke.edu/~lcarin/Yunchen9.30.2016.pdf): ppt, GAN 변형들
 
-# Implementation
 
 
+## 7. Implementation (Project)
 
 - [Keras Adversarial Models](https://github.com/bstriner/keras-adversarial): bstriner
 
@@ -119,10 +100,10 @@
 - [Keras Adversarial Models](https://github.com/bstriner/keras-adversarial)
 
 - [DiscoGAN](https://github.com/SKTBrain/DiscoGAN): SKTBrain, Pythrch기반
-  - [DiscoGAN 설명자료](https://www.facebook.com/notes/sk-t-brain/sk-t-brain-research/398821727155314)
-  - [DiscoGAN Arxiv 논문 링크](https://arxiv.org/abs/1703.05192)
-  - [Taehoon Kim 님이 구현하신 DiscoGAN 소스코드](https://github.com/carpedm20/DiscoGAN-pytorch)
-  - [wiseodd 님이 구현하신 DiscoGAN 소스코드](https://github.com/…/generative-m…/tree/master/GAN/disco_gan)
+- [DiscoGAN 설명자료](https://www.facebook.com/notes/sk-t-brain/sk-t-brain-research/398821727155314)
+- [DiscoGAN Arxiv 논문 링크](https://arxiv.org/abs/1703.05192)
+- [Taehoon Kim 님이 구현하신 DiscoGAN 소스코드](https://github.com/carpedm20/DiscoGAN-pytorch)
+- [wiseodd 님이 구현하신 DiscoGAN 소스코드](https://github.com/…/generative-m…/tree/master/GAN/disco_gan)
 - [List of generative models](https://github.com/wiseodd/generative-models): 거의 모든 GAN코드 모음
 
 - [DCGAN-MNIST](https://github.com/erilyth/DCGANs): Keras버젼, erilyth
@@ -130,4 +111,8 @@
 - [Variational Auto-Encoder (VAE)](https://github.com/hwalsuklee/tensorflow-mnist-VAE)
 
 
-- Deep Convolutional GAN(DCGAN): Tensorflow,  [code](https://github.com/carpedm20/DCGAN-tensorflow),  [demo](http://carpedm20.github.io/faces/)
+- Deep Convolutional GAN(DCGAN): Tensorflow, [code](https://github.com/carpedm20/DCGAN-tensorflow), [demo](http://carpedm20.github.io/faces/)
+
+
+## 8. Research Group / Conference 
+
