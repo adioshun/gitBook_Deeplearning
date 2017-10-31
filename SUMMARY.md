@@ -36,7 +36,7 @@
 
 ## CNN
 
-* -ToRead\_CNN
+* [-ToRead\_CNN](-toreadcnn.md)
 * [CNN](_cnn.md)
 
 ## RNN
