@@ -23,13 +23,41 @@
 * [Hyper Parameter](tip/hyper-parameter.md)
 * [Debugging\_Training](debuggingtraining.md)
 
-## Network\_Zoo
+## AE
 
+* -ToREAD_AE
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
 * [AutoEncoder](autoencoder.md)
+
+
+## 
+
+* -ToREAD_RL
 * [Reinforcement Learning](reinforcement-learning.md)
+
+
+
+
+## CNN
+
+* -ToRead_CNN
 * [CNN](_cnn.md)
+
+
+
+
+
+## RNN
+
+* -ToREAD_RNN
 * [RNN](rnn.md)
+
+
+
+
+## GAN
+
+* -ToREAD_GAN
 * [GAN](gan.md)
   * [gan1.py](gan/gan1py.md)
   * [gan2.py](gan/gan2py.md)
