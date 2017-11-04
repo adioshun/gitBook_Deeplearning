@@ -1,25 +1,16 @@
-# 스스로 모델 만들기
+# 모델 만들기
 
-- [github:DEvol - Deep Neural Network Evolution](https://github.com/joeddav/devol)
+## 1. List
 
-DeepLearning Project Workflow라고 읽고
-Bias-Variance Tradeoff에 가까운데 가끔 비슷한 질문이 올라오는 것 같아서 올립니다.
+- [List of DL-tricks](https://github.com/handong1587/handong1587.github.io/blob/master/_posts/deep_learning/2015-10-09-dl-tricks.md)
 
-모델 성능이 원하는대로 나오지 않을때
-
-1) 데이터를 더 모아야 하는지
-2) 더 큰 모델을 만들어야 할 지
-
-High bias, High Variance 체크를 통해 간단히 판단하는 법입니다.
-http://fbsight.com/t/deeplearning-project-workflow-bias-variance-tradeoff/78035
+## 2. Paper
 
 
-# Paper
 
--
+## 3. Article (Post, blog, etc.)
 
 
-# Article / Post
 
 - [기초용어/개념](https://github.com/kailashahirwar/cheatsheets-ai/blob/master/Deep%20Learning%20Cheat%20Sheet-Hacker%20Noon.pdf)
 
@@ -30,9 +21,9 @@ http://fbsight.com/t/deeplearning-project-workflow-bias-variance-tradeoff/78035
 - [머신러닝 시스템 프로세스와 아키텍쳐](http://bcho.tistory.com/1177)
 
 - [Applying deep learning to real-world problems](https://medium.com/merantix/applying-deep-learning-to-real-world-problems-ba2d86ac5837)
-  - Learning I: the value of pre-training
-  - Learning II: caveats of real-world label distributions
-  - Learning III: understanding black box models
+- Learning I: the value of pre-training
+- Learning II: caveats of real-world label distributions
+- Learning III: understanding black box models
 
 - [An end to end implementation of a Machine Learning pipeline](https://spandan-madan.github.io/DeepLearningProject/): [github](https://github.com/Spandan-Madan/DeepLearningProject)
 
@@ -46,9 +37,9 @@ http://fbsight.com/t/deeplearning-project-workflow-bias-variance-tradeoff/78035
 
 - 10 steps to bootstrap your machine learning project: [(part 1)](https://blog.metaflow.fr/10-steps-to-bootstrap-your-machine-learning-project-part-1-aa7e1031f5b1), [(part 2)](https://blog.metaflow.fr/10-steps-to-bootstrap-your-machine-learning-project-part-2-b6be78444c70)]
 
-- Improve your neural networks:  [(Part 1)](http://adventuresinmachinelearning.com/improve-neural-networks-part-1/), [(Part 1한글)](https://www.nextobe.com/single-post/2017/05/11/Neural-Network-%25EA%25B0%259C%25EC%2584%25A0)
+- Improve your neural networks: [(Part 1)](http://adventuresinmachinelearning.com/improve-neural-networks-part-1/), [(Part 1한글)](https://www.nextobe.com/single-post/2017/05/11/Neural-Network-%25EA%25B0%259C%25EC%2584%25A0)
 
-- [Must Know Tips/Tricks in Deep Neural Networks (by  Vincent Granville)](http://www.datasciencecentral.com/profiles/blogs/must-know-tips-tricks-in-deep-neural-networks)
+- [Must Know Tips/Tricks in Deep Neural Networks (by Vincent Granville)](http://www.datasciencecentral.com/profiles/blogs/must-know-tips-tricks-in-deep-neural-networks)
 
 - [Must Know Tips/Tricks in Deep Neural Networks (by Xiu-Shen Wei)](http://lamda.nju.edu.cn/weixs/project/CNNTricks/CNNTricks.html)
 
@@ -87,6 +78,67 @@ Am I overfitting?
 
 - Catastrophic forgetting 결함에 대한 문제를 극복하는 방법: [논문](https://arxiv.org/pdf/1612.00796.pdf), [코드](https://github.com/ariseff/overcoming-catastrophic)
 
+
+
+Here are some resources for tips and tricks for training neural networks. ([Resource 1](http://cs231n.github.io/neural-networks-3/#baby), [Resource 2](https://www.quora.com/Machine-Learning-What-are-some-tips-and-tricks-for-training-deep-neural-networks), [Resource 3](https://arxiv.org/abs/1206.5533))
+
+
+
+
+- Limitation / Further Readings: [catastrophic forgetting](https://deepmind.com/blog/enabling-continual-learning-in-neural-networks/)
+
+### QnA
+
+- [Why does learning curve of my model shows large variance in training error? How to fix it?](https://www.reddit.com/r/MachineLearning/comments/65rnyj/dwhy_does_learning_curve_of_my_model_shows_large/?st=j1lduqn0&sh=a0d0d41f)
+
+- [Live loss plots inside Jupyter Notebook for Keras](https://www.reddit.com/r/MachineLearning/comments/65jelb/d_live_loss_plots_inside_jupyter_notebook_for/?st=j1k2qa06&sh=01fc92df)
+
+- [How big should batch size and number of epochs be when fitting a model in Keras?](http://stackoverflow.com/questions/35050753/how-big-should-batch-size-and-number-of-epochs-be-when-fitting-a-model-in-keras)
+
+- [Hyperparameter search benchmark?](https://www.reddit.com/r/MachineLearning/comments/69n74f/p_hyperparameter_search_benchmark/)
+
+- <del>[How to design deep convolutional neural networks?](http://stackoverflow.com/questions/37280910/how-to-design-deep-convolutional-neural-networks): </del> 결론은 정해진 룰 없음. 경험적으로 반복 수행으로 찾아 내는것임
+
+
+
+
+## 3. Tutorial (Series, )
+
+
+
+## 4. Youtube
+
+
+
+## 6. Material (Pdf, ppt)
+
+
+
+## 7. Implementation (Project)
+
+
+## 8. Research Group / Conference 
+
+
+
+
+
+---
+- [github:DEvol - Deep Neural Network Evolution](https://github.com/joeddav/devol)
+
+DeepLearning Project Workflow라고 읽고
+Bias-Variance Tradeoff에 가까운데 가끔 비슷한 질문이 올라오는 것 같아서 올립니다.
+
+모델 성능이 원하는대로 나오지 않을때
+
+1) 데이터를 더 모아야 하는지
+2) 더 큰 모델을 만들어야 할 지
+
+High bias, High Variance 체크를 통해 간단히 판단하는 법입니다.
+http://fbsight.com/t/deeplearning-project-workflow-bias-variance-tradeoff/78035
+
+
+```
 Some important parameters to look out for while optimizing neural networks are:
 - Type of architecture
 - Number of Layers
@@ -98,8 +150,12 @@ Some important parameters to look out for while optimizing neural networks are:
 - Weight sharing
 - etc.
 - etc for CNN : convolutional filter size, pooling value, etc.
-Here are some resources for tips and tricks for training neural networks. ([Resource 1](http://cs231n.github.io/neural-networks-3/#baby), [Resource 2](https://www.quora.com/Machine-Learning-What-are-some-tips-and-tricks-for-training-deep-neural-networks), [Resource 3](https://arxiv.org/abs/1206.5533))
+```
 
+
+
+
+---
 
 # Tools
 
@@ -122,21 +178,7 @@ Here are some resources for tips and tricks for training neural networks. ([Reso
 
 
 
-# QnA
 
-- [Why does learning curve of my model shows large variance in training error? How to fix it?](https://www.reddit.com/r/MachineLearning/comments/65rnyj/dwhy_does_learning_curve_of_my_model_shows_large/?st=j1lduqn0&sh=a0d0d41f)
-
-- [Live loss plots inside Jupyter Notebook for Keras](https://www.reddit.com/r/MachineLearning/comments/65jelb/d_live_loss_plots_inside_jupyter_notebook_for/?st=j1k2qa06&sh=01fc92df)
-
-- [How big should batch size and number of epochs be when fitting a model in Keras?](http://stackoverflow.com/questions/35050753/how-big-should-batch-size-and-number-of-epochs-be-when-fitting-a-model-in-keras)
-
-- [Hyperparameter search benchmark?](https://www.reddit.com/r/MachineLearning/comments/69n74f/p_hyperparameter_search_benchmark/)
-
-- <del>[How to design deep convolutional neural networks?](http://stackoverflow.com/questions/37280910/how-to-design-deep-convolutional-neural-networks): </del> 결론은 정해진 룰 없음. 경험적으로 반복 수행으로 찾아 내는것임
-
-# Limitation / Further Readings
-
-- [catastrophic forgetting](https://deepmind.com/blog/enabling-continual-learning-in-neural-networks/)
 
 
 ---
