@@ -1,28 +1,3 @@
-# Deep Learning
-
-## Paper
-
-[Efficient Processing of Deep Neural Networks: A Tutorial and Survey](https://arxiv.org/abs/1703.09039v2)
-
-## 동영상
-
-### 모두를 위한 딥러닝\(시즌1\)
-
-* [Youtube](https://www.youtube.com/watch?v=BS6O0zOGX4E&list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm)
-* [강의 웹사이트](http://hunkim.github.io/ml/)
-* [질문사이트](http://qna.iamprogrammer.io/c/dev/ml)
-* [요약정리](http://pythonkim.tistory.com/notice/25)
-
-
-
-## Blog 
-
-* [파이썬\_킴 블로그](http://pythonkim.tistory.com/category/%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C%EC%9A%B0)
-
-* [라온피플 블로그](http://laonple.blog.me/220648539191)
-
-
----
 # 출처
 
 ## 교재

@@ -6,6 +6,10 @@
 
 ## 2. Paper
 
+[Efficient Processing of Deep Neural Networks: A Tutorial and Survey](https://arxiv.org/abs/1703.09039v2)
+
+
+
 
 
 ## 3. Article (Post, blog, etc.)
