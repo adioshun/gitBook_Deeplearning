@@ -62,6 +62,8 @@ A Tutorial](https://arxiv.org/pdf/1703.01619.pdf): Sequence-to-sequence모델을
 
 - [Awesome - Most Cited Deep Learning Papers](https://github.com/terryum/awesome-deep-learning-papers): TerryUm
 
+- [딥러닝을 제대로 이해하기 위해서 필요한 배경지식맵](http://bahnsville.tistory.com/m/1155)
+
 - [카카오AI리포트] 딥러닝 연구의 현재와 미래 (1/2) ](https://brunch.co.kr/@kakao-it/65)
 
 - [Brief History of Machine Learning](https://chatbotnewsdaily.com/since-the-initial-standpoint-of-science-technology-and-ai-scientists-following-blaise-pascal-and-804ac13d8151)
