@@ -158,6 +158,20 @@ Stride는 입력 영상의 크기가 큰 경우, 연산량을 줄이기 위한 �
 
 
 
+###Previous Hyperparameter Optimization
+
+> 아래와 같은 대표적인 알고리즘들을 소개하였고, 직접 구현하여 적용하기 어려운 점을 단점으로 꼽았다. [[출처]](http://openresearch.ai/t/chopt-automated-hyperparameter-optimization-framework-for-cloud-based-machine-learning-platforms/379)
+
+- Population-Based Training(PBT)
+ - fixed computation budget
+ - optimize a population of models
+- Hyperband
+ - 성능 좋다고 함(random search, bayesian 대비)
+ - small - medium budget에서 잘 작동한다고 함
+ - 단, configuration에 따라 성능 결정되고, 자원이 많으면 random search 대비 낫지 않다고 함
+- BOHB
+ - Hyperband + Bayesian Optimization
+
 
 
 ---
