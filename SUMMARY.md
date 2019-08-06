@@ -49,6 +49,14 @@
 * [README](Multi-Task-Learning/README.md)
 * [INTRO](Multi-Task-Learning/Intro.md)
 
+## Bayesian Learning
+
+* [README](Bayesian-Learning/README.md)
+* [INTRO](Bayesian-Learning/Intro.md)
+* [2017-Deep-Learning-Is-Not-Good-Enough](Bayesian-Learning/2017-Deep-Learning-Is-Not-Good-Enough.md)
+
+
+
 
 
 ## Auto Encoder
