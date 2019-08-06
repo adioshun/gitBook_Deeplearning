@@ -44,8 +44,6 @@
 
 * [README](CNN/README.md)
 * [INTRO](CNN/Intro.md)
-* [-ToRead\_CNN](-toreadcnn.md)
-* [CNN](_cnn.md)
 
 ## RNN
 
