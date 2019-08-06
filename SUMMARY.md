@@ -1,17 +1,17 @@
 # Summary
 
+## Deep Learning
+
 * [README](README.md)
 * [References](References.md)
 
-## Deep Learning
+## Fundemental
 
 * [README](Fundemental/README.md)
 * [Backpropagation](Fundemental/Backpropagation.md)
 * [ActivationFuction](Fundemental/Activation-Function.md)
 * [Loss\_Cost\_Error\_함수](Fundemental/Loss-Function.md)
 * [Optimization\_최적화](Fundemental/Optimization.md)
-
----
 
 ## How-to-Design
 
@@ -23,23 +23,15 @@
   * [An Analysis of Deep Neural Network Models for Practical Applications](How-to-Design/an-analysis-of-deep-neural-network-models-for-practical-applications.md)
 * [네트워크 설계](design_layer.md)
 
-
 ## How-to-Enhancement
 
-* [-ToRead\_HowToEnhance](-toreadhowtoenhance.md)
-* [TIP](tip.md)
 * [README](How-to-Enhancement/README.md)
 * [INTRO](How-to-Enhancement/Intor.md)
 * [Batch normalization](How-to-Enhancement/batch-normalization.md)
-* [Overfitting-tmp](optimization.md)
 * [Overfitting](How-to-Enhancement/optimization.md)
-
 * [Normalization](How-to-Enhancement/normalization.md)
 * [Hyper Parameter](How-to-Enhancement/hyper-parameter.md)
-* [Debugging\_Training-tmp](debuggingtraining.md)
 * [Debugging\_Training](How-to-Enhancement/debugging-training.md)
-
-
 
 ## Auto Encoder
 
