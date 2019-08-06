@@ -24,15 +24,22 @@
 * [네트워크 설계](design_layer.md)
 
 
-## 성능 향상 방법
+## How-to-Enhancement
 
 * [-ToRead\_HowToEnhance](-toreadhowtoenhance.md)
 * [TIP](tip.md)
-* [Batch normalization](tip/batch-normalization.md)
-* [Overfitting](optimization.md)
-* [Normalization](tip/normalization.md)
-* [Hyper Parameter](tip/hyper-parameter.md)
-* [Debugging\_Training](debuggingtraining.md)
+* [README](How-to-Enhancement/README.md)
+* [INTRO](How-to-Enhancement/Intor.md)
+* [Batch normalization](How-to-Enhancement/batch-normalization.md)
+* [Overfitting-tmp](optimization.md)
+* [Overfitting](How-to-Enhancement/optimization.md)
+
+* [Normalization](How-to-Enhancement/normalization.md)
+* [Hyper Parameter](How-to-Enhancement/hyper-parameter.md)
+* [Debugging\_Training-tmp](debuggingtraining.md)
+* [Debugging\_Training](How-to-Enhancement/debugging-training.md)
+
+
 
 ## Auto Encoder
 
