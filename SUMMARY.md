@@ -35,18 +35,10 @@
 * [INTRO](Auto-Encoder/Intor.md)
 * [RBM-DBNetwork](Auto-Encoder/RBM-DB-Network.md)
 
----
-
-* [-ToREAD\_AE](-toreadae.md)
-* [RBM\_DBNetwork](rbm_dbnetwork.md)
-* [AutoEncoder](autoencoder.md)
-
 ## Reinforce Learning
 
 * [README](Reinforce-Learning/README.md)
 * [INTRO](Reinforce-Learning/Intro.md)
-* [-ToREAD\_RL](-toreadrl.md)
-* [Reinforcement Learning](reinforcement-learning.md)
 
 ## CNN
 
