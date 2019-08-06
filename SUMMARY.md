@@ -15,13 +15,14 @@
 
 ## How-to-Design
 
-* [README](How-to-Desing/README.md)
-
+* [README](How-to-Design/README.md)
+* [INTRO](How-to-Design/Intro.md)
+  * [A practical theory for designing very deep convolutional neural networks](How-to-Design/a-practical-theory-for-designing-very-deep-convolutional-neural-networks.md)
+  * [DEEP CONVOLUTIONAL NEURALNETWORK DESIGN PATTERNS](How-to-Design/deep-convolutional-neuralnetwork-design-patterns.md)
+  * [Rethinking the Inception Architecture for Computer Vision](How-to-Design/rethinking-the-inception-architecture-for-computer-vision.md)
+  * [An Analysis of Deep Neural Network Models for Practical Applications](How-to-Design/an-analysis-of-deep-neural-network-models-for-practical-applications.md)
 * [네트워크 설계](design_layer.md)
-  * [A practical theory for designing very deep convolutional neural networks](design_layer/a-practical-theory-for-designing-very-deep-convolutional-neural-networks.md)
-  * [DEEP CONVOLUTIONAL NEURALNETWORK DESIGN PATTERNS](design_layer/deep-convolutional-neuralnetwork-design-patterns.md)
-  * [Rethinking the Inception Architecture for Computer Vision](design_layer/rethinking-the-inception-architecture-for-computer-vision.md)
-  * [An Analysis of Deep Neural Network Models for Practical Applications](design_layer/an-analysis-of-deep-neural-network-models-for-practical-applications.md)
+
 
 ## 성능 향상 방법
 
