@@ -21,7 +21,6 @@
   * [DEEP CONVOLUTIONAL NEURALNETWORK DESIGN PATTERNS](How-to-Design/deep-convolutional-neuralnetwork-design-patterns.md)
   * [Rethinking the Inception Architecture for Computer Vision](How-to-Design/rethinking-the-inception-architecture-for-computer-vision.md)
   * [An Analysis of Deep Neural Network Models for Practical Applications](How-to-Design/an-analysis-of-deep-neural-network-models-for-practical-applications.md)
-* [네트워크 설계](design_layer.md)
 
 ## How-to-Enhancement
 
@@ -55,10 +54,6 @@
 * [INTRO](Bayesian-Learning/Intro.md)
 * [2017-Deep-Learning-Is-Not-Good-Enough](Bayesian-Learning/2017-Deep-Learning-Is-Not-Good-Enough.md)
 
-
-
-
-
 ## Auto Encoder
 
 * [README](Auto-Encoder/README.md)
@@ -76,10 +71,9 @@
 * [INTRO](CNN/Intro.md)
 
 ## Capsule Network
+
 * [README](Capsule-Network/README.md)
 * [INTRO](Capsule-Network/Intro.md)
-
-
 
 ## RNN
 
@@ -93,7 +87,7 @@
   * [gan1.py](GAN/gan1py.md)
   * [gan2.py](GAN/gan2py.md)
   * [gan3.py](GAN/gan3py.md)
-  * [GAN\_SimGAN](gansimgan.md)
+* [GAN-sim-gan](GAN/GAN-sim-gan.md)
 
 ## Relational Reasoning
 
