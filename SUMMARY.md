@@ -1,5 +1,6 @@
 # Summary
 
+* [README](README.md)
 * [References](References.md)
 
 ## Deep Learning
@@ -10,20 +11,13 @@
 * [Loss\_Cost\_Error\_함수](Fundemental/Loss-Function.md)
 * [Optimization\_최적화](Fundemental/Optimization.md)
 
+---
 
-
-* [Introduction](README.md)
-* [List\_DeepLearning](listdeeplearning.md)
-* [기초 학습](chapter1.md)
 * [네트워크 설계](design_layer.md)
   * [A practical theory for designing very deep convolutional neural networks](design_layer/a-practical-theory-for-designing-very-deep-convolutional-neural-networks.md)
   * [DEEP CONVOLUTIONAL NEURALNETWORK DESIGN PATTERNS](design_layer/deep-convolutional-neuralnetwork-design-patterns.md)
   * [Rethinking the Inception Architecture for Computer Vision](design_layer/rethinking-the-inception-architecture-for-computer-vision.md)
   * [An Analysis of Deep Neural Network Models for Practical Applications](design_layer/an-analysis-of-deep-neural-network-models-for-practical-applications.md)
-* [Backpropagation](backpropagation.md)
-* [ActivationFuction](activationfuction.md)
-* [Loss\_Cost\_Error\_함수](error_function.md)
-* [Optimization\_최적화](minimum.md)
 
 ## 성능 향상 방법
 
@@ -41,15 +35,14 @@
 * [INTRO](Auto-Encoder/Intor.md)
 * [RBM-DBNetwork](Auto-Encoder/RBM-DB-Network.md)
 
+---
 
-
-* -ToREAD\_AE
+* [-ToREAD\_AE](-toreadae.md)
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
 * [AutoEncoder](autoencoder.md)
 
----
-
 ## Reinforce Learning
+
 * [README](Reinforce-Learning/README.md)
 * [INTRO](Reinforce-Learning/Intro.md)
 * [-ToREAD\_RL](-toreadrl.md)
