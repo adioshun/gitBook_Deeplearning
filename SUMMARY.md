@@ -2,6 +2,14 @@
 
 ## Deep Learning
 
+* [README](Fundemental/README.md)
+* [Backpropagation](Fundemental/Backpropagation.md)
+* [ActivationFuction](Fundemental/Activation-Function.md)
+* [Loss\_Cost\_Error\_함수](Fundemental/Loss-Function.md)
+* [Optimization\_최적화](Fundemental/Optimization.md)
+
+
+
 * [Introduction](README.md)
 * [List\_DeepLearning](listdeeplearning.md)
 * [기초 학습](chapter1.md)
@@ -25,7 +33,13 @@
 * [Hyper Parameter](tip/hyper-parameter.md)
 * [Debugging\_Training](debuggingtraining.md)
 
-## AE
+## Auto Encoder
+
+* [README](Auto-Encoder/README.md)
+* [INTRO](Auto-Encoder/Intor.md)
+* [RBM-DBNetwork](Auto-Encoder/RBM-DB-Network.md)
+
+
 
 * -ToREAD\_AE
 * [RBM\_DBNetwork](rbm_dbnetwork.md)
@@ -33,25 +47,34 @@
 
 ---
 
+## Reinforce Learning
+* [README](Reinforce-Learning/README.md)
+* [INTRO](Reinforce-Learning/Intro.md)
 * [-ToREAD\_RL](-toreadrl.md)
 * [Reinforcement Learning](reinforcement-learning.md)
 
 ## CNN
 
+* [README](CNN/README.md)
+* [INTRO](CNN/Intro.md)
 * [-ToRead\_CNN](-toreadcnn.md)
 * [CNN](_cnn.md)
 
 ## RNN
 
+* [README](RNN/README.md)
+* [INTRO](RNN/Intro.md)
 * [-ToREAD\_RNN](-toreadrnn.md)
 * [RNN](rnn.md)
 
 ## GAN
 
+* [README](GAN/README.md)
 * [-ToREAD\_GAN](-toreadgan.md)
 * [GAN](gan.md)
-  * [gan1.py](gan/gan1py.md)
-  * [gan2.py](gan/gan2py.md)
-  * [gan3.py](gan/gan3py.md)
+* [INTRO](GAN/Intro.md)
+  * [gan1.py](GAN/gan1py.md)
+  * [gan2.py](GAN/gan2py.md)
+  * [gan3.py](GAN/gan3py.md)
   * [GAN\_SimGAN](gansimgan.md)
 
