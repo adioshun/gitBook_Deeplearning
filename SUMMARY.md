@@ -75,6 +75,12 @@
 * [README](CNN/README.md)
 * [INTRO](CNN/Intro.md)
 
+## Capsule Network
+* [README](Capsule-Network/README.md)
+* [INTRO](Capsule-Network/Intro.md)
+
+
+
 ## RNN
 
 * [README](RNN/README.md)
