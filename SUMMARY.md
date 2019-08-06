@@ -33,6 +33,23 @@
 * [Hyper Parameter](How-to-Enhancement/hyper-parameter.md)
 * [Debugging\_Training](How-to-Enhancement/debugging-training.md)
 
+## Transfer Learning
+
+* [README](Transfer-Learning/README.md)
+* [INTRO](Transfer-Learning/Intro.md)
+
+## Auto ML
+
+* [README](Auto-ML/README.md)
+* [INTRO](Auto-ML/Intro.md)
+
+## Multi-Task Learning
+
+* [README](Multi-Task-Learning/README.md)
+* [INTRO](Multi-Task-Learning/Intro.md)
+
+
+
 ## Auto Encoder
 
 * [README](Auto-Encoder/README.md)
@@ -53,14 +70,10 @@
 
 * [README](RNN/README.md)
 * [INTRO](RNN/Intro.md)
-* [-ToREAD\_RNN](-toreadrnn.md)
-* [RNN](rnn.md)
 
 ## GAN
 
 * [README](GAN/README.md)
-* [-ToREAD\_GAN](-toreadgan.md)
-* [GAN](gan.md)
 * [INTRO](GAN/Intro.md)
   * [gan1.py](GAN/gan1py.md)
   * [gan2.py](GAN/gan2py.md)
