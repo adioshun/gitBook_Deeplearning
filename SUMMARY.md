@@ -38,6 +38,10 @@
 * [INTRO](Transfer-Learning/Intro.md)
 * [2017-Dynamically-Expandable-Networks](Transfer-Learning/2017-Dynamically-Expandable-Networks.md)
 
+## Online Learning
+
+* [README](Online-Learning/README.md)
+
 ## Auto ML
 
 * [README](Auto-ML/README.md)
