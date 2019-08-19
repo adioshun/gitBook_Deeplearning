@@ -27,7 +27,7 @@
 * [README](How-to-Enhancement/README.md)
 * [INTRO](How-to-Enhancement/Intor.md)
 * [Overfitting](How-to-Enhancement/optimization.md)
- * [Batch normalization](How-to-Enhancement/batch-normalization.md)
+    * [Batch normalization](How-to-Enhancement/batch-normalization.md)
 * [Normalization](How-to-Enhancement/normalization.md)
 * [Hyper Parameter](How-to-Enhancement/hyper-parameter.md)
 * [Debugging\_Training](How-to-Enhancement/debugging-training.md)
