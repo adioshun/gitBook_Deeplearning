@@ -102,3 +102,4 @@
 
 * [README](pyTorch/README.md)
 * [Tutorial-Regression](pyTorch/Tutorial_Regression.md)
+* [Tutorial-CNN](pyTorch/Tutorial_CNN.md)
