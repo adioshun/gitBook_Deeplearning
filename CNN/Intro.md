@@ -48,6 +48,7 @@
 > 입력에 filter를 곱해서 나온 값을 모두 합침 
 
 ![](/assets/onenum.png)
+
 1. 7x7(색상) 전체 이미지 준비 
 2. 3x3의 filter를 이용해서 이미지의 일부부만 입력 받아 `하나의 값(=Wx+b)`으로 변환
 3. 같은 filter(w값이 같음)를 가지고 이미지의 다른 부분도 입력 받음
@@ -65,6 +66,22 @@
 * Activation Maps크기 
 
 ![](/assets/pad.PNG)
+
+
+input : batch_size, channel, height, width = N, C, H, W = 
+conv = nn.Conv2d(입력 채널, 출력 채널, 커널 사이즈, .....) = (1,1,3)  
+Output : (input size = filter size + 2*padding)/Stride + 1
+
+![](https://i.imgur.com/tFA1Cjh.png)
+
+- Input Image size = 227 * 227 
+- Filter size = 11*11
+- stride = 4
+- padding = 0
+- output = 55 
+
+> Convolution filter(=kernel)과 Perceptron의 관계 : 각 **weight** 값으로 사용됨 
+
 
 ### 2.2 RELU Layer
 * 기존 자료 참고 
