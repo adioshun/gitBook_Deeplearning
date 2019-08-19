@@ -98,3 +98,7 @@
 * [README](Relational-Reasoning/README.md)
 * [INTRO](Relational-Reasoning/Intro.md)
 
+## pyTorch 
+
+* [README](pyTorch/README.md)
+* [Tutorial-Regression](pyTorch/Tutorial-Regression.md)
