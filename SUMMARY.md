@@ -101,4 +101,4 @@
 ## pyTorch 
 
 * [README](pyTorch/README.md)
-* [Tutorial-Regression](pyTorch/Tutorial-Regression.md)
+* [Tutorial-Regression](pyTorch/Tutorial_Regression.md)
