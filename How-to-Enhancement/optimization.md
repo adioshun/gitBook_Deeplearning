@@ -9,6 +9,8 @@
     * Dropout : 망 자체를 변화(부분 생략)하는 방안 
     - Local Response Normalization(LRN)
     - Batch Normalization(BN)
+    - Early Stopping
+    - Reduce Network Size
     
 ## 1. More Training data = Image augmentation
 |Affine Transform|Elastic Distortion|
