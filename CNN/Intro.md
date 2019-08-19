@@ -44,6 +44,9 @@
 ![](/assets/CNN.PNG)
 
 ### 2.1 Conv Layer
+
+> 입력에 filter를 곱해서 나온 값을 모두 합침 
+
 ![](/assets/onenum.png)
 1. 7x7(색상) 전체 이미지 준비 
 2. 3x3의 filter를 이용해서 이미지의 일부부만 입력 받아 `하나의 값(=Wx+b)`으로 변환
