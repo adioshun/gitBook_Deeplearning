@@ -68,9 +68,9 @@
 ![](/assets/pad.PNG)
 
 
-input : batch_size, channel, height, width = N, C, H, W = 
-conv = nn.Conv2d(입력 채널, 출력 채널, 커널 사이즈, .....) = (1,1,3)  
-Output : (input size = filter size + 2*padding)/Stride + 1
+- input : batch_size, channel, height, width = N, C, H, W 
+- conv = nn.Conv2d(입력 채널, 출력 채널, 커널 사이즈, .....) = (1,1,3)  
+- Output : (input size = filter size + 2*padding)/Stride + 1
 
 ![](https://i.imgur.com/tFA1Cjh.png)
 
