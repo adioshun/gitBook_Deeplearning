@@ -103,3 +103,4 @@
 * [README](pyTorch/README.md)
 * [Tutorial-Regression](pyTorch/Tutorial_Regression.md)
 * [Tutorial-CNN](pyTorch/Tutorial_CNN.md)
+* [Tutorial-RESNET](pyTorch/Tutorial_Sample_RESNET.md)
