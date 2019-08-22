@@ -94,9 +94,9 @@ for epoch in range(nb_epochs + 1):
     cost = torch.mean((hypothesis - y_train) ** 2)
 
     # cost로 H(x) 개선
-    optimizer.zero_grad()
-    cost.backward()
-    optimizer.step()
+    optimizer.zero_grad()  #경사 초기화 
+    cost.backward() #역전파 계산
+    optimizer.step() #가중치 업데이트 
 
     # 100번마다 로그 출력
     if epoch % 100 == 0:
