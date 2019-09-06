@@ -30,6 +30,7 @@
 * [Overfitting](How-to-Enhancement/optimization.md) : 오버피팅 제거 
     * [Batch normalization](How-to-Enhancement/batch-normalization.md)
 * [Hyper Parameter](How-to-Enhancement/hyper-parameter.md)
+ * [Learning Rate](How-to-Enhancement/Learning_rate.md)
 * [Debugging\_Training](How-to-Enhancement/debugging-training.md)
 
 ## Transfer Learning
