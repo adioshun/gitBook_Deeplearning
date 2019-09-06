@@ -81,8 +81,10 @@ cost = tf.reduce_mean(tf.square(hypothesis - y_data))
 cost = -tf.reduce_mean(labels * tf.log(logistic_regression(features)) + (1 - labels) * tf.log(1 - hypothesis))
 
 # multi-class classification에서는 
-cost  = tf.reduce_mean(-tf.reduce_sum(Y * tf.log(logits), axis=1)) 
+cost = tf.reduce_mean(-tf.reduce_sum(Y * tf.log(logits), axis=1)) 
 
+logits = tf.matmul(X, W) + b
+cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=logits,labels=Y))
 ```
 
 
@@ -154,4 +156,17 @@ for step in range(EPOCHS):
         optimizer.apply_gradients(grads_and_vars=zip(grads,[W,b]))
         if step % 100 == 0:
             print("Iter: {}, Loss: {:.4f}".format(step, loss_fn(logistic_regression(features),features,labels)))
+```
+
+
+## 7. 테스트 
+
+```python 
+
+def prediction(X, Y):
+    pred = tf.argmax(hypothesis(X), 1)
+    correct_prediction = tf.equal(pred, tf.argmax(Y, 1))
+    accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+
+    return accuracy
 ```
