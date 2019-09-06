@@ -2,7 +2,7 @@
 
 1. More Training data
 
-2. Reduce the number of feature
+2. Reduce the number of feature : PCA
 
 3. __Regularization (정규화,일반화)__
     * Weight : error 함수 또는 cost 함수를 변형하여 penalty를 활용하는 방안  
