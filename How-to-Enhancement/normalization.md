@@ -3,6 +3,12 @@
 - 학습 절차 전에 수행 
 - 데이터의 어떤 `경향`을 제거하여 동등한 환경의 데이터를 만드는 작업 
 
+
+||표준화(Standardization)|정규화(Normalization)|
+|-|-|-|
+|정의|Mean Distance|0~1|
+|기타|표준은 기준으로 계산||
+
 ## 1. 정규화(Normalization)
 ![](/assets/nor.png)
 * 전체 구간을 0~100으로 설정하여 데이터를 관찰 
