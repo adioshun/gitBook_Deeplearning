@@ -9,30 +9,64 @@
 ## 2 데이터 생성 
 
 ```python  
-x_train  =  torch.FloatTensor([[1],  [2],  [3]])  
-y_train  =  torch.FloatTensor([[2],  [4],  [5]])
+## Linear Regression에서는
+x_data = [1, 2, 3, 4, 5]
+y_data = [1, 2, 3, 4, 5] #Continuous 
+
+
+## Logistic Regression의 경우
+x_train = [[1., 2.],
+          [2., 3.],
+          [3., 1.],
+          [4., 3.],
+          [5., 3.],
+          [6., 2.]]
+y_train = [[0.], 
+          [0.],
+          [0.],
+          [1.],
+          [1.],
+          [1.]] #Discrete
+
+## multi-class classification(Softmax)의 경우 
+x_data = [[1, 2, 1, 1],
+          [2, 1, 3, 2],
+          [3, 1, 3, 4],
+          [4, 1, 5, 5],
+          [1, 7, 5, 5],
+          [1, 2, 5, 6],
+          [1, 6, 6, 6],
+          [1, 7, 7, 7]]
+y_data = [[0, 0, 1],
+          [0, 0, 1],
+          [0, 0, 1],
+          [0, 1, 0],
+          [0, 1, 0],
+          [0, 1, 0],
+          [1, 0, 0],
+          [1, 0, 0]] #One hot 인코딩 
+          
 ```
 
 ## 3. Modeling
 
 ```python 
-# Weight Initialization
-W = torch.zeros(1, requires_grad=True) #requires_grad = 학습용 값임을 명시 
-# W = torch.zeros((4,3), requires_grad=True) #input(Feature?) dim =4, Class =3 (4개의 정보를 입력 받아 3개의 값으로 매칭)
-b = torch.zeros(1, requires_grad=True)
+# Weight Initialization (2.0, 0.5)
+W = tf.Variable(2.0)
+b = tf.Variable(0.5)
 
-hypothesis  =  x_train  *  W  +  b
+hypothesis = W * x_data + b
 
 """
 # Multivariate Linear Regression에서는 
-hypothesis = x1_train * w1 + x2_train * w2 + x3_train * w3 + b #기본
-hypothesis = x_train.matmul(W) + b # 간단
+hypothesis = W1 * x1_data + W2 * x2_data + b #기본
+hypothesis = tf.matmul(W, x_data) + b # Matrix 연산, W와 x_data 위치 변화 조심 
 
-# Logistic Regression에서는 Regression으로 나온값을 sigmoid합수에 넣어 0 or 1을 출력 
-hypothesis = torch.sigmoid(x_train.matmul(W) + b)
+# Logistic Regression의 경우 tf.exp 시그모이드 함수 이용 
+hypothesis  = tf.div(1., 1. + tf.exp(tf.matmul(features, W) + b))
 
 # Multi-class classification 나온값을 SoftMax합수에 넣어 확률값으로 출력 
-hypothesis = F.softmax(z, dim=0)
+hypothesis = tf.nn.softmax(tf.matmul(X, W) + b) # softmax = exp(logits) / reduce_sum(exp(logits), dim)
 """
 ```
 
@@ -41,15 +75,13 @@ hypothesis = F.softmax(z, dim=0)
 
 ```python 
 # Linear Regression의 경우 MSE(Mean Squared Error)로 Loss계산 
-cost = torch.mean((hypothesis - y_train) ** 2)
+cost = tf.reduce_mean(tf.square(hypothesis - y_data))
 
-# Logistic Regression의 경우 Binary Cross Entropy로 계산 
-cost = -(y_train * torch.log(hypothesis) + (1 - y_train) * torch.log(1 - hypothesis)).mean()
+# Logistic Regression의 경우 
+cost = -tf.reduce_mean(labels * tf.log(logistic_regression(features)) + (1 - labels) * tf.log(1 - hypothesis))
 
 # multi-class classification에서는 
-y_one_hot  =  torch.zeros_like(hypothesis)
-y_one_hot.scatter_(1, y.unsqueeze(1), 1)
-cost  =  (y_one_hot  *  -torch.log(hypothesis)).sum(dim=1).mean()
+cost  = tf.reduce_mean(-tf.reduce_sum(Y * tf.log(logits), axis=1)) 
 
 ```
 
@@ -63,142 +95,63 @@ cost  =  (y_one_hot  *  -torch.log(hypothesis)).sum(dim=1).mean()
 ![](https://i.imgur.com/YwEuMza.png)
 cost()를 미분하여 기울기를 구하는 문제 
 
-```python 
-optimizer = optim.SGD([W, b], lr=0.01)
 
-#항상 붙어 다니는 3줄 
-optimizer.zero_grad()  # gradient 초기화 
-cost.backward()        # gradient 계산  
-optimizer.step()       # gradient 개선(=descent)
+
+```python 
+with tf.GradientTape() as tape:  #변수들의 변화를 tape에 저장 
+    hypothesis = W * x_data + b
+    cost = tf.reduce_mean(tf.square(hypothesis - y_data))
+
+W_grad, b_grad = tape.gradient(cost, [W, b])  #미분, 기울기값을 반환 
+
+#파라미터 업데이트 
+learning_rate = 0.01
+
+W.assign_sub(learning_rate * W_grad) # A.assign_sub(B) : A = A-B : A-+ B
+b.assign_sub(learning_rate * b_grad)
 ```
+
+
+```python 
+def loss_fn(hypothesis, features, labels):
+    cost = -tf.reduce_mean(labels * tf.log(logistic_regression(features)) + (1 - labels) * tf.log(1 - hypothesis))
+    return cost
+    
+def grad(hypothesis, features, labels):
+    with tf.GradientTape() as tape:
+        loss_value = loss_fn(logistic_regression(features),features,labels)
+    return tape.gradient(loss_value, [W,b])
+```
+
 
 ## 6. 전체 코드 
 
+### 6.1 Linear Regression의 경우
 ```python 
- # 데이터
- x_train = torch.FloatTensor([[1], [2], [3]])
- y_train = torch.FloatTensor([[1], [2], [3]])
- # 모델 초기화
- W = torch.zeros(1, requires_grad=True)
- b = torch.zeros(1, requires_grad=True)
- # optimizer 설정
- optimizer = optim.SGD([W, b], lr=0.01)
-    
-nb_epochs = 1000
-for epoch in range(nb_epochs + 1):
-    
-    # H(x) 계산
-    hypothesis = x_train * W + b
-    
-    # cost 계산
-    cost = torch.mean((hypothesis - y_train) ** 2)
+W = tf.Variable(2.9)
+b = tf.Variable(0.5)
 
-    # cost로 H(x) 개선
-    optimizer.zero_grad()  #경사 초기화 
-    cost.backward() #역전파 계산
-    optimizer.step() #가중치 업데이트 
-
-    # 100번마다 로그 출력
-    if epoch % 100 == 0:
-        print('Epoch {:4d}/{} W: {:.3f}, b: {:.3f} Cost: {:.6f}'.format(
-            epoch, nb_epochs, W.item(), b.item(), cost.item()
-        ))
+for i in range(100):
+    with tf.GradientTape() as tape:
+        hypothesis = W * x_data + b
+        cost = tf.reduce_mean(tf.square(hypothesis - y_data))
+    W_grad, b_grad = tape.gradient(cost, [W, b])
+    W.assign_sub(learning_rate * W_grad)
+    b.assign_sub(learning_rate * b_grad)
+    if i % 10 == 0:
+      print("{:5}|{:10.4f}|{:10.4f}|{:10.6f}".format(i, W.numpy(), b.numpy(), cost))
   ```
 
- ---
-# nn.Module 을 이용한 코드 작성 
+### 6.2 Logistic Regression의 경우 
 
-## 1. 개요 
+```python 
 
-> 기본적으로 PyTorch의 모든 모델은 제공되는 `nn.Module`을 inherit 해서 만들게 됩니다.
+EPOCHS = 1001
 
-
-## 2 데이터 생성 
-
-> 동일 
-
-```python  
-x_train  =  torch.FloatTensor([[1],  [2],  [3]])  
-y_train  =  torch.FloatTensor([[2],  [4],  [5]])
+for step in range(EPOCHS):
+    for features, labels  in tfe.Iterator(dataset):
+        grads = grad(logistic_regression(features), features, labels)
+        optimizer.apply_gradients(grads_and_vars=zip(grads,[W,b]))
+        if step % 100 == 0:
+            print("Iter: {}, Loss: {:.4f}".format(step, loss_fn(logistic_regression(features),features,labels)))
 ```
-
-## 3. Modeling
-
-```python 
-class LinearRegressionModel(nn.Module):
-    def __init__(self):  #사용할 레이어(nn.Linear)들을 정의
-        super().__init__()
-        self.linear = nn.Linear(1, 1)  # (입력차원, 출력차원)
-
-    def forward(self, x):  #`forward`에서는 이 모델이 어떻게 입력값에서 출력값을 계산하는지 알려줍니다.
-        return self.linear(x) #hypothesis 정의 
-        #return self.sigmoid(self.linear(x)) # Logistic Regression시 
-
-model  =  LinearRegressionModel()
- 
-hypothesis  =  model(x_train)
-``` 
-
-## 4. Loss(=Cost) 정의 하기 
-
-```python 
-# pytorch 에서 제공 (torch.nn.functional)
-cost = F.mse_loss(hypothesis,  y_train)
-
-# Logistic Regression에서는 
-cost = F.binary_cross_entropy(hypothesis, y_train)
-
-# multi-class classification에서는 
-cost = F.nll_loss(F.log_softmax(z, dim=1), y) # nll = Negative Log Likelihood 
-## or 
-cost = F.cross_entropy(z,  y)  #Combines F.log_softmax()` and `F.nll_loss()`.
-```
-
-## 5. 학습 (Gradient Descent)
-
-> 동일 
-
-```python 
-optimizer = optim.SGD([W, b], lr=0.01)
-
-#항상 붙어 다니는 3줄 
-optimizer.zero_grad()  # gradient 초기화 
-cost.backward()        # gradient 계산  
-optimizer.step()       # gradient 개선(=descent)
-```
-
-## 6. 전체 코드 
-
-
-```python 
-# 데이터
-x_train = torch.FloatTensor([[1], [2], [3]])
-y_train = torch.FloatTensor([[1], [2], [3]])
-# 모델 초기화
-model = LinearRegressionModel()
-# optimizer 설정
-optimizer = optim.SGD(model.parameters(), lr=0.01)
-
-nb_epochs = 1000
-for epoch in range(nb_epochs + 1):
-    
-    # H(x) 계산
-    prediction = model(x_train)
-    
-    # cost 계산
-    cost = F.mse_loss(prediction, y_train)
-    
-    # cost로 H(x) 개선
-    optimizer.zero_grad()
-    cost.backward()
-    optimizer.step()
-    
-    # 100번마다 로그 출력
-    if epoch % 100 == 0:
-        params = list(model.parameters())
-        W = params[0].item()
-        b = params[1].item()
-        print('Epoch {:4d}/{} W: {:.3f}, b: {:.3f} Cost: {:.6f}'.format(
-            epoch, nb_epochs, W, b, cost.item()
-        ))
-  ```
