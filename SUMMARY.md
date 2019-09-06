@@ -27,7 +27,7 @@
 * [README](How-to-Enhancement/README.md)
 * [INTRO](How-to-Enhancement/Intor.md)
 * 전처리 
- * [Normalization](How-to-Enhancement/normalization.md) 
+   * [Normalization](How-to-Enhancement/normalization.md) 
 * [Overfitting](How-to-Enhancement/optimization.md) : 오버피팅 제거 
     * [Batch normalization](How-to-Enhancement/batch-normalization.md)
 * [Hyper Parameter](How-to-Enhancement/hyper-parameter.md)
