@@ -1,5 +1,17 @@
 # Overfitting 문제 해결법 
 
+```
+# 다른 분류 
+1. Feature Normalization 
+2. Regularization : Loss에 Term 추가 
+3. More Data (Augmentation)
+4. Drop Out
+5. Batch Normalization
+```
+
+
+```
+
 1. More Training data
 
 2. Reduce the number of feature : PCA
