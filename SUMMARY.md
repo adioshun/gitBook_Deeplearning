@@ -106,7 +106,11 @@
 * [Tutorial-Regression](pyTorch/Tutorial_Regression.md)
 * [Tutorial-CNN](pyTorch/Tutorial_CNN.md)
 * [Tutorial-RESNET](pyTorch/Tutorial_Sample_RESNET.md)
+* [Tutorial-YOLO2](pyTorch/Intro.md)
 * [Tips](pyTorch/Tips.md)
+* [Snippets](pyTorch/Snippets.md)
+* [Tools](pyTorch/Tools.md)
+
 
 ## Tensorflow 
 
@@ -114,3 +118,4 @@
 * [Tutorial-Regression](TensorFlow/Tutorial_Regression.md)
 * [Tutorial-CNN](TensorFlow/Tutorial_CNN.md)
 * [Tips](TensorFlow/Tips.md)
+* [Tools](TensorFlow/Tools.md)
