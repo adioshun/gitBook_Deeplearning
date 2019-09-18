@@ -112,7 +112,7 @@ def loss(model, inputs, targets):
 def grad(model, inputs, targets):
   with tf.GradientTape() as tape:
     loss_value = loss(model, inputs, targets)
-  return tape.gradient(loss_value, [model.W, model.B])  #
+  return tape.gradient(loss_value, [model.W, model.B])  #tape.gradient(y, x) 명령으로 변수형 텐서 x에 대한 y의 미분값 계산
 
 model = Model()
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.01)
