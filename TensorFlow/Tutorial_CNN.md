@@ -62,3 +62,13 @@ class create_model_class(tf.keras.Model):
 ---
 
 ## 3. 실행 (Eager 모드)
+
+
+```python 
+    for images, labels in train_dataset:
+        grads = grad(model, images, labels)                
+        optimizer.apply_gradients(zip(grads, model.variables))
+        loss = loss_fn(model, images, labels)
+        acc = evaluate(model, images, labels)
+        ``` 
+

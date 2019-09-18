@@ -170,3 +170,8 @@ def prediction(X, Y):
 
     return accuracy
 ```
+
+---
+
+
+- [깔끔한 전체 class로 작성한 코드](https://nbviewer.jupyter.org/github/deeplearningzerotoall/TensorFlow/blob/master/lab-09-3-XOR-NN-Wide-Deep-eager.ipynb)

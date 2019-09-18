@@ -28,7 +28,12 @@ b = tf.Variable(tf.zeros(shape=(2),dtype=tf.float64), name="b")
 
 
 
+---
 
+## 2. `ft.py_func`
+
+
+Python 코드를 텐서플로우에서 실행 하는 방법 [[참고]](https://tensorflowkorea.gitbooks.io/tensorflow-kr/content/g3doc/api_docs/python/script_ops.html)
 
 ---
 ## 하이레벨 API
