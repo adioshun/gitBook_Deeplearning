@@ -62,7 +62,7 @@ class create_model_class(tf.keras.Model):
 
     return model
   
-  ```
+```
   
   
 ### 2.3 Model Subclass
@@ -94,8 +94,6 @@ class MNISTModel(tf.keras.Model):
         net = self.drop4(net)
         net = self.dense5(net)
         return net
-
-
 ```
 ---
 
@@ -114,7 +112,7 @@ def loss(model, inputs, targets):
 def grad(model, inputs, targets):
   with tf.GradientTape() as tape:
     loss_value = loss(model, inputs, targets)
-  return tape.gradient(loss_value, [model.W, model.B])
+  return tape.gradient(loss_value, [model.W, model.B])  #
 
 model = Model()
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.01)
