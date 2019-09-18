@@ -63,6 +63,40 @@ class create_model_class(tf.keras.Model):
     return model
   
   ```
+  
+  
+### 2.3 Model Subclass
+
+```python 
+
+class MNISTModel(tf.keras.Model):
+    def __init__(self):
+        super(MNISTModel, self).__init__()
+        self.conv1 = keras.layers.Conv2D(filters=32, kernel_size=[3, 3], padding='SAME', activation=tf.nn.relu)
+        self.pool1 = keras.layers.MaxPool2D(padding='SAME')
+        self.conv2 = keras.layers.Conv2D(filters=64, kernel_size=[3, 3], padding='SAME', activation=tf.nn.relu)
+        self.pool2 = keras.layers.MaxPool2D(padding='SAME')
+        self.conv3 = keras.layers.Conv2D(filters=128, kernel_size=[3, 3], padding='SAME', activation=tf.nn.relu)
+        self.pool3 = keras.layers.MaxPool2D(padding='SAME')
+        self.pool3_flat = keras.layers.Flatten()
+        self.dense4 = keras.layers.Dense(units=256, activation=tf.nn.relu)
+        self.drop4 = keras.layers.Dropout(rate=0.4)
+        self.dense5 = keras.layers.Dense(units=10)
+    def call(self, inputs, training=False):
+        net = self.conv1(inputs)
+        net = self.pool1(net)
+        net = self.conv2(net)
+        net = self.pool2(net)
+        net = self.conv3(net)
+        net = self.pool3(net)
+        net = self.pool3_flat(net)
+        net = self.dense4(net)
+        net = self.drop4(net)
+        net = self.dense5(net)
+        return net
+
+
+```
 ---
 
 ## 3. 실행 (Eager 모드)
