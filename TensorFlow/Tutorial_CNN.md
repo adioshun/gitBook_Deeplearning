@@ -14,7 +14,7 @@
 
 ## 2. 모델 생성 
 
-### 2.1 Class스타일 모델 생성
+### 2.1 Class스타일 모델 생성 with Keras
 
 ```python 
 
@@ -40,7 +40,7 @@ class create_model_class(tf.keras.Model):
         
   ```
 
-### 2.2 function스타일 모델 생성   
+### 2.2 function스타일 모델 생성 with Keras   
       
   ```python 
   
