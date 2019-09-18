@@ -64,14 +64,34 @@ class create_model_class(tf.keras.Model):
 ## 3. 실행 (Eager 모드)
 
 
-```python 
 
-# loss를 weight와 bias에 대해 미분한 결과를 반환합니다.
-def grad(weights, biases):
-  with tfe.GradientTape() as tape:
-    loss_value = loss(weights, biases)
-  return tape.gradient(loss_value, [weights, biases])
+
+```python 
+# https://www.tensorflow.org/guide/eager#eager_training
+
+def loss(model, inputs, targets):
+  error = model(inputs) - targets
+  return tf.reduce_mean(tf.square(error))
+
+def grad(model, inputs, targets):
+  with tf.GradientTape() as tape:
+    loss_value = loss(model, inputs, targets)
+  return tape.gradient(loss_value, [model.W, model.B])
+
+model = Model()
+optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.01)
+
+
+# Training loop
+grads = grad(model, training_inputs, training_outputs)
+optimizer.apply_gradients(zip(grads, [model.W, model.B]),
+                            global_step=tf.train.get_or_create_global_step())
+
 ```
+
+
+---
+
 
   
 ```python 
@@ -89,30 +109,7 @@ for (batch, (images, labels)) in enumerate(tfe.Iterator(dataset)):
                             global_step=tf.train.get_or_create_global_step())
 ```
 
-```python   
 
-for images, labels in train_dataset:
-    grads = grad(model, images, labels)                
-    optimizer.apply_gradients(zip(grads, model.variables))
-    loss = loss_fn(model, images, labels)
-    acc = evaluate(model, images, labels)
-    
-```
-
-```python     
-    
-    
-# 학습 루프
-for i in range(300):
-  grads = grad(model, training_inputs, training_outputs)
-  optimizer.apply_gradients(zip(grads, [model.W, model.B]),
-                            global_step=tf.train.get_or_create_global_step())    
-    
-    
-    
-    
-    
-    ``` 
 
 
 

@@ -1,6 +1,5 @@
 # Tensorflow Tips 
 
-
 ## 1. [Eager Execution Mode](https://www.tensorflow.org/guide/eager) [[한글]](https://github.com/tgjeon/TF-Eager-Execution-Guide-KR/blob/master/guide.md)
 
 
@@ -26,9 +25,9 @@ b = tf.Variable(tf.zeros(shape=(2),dtype=tf.float64), name="b")
 
 - [Eager 모드 실행을 위해 경할 코드 8가지](https://medium.com/coinmonks/8-things-to-do-differently-in-tensorflows-eager-execution-mode-47cf429aa3ad) : Placeholders, Variables, 
 
-
-
 ---
+
+
 
 ## 2. `ft.py_func`
 
