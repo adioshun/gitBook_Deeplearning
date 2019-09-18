@@ -117,6 +117,7 @@
 * [README](TensorFlow/README.md)
 * [Tutorial-Regression](TensorFlow/Tutorial_Regression.md)
 * [Tutorial-CNN](TensorFlow/Tutorial_CNN.md)
+* [Tutorial-1x-CNN](TensorFlow/Tutorial-1x_CNN.md)
 * [Tips](TensorFlow/Tips.md)
 * [Snippets](TensorFlow/Snippets.md)
 * [Tools](TensorFlow/Tools.md)
