@@ -1,3 +1,44 @@
+# TensorFlow 1.x CNN Tutorial 
+
+> [TensorFlow 한글 문서](https://tensorflowkorea.gitbooks.io/tensorflow-kr/content/)
+
+
+---
+
+## 1. 모델 생성 
+
+
+
+---
+
+## 2. 실행 하기 [(그래프모드)](https://tensorflowkorea.gitbooks.io/tensorflow-kr/content/g3doc/api_docs/python/client.html) `session.run`
+
+```python 
+
+"""
+기본 구조  
+"""
+    tf.Session.run(train_op)
+    tf.Session.run((train_op1, train_op2))
+    tf.Session.run([train_op1, train_op2])
+
+
+
+"""
+fetches의 내용을 수행하여 feed_dict의 값을 교체 
+"""
+    tf.Session.run(fetches,\ #
+                   feed_dict=None,\
+                   options=None,\
+                   run_metadata=None\
+                   )
+
+
+
+```
+
+---
+
 ###### Placeholder
 
 일종의 자료형, 다른 텐서를 할당하는 것
