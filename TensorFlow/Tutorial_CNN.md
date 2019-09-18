@@ -72,35 +72,57 @@ class create_model_class(tf.keras.Model):
 ```
   
   
-### 2.3 Model Subclass
+### 2.3 [Model Subclass](https://github.com/aymericdamien/TensorFlow-Examples/blob/master/tensorflow_v2/notebooks/3_NeuralNetworks/convolutional_network.ipynb)
 
 ```python 
 
-class MNISTModel(tf.keras.Model):
+from tensorflow.keras import Model, layers
+
+# Create TF Model.
+class ConvNet(Model):
+    # Set layers.
     def __init__(self):
-        super(MNISTModel, self).__init__()
-        self.conv1 = keras.layers.Conv2D(filters=32, kernel_size=[3, 3], padding='SAME', activation=tf.nn.relu)
-        self.pool1 = keras.layers.MaxPool2D(padding='SAME')
-        self.conv2 = keras.layers.Conv2D(filters=64, kernel_size=[3, 3], padding='SAME', activation=tf.nn.relu)
-        self.pool2 = keras.layers.MaxPool2D(padding='SAME')
-        self.conv3 = keras.layers.Conv2D(filters=128, kernel_size=[3, 3], padding='SAME', activation=tf.nn.relu)
-        self.pool3 = keras.layers.MaxPool2D(padding='SAME')
-        self.pool3_flat = keras.layers.Flatten()
-        self.dense4 = keras.layers.Dense(units=256, activation=tf.nn.relu)
-        self.drop4 = keras.layers.Dropout(rate=0.4)
-        self.dense5 = keras.layers.Dense(units=10)
-    def call(self, inputs, training=False):
-        net = self.conv1(inputs)
-        net = self.pool1(net)
-        net = self.conv2(net)
-        net = self.pool2(net)
-        net = self.conv3(net)
-        net = self.pool3(net)
-        net = self.pool3_flat(net)
-        net = self.dense4(net)
-        net = self.drop4(net)
-        net = self.dense5(net)
-        return net
+        super(ConvNet, self).__init__()
+        # Convolution Layer with 32 filters and a kernel size of 5.
+        self.conv1 = layers.Conv2D(32, kernel_size=5, activation=tf.nn.relu)
+        # Max Pooling (down-sampling) with kernel size of 2 and strides of 2. 
+        self.maxpool1 = layers.MaxPool2D(2, strides=2)
+
+        # Convolution Layer with 64 filters and a kernel size of 3.
+        self.conv2 = layers.Conv2D(64, kernel_size=3, activation=tf.nn.relu)
+        # Max Pooling (down-sampling) with kernel size of 2 and strides of 2. 
+        self.maxpool2 = layers.MaxPool2D(2, strides=2)
+
+        # Flatten the data to a 1-D vector for the fully connected layer.
+        self.flatten = layers.Flatten()
+
+        # Fully connected layer.
+        self.fc1 = layers.Dense(1024)
+        # Apply Dropout (if is_training is False, dropout is not applied).
+        self.dropout = layers.Dropout(rate=0.5)
+
+        # Output layer, class prediction.
+        self.out = layers.Dense(num_classes)
+
+    # Set forward pass.
+    def call(self, x, is_training=False):
+        x = tf.reshape(x, [-1, 28, 28, 1])
+        x = self.conv1(x)
+        x = self.maxpool1(x)
+        x = self.conv2(x)
+        x = self.maxpool2(x)
+        x = self.flatten(x)
+        x = self.fc1(x)
+        x = self.dropout(x, training=is_training)
+        x = self.out(x)
+        if not is_training:
+            # tf cross entropy expect logits without softmax, so only
+            # apply softmax when not training.
+            x = tf.nn.softmax(x)
+        return x
+
+# Build neural network model.
+conv_net = ConvNet()
 ```
 ---
 
