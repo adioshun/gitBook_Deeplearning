@@ -8,10 +8,17 @@
 
 > 전체 흐름 강의 : [Logistic Regression-강의](https://www.youtube.com/watch?v=enyQpA-xAYc&list=PLQ28Nx3M4Jrguyuwg4xe9d9t2XE639e5C&index=11), [Logistic Regression-코드](https://github.com/deeplearningzerotoall/TensorFlow/blob/master/lab-05-1-logistic_regression-eager.ipynb)
 
+> [TensorFlow 2.0 Examples](https://github.com/aymericdamien/TensorFlow-Examples/tree/master/tensorflow_v2)
+
 ---
 
 ## 1. 데이터 준비 
 
+```python 
+# Use tf.data API to shuffle and batch data.
+train_data = tf.data.Dataset.from_tensor_slices((x_train, y_train))
+train_data = train_data.repeat().shuffle(5000).batch(batch_size).prefetch(1)
+```
 
 ---
 
