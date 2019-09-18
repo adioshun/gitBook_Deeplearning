@@ -118,4 +118,5 @@
 * [Tutorial-Regression](TensorFlow/Tutorial_Regression.md)
 * [Tutorial-CNN](TensorFlow/Tutorial_CNN.md)
 * [Tips](TensorFlow/Tips.md)
+* [Snippets](TensorFlow/Snippets.md)
 * [Tools](TensorFlow/Tools.md)
