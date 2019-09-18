@@ -120,6 +120,8 @@ optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.01)
 
 # Training loop
 grads = grad(model, training_inputs, training_outputs)
+#grad = tfe.implicit_gradients(loss_fn) 
+## https://github.com/aymericdamien/TensorFlow-Examples/blob/master/examples/3_NeuralNetworks/neural_network_eager_api.py
 optimizer.apply_gradients(zip(grads, [model.W, model.B]),
                             global_step=tf.train.get_or_create_global_step())
 
