@@ -5,13 +5,18 @@
 
 ---
 
-## 1. 모델 생성 
+## 1. 데이터 준비 
+
+
+---
+
+## 2. 모델 생성 
 
 
 
 ---
 
-## 2. 실행 하기 [(그래프모드)](https://tensorflowkorea.gitbooks.io/tensorflow-kr/content/g3doc/api_docs/python/client.html) `session.run`
+## 3. 실행 하기 [(그래프모드)](https://tensorflowkorea.gitbooks.io/tensorflow-kr/content/g3doc/api_docs/python/client.html) `session.run`
 
 ```python 
 

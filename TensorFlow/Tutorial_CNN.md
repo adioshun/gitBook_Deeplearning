@@ -4,9 +4,17 @@
 > 전체 흐름 강의 : [Logistic Regression-강의](https://www.youtube.com/watch?v=enyQpA-xAYc&list=PLQ28Nx3M4Jrguyuwg4xe9d9t2XE639e5C&index=11), [Logistic Regression-코드](https://github.com/deeplearningzerotoall/TensorFlow/blob/master/lab-05-1-logistic_regression-eager.ipynb), [mnist cnn keras sequential eager-강의4개](https://www.youtube.com/watch?v=OR_NwgouflE&list=PLQ28Nx3M4Jrguyuwg4xe9d9t2XE639e5C&index=36)
 
 
-## 1. 모델 생성 
+---
 
-### 1.1 Class스타일 모델 생성
+## 1. 데이터 준비 
+
+
+---
+
+
+## 2. 모델 생성 
+
+### 2.1 Class스타일 모델 생성
 
 ```python 
 
@@ -32,7 +40,7 @@ class create_model_class(tf.keras.Model):
         
   ```
 
-### 1.2 function스타일 모델 생성   
+### 2.2 function스타일 모델 생성   
       
   ```python 
   
@@ -53,4 +61,4 @@ class create_model_class(tf.keras.Model):
   ```
 ---
 
-## 2. 실행 (Eager 모드)
+## 3. 실행 (Eager 모드)
