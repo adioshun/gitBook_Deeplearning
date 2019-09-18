@@ -121,3 +121,6 @@
 * [Tips](TensorFlow/Tips.md)
 * [Snippets](TensorFlow/Snippets.md)
 * [Tools](TensorFlow/Tools.md)
+  * [Tensorflow Object Detection API](TensorFlow/Tools-Object-Detection-API.md)
+  * [Tensorboard](TensorFlow/Tools-Tensorboard.md)
+  * [CloudML](TensorFlow/Tools-CloudML.md)
