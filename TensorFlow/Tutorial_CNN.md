@@ -25,6 +25,10 @@ train_data = train_data.repeat().shuffle(5000).batch(batch_size).prefetch(1)
 
 ## 2. 모델 생성 
 
+
+- TF Low API : tf.nn.conv2
+- TF High API : tf.layers.conv2 OR tf.keras.layers.conv2
+
 ### 2.1 Class스타일 모델 생성 with Keras
 
 ```python 
