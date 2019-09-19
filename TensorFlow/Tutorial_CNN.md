@@ -132,8 +132,9 @@ conv_net = ConvNet()
 
 ## 3. 실행 (Eager 모드)
 
+AllInOne : https://github.com/aymericdamien/TensorFlow-Examples/blob/master/tensorflow_v2/notebooks/3_NeuralNetworks/convolutional_network_raw.ipynb
 
-
+Build Custom Layers & Modules : https://github.com/aymericdamien/TensorFlow-Examples/blob/master/tensorflow_v2/notebooks/4_Utils/build_custom_layers.ipynb
 
 ```python 
 # https://www.tensorflow.org/guide/eager#eager_training
