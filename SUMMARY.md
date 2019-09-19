@@ -103,6 +103,7 @@
 ## pyTorch 
 
 * [README](pyTorch/README.md)
+* [Tutorial-Fundamental](pyTorch/Tutorial_Fundamental.md)
 * [Tutorial-Regression](pyTorch/Tutorial_Regression.md)
 * [Tutorial-CNN](pyTorch/Tutorial_CNN.md)
 * [Tutorial-RESNET](pyTorch/Tutorial_Sample_RESNET.md)
@@ -115,6 +116,7 @@
 ## Tensorflow 
 
 * [README](TensorFlow/README.md)
+* [Tutorial-Fundamental](TensorFlow/Tutorial_Fundamental.md)
 * [Tutorial-Regression](TensorFlow/Tutorial_Regression.md)
 * [Tutorial-CNN](TensorFlow/Tutorial_CNN.md)
 * [Tutorial-1x-CNN](TensorFlow/Tutorial-1x_CNN.md)
