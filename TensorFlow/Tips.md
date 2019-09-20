@@ -65,5 +65,20 @@ https://github.com/bwcho75/tensorflowML/blob/master/HighLevel%20API%201.%20Linea
 
 
 
+# MNIST Offline 
 
+```python 
+#https://s3.amazonaws.com/img-datasets/mnist.pkl.gz
+import gzip
+import sys
+import pickle as cPickle
+f = gzip.open('mnist.pkl.gz', 'rb')
+if sys.version_info < (3,):
+    data = cPickle.load(f)
+else:
+    data = cPickle.load(f, encoding='bytes')
+f.close()
+
+(x_train, _), (x_test, _) = data
+```
 
