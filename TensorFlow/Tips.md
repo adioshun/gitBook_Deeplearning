@@ -15,9 +15,8 @@ print("Eager Mode: ",tf.executing_eagerly())
 
 
 ```python 
-in_b = tf.placeholder(dtype=tf.float32, shape=(2))
-
-b = tf.Variable(tf.zeros(shape=(2),dtype=tf.float64), name="b")
+is_training_pl = tf.placeholder(shape=(),dtype=tf.bool, name="b")
+is_training_pl = tf.Variable(tf.zeros(shape=(),dtype=tf.bool), name="b")
 ```
 
 > https://www.tensorflow.org/beta/guide/migration_guide?hl=ko#%EB%B3%80%ED%99%98_%EC%A0%84
