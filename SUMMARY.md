@@ -111,6 +111,8 @@
 * [Tips](pyTorch/Tips.md)
 * [Snippets](pyTorch/Snippets.md)
 * [Tools](pyTorch/Tools.md)
+* [References](pyTorch/References.md)
+
 
 
 ## Tensorflow 
@@ -126,3 +128,4 @@
   * [Tensorflow Object Detection API](TensorFlow/Tools-Object-Detection-API.md)
   * [Tensorboard](TensorFlow/Tools-Tensorboard.md)
   * [CloudML](TensorFlow/Tools-CloudML.md)
+* [References](TensorFlow/References.md)
