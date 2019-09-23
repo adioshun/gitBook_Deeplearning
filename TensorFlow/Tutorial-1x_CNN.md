@@ -69,8 +69,9 @@ with tf.Session() as sess:
 
 ```python 
 
-saver = tf.train.Saver()
-saver.restore(sess, restore_model_path) #복원 
+sess = tf.Session() 
+saver = tf.train.Saver() # 위와 순서 바뀌면 `No variables to save`에러 출력 
+#saver.restore(sess, restore_model_path) #복원 
 
 sess.run(...)
 
