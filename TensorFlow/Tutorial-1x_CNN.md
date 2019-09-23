@@ -20,23 +20,49 @@
 
 ```python 
 
-"""
-기본 구조  
-"""
-    tf.Session.run(train_op)
-    tf.Session.run((train_op1, train_op2))
-    tf.Session.run([train_op1, train_op2])
+import tensorflow as tf
+
+input1 = tf.constant([3.0])
+input2 = tf.constant([2.0])
+input3 = tf.constant([5.0])
+intermed12 = tf.add(input1, input2)
+intermed23 = tf.add(input2, input3)
+
+
+ops = {'a': intermed12,
+            'b': intermed12,
+}
 
 
 
-"""
-fetches의 내용을 수행하여 feed_dict의 값을 교체 
-"""
-    tf.Session.run(fetches,\ #
-                   feed_dict=None,\
-                   options=None,\
-                   run_metadata=None\
-                   )
+with tf.Session() as sess:
+  result1, resutl2 = sess.run([ops['a'],ops['b']] )
+  print(result1)
+````
+
+## Dynamic input with feed_dic
+
+
+```python
+
+input1 = tf.placeholder(tf.float32)  # feed_dict={input1:[3.3]
+input2 = tf.placeholder(tf.float32)  # feed_dict={input2:[3.3]
+input3 = tf.placeholder(tf.float32)  # feed_dict={input3:[3.3]
+
+intermed12 = tf.add(input1, input2)
+intermed23 = tf.add(input2, input3)
+
+
+ops = {'a': intermed12,
+            'b': intermed23,
+}
+
+
+with tf.Session() as sess:
+  result1, resutl2 = sess.run([ops['a'],ops['b']], feed_dict={input1:[3.3],input2:[2.2],input3:[5.5]} )
+  print(result1)
+
+  
 
 
 
