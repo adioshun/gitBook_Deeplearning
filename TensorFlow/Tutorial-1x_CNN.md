@@ -40,7 +40,7 @@ with tf.Session() as sess:
   print(result1)
 ````
 
-## Dynamic input with feed_dic
+### Dynamic input with feed_dic
 
 
 ```python
@@ -62,11 +62,26 @@ with tf.Session() as sess:
   result1, resutl2 = sess.run([ops['a'],ops['b']], feed_dict={input1:[3.3],input2:[2.2],input3:[5.5]} )
   print(result1)
 
-  
+```
 
+
+## 4. 저장 & 복원 
+
+```python 
+
+saver = tf.train.Saver()
+saver.restore(sess, restore_model_path) #복원 
+
+sess.run(...)
+
+save_path = saver.save(sess, os.path.join(LOG_DIR, "model.ckpt")) #저장 
 
 
 ```
+
+
+
+## 5. 테스트 
 
 ---
 
