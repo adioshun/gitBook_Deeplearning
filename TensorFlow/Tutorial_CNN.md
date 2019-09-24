@@ -192,6 +192,432 @@ for (batch, (images, labels)) in enumerate(tfe.Iterator(dataset)):
 
 
 
+---
+
+## 모두 함수화 
+
+```python 
+# https://github.com/dragen1860/TensorFlow-2.x-Tutorials/blob/master/05-FashionMNIST/mnist_matmul.py
+
+import  os
+import  tensorflow as tf
+from    tensorflow import keras
+from    tensorflow.keras import layers, optimizers, datasets
+
+def prepare_mnist_features_and_labels(x, y):
+..
+  return x, y
+
+
+
+def mnist_dataset():
+..
+  return ds
+
+
+
+
+
+
+def compute_loss(logits, labels):
+  return tf.reduce_mean(
+      tf.nn.sparse_softmax_cross_entropy_with_logits(
+          logits=logits, labels=labels))
+
+
+def compute_accuracy(logits, labels):
+  predictions = tf.argmax(logits, axis=1)
+  return tf.reduce_mean(tf.cast(tf.equal(predictions, labels), tf.float32))
+
+
+def train_one_step(model, optimizer, x, y):
+
+  with tf.GradientTape() as tape:
+
+    logits = model(x)
+    loss = compute_loss(logits, y)
+
+  # compute gradient
+  grads = tape.gradient(loss, model.trainable_variables)
+  # update to weights
+  optimizer.apply_gradients(zip(grads, model.trainable_variables))
+
+  accuracy = compute_accuracy(logits, y)
+
+  # loss and accuracy is scalar tensor
+  return loss, accuracy
+
+
+def train(epoch, model, optimizer):
+
+  train_ds = mnist_dataset()
+  loss = 0.0
+  accuracy = 0.0
+
+  for step, (x, y) in enumerate(train_ds):
+
+    loss, accuracy = train_one_step(model, optimizer, x, y)
+
+    if step%500==0:
+      print('epoch', epoch, ': loss', loss.numpy(), '; accuracy', accuracy.numpy())
+  return loss, accuracy
+
+
+
+
+
+class MyLayer(layers.Layer):
+
+
+    def __init__(self, units):
+        """
+
+        :param units: [input_dim, h1_dim,...,hn_dim, output_dim]
+        """
+        super(MyLayer, self).__init__()
+
+
+        for i in range(1, len(units)):
+            # w: [input_dim, output_dim]
+            self.add_variable(name='kernel%d'%i, shape=[units[i-1], units[i]])
+            # b: [output_dim]
+            self.add_variable(name='bias%d'%i,shape=[units[i]])
+
+
+
+    def call(self, x):
+        """
+
+        :param x: [b, input_dim]
+        :return:
+        """
+        num = len(self.trainable_variables)
+
+        x = tf.reshape(x, [-1, 28*28])
+
+        for i in range(0, num, 2):
+
+            x = tf.matmul(x, self.trainable_variables[i]) + self.trainable_variables[i+1]
+
+        return x
+
+
+
+def main():
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # or any {'0', '1', '2'}
+
+    train_dataset = mnist_dataset()
+
+    model = MyLayer([28*28, 200, 200, 10])
+    for p in model.trainable_variables:
+        print(p.name, p.shape)
+    optimizer = optimizers.Adam()
+
+    for epoch in range(20):
+        loss, accuracy = train(epoch, model, optimizer)
+
+    print('Final epoch', epoch, ': loss', loss.numpy(), '; accuracy', accuracy.numpy())
+
+
+if __name__ == '__main__':
+    main()
+
+
+
+```
+
+
+## 메인 함수에 포함 
+
+
+```python 
+import  os
+import  tensorflow as tf
+from    tensorflow import  keras
+from    tensorflow.keras import datasets, layers, optimizers
+import  argparse
+import  numpy as np
+from    network import VGG16
+
+
+
+
+def normalize(X_train, X_test):
+..
+    return X_train, X_test
+
+def prepare_cifar(x, y):
+..
+    return x, y
+
+
+
+def compute_loss(logits, labels):
+  return tf.reduce_mean(
+      tf.nn.sparse_softmax_cross_entropy_with_logits(
+          logits=logits, labels=labels))
+
+def main():
+
+    tf.random.set_seed(22)
+
+    print('loading data...')
+    (x,y), (x_test, y_test) = datasets.cifar10.load_data()
+    x, x_test = normalize(x, x_test)
+    print(x.shape, y.shape, x_test.shape, y_test.shape)
+    # x = tf.convert_to_tensor(x)
+    # y = tf.convert_to_tensor(y)
+    train_loader = tf.data.Dataset.from_tensor_slices((x,y))
+    train_loader = train_loader.map(prepare_cifar).shuffle(50000).batch(256)
+
+    test_loader = tf.data.Dataset.from_tensor_slices((x_test, y_test))
+    test_loader = test_loader.map(prepare_cifar).shuffle(10000).batch(256)
+    print('done.')
+
+
+
+
+    model = VGG16([32, 32, 3])
+
+
+    # must specify from_logits=True!
+    criteon = keras.losses.CategoricalCrossentropy(from_logits=True)
+    metric = keras.metrics.CategoricalAccuracy()
+
+    optimizer = optimizers.Adam(learning_rate=0.0001)
+
+
+    for epoch in range(250):
+
+        for step, (x, y) in enumerate(train_loader):
+            # [b, 1] => [b]
+            y = tf.squeeze(y, axis=1)
+            # [b, 10]
+            y = tf.one_hot(y, depth=10)
+
+            with tf.GradientTape() as tape:
+                logits = model(x)
+                loss = criteon(y, logits)
+                # loss2 = compute_loss(logits, tf.argmax(y, axis=1))
+                # mse_loss = tf.reduce_sum(tf.square(y-logits))
+                # print(y.shape, logits.shape)
+                metric.update_state(y, logits)
+
+            grads = tape.gradient(loss, model.trainable_variables)
+            # MUST clip gradient here or it will disconverge!
+            grads = [ tf.clip_by_norm(g, 15) for g in grads]
+            optimizer.apply_gradients(zip(grads, model.trainable_variables))
+
+            if step % 40 == 0:
+                # for g in grads:
+                #     print(tf.norm(g).numpy())
+                print(epoch, step, 'loss:', float(loss), 'acc:', metric.result().numpy())
+                metric.reset_states()
+
+
+        if epoch % 1 == 0:
+
+            metric = keras.metrics.CategoricalAccuracy()
+            for x, y in test_loader:
+                # [b, 1] => [b]
+                y = tf.squeeze(y, axis=1)
+                # [b, 10]
+                y = tf.one_hot(y, depth=10)
+
+                logits = model.predict(x)
+                # be careful, these functions can accept y as [b] without warnning.
+                metric.update_state(y, logits)
+            print('test acc:', metric.result().numpy())
+            metric.reset_states()
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    main()
+
+
+```
+
+
+## model - comple - fit -evaluate process
+
+```python 
+
+import  os
+import  tensorflow as tf
+import  numpy as np
+from    tensorflow import keras
+
+
+# In[1]:
+
+
+tf.random.set_seed(22)
+np.random.seed(22)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+assert tf.__version__.startswith('2.')
+
+
+
+
+(x_train, y_train), (x_test, y_test) = keras.datasets.fashion_mnist.load_data()
+x_train, x_test = x_train.astype(np.float32)/255., x_test.astype(np.float32)/255.
+# [b, 28, 28] => [b, 28, 28, 1]
+x_train, x_test = np.expand_dims(x_train, axis=3), np.expand_dims(x_test, axis=3)
+# one hot encode the labels. convert back to numpy as we cannot use a combination of numpy
+# and tensors as input to keras
+y_train_ohe = tf.one_hot(y_train, depth=10).numpy()
+y_test_ohe = tf.one_hot(y_test, depth=10).numpy()
+
+# In[2]:
+
+
+print(x_train.shape, y_train.shape)
+print(x_test.shape, y_test.shape)
+
+
+
+# 3x3 convolution
+def conv3x3(channels, stride=1, kernel=(3, 3)):
+    return keras.layers.Conv2D(channels, kernel, strides=stride, padding='same',
+                               use_bias=False,
+                            kernel_initializer=tf.random_normal_initializer())
+
+class ResnetBlock(keras.Model):
+
+    def __init__(self, channels, strides=1, residual_path=False):
+        super(ResnetBlock, self).__init__()
+
+        self.channels = channels
+        self.strides = strides
+        self.residual_path = residual_path
+
+        self.conv1 = conv3x3(channels, strides)
+        self.bn1 = keras.layers.BatchNormalization()
+        self.conv2 = conv3x3(channels)
+        self.bn2 = keras.layers.BatchNormalization()
+
+        if residual_path:
+            self.down_conv = conv3x3(channels, strides, kernel=(1, 1))
+            self.down_bn = tf.keras.layers.BatchNormalization()
+
+    def call(self, inputs, training=None):
+        residual = inputs
+
+        x = self.bn1(inputs, training=training)
+        x = tf.nn.relu(x)
+        x = self.conv1(x)
+        x = self.bn2(x, training=training)
+        x = tf.nn.relu(x)
+        x = self.conv2(x)
+
+        # this module can be added into self.
+        # however, module in for can not be added.
+        if self.residual_path:
+            residual = self.down_bn(inputs, training=training)
+            residual = tf.nn.relu(residual)
+            residual = self.down_conv(residual)
+
+        x = x + residual
+        return x
+
+
+class ResNet(keras.Model):
+
+    def __init__(self, block_list, num_classes, initial_filters=16, **kwargs):
+        super(ResNet, self).__init__(**kwargs)
+
+        self.num_blocks = len(block_list)
+        self.block_list = block_list
+
+        self.in_channels = initial_filters
+        self.out_channels = initial_filters
+        self.conv_initial = conv3x3(self.out_channels)
+
+        self.blocks = keras.models.Sequential(name='dynamic-blocks')
+
+        # build all the blocks
+        for block_id in range(len(block_list)):
+            for layer_id in range(block_list[block_id]):
+
+                if block_id != 0 and layer_id == 0:
+                    block = ResnetBlock(self.out_channels, strides=2, residual_path=True)
+                else:
+                    if self.in_channels != self.out_channels:
+                        residual_path = True
+                    else:
+                        residual_path = False
+                    block = ResnetBlock(self.out_channels, residual_path=residual_path)
+
+                self.in_channels = self.out_channels
+
+                self.blocks.add(block)
+
+            self.out_channels *= 2
+
+        self.final_bn = keras.layers.BatchNormalization()
+        self.avg_pool = keras.layers.GlobalAveragePooling2D()
+        self.fc = keras.layers.Dense(num_classes)
+
+    def call(self, inputs, training=None):
+
+        out = self.conv_initial(inputs)
+
+        out = self.blocks(out, training=training)
+
+        out = self.final_bn(out, training=training)
+        out = tf.nn.relu(out)
+
+        out = self.avg_pool(out)
+        out = self.fc(out)
+
+
+        return out
+
+# In[3]:
+
+def main():
+    num_classes = 10
+    batch_size = 32
+    epochs = 1
+
+    # build model and optimizer
+    model = ResNet([2, 2, 2], num_classes)
+    model.compile(optimizer=keras.optimizers.Adam(0.001),
+                  loss=keras.losses.CategoricalCrossentropy(from_logits=True),
+                  metrics=['accuracy'])
+    model.build(input_shape=(None, 28, 28, 1))
+    print("Number of variables in the model :", len(model.variables))
+    model.summary()
+
+    # train
+    model.fit(x_train, y_train_ohe, batch_size=batch_size, epochs=epochs,
+              validation_data=(x_test, y_test_ohe), verbose=1)
+
+    # evaluate on test set
+    scores = model.evaluate(x_test, y_test_ohe, batch_size, verbose=1)
+    print("Final test loss and accuracy :", scores)
+
+
+
+
+if __name__ == '__main__':
+    main()
+
+```
+
+
+
+
+
+
+
+
+
 
 
 

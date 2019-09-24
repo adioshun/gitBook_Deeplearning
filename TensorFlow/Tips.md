@@ -43,6 +43,53 @@ is_training_pl = tf.Variable(tf.zeros(shape=(),dtype=tf.bool), name="b")
 
 Python 코드를 텐서플로우에서 실행 하는 방법 [[참고]](https://tensorflowkorea.gitbooks.io/tensorflow-kr/content/g3doc/api_docs/python/script_ops.html)
 
+
+
+
+
+## 3. Eager - Graph 
+
+
+```python 
+
+# Eager 
+def measurement(gpu=False):
+    if gpu:
+        device = "/gpu:0"
+    else:
+        device = "/cpu:0" 
+        
+    with tf.device(device):
+        with tf.GradientTape() as tape:
+            y_pre = model(x)
+            loss_value = loss(y, y_pre)
+        grads = tape.gradient(loss_value, model.variables)
+        optimizer.apply_gradients(zip(grads, model.variables))
+
+
+
+# Graph 
+@tf.contrib.eager.defun
+def graph_measurement(gpu=False):
+    if gpu:
+        device = "/gpu:0"
+    else:
+        device = "/cpu:0" 
+        
+    with tf.device(device):
+        with tf.GradientTape() as tape:
+            y_pre = model(x)
+            loss_value = loss(y, y_pre)
+        grads = tape.gradient(loss_value, model.variables)
+        optimizer.apply_gradients(zip(grads, model.variables))
+```
+
+
+
+
+
+
+
 ---
 ## 하이레벨 API
 
