@@ -1,4 +1,10 @@
+# TensorBoard
+
+> 쥬피터에서 실행시 : %tensorboard --logdir=./my_logs
+
 ![](https://i.imgur.com/CMjq8n4.png)
+
+
 
 1. 코드에 텐서보드용 로그 파일 저장 위치 지정
 ```
