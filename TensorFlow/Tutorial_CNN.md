@@ -152,39 +152,8 @@ model = Model()
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.01)
 
 
-# Training loop
-grads = grad(model, training_inputs, training_outputs)
-#grad = tfe.implicit_gradients(loss_fn) 
-## https://github.com/aymericdamien/TensorFlow-Examples/blob/master/examples/3_NeuralNetworks/neural_network_eager_api.py
-optimizer.apply_gradients(zip(grads, [model.W, model.B]),
-                            global_step=tf.train.get_or_create_global_step())
 
 ```
-
-
----
-
-
-  
-```python 
-dataset = tf.data.Dataset.from_tensor_slices((data.train.images,
-                                              data.train.labels))
-...
-for (batch, (images, labels)) in enumerate(tfe.Iterator(dataset)):
-  ...
-  with tfe.GradientTape() as tape:
-    logits = model(images, training=True)
-    loss_value = loss(logits, labels)
-  ...
-  grads = tape.gradient(loss_value, model.variables)
-  optimizer.apply_gradients(zip(grads, model.variables),
-                            global_step=tf.train.get_or_create_global_step())
-```
-
-
-
-
-
 
 
 
@@ -193,31 +162,10 @@ for (batch, (images, labels)) in enumerate(tfe.Iterator(dataset)):
 
 
 ---
-
 ## 모두 함수화 
 
 ```python 
 # https://github.com/dragen1860/TensorFlow-2.x-Tutorials/blob/master/05-FashionMNIST/mnist_matmul.py
-
-import  os
-import  tensorflow as tf
-from    tensorflow import keras
-from    tensorflow.keras import layers, optimizers, datasets
-
-def prepare_mnist_features_and_labels(x, y):
-..
-  return x, y
-
-
-
-def mnist_dataset():
-..
-  return ds
-
-
-
-
-
 
 def compute_loss(logits, labels):
   return tf.reduce_mean(
@@ -268,36 +216,10 @@ def train(epoch, model, optimizer):
 
 class MyLayer(layers.Layer):
 
-
     def __init__(self, units):
-        """
-
-        :param units: [input_dim, h1_dim,...,hn_dim, output_dim]
-        """
-        super(MyLayer, self).__init__()
-
-
-        for i in range(1, len(units)):
-            # w: [input_dim, output_dim]
-            self.add_variable(name='kernel%d'%i, shape=[units[i-1], units[i]])
-            # b: [output_dim]
-            self.add_variable(name='bias%d'%i,shape=[units[i]])
-
-
 
     def call(self, x):
-        """
 
-        :param x: [b, input_dim]
-        :return:
-        """
-        num = len(self.trainable_variables)
-
-        x = tf.reshape(x, [-1, 28*28])
-
-        for i in range(0, num, 2):
-
-            x = tf.matmul(x, self.trainable_variables[i]) + self.trainable_variables[i+1]
 
         return x
 
@@ -331,25 +253,6 @@ if __name__ == '__main__':
 
 
 ```python 
-import  os
-import  tensorflow as tf
-from    tensorflow import  keras
-from    tensorflow.keras import datasets, layers, optimizers
-import  argparse
-import  numpy as np
-from    network import VGG16
-
-
-
-
-def normalize(X_train, X_test):
-..
-    return X_train, X_test
-
-def prepare_cifar(x, y):
-..
-    return x, y
-
 
 
 def compute_loss(logits, labels):
@@ -358,24 +261,6 @@ def compute_loss(logits, labels):
           logits=logits, labels=labels))
 
 def main():
-
-    tf.random.set_seed(22)
-
-    print('loading data...')
-    (x,y), (x_test, y_test) = datasets.cifar10.load_data()
-    x, x_test = normalize(x, x_test)
-    print(x.shape, y.shape, x_test.shape, y_test.shape)
-    # x = tf.convert_to_tensor(x)
-    # y = tf.convert_to_tensor(y)
-    train_loader = tf.data.Dataset.from_tensor_slices((x,y))
-    train_loader = train_loader.map(prepare_cifar).shuffle(50000).batch(256)
-
-    test_loader = tf.data.Dataset.from_tensor_slices((x_test, y_test))
-    test_loader = test_loader.map(prepare_cifar).shuffle(10000).batch(256)
-    print('done.')
-
-
-
 
     model = VGG16([32, 32, 3])
 
@@ -453,132 +338,7 @@ import  numpy as np
 from    tensorflow import keras
 
 
-# In[1]:
 
-
-tf.random.set_seed(22)
-np.random.seed(22)
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-assert tf.__version__.startswith('2.')
-
-
-
-
-(x_train, y_train), (x_test, y_test) = keras.datasets.fashion_mnist.load_data()
-x_train, x_test = x_train.astype(np.float32)/255., x_test.astype(np.float32)/255.
-# [b, 28, 28] => [b, 28, 28, 1]
-x_train, x_test = np.expand_dims(x_train, axis=3), np.expand_dims(x_test, axis=3)
-# one hot encode the labels. convert back to numpy as we cannot use a combination of numpy
-# and tensors as input to keras
-y_train_ohe = tf.one_hot(y_train, depth=10).numpy()
-y_test_ohe = tf.one_hot(y_test, depth=10).numpy()
-
-# In[2]:
-
-
-print(x_train.shape, y_train.shape)
-print(x_test.shape, y_test.shape)
-
-
-
-# 3x3 convolution
-def conv3x3(channels, stride=1, kernel=(3, 3)):
-    return keras.layers.Conv2D(channels, kernel, strides=stride, padding='same',
-                               use_bias=False,
-                            kernel_initializer=tf.random_normal_initializer())
-
-class ResnetBlock(keras.Model):
-
-    def __init__(self, channels, strides=1, residual_path=False):
-        super(ResnetBlock, self).__init__()
-
-        self.channels = channels
-        self.strides = strides
-        self.residual_path = residual_path
-
-        self.conv1 = conv3x3(channels, strides)
-        self.bn1 = keras.layers.BatchNormalization()
-        self.conv2 = conv3x3(channels)
-        self.bn2 = keras.layers.BatchNormalization()
-
-        if residual_path:
-            self.down_conv = conv3x3(channels, strides, kernel=(1, 1))
-            self.down_bn = tf.keras.layers.BatchNormalization()
-
-    def call(self, inputs, training=None):
-        residual = inputs
-
-        x = self.bn1(inputs, training=training)
-        x = tf.nn.relu(x)
-        x = self.conv1(x)
-        x = self.bn2(x, training=training)
-        x = tf.nn.relu(x)
-        x = self.conv2(x)
-
-        # this module can be added into self.
-        # however, module in for can not be added.
-        if self.residual_path:
-            residual = self.down_bn(inputs, training=training)
-            residual = tf.nn.relu(residual)
-            residual = self.down_conv(residual)
-
-        x = x + residual
-        return x
-
-
-class ResNet(keras.Model):
-
-    def __init__(self, block_list, num_classes, initial_filters=16, **kwargs):
-        super(ResNet, self).__init__(**kwargs)
-
-        self.num_blocks = len(block_list)
-        self.block_list = block_list
-
-        self.in_channels = initial_filters
-        self.out_channels = initial_filters
-        self.conv_initial = conv3x3(self.out_channels)
-
-        self.blocks = keras.models.Sequential(name='dynamic-blocks')
-
-        # build all the blocks
-        for block_id in range(len(block_list)):
-            for layer_id in range(block_list[block_id]):
-
-                if block_id != 0 and layer_id == 0:
-                    block = ResnetBlock(self.out_channels, strides=2, residual_path=True)
-                else:
-                    if self.in_channels != self.out_channels:
-                        residual_path = True
-                    else:
-                        residual_path = False
-                    block = ResnetBlock(self.out_channels, residual_path=residual_path)
-
-                self.in_channels = self.out_channels
-
-                self.blocks.add(block)
-
-            self.out_channels *= 2
-
-        self.final_bn = keras.layers.BatchNormalization()
-        self.avg_pool = keras.layers.GlobalAveragePooling2D()
-        self.fc = keras.layers.Dense(num_classes)
-
-    def call(self, inputs, training=None):
-
-        out = self.conv_initial(inputs)
-
-        out = self.blocks(out, training=training)
-
-        out = self.final_bn(out, training=training)
-        out = tf.nn.relu(out)
-
-        out = self.avg_pool(out)
-        out = self.fc(out)
-
-
-        return out
-
-# In[3]:
 
 def main():
     num_classes = 10
@@ -625,6 +385,7 @@ optimizer = tf.optimizers.Adam()
 loss_fn = tf.losses.MeanSquaredError()
 
 @tf.function
+
 def train_step(feature, target):
 
     with tf.GradientTape() as tape:
@@ -637,6 +398,7 @@ def train_step(feature, target):
     return loss
 
 @tf.function
+
 def val_step(feature, target):
     
     y_pred = model(feature)
