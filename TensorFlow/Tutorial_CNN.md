@@ -60,21 +60,61 @@ class create_model_class(tf.keras.Model):
 
 ### 2.2 function스타일 모델 생성 with Keras   
       
-  ```python 
+```python 
   
-  def create_model_function(label_dim) :
-    weight_init = tf.keras.initializers.RandomNormal()
+# Store layers weight & bias
 
-    model = tf.keras.Sequential()
-    model.add(flatten())
+# A random value generator to initialize weights.
+#random_normal = tf.initializers.RandomNormal()
 
-    for i in range(2) :
-        model.add(dense(256, weight_init))
-        model.add(sigmoid())
+weights = {
+    # Conv Layer 1: 5x5 conv, 1 input, 32 filters (MNIST has 1 color channel only).
+    'wc1': tf.Variable(tf.zeros([5, 5, 1, conv1_filters])),
+    # Conv Layer 2: 5x5 conv, 32 inputs, 64 filters.
+    'wc2': tf.Variable(tf.zeros([5, 5, conv1_filters, conv2_filters])),
+    # FC Layer 1: 7*7*64 inputs, 1024 units.
+    'wd1': tf.Variable(tf.zeros([7*7*64, fc1_units])),
+    # FC Out Layer: 1024 inputs, 10 units (total number of classes)
+    'out': tf.Variable(tf.zeros([fc1_units, num_classes]))
+}
 
-    model.add(dense(label_dim, weight_init))
+biases = {
+    'bc1': tf.Variable(tf.zeros([conv1_filters])),
+    'bc2': tf.Variable(tf.zeros([conv2_filters])),
+    'bd1': tf.Variable(tf.zeros([fc1_units])),
+    'out': tf.Variable(tf.zeros([num_classes]))
+}
+  
+# Create model
+def conv_net(x):
+    
+    # Input shape: [-1, 28, 28, 1]. A batch of 28x28x1 (grayscale) images.
+    x = tf.reshape(x, [-1, 28, 28, 1])
 
-    return model
+    # Convolution Layer. Output shape: [-1, 28, 28, 32].
+    conv1 = conv2d(x, weights['wc1'], biases['bc1'])
+    
+    # Max Pooling (down-sampling). Output shape: [-1, 14, 14, 32].
+    conv1 = maxpool2d(conv1, k=2)
+
+    # Convolution Layer. Output shape: [-1, 14, 14, 64].
+    conv2 = conv2d(conv1, weights['wc2'], biases['bc2'])
+    
+    # Max Pooling (down-sampling). Output shape: [-1, 7, 7, 64].
+    conv2 = maxpool2d(conv2, k=2)
+
+    # Reshape conv2 output to fit fully connected layer input, Output shape: [-1, 7*7*64].
+    fc1 = tf.reshape(conv2, [-1, weights['wd1'].get_shape().as_list()[0]])
+    
+    # Fully connected layer, Output shape: [-1, 1024].
+    fc1 = tf.add(tf.matmul(fc1, weights['wd1']), biases['bd1'])
+    # Apply ReLU to fc1 output for non-linearity.
+    fc1 = tf.nn.relu(fc1)
+
+    # Fully connected layer, Output shape: [-1, 10].
+    out = tf.add(tf.matmul(fc1, weights['out']), biases['out'])
+    # Apply softmax to normalize the logits to a probability distribution.
+    return tf.nn.softmax(out)
   
 ```
   
