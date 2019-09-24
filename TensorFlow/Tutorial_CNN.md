@@ -10,6 +10,9 @@
 
 > [TensorFlow 2.0 Examples](https://github.com/aymericdamien/TensorFlow-Examples/tree/master/tensorflow_v2)
 
+
+
+> 추천 구조 : https://github.com/aymericdamien/TensorFlow-Examples/blob/master/tensorflow_v2/notebooks/3_NeuralNetworks/convolutional_network.ipynb
 ---
 
 ## 1. 데이터 준비 
