@@ -7,12 +7,10 @@
 ```
 import tensorflow as tf
 
-tf.enable_eager_execution()
-#tf.executing_eagerly()
-print("Eager Mode: ",tf.executing_eagerly())
+tf.executing_eagerly() # TF 2.x 
+#tf.enable_eager_execution() #TF 1.x
 
 tf.compat.v1.disable_eager_execution()
-print("Eager Mode: ",tf.executing_eagerly())
 
 
 
@@ -139,3 +137,9 @@ f.close()
 (x_train, _), (x_test, _) = data
 ```
 
+---
+
+
+## Parse Jupyter 에서 사용 
+
+`import sys; sys.argv=['']; del sys`
