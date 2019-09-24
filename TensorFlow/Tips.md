@@ -8,7 +8,17 @@
 import tensorflow as tf
 
 tf.enable_eager_execution()
+#tf.executing_eagerly()
 print("Eager Mode: ",tf.executing_eagerly())
+
+tf.compat.v1.disable_eager_execution()
+print("Eager Mode: ",tf.executing_eagerly())
+
+
+
+
+model = multi_gpu_model(model, 2, cpu_relocation=True)
+tf.test.is_gpu_available()
 ```
 
 

@@ -1,4 +1,86 @@
-# Tensorflow 저장 및 불러 오기 
+# TF1.x Snippets
+
+
+
+
+
+---
+
+# TF2.x Snippets
+
+
+## 1. DataLoad 
+- https://github.com/ageron/tf2_course/blob/master/03_loading_and_preprocessing_data.ipynb
+
+```python 
+import numpy as np
+dataset = tf.data.Dataset.from_tensor_slices(np.arange(10))
+dataset
+
+for item in dataset:
+    print(item)
+
+for item in dataset:
+    print(item.numpy(), end=" ")
+
+#-----------------
+dataset = tf.data.Dataset.from_tensor_slices({"features": X, "label": y})
+dataset
+
+
+for item in dataset:
+    print(item["features"].numpy(), item["label"].numpy())
+    
+```
+
+## 2. model save & Load
+- https://github.com/ageron/tf2_course/blob/master/04_deploy_and_distribute_tf2.ipynb
+
+
+### 2.1 Keras 
+
+```python 
+#Save
+model_path = './models/keras/model.json'
+weights_path = './models/keras/weights.h5'
+
+model.save(model_path)
+model.save_weights(weights_path)
+
+#Load
+model = keras.models.load_model("my_mnist_model.h5")
+model.load_weights("./yolov3") 
+# https://github.com/YunYang1994/TensorFlow2.0-Examples/blob/master/4-Object_Detection/YOLOV3/test.py
+```
+
+### 2.2 TF
+
+```pythbon 
+# Save 
+tf.saved_model.save(model, model_path)
+
+
+
+
+# load
+
+loaded_model = tf.saved_model.load(model_path)
+
+
+
+```
+
+### 2.3 Numpy
+
+```python 
+weighs = np.load("./vgg16.npy", encoding='latin1').item()
+for layer_name in weighs.keys():
+    layer = model.get_layer(layer_name)
+    layer.set_weights(weighs[layer_name])
+
+```
+
+---
 
 
 ## 1. 모델 zoo
@@ -30,3 +112,4 @@
 
 
 
+# Loading and Preprocessing Data
