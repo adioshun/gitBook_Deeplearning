@@ -615,8 +615,79 @@ if __name__ == '__main__':
 
 
 
+---
+## Training by hand
 
 
+
+```python 
+optimizer = tf.optimizers.Adam()
+loss_fn = tf.losses.MeanSquaredError()
+
+@tf.function
+def train_step(feature, target):
+
+    with tf.GradientTape() as tape:
+        y_pred = model(feature, training=True)
+        loss = loss_fn(target, y_pred)
+    
+    grads = tape.gradient(loss, model.variables)
+    optimizer.apply_gradients(zip(grads, model.variables))
+    
+    return loss
+
+@tf.function
+def val_step(feature, target):
+    
+    y_pred = model(feature)
+    loss = loss_fn(target, y_pred)
+    
+    return loss
+
+
+for i in range(10):
+    
+    running_loss = 0
+    running_val_loss = 0
+    
+    for i, (batch_feature, batch_target) in enumerate(dataset):
+        loss_ = train_step(batch_feature, batch_target)
+        running_loss += loss_
+        
+    for j, (batch_feature, batch_target) in enumerate(val_dataset):
+        loss_ = val_step(batch_feature, batch_target)
+        running_val_loss += loss_
+        
+    print("----------epoch {}--------".format(i+1))
+    print("loss: {},  val_loss: {}".format(running_loss/(i+1), 
+                                           running_val_loss/(j+1)))
+
+
+#----------------------------------------------------------------------------
+
+
+# Keras 에서 accuracy 구하기 
+test_loss, test_acc = model.evaluate(x=x_test_eager.numpy(), 
+                                     y=y_test_eager.numpy())
+
+
+# TF에서 Accuracy 구하기 
+
+def accuracy(y, y_pre):
+    return tf.keras.metrics.categorical_accuracy(y, y_pre)
+
+for j in range(num_epochs):
+    
+    running_loss = 0
+    running_acc = 0
+
+    for i, (x_, y_) in enumerate(train_dataset):
+        
+        with tf.device("/gpu:0"):
+            with tf.GradientTape() as tape:
+                y_pre = model(x_, training=True)
+                loss = loss_fn(y_, y_pre)
+            acc = accuracy(y_, y_pre)
 
 
 
