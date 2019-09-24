@@ -121,6 +121,8 @@
 * [Tutorial-Fundamental](TensorFlow/Tutorial_Fundamental.md)
 * [Tutorial-Regression](TensorFlow/Tutorial_Regression.md)
 * [Tutorial-CNN](TensorFlow/Tutorial_CNN.md)
+  * [KerasAPI](TensorFlow/Tutorial_CNN-KerasAPI.md)
+  * [TF2](TensorFlow/Tutorial_CNN-TF2.md)
 * [Tutorial-1x-CNN](TensorFlow/Tutorial-1x_CNN.md)
 * [Tips](TensorFlow/Tips.md)
 * [Snippets](TensorFlow/Snippets.md)
