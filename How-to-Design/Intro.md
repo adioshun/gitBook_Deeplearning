@@ -3,7 +3,9 @@
 
 Conv2D(input, outout, kernel) = conv2D(1,1,3) #pyTorch 버젼 
 - Input : NxCxHxW = batch size, channel, height, width
-- output : NxCxHxW = [(input - filter size + (2xpadding)/stride] + 1
+- output : NxCxHxW 
+. H & W = [(input - filter size + (2xpadding)/stride] + 1
+. C = 필터 갯수 (위예시는 3x3이 한개 이므로 1 )
 
 > [레이어 파라미터 계산 하기(Youtube)](https://www.youtube.com/watch?v=rySyghVxo6U&list=PLQ28Nx3M4JrhkqBVIXg-i5_CVVoS1UzAv&index=19)
 
