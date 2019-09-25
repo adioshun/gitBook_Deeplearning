@@ -25,6 +25,8 @@ tf.test.is_gpu_available()
 ```python 
 is_training_pl = tf.placeholder(shape=(),dtype=tf.bool, name="b")
 is_training_pl = tf.Variable(tf.zeros(shape=(),dtype=tf.bool), name="b")
+tf.compat.v1.Variable(name, shape, dtype=dtype)
+
 
 tf.train.exponential_decay -> tf.compat.v1.train.exponential_decay
 tf.get_variable -> tf.Variable
