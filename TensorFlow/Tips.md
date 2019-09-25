@@ -25,6 +25,14 @@ tf.test.is_gpu_available()
 ```python 
 is_training_pl = tf.placeholder(shape=(),dtype=tf.bool, name="b")
 is_training_pl = tf.Variable(tf.zeros(shape=(),dtype=tf.bool), name="b")
+
+tf.train.exponential_decay -> tf.compat.v1.train.exponential_decay
+tf.get_variable -> tf.Variable
+initializer=tf.contrib.layers.xavier_initializer())  -> initializer = tf.initializers.GlorotUniform()
+tf.get_variable -> tf.Variable -> tf.compat.v1.Variable(name, shape, initializer=initializer, dtype=dtype)
+tf.contrib.layers.batch_norm() --> tf.compat.v1.layers.BatchNormalization
+#https://www.tensorflow.org/api_docs/python/tf/layers/BatchNormalization?hl=ko
+
 ```
 
 > https://www.tensorflow.org/beta/guide/migration_guide?hl=ko#%EB%B3%80%ED%99%98_%EC%A0%84
