@@ -1,5 +1,10 @@
 # 네트워크 설계
 
+
+Conv2D(input, outout, kernel) = conv2D(1,1,3) #pyTorch 버젼 
+- Input : NxCxHxW = batch size, channel, height, width
+- output : NxCxHxW = [(input - filter size + (2xpadding)/stride] + 1
+
 > [레이어 파라미터 계산 하기(Youtube)](https://www.youtube.com/watch?v=rySyghVxo6U&list=PLQ28Nx3M4JrhkqBVIXg-i5_CVVoS1UzAv&index=19)
 
 가정사항
