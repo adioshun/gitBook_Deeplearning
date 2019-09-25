@@ -1,4 +1,7 @@
 # 네트워크 설계
+
+> [레이어 파라미터 계산 하기(Youtube)](https://www.youtube.com/watch?v=rySyghVxo6U&list=PLQ28Nx3M4JrhkqBVIXg-i5_CVVoS1UzAv&index=19)
+
 가정사항
 - 털 과 날개의 유무(feature=2)에 따라, 기타, 포유류,조류(Classificatin=3)을 하는 신경모델 
 
