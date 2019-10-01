@@ -1,10 +1,29 @@
 # [Create Network ](https://nbviewer.jupyter.org/github/deeplearningzerotoall/TensorFlow/blob/master/lab-10-1-1-mnist_nn_softmax.ipynb)
 
 
-[구현방법](https://www.youtube.com/watch?v=OR_NwgouflE&list=PLQ28Nx3M4Jrguyuwg4xe9d9t2XE639e5C&index=36)
-1. Keras Sequential API : 블록 쌓듯이 쉽게, 멀티 인붓/아웃풋 불가, shared Layer 불가 
-2. KERAS Functional : Input layer 지정으로 멀티 인북 가능 
-3. Keras.Model subclassing : Fully-customizable model 생성 가능, `_init_`method에 레이어 선언, `call`method에서 사용 
+## 1 [구현방법](https://www.youtube.com/watch?v=OR_NwgouflE&list=PLQ28Nx3M4Jrguyuwg4xe9d9t2XE639e5C&index=36)
+
+### 1.1 Sequential API 
+
+- input 파라미터 사용 : `model.add(keras.layers.ConvD(...., input_shape(28,28,1),....)`
+- 다름 레이어의 인풋은 이전 레이어, 별도 지정 없음 
+- return : model 
+
+### 1.2 Funtional API
+
+
+- input layer 사용 : `input = keras.Input(shape=(28,28,1))`
+- 다음 레이어의 인풋은 `conv1= keras.layersConv2D(....)(INPUT)`으로 지정 
+- return `keras.Model(inputs= inputs, outputs =logits)`
+
+
+
+### 1.3 subclassing 
+
+- `def __init__`에서 Funtional API를 이용하여 레이어 구현 
+- `def __call__`에서 학습 절차 정의 
+. input 지정 `call(..., inputs, ...)`
+. return : net 
 
 > 전체 흐름 강의 : [Logistic Regression-강의](https://www.youtube.com/watch?v=enyQpA-xAYc&list=PLQ28Nx3M4Jrguyuwg4xe9d9t2XE639e5C&index=11), [Logistic Regression-코드](https://github.com/deeplearningzerotoall/TensorFlow/blob/master/lab-05-1-logistic_regression-eager.ipynb)
 
