@@ -80,6 +80,53 @@ for layer_name in weighs.keys():
 
 ```
 
+
+## 3. 평가 
+
+```python 
+def evaluate(model, images, labels):
+    logits = model(images, training=False)
+    correct_prediction = tf.equal(tf.argmax(logits, 1), tf.argmax(labels, 1))
+    accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+    return accuracy
+    
+# train my model
+print('Learning started. It takes sometime.')
+for epoch in range(training_epochs):
+    avg_loss = 0.
+    avg_train_acc = 0.
+    avg_test_acc = 0.
+    train_step = 0
+    test_step = 0
+    
+    for images, labels in train_dataset:
+        grads = grad(model, images, labels)                
+        optimizer.apply_gradients(zip(grads, model.variables))
+        loss = loss_fn(model, images, labels)
+        acc = evaluate(model, images, labels)
+        avg_loss = avg_loss + loss
+        avg_train_acc = avg_train_acc + acc
+        train_step += 1
+    avg_loss = avg_loss / train_step
+    avg_train_acc = avg_train_acc / train_step
+    
+    for images, labels in test_dataset:        
+        acc = evaluate(model, images, labels)        
+        avg_test_acc = avg_test_acc + acc
+        test_step += 1    
+    avg_test_acc = avg_test_acc / test_step    
+
+    print('Epoch:', '{}'.format(epoch + 1), 'loss =', '{:.8f}'.format(avg_loss), 
+          'train accuracy = ', '{:.4f}'.format(avg_train_acc), 
+          'test accuracy = ', '{:.4f}'.format(avg_test_acc))
+    
+    checkpoint.save(file_prefix=checkpoint_prefix)
+
+print('Learning Finished!')
+
+
+```
+
 ---
 
 
