@@ -1,6 +1,6 @@
 # [CNN TF2](https://github.com/aymericdamien/TensorFlow-Examples/blob/master/tensorflow_v2/notebooks/3_NeuralNetworks/convolutional_network.ipynb)
 
-
+- colab 메뉴얼 :[1](https://colab.research.google.com/github/zaidalyafeai/Notebooks/blob/master/TF_2_0.ipynb#scrollTo=qLOdEd07UI-x), [2](https://colab.research.google.com/drive/17u-pRZJnKN0gO5XZmq8n5A2bKGrfKEUg)
 
 ```python 
 
