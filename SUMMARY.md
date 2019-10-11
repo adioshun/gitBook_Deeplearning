@@ -34,6 +34,11 @@
  * [Learning Rate](How-to-Enhancement/Learning_rate.md)
 * [Debugging\_Training](How-to-Enhancement/debugging-training.md)
 
+## 경량화 (Model compression)
+
+* [README](Model-Compression/README.md)
+* [INTRO](Model-Compression/Intro.md)
+
 ## Transfer Learning
 
 * [README](Transfer-Learning/README.md)
