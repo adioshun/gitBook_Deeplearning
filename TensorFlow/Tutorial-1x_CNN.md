@@ -11,6 +11,10 @@
 
 #### A. tf.data.Dataset 
 
+```python 
+print(dataset3.output_types)  # ==> (tf.float32, (tf.float32, tf.int32))
+print(dataset3.output_shapes)  # ==> "(10, ((), (100,)))"
+```
 ##### 가. Creating a source 
     - tf.data.Dataset.from_tensors()
     - tf.data.dataset.from_tensor_slices(np_features, np_labels)
