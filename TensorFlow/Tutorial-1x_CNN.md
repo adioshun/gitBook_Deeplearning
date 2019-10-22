@@ -11,10 +11,6 @@
 
 #### A. tf.data.Dataset 
 
-```python 
-print(dataset3.output_types)  # ==> (tf.float32, (tf.float32, tf.int32))
-print(dataset3.output_shapes)  # ==> "(10, ((), (100,)))"
-```
 ##### 가. Creating a source 
     - tf.data.Dataset.from_tensors()
     - tf.data.dataset.from_tensor_slices(np_features, np_labels)
@@ -60,6 +56,11 @@ dataset = dataset.map(
 ###### - Batch로 입력 
 ```python 
 batched_dataset = dataset.batch(4)
+# dataset = dataset.apply(tf.contrib.data.batch_and_drop_remainder(32)) # `Dimension(None)`에러시
+
+# Dim 확인 
+print(dataset.output_types) 
+print(dataset.output_shapes) 
 
 iterator = batched_dataset.make_one_shot_iterator()
 next_element = iterator.get_next()
