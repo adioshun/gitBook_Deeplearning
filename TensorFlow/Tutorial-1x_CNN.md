@@ -15,16 +15,14 @@
     - tf.data.Dataset.from_tensors()
     - tf.data.dataset.from_tensor_slices(np_features, np_labels)
 
+###### - 바로 입력 (2GB제한) 
 ```python 
-with np.load("/var/data/training_data.npy") as data:
-  features = data["features"]
-  labels = data["labels"]
-
-# 바로 입력 (2GB제한) 
 dataset = tf.data.Dataset.from_tensor_slices((features, labels))
+```
 
+###### - placeholder로 입력 
 
-# placeholder로 입력 
+```python 
 features_placeholder = tf.placeholder(features.dtype, features.shape)
 labels_placeholder = tf.placeholder(labels.dtype, labels.shape)
 
@@ -37,6 +35,31 @@ sess.run(iterator.initializer, feed_dict={features_placeholder: features,
 
 ```
 
+###### - 파일명 / 전처리 후 입력 
+```python 
+
+def _read_py_function(filename, label):
+  image_decoded = cv2.imread(filename.decode(), cv2.IMREAD_GRAYSCALE)
+  return image_decoded, label
+  
+filenames = ["/var/data/image1.jpg", "/var/data/image2.jpg", ...]
+labels = [0, 37, 29, 1, ...]
+
+dataset = tf.data.Dataset.from_tensor_slices((filenames, labels))
+dataset = dataset.map(
+    lambda filename, label: tuple(tf.py_func(
+        _read_py_function, [filename, label], [tf.uint8, label.dtype])))
+
+
+```
+
+###### - Batch로 입력 
+```python 
+batched_dataset = dataset.batch(4)
+
+iterator = batched_dataset.make_one_shot_iterator()
+next_element = iterator.get_next()
+```
 
 ###### 나. Applying a transformation : transform Dataset into a new Dataset
     - (e.g. Dataset.batch())
