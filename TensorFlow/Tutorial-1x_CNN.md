@@ -11,11 +11,34 @@
 
 #### A. tf.data.Dataset 
 
-- Creating a source 
+##### 가. Creating a source 
     - tf.data.Dataset.from_tensors()
-    - (e.g. Dataset.from_tensor_slices()
+    - tf.data.dataset.from_tensor_slices(np_features, np_labels)
 
-- Applying a transformation : transform Dataset into a new Dataset
+```python 
+with np.load("/var/data/training_data.npy") as data:
+  features = data["features"]
+  labels = data["labels"]
+
+# 바로 입력 (2GB제한) 
+dataset = tf.data.Dataset.from_tensor_slices((features, labels))
+
+
+# placeholder로 입력 
+features_placeholder = tf.placeholder(features.dtype, features.shape)
+labels_placeholder = tf.placeholder(labels.dtype, labels.shape)
+
+dataset = tf.data.Dataset.from_tensor_slices((features_placeholder, labels_placeholder))
+## 사용시 
+iterator = dataset.make_initializable_iterator()
+
+sess.run(iterator.initializer, feed_dict={features_placeholder: features,
+                                          labels_placeholder: labels})
+
+```
+
+
+###### 나. Applying a transformation : transform Dataset into a new Dataset
     - (e.g. Dataset.batch())
     - Dataset.map()
 
@@ -26,10 +49,20 @@
 > The most common way to consume values from a Dataset is to make an iterator object
 
 
-- Dataset.make_one_shot_iterator()
-- Iterator.initializer
+- Dataset.make_one_shot_iterator()  #`Estimator`에서 유일게 지원 
+- Iterator.initializer # feed-dict과 쓰일때 유용 `sess.run(iterator.initializer, feed_dict={max_value: 10})`
 - Iterator.get_next()
 
+
+```python 
+dataset = tf.data.Dataset.range(100)
+iterator = dataset.make_one_shot_iterator()
+next_element = iterator.get_next()
+
+for i in range(100):
+  value = sess.run(next_element)
+  assert i == value
+```
 
 ---
 
