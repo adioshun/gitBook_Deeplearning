@@ -5,7 +5,30 @@
 
 ---
 
-## 1. 데이터 준비 
+## 1. [데이터 준비](https://github.com/tensorflow/docs/blob/master/site/en/r1/guide/datasets.md)
+
+### 1.1 tf.data API 이용 
+
+#### A. tf.data.Dataset 
+
+- Creating a source 
+    - tf.data.Dataset.from_tensors()
+    - (e.g. Dataset.from_tensor_slices()
+
+- Applying a transformation : transform Dataset into a new Dataset
+    - (e.g. Dataset.batch())
+    - Dataset.map()
+
+
+
+#### B. tf.data.Iterator 
+
+> The most common way to consume values from a Dataset is to make an iterator object
+
+
+- Dataset.make_one_shot_iterator()
+- Iterator.initializer
+- Iterator.get_next()
 
 
 ---
