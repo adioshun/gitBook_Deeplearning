@@ -56,7 +56,8 @@ dataset = dataset.map(
 ###### - Batch로 입력 
 ```python 
 batched_dataset = dataset.batch(4)
-#OR batched_dataset = dataset.apply(tf.contrib.data.batch_and_drop_remainder(32)) # `Dimension(None)`에러시 
+#`Dimension(None) OR (??) `에러시 https://github.com/tensorflow/tensorflow/issues/18226
+# batched_dataset = dataset.apply(tf.contrib.data.batch_and_drop_remainder(32)) 
 
 # Dim 확인 
 print(dataset.output_types) 
