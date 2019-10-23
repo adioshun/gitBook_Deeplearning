@@ -29,3 +29,4 @@ pip install -U --pre tensorflow  #업그레이드
 
 ---
 
+- [TensorFlow Tutorial and Examples for Beginners (support TF v1 & v2)](https://github.com/aymericdamien/TensorFlow-Examples)
