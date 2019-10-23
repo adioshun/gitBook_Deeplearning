@@ -111,10 +111,11 @@
 * [Tutorial-Fundamental](pyTorch/Tutorial_Fundamental.md)
 * [Tutorial-Regression](pyTorch/Tutorial_Regression.md)
 * [Tutorial-CNN](pyTorch/Tutorial_CNN.md)
-* [Tutorial-RESNET](pyTorch/Tutorial_Sample_RESNET.md)
-* [Tutorial-YOLO2](pyTorch/Intro.md)
+  * [Tutorial-RESNET](pyTorch/Tutorial_Sample_RESNET.md)
+  * [Tutorial-YOLO2](pyTorch/Intro.md)
 * [Tips](pyTorch/Tips.md)
 * [Snippets](pyTorch/Snippets.md)
+  * [Dataloader](pyTorch/Snippets_Dataloader.md)
 * [Tools](pyTorch/Tools.md)
 * [References](pyTorch/References.md)
 
@@ -131,6 +132,8 @@
 * [Tutorial-1x-CNN](TensorFlow/Tutorial-1x_CNN.md)
 * [Tips](TensorFlow/Tips.md)
 * [Snippets](TensorFlow/Snippets.md)
+  * [Dataloader](TensorFlow/Snippets_Dataloader.md)
+
 * [Tools](TensorFlow/Tools.md)
   * [Tensorflow Object Detection API](TensorFlow/Tools-Object-Detection-API.md)
   * [Tensorboard](TensorFlow/Tools-Tensorboard.md)
