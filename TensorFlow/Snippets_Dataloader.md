@@ -1,58 +1,84 @@
 # Tensorflow Dataloader
 
 
-## 1. Numpy 
+## 1. [Numpy](https://github.com/charlesq34/pointnet2/blob/master/modelnet_dataset.py)
 
 ```python
 '''
     ModelNet dataset. Support ModelNet40, ModelNet10, XYZ and normal channels. Up to 10000 points.
 '''
 
+import os
+import os.path
+import json
+import numpy as np
+import sys
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = BASE_DIR
+sys.path.append(os.path.join(ROOT_DIR, 'utils'))
+import provider
+from glob import glob 
+import re
+from tqdm import tqdm
+
+def pc_normalize(pc):
+    l = pc.shape[0]
+    centroid = np.mean(pc, axis=0)
+    pc = pc - centroid
+    m = np.max(np.sqrt(np.sum(pc**2, axis=1)))
+    pc = pc / m
+    return pc
+
 class ModelNetDataset():
-    def __init__(self, root, batch_size = 32, npoints = 1024, split='train', normalize=True, normal_channel=False, modelnet10=True, cache_size=15000, shuffle=None):
+    def __init__(self, root, batch_size = 32, npoints = 1024, split='train', normalize=False, normal_channel=False, modelnet10=True, cache_size=15000, shuffle=None):
         self.root = '/workspace/datasets/modelnet40_normal_resampled/'
         self.batch_size = batch_size
         self.npoints = npoints
         self.normalize = normalize
-        if modelnet10:
-            self.catfile = os.path.join(self.root, 'modelnet10_shape_names.txt')
-        else:
-            self.catfile = os.path.join(self.root, 'shape_names.txt')
-        self.cat = [line.rstrip() for line in open(self.catfile)]
-        self.classes = dict(zip(self.cat, range(len(self.cat))))  
-            """
-            {'bathtub': 0,
-            'bed': 1,
-            ...
-            'toilet': 9}
-            """
         self.normal_channel = normal_channel
+
+        ###To be modified 
+        # Dataset 1
+        self.cat = ['vehicle','bycle','human' ]
+        self.classes = dict(zip(self.cat, range(len(self.cat))))          
         
         shape_ids = {}
-        if modelnet10:
-            shape_ids['train'] = [line.rstrip() for line in open(os.path.join(self.root, 'modelnet10_train.txt'))] 
-            shape_ids['test']= [line.rstrip() for line in open(os.path.join(self.root, 'modelnet10_test.txt'))]
-        else:
-            shape_ids['train'] = [line.rstrip() for line in open(os.path.join(self.root, 'modelnet40_train.txt'))] 
-            shape_ids['test']= [line.rstrip() for line in open(os.path.join(self.root, 'modelnet40_test.txt'))]
-        assert(split=='train' or split=='test')
-        """
-        ['bathtub_0001',
-        'bathtub_0002',
-        ...
-        """
-        shape_names = ['_'.join(x.split('_')[0:-1]) for x in shape_ids[split]]
-        """
-        ['bathtub',
-        'bathtub',
-        ...
-        """
-        # list of (shape_name, shape_txt_file_path) tuple
-        self.datapath = [(shape_names[i], os.path.join(self.root, shape_names[i], shape_ids[split][i])+'.txt') for i in range(len(shape_ids[split]))]
-        """
-        ('bathtub',
-        '/workspace/datasets/modelnet40_normal_resampled/bathtub/bathtub_0001.txt')
-        """
+        shape_ids['train'] = glob('./human_*.npy')
+        shape_ids['test'] = glob(./human_2*.npy')
+        shape_names = ['human' for _ in range(len(shape_ids[split]))] #list
+
+        self.datapath1 = [(shape_names[i], shape_ids[split][i]) for i in range(len(shape_ids[split]))]        
+
+        # Dataset 2
+        shape_ids2 = {}
+        shape_ids2['train'] = glob('/./pointnet3_dataset_object_*.npy')
+        shape_ids2['test'] = glob('./pointnet3_dataset_object_9*.npy')
+        
+        shape_names2 = []
+        vehicle = [1.0, 0.0, 0.0]
+        bycle = [0.0, 1.0, 0.0]
+        human = [0.0, 0.0, 1.0]
+
+        for i in tqdm(range(len(shape_ids2[split]))):
+            strr = shape_ids2[split][i]
+            arr_str = re.split('_|.npy',strr)
+
+            load_path = './pointnet3_dataset_label_{}.npy'.format(arr_str[5])
+            label = np.load(load_path)
+            if label.tolist() == vehicle:
+                shape_names2.append("vehicle")
+            elif label.tolist() == bycle:
+                shape_names2.append("bycle")
+            elif label.tolist() == human:
+                shape_names2.append("human")
+            else:
+                print("-------error")
+
+        
+        self.datapath2 = [(shape_names2[i], shape_ids2[split][i]) for i in range(len(shape_ids2[split]))]        
+        self.datapath = np.row_stack([np.array(self.datapath1),np.array(self.datapath2)])
+        
+
         self.cache_size = cache_size # how many data points to cache in memory
         self.cache = {} # from index to (point_set, cls) tuple
 
@@ -64,9 +90,7 @@ class ModelNetDataset():
 
         self.reset()
 
-    def _augment_batch_data(self, batch_data):   
-        jittered_data = provider.random_scale_point_cloud(rotated_data[:,:,0:3])
-        jittered_data = provider.shift_point_cloud(jittered_data)
+    def _augment_batch_data(self, batch_data):    
         jittered_data = provider.jitter_point_cloud(jittered_data)
         rotated_data[:,:,0:3] = jittered_data
         return provider.shuffle_points(rotated_data)
@@ -79,7 +103,8 @@ class ModelNetDataset():
             fn = self.datapath[index]
             cls = self.classes[self.datapath[index][0]]
             cls = np.array([cls]).astype(np.int32)
-            point_set = np.loadtxt(fn[1],delimiter=',').astype(np.float32)
+            #point_set = np.loadtxt(fn[1],delimiter=',').astype(np.float32)
+            point_set = np.load(fn[1]).astype(np.float32)
             # Take the first npoints
             point_set = point_set[0:self.npoints,:]
             if self.normalize:
@@ -88,7 +113,10 @@ class ModelNetDataset():
                 point_set = point_set[:,0:3]
             if len(self.cache) < self.cache_size:
                 self.cache[index] = (point_set, cls)
-        return point_set, cls
+        
+        full_point_set = np.zeros((self.npoints, 3))  #upsamping to npoints
+        full_point_set[0:point_set.shape[0],0:3] = point_set
+        return full_point_set, cls
         
     def __getitem__(self, index):
         return self._get_item(index)
@@ -126,6 +154,23 @@ class ModelNetDataset():
         self.batch_idx += 1
         if augment: batch_data = self._augment_batch_data(batch_data)
         return batch_data, batch_label
+    
+if __name__ == '__main__':
+    d = ModelNetDataset(root = '../data/modelnet40_normal_resampled', split='test')
+    print(d.shuffle)
+    print(len(d))
+    import time
+    tic = time.time()
+    for i in range(10):
+        ps, cls = d[i]
+    print(time.time() - tic)
+    print(ps.shape, type(ps), cls)
+
+    print(d.has_next_batch())
+    ps_batch, cls_batch = d.next_batch(True)
+    print(ps_batch.shape)
+    print(cls_batch.shape)
+
 ```
 
 ```python 
