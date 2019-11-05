@@ -13,3 +13,6 @@ Sequential Labeling with online Deep Learning : [논문](https://arxiv.org/abs/1
 [Online/Incremental Learning with Keras and Creme](https://www.pyimagesearch.com/2019/06/17/online-incremental-learning-with-keras-and-creme/): pyimagesearch, Creme는 머신러닝용인듯
 - [Keras: Feature extraction on large datasets with Deep Learning](https://www.pyimagesearch.com/2019/05/27/keras-feature-extraction-on-large-datasets-with-deep-learning/)
 - [Transfer Learning with Keras and Deep Learning](https://www.pyimagesearch.com/2019/05/20/transfer-learning-with-keras-and-deep-learning/)
+
+
+- [OperationalAI: 지속적으로 학습하는 AnomalyDetection시스템 만들기](https://deview.kr/data/deview/2019/presentation/[143]DEVIEW2019_MakinaRocks_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%80%E1%85%B5%E1%84%92%E1%85%A7%E1%86%AB.pdf) : DEVIEW2019, 김기현 
