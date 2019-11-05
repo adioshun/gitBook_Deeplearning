@@ -87,3 +87,14 @@
 - 매틀랩: [Transfer Learning Using Convolutional Neural Networks](https://www.mathworks.com/help/nnet/examples/transfer-learning-using-convolutional-neural-networks.html)
 
 - 매틀랩: [Transfer Learning and Fine-Tuning of Convolutional Neural Networks](http://www.mathworks.com/help/nnet/examples/transfer-learning-and-fine-tuning-of-convolutional-neural-networks.html)
+
+---
+![](https://i.imgur.com/md7nNiQ.png)
+
+[전이학습]
+
+깃허브 : https://github.com/Transfer-Learning-with-Python
+
+자료 : https://drive.google.com/drive/folders/1JPPMFYlGMl1BbjjMnG2WqakWwBkiHgzP
+
+동영상 : https://www.youtube.com/playlist?list=PLqkITFr6P-oQlgZS4-XNRcYW2FBUPrc0h
