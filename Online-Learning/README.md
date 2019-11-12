@@ -2,7 +2,7 @@
 
 ## . 정의 
 
-ContinualLearning : 옛 지식을 잊지 않으면서 새로운 지식을 학습하는 AI
+Continual Learning(=Lifelong learning) : 옛 지식을 잊지 않으면서 새로운 지식을 학습하는 AI
 - Incremental Training:새로운 데이터만을 사용, 기존 모델 재학습
     - 이전 데이터로부터 학습한 내용을 잊어버리는 현상인
     - Catastrophic Forgetting이 발생함
@@ -10,7 +10,18 @@ ContinualLearning : 옛 지식을 잊지 않으면서 새로운 지식을 학습
 - Inclusive Training:전체 데이터를 사용하여 모델을 새롭게 학습
     - 전체 데이터에 대한 학습은 Scalability Issue가 있음
 
+lifelong learning은 심층 신경망(DNN)에서 online/incremental learning의 특수한 사례로 생각할 수 있다.
 
+
+Lifelong Machine Learning focuses on developing versatile systems that accumulate and refine their knowledge over time.
+
+This research area integrates techniques from multiple subfields of Machine Learning and Artificial Intelligence, including 
+- transfer learning, 
+- multi-task learning, 
+- online learning, 
+- and knowledge representation and maintenance.
+
+---
 
 [DEEP ONLINE LEARNING VIA META-LEARNING:CONTINUAL ADAPTATION FOR MODEL-BASED RL](https://arxiv.org/pdf/1812.07671.pdf)
 

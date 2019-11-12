@@ -1,4 +1,18 @@
-# Continual Learning
+# [Lifelong Learning with Dynamically Expandable Networks](https://arxiv.org/pdf/1708.01547v2.pdf)
+
+ 
+ > 2017. 울산과기대
+
+
+
+
+
+---
+
+
+
+# [영문 정리 ](https://hackernoon.com/dynamically-expandable-neural-networks-ce75ff2b69cf)
+
 - 정의 : able to learn continuously over time.
 -  원리 : techniques like transfer learning are used
 	- where the model is trained on previous data
@@ -22,7 +36,7 @@
 
 ## 2. 구현 방법 - Dynamically Expandable Networks
 
-> [Lifelong Learning with Dynamically Expandable Networks](https://arxiv.org/pdf/1708.01547v2.pdf), 2017. 울산과기대
+
 
 - 원리 
 	- Train a model, 
@@ -47,8 +61,3 @@ In the above, figure **_t_** denotes task number. Thus, **_t-1_** denotes the pr
 
 
 
-
-
----
-
-[Dynamically Expandable Neural Networks](https://hackernoon.com/dynamically-expandable-neural-networks-ce75ff2b69cf))
