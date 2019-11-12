@@ -212,22 +212,24 @@ This research area integrates techniques from multiple subfields of Machine Lear
 
 ---
 
-[DEEP ONLINE LEARNING VIA META-LEARNING:CONTINUAL ADAPTATION FOR MODEL-BASED RL](https://arxiv.org/pdf/1812.07671.pdf)
+- [DEEP ONLINE LEARNING VIA META-LEARNING:CONTINUAL ADAPTATION FOR MODEL-BASED RL](https://arxiv.org/pdf/1812.07671.pdf)
 
 
-Sequential Labeling with online Deep Learning : [논문](https://arxiv.org/abs/1412.3397), [코드(Matlab)](https://github.com/ganggit/deepCRFs), 2014
+- Sequential Labeling with online Deep Learning : [논문](https://arxiv.org/abs/1412.3397), [코드(Matlab)](https://github.com/ganggit/deepCRFs), 2014
 
 
-[어떻게 하면 싱싱한 데이터를 모형에 바로 적용할 수 있을까? – Bayesian Online Leaning](http://freesearch.pe.kr/archives/4497)
+- [어떻게 하면 싱싱한 데이터를 모형에 바로 적용할 수 있을까? – Bayesian Online Leaning](http://freesearch.pe.kr/archives/4497)
 
 
-[Object tracking by using online learning with deep neural network features](http://koasas.kaist.ac.kr/handle/10203/221670): 조영주, 2016
+- [Object tracking by using online learning with deep neural network features](http://koasas.kaist.ac.kr/handle/10203/221670): 조영주, 2016
 
 
-[Online/Incremental Learning with Keras and Creme](https://www.pyimagesearch.com/2019/06/17/online-incremental-learning-with-keras-and-creme/): pyimagesearch, Creme는 머신러닝용인듯
+- [Online/Incremental Learning with Keras and Creme](https://www.pyimagesearch.com/2019/06/17/online-incremental-learning-with-keras-and-creme/): pyimagesearch, Creme는 머신러닝용인듯
 - [Keras: Feature extraction on large datasets with Deep Learning](https://www.pyimagesearch.com/2019/05/27/keras-feature-extraction-on-large-datasets-with-deep-learning/)
 - [Transfer Learning with Keras and Deep Learning](https://www.pyimagesearch.com/2019/05/20/transfer-learning-with-keras-and-deep-learning/)
 
 
 - [OperationalAI: 지속적으로 학습하는 AnomalyDetection시스템 만들기](https://deview.kr/data/deview/2019/presentation/[143]DEVIEW2019_MakinaRocks_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%80%E1%85%B5%E1%84%92%E1%85%A7%E1%86%AB.pdf) : DEVIEW2019, 김기현 
 
+- [An Introduction to Online Machine Learning](https://medium.com/danny-butvinik/https-medium-com-dannybutvinik-online-machine-learning-842b1e999880) : blog 
+- [Incremental Online Learning](https://medium.com/@dannybutvinik/incremental-online-learning-9868861db880):blog 
