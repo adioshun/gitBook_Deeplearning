@@ -201,7 +201,7 @@ Lifelong Machine Learning focuses on developing versatile systems that accumulat
 This research area integrates techniques from multiple subfields of Machine Learning and Artificial Intelligence, including 
 - transfer learning, 
 - multi-task learning, 
-- online learning, 
+- online learning 
 - and knowledge representation and maintenance.
 
 ---
