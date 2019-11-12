@@ -27,14 +27,14 @@
 * [README](How-to-Enhancement/README.md)
 * [INTRO](How-to-Enhancement/Intor.md)
 * 전처리 
-   * [Normalization](How-to-Enhancement/normalization.md) 
-* [Overfitting](How-to-Enhancement/optimization.md) : 오버피팅 제거 
-    * [Batch normalization](How-to-Enhancement/batch-normalization.md)
+  * [Normalization](How-to-Enhancement/normalization.md)
+* [Overfitting](How-to-Enhancement/optimization.md)
+  * [Batch normalization](How-to-Enhancement/batch-normalization.md)
 * [Hyper Parameter](How-to-Enhancement/hyper-parameter.md)
- * [Learning Rate](How-to-Enhancement/Learning_rate.md)
+  * [Learning Rate](How-to-Enhancement/Learning_rate.md)
 * [Debugging\_Training](How-to-Enhancement/debugging-training.md)
 
-## 경량화 (Model compression)
+## 경량화 \(Model compression\)
 
 * [README](Model-Compression/README.md)
 * [INTRO](Model-Compression/Intro.md)
@@ -43,11 +43,8 @@
 
 * [README](Transfer-Learning/README.md)
 * [INTRO](Transfer-Learning/Intro.md)
-* [2017-Dynamically-Expandable-Networks](Transfer-Learning/2017-Dynamically-Expandable-Networks.md)
-* [(외부링크) lifelongml](http://lifelongml.org/)
-
-
-
+* [2017-Lifelong Learning with Dynamically Expandable Networks](Transfer-Learning/2017-Dynamically-Expandable-Networks.md)
+* [\(외부링크\) lifelongml](http://lifelongml.org/)
 
 ## Auto ML
 
@@ -105,7 +102,7 @@
 * [README](Relational-Reasoning/README.md)
 * [INTRO](Relational-Reasoning/Intro.md)
 
-## pyTorch 
+## pyTorch
 
 * [README](pyTorch/README.md)
 * [Tutorial-Fundamental](pyTorch/Tutorial_Fundamental.md)
@@ -119,9 +116,7 @@
 * [Tools](pyTorch/Tools.md)
 * [References](pyTorch/References.md)
 
-
-
-## Tensorflow 
+## Tensorflow
 
 * [README](TensorFlow/README.md)
 * [Tutorial-Fundamental](TensorFlow/Tutorial_Fundamental.md)
@@ -133,9 +128,9 @@
 * [Tips](TensorFlow/Tips.md)
 * [Snippets](TensorFlow/Snippets.md)
   * [Dataloader](TensorFlow/Snippets_Dataloader.md)
-
 * [Tools](TensorFlow/Tools.md)
   * [Tensorflow Object Detection API](TensorFlow/Tools-Object-Detection-API.md)
   * [Tensorboard](TensorFlow/Tools-Tensorboard.md)
   * [CloudML](TensorFlow/Tools-CloudML.md)
 * [References](TensorFlow/References.md)
+
