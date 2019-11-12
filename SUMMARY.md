@@ -44,11 +44,10 @@
 * [README](Transfer-Learning/README.md)
 * [INTRO](Transfer-Learning/Intro.md)
 * [2017-Dynamically-Expandable-Networks](Transfer-Learning/2017-Dynamically-Expandable-Networks.md)
+* [(외부링크) lifelongml](http://lifelongml.org/)
 
-## Online Learning
 
-* [README](Online-Learning/README.md)
-* [http://lifelongml.org/](http://lifelongml.org/)
+
 
 ## Auto ML
 
