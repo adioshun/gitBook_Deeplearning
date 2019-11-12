@@ -258,11 +258,3 @@ Sequential Labeling with online Deep Learning : [논문](https://arxiv.org/abs/1
 
 - [OperationalAI: 지속적으로 학습하는 AnomalyDetection시스템 만들기](https://deview.kr/data/deview/2019/presentation/[143]DEVIEW2019_MakinaRocks_%E1%84%80%E1%85%B5%E1%86%B7%E1%84%80%E1%85%B5%E1%84%92%E1%85%A7%E1%86%AB.pdf) : DEVIEW2019, 김기현 
 
-
---- 
-
-[Continual/Lifelong Learning with Deep Architectures](https://medium.com/@datasciencemilan/continual-lifelong-learning-with-deep-architectures-7f25556fb6c) : blog 
-
-[Lifelong Learning With Dynamically Expandable Networks](https://excelsior-cjh.tistory.com/190) : 한글 요약 
-
-[Continual Lifelong Learning with Neural Networks: A Review](https://arxiv.org/abs/1802.07569): 2019
