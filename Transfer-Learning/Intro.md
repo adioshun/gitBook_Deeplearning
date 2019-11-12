@@ -5,9 +5,6 @@
 
 ## 1. 개요 
 
-> "Transfer learning will be the next driver of ML success", Andrew NG, NIPS 2016
-
-
 ### 1.1 역사 
 - 1995년 NIPS workshop에서 "Learning to learn"이라는 주제로 소개
 - Domain Adaptation : knowledge transfer
@@ -39,6 +36,11 @@
     
 ![](https://i.imgur.com/gQfiI5J.png)
 
+### 1.6 용어 
+
+- Finetuning : 모델의 파라미터를 미세하게 조정하는 행위, 이미 존재하는 모델에 추가 데이터를 투입하여 파라미터를 업데이트하는 것을 말한다
+
+- 보틀넥 피쳐(Bottleneck feature) : 모델의 마지막 부분으로 보통 Pooling 다음 FC 전, 모델에서 가장 추상화된 피쳐
 
 ## 2. 적용 방법(상세) 
 
