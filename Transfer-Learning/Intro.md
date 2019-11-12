@@ -210,6 +210,24 @@ This research area integrates techniques from multiple subfields of Machine Lear
 - online learning 
 - and knowledge representation and maintenance.
 
+
+## 용어 
+
+- lifelong(=continual??) learning 
+
+- transfer learning
+
+
+-  sequential/Online/Incremental learning : model learns one observation at a time
+	. sequential Vs. incremental =  데이터에 순서 법칙이 존재 할때 oder Vs. 데이터에 순서 법칙이 없을때 random 
+	. online Vs.  incremental = Label정보 없음, 이전 내용을 잊을수 있음(Catastrophic Interference) Vs. 라벨 정보 있음, 이전 내용을 잊을 없음 
+
+	. online Vs.  incremental = faster than the sampling rate VS. runs slower than the sampling rate(updating every 1000 samples)
+
+
+
+https://datascience.stackexchange.com/questions/6186/is-there-a-difference-between-on-line-learning-incremental-learning-and-sequent
+
 ---
 
 - [DEEP ONLINE LEARNING VIA META-LEARNING:CONTINUAL ADAPTATION FOR MODEL-BASED RL](https://arxiv.org/pdf/1812.07671.pdf)
