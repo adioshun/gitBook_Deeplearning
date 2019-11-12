@@ -20,18 +20,14 @@
 만약 이미지셋이 100만개보다 적다면 pre-train 모델을 사용하라!!!
 
 
-
-![](http://sebastianruder.com/content/images/2017/03/andrew_ng_drivers_ml_success-1.png)
-
 > "Transfer learning will be the next driver of ML success", Andrew NG, NIPS 2016
 
 
 ## 역사??
-- 1. 1995년 NIPS workshop에서 "Learning to learn"이라는 주제로 소개
-- 2. Domain Adaptation : knowledge transfer
-- 3. Transfer learning
+- 1995년 NIPS workshop에서 "Learning to learn"이라는 주제로 소개
+- Domain Adaptation : knowledge transfer
+- Transfer learning
 
-![](http://nmhkahn.github.io/assets/CNN-Practice/vggnet.png)
 
 위 이미지와 같은 VGGNet을 어떤 도메인에 사용해야 할 경우가 있다고 생각해보자. 맨땅에 VGGNet을 학습시키기 위해서는 매우매우 많은 데이터가 필요하고, 학습하는데 걸리는 시간도 매우 긴 것은 사실이다 (2~3주 걸린 것으로 알고 있다). 하지만 VGGNet의 pre-train된 모델을 구할 수 있다면 (Caffe model zoo) 이를 갖다가 사용하면 문제가 매우 쉬워진다.
 
