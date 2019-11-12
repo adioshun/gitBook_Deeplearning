@@ -48,6 +48,7 @@
 ## Online Learning
 
 * [README](Online-Learning/README.md)
+* [http://lifelongml.org/](http://lifelongml.org/)
 
 ## Auto ML
 
