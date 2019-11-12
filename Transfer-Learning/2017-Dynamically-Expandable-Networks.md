@@ -14,7 +14,8 @@
 # [영문 정리 ](https://hackernoon.com/dynamically-expandable-neural-networks-ce75ff2b69cf)
 
 - 정의 : able to learn continuously over time.
--  원리 : techniques like transfer learning are used
+
+- 원리 : techniques like transfer learning are used
 	- where the model is trained on previous data
 	- and some features are used from that model to learn new data. 
 
@@ -23,12 +24,13 @@
 - It is also used when the new data is sparse.
 
 
-## 1. 구현 방법 - 간단버젼 
-- 방법 : constantly fine-tuning the model based on newer data. 
+## 1. 구현 방법(간단버젼) : constantly fine-tuning the model based on newer data. 
+
 ### 문제점 # 1
 
 - However, if the **new task** is very **different** from the old tasks, the model will not be able to perform well on that new task, as features from the old task are not useful, 
 	- e.g. if a model that is trained on a million images of animals, it will probably not work very well if it is fine-tuned on images of cars.
+
 ### 문제점 # 2 
 
 - after **fine-tuning**, the model may begin to perform the **original** task **poorly** (in this example, predicting animals). 
