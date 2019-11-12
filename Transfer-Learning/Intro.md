@@ -57,14 +57,14 @@
 
 ## 2.3 내 모델을 Fine-tuning 하기
 
-### Quadrant 1 : 크기가 크고 유사성이 작은 데이터셋일 때 -> 전략 1 
+##### Quadrant 1 : 크기가 크고 유사성이 작은 데이터셋일 때 -> 전략 1 
 많은 레이어를 fine-tune 한다.
 
 - 충분한 데이터가 있으므로 그냥 처음부터 학습 하는게 좋을수 있다.
 - 그러나 현실에서는 전체 층에 대해서 Fine-Tune을 수행 한다.
 
 
-### 2. Quadrant 2 : 크기가 크고 유사성도 높은 데이터셋일 때 -> ALL (추천 : 전략 2)  
+##### Quadrant 2 : 크기가 크고 유사성도 높은 데이터셋일 때 -> ALL (추천 : 전략 2)  
 
 추가한 레이어와 몇개 레이어를 fine-tune 한다.
 
@@ -84,7 +84,7 @@ for layer in model.layers[:5]:
 > [코드 출처](https://medium.com/towards-data-science/transfer-learning-using-keras-d804b2e04ef8)
 
 
-### Quadrant 3 : 크기가 작고 유사성도 작은 데이터셋일 때 -> 전략 2 
+##### Quadrant 3 : 크기가 작고 유사성도 작은 데이터셋일 때 -> 전략 2 
 
 큰일이다…..
 
@@ -96,7 +96,7 @@ for layer in model.layers[:5]:
 
 
 
-### Quadrant 4 : 크기가 작지만 유사성은 높은 데이터셋일 때 -> 전략 3 
+##### Quadrant 4 : 크기가 작지만 유사성은 높은 데이터셋일 때 -> 전략 3 
 
 끝 레이어(top layer)에 도메인에 맞는 레이어를 추가하고 추가한 레이어만 학습한다.
 
