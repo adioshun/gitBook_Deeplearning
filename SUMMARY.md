@@ -44,6 +44,7 @@
 * [README](Transfer-Learning/README.md)
 * [INTRO](Transfer-Learning/Intro.md)
 * [2017-Lifelong Learning with Dynamically Expandable Networks](Transfer-Learning/2017-Dynamically-Expandable-Networks.md)
+* [2019-Continual Lifelong Learning with Neural Networks: A Review](Transfer-Learning/2019-Continual-Lifelong-Learning-with-Neural-Networks-A-Review)
 * [\(외부링크\) lifelongml](http://lifelongml.org/)
 
 ## Auto ML
