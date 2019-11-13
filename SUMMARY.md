@@ -42,7 +42,6 @@
 ## Transfer Learning
 
 * [README](Transfer-Learning/README.md)
-* [INTRO](Transfer-Learning/Intro.md)
 * [2009-A Survey on Transfer Learning \(0%\)](Transfer-Learning/A-Survey-on-Transfer-Learning.md)
 * [2017-Lifelong Learning with Dynamically Expandable Networks](Transfer-Learning/2017-Dynamically-Expandable-Networks.md)
 * [2019-Continual Lifelong Learning with Neural Networks: A Review](Transfer-Learning/2019-Continual-Lifelong-Learning-with-Neural-Networks-A-Review.md)
