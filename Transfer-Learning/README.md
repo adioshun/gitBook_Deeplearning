@@ -210,6 +210,9 @@ This research area integrates techniques from multiple subfields of Machine Lear
 - online learning 
 - and knowledge representation and maintenance.
 
+## 목적 
+
+- 오프라인 러닝과 동일한 성능 `the main objective of an online machine learning algorithm is to try to perform as closely to the corresponding offline algorithm as possible`
 
 ## 용어 
 
@@ -229,6 +232,9 @@ This research area integrates techniques from multiple subfields of Machine Lear
 https://datascience.stackexchange.com/questions/6186/is-there-a-difference-between-on-line-learning-incremental-learning-and-sequent
 
 ## 참고 자료 
+
+
+### 1. Online Learning
 
 - [Online Learning](https://www.slideshare.net/queirozfcom/online-machine-learning-introduction-and-examples?from_action=save) : PPT, 60pages
 
@@ -254,6 +260,14 @@ https://datascience.stackexchange.com/questions/6186/is-there-a-difference-betwe
 - [An Introduction to Online Machine Learning](https://medium.com/danny-butvinik/https-medium-com-dannybutvinik-online-machine-learning-842b1e999880) : blog 
 - [Incremental Online Learning](https://medium.com/@dannybutvinik/incremental-online-learning-9868861db880):blog 
 
+- [[MIT 6.883] Online Methods in Machine Learning](http://www.mit.edu/~rakhlin/6.883/)
+
+
+- [[코세라] Online Learning](https://www.coursera.org/lecture/machine-learning/online-learning-ABO2q): 13min
+
+- [[CSE599s] Online Learning](https://courses.cs.washington.edu/courses/cse599s/12sp/index.html): 2012
+
+### 2. Transfer Learning 
 
 ![](https://pbs.twimg.com/media/C7fbqxLW4AERcdD.jpg)
 
