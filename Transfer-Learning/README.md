@@ -228,7 +228,9 @@ This research area integrates techniques from multiple subfields of Machine Lear
 
 https://datascience.stackexchange.com/questions/6186/is-there-a-difference-between-on-line-learning-incremental-learning-and-sequent
 
----
+## 참고 자료 
+
+- [Online Learning](https://www.slideshare.net/queirozfcom/online-machine-learning-introduction-and-examples?from_action=save) : PPT, 60pages
 
 - [DEEP ONLINE LEARNING VIA META-LEARNING:CONTINUAL ADAPTATION FOR MODEL-BASED RL](https://arxiv.org/pdf/1812.07671.pdf)
 
