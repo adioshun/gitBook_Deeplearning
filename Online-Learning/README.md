@@ -74,6 +74,11 @@ https://datascience.stackexchange.com/questions/6186/is-there-a-difference-betwe
 
 - [[CSE599s] Online Learning](https://courses.cs.washington.edu/courses/cse599s/12sp/index.html): 2012
 
+
+---
+
+## Catastrophic Forgetting
+
 - [OVERCOMING CATASTROPHIC FORGETTING FOR CONTINUAL LEARNING VIA MODEL ADAPTATION](https://openreview.net/pdf?id=ryGvcoA5YX): ICLR 2019
 
 - [Overcoming catastrophic forgetting in neural networks](https://arxiv.org/abs/1612.00796): 2017, [[code]](https://researchcode.com/code/2217672712/overcoming-catastrophic-forgetting-in-neural-networks/)
