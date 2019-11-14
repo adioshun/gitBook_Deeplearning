@@ -74,4 +74,12 @@ https://datascience.stackexchange.com/questions/6186/is-there-a-difference-betwe
 
 - [[CSE599s] Online Learning](https://courses.cs.washington.edu/courses/cse599s/12sp/index.html): 2012
 
-### 2. Transfer Learning
+- [OVERCOMING CATASTROPHIC FORGETTING FOR CONTINUAL LEARNING VIA MODEL ADAPTATION](https://openreview.net/pdf?id=ryGvcoA5YX): ICLR 2019
+
+- [Overcoming catastrophic forgetting in neural networks](https://arxiv.org/abs/1612.00796): 2017, [[code]](https://researchcode.com/code/2217672712/overcoming-catastrophic-forgetting-in-neural-networks/)
+
+- [Overcoming Catastrophic Forgetting by Incremental Moment Matching](https://papers.nips.cc/paper/7051-overcoming-catastrophic-forgetting-by-incremental-moment-matching.pdf): NIPS2017, SNU, NAVER
+
+- [Measuring Catastrophic Forgetting in Neural Networks](https://arxiv.org/abs/1708.02072) : 2017
+
+- [Keep and Learn: Knowledge Preservation in Neural Networks](https://arxiv.org/abs/1805.10784): 2018, [[한글정리]](https://blog.lunit.io/2018/08/31/keep-and-learn-continual-learning-by-constraining-the-latent-space-for-knowledge-preservation-in-neural-networks/)
