@@ -46,7 +46,7 @@ This research area integrates techniques from multiple subfields of Machine Lear
 
 - Lifelong learning is akin to transferring knowledge acquired on old tasks to the new ones. 
 
-- Never-ending learning, on the other hand, focuses on continuously acquiring data to improve existing classifiers or to learn new o
+- Never-ending learning, on the other hand, focuses on continuously acquiring data to improve existing classifiers or to learn new ones. 
 
 
 
