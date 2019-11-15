@@ -52,7 +52,7 @@
 * [2017-Lifelong Learning with Dynamically Expandable Networks](Online-Learning/2017-Dynamically-Expandable-Networks.md)
 * [2017-Measuring Catastrophic Forgetting in Neural Networks](Online-Learning/2017-Measuring-Catastrophic-Forgetting-in-Neural-Networks.md)
 * [2017-Overcoming catastrophic forgetting in neural networks](Online-Learning/2017-Overcoming-catastrophic-forgetting-in-neural-networks.md)
-* [Online-Learning/2018-Keep and Learn: Continual Learning by Constraining the Latent Space for Knowledge Preservation in Neural Networks](2018-Keep-and-Learn:-Continual-Learning-by-Constraining-the-Latent-Space-for-Knowledge-Preservation-in-Neural-Networks.md)
+* [2018-Keep and Learn: Continual Learning by Constraining the Latent Space for Knowledge Preservation in Neural Networks](Online-Learning/2018-Keep-and-Learn-Continual-Learning-by-Constraining-the-Latent-Space-for-Knowledge-Preservation-in-Neural-Networks.md)
 * [2018-A study on sequential iterative learning for overcoming catastrophic forgetting phenomenon of artificial neural network](Online-Learning/2018-A-study-on-sequential-iterative-learning-for-overcoming-catastrophic-forgetting-phenomenon-of-artificial-neural-network.md)
 * [2019-Continual Lifelong Learning with Neural Networks: A Review](Online-Learning/2019-Continual-Lifelong-Learning-with-Neural-Networks-A-Review.md)
 * [\(외부링크\) lifelongml](http://lifelongml.org/)
