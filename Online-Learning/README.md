@@ -90,15 +90,21 @@ This research area integrates techniques from multiple subfields of Machine Lear
 
 ## Catastrophic Forgetting
 
-- [OVERCOMING CATASTROPHIC FORGETTING FOR CONTINUAL LEARNING VIA MODEL ADAPTATION](https://openreview.net/pdf?id=ryGvcoA5YX): ICLR 2019
+- [2019-OVERCOMING CATASTROPHIC FORGETTING FOR CONTINUAL LEARNING VIA MODEL ADAPTATION](https://openreview.net/pdf?id=ryGvcoA5YX): ICLR 2019
 
-- [Overcoming catastrophic forgetting in neural networks](https://arxiv.org/abs/1612.00796): 2017, [[code]](https://researchcode.com/code/2217672712/overcoming-catastrophic-forgetting-in-neural-networks/)
+- [2017-Overcoming catastrophic forgetting in neural networks](https://arxiv.org/abs/1612.00796): 2017, [[code]](https://researchcode.com/code/2217672712/overcoming-catastrophic-forgetting-in-neural-networks/)
 
-- [Overcoming Catastrophic Forgetting by Incremental Moment Matching](https://papers.nips.cc/paper/7051-overcoming-catastrophic-forgetting-by-incremental-moment-matching.pdf): NIPS2017, SNU, NAVER
+- [2017-Overcoming Catastrophic Forgetting by Incremental Moment Matching](https://papers.nips.cc/paper/7051-overcoming-catastrophic-forgetting-by-incremental-moment-matching.pdf): NIPS2017, SNU, NAVER
 
-- [Measuring Catastrophic Forgetting in Neural Networks](https://arxiv.org/abs/1708.02072) : 2017
+- ~~[217-Measuring Catastrophic Forgetting in Neural Networks](https://arxiv.org/abs/1708.02072) : 2017~~
 
-- [Keep and Learn: Knowledge Preservation in Neural Networks](https://arxiv.org/abs/1805.10784): 2018, [[한글정리]](https://blog.lunit.io/2018/08/31/keep-and-learn-continual-learning-by-constraining-the-latent-space-for-knowledge-preservation-in-neural-networks/)
+- ~~[2018-Keep and Learn: Knowledge Preservation in Neural Networks](https://arxiv.org/abs/1805.10784): 2018, [[한글정리]](https://blog.lunit.io/2018/08/31/keep-and-learn-continual-learning-by-constraining-the-latent-space-for-knowledge-preservation-in-neural-networks/)~~
+
+- [2017-Incremental On-line Learning: A Review and Comparison of State of the Art Algorithms](https://pub.uni-bielefeld.de/download/2914730/2914731)
+
+- [2018-End-to-End Incremental Learning](https://arxiv.org/pdf/1807.09536.pdf)
+
+- [2016-Incremental learning algorithms and applications](https://hal.archives-ouvertes.fr/hal-01418129/document)
 
 #### 지속 학습 방법들 
 

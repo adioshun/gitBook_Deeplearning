@@ -1,6 +1,6 @@
 # [Continual Lifelong Learning with Neural Networks: A Review](https://arxiv.org/abs/1802.07569)
 
-> [한글 정리 ppt 및 후기s](http://dmqm.korea.ac.kr/activity/seminar/266)
+
 
 
 

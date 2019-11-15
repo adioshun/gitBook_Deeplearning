@@ -1,7 +1,19 @@
 # [Lifelong Learning with Dynamically Expandable Networks](https://arxiv.org/pdf/1708.01547v2.pdf)
 
  
- > 2017. 울산과기대
+ > 2017. 울산과기대,[한글 정리 ppt 및 후기s](http://dmqm.korea.ac.kr/activity/seminar/266)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
