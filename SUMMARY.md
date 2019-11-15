@@ -49,6 +49,7 @@
 * [README](Online-Learning/README.md)
 * [Catastrophic Forgetting](Online-Learning/Catastrophic-Forgetting.md)
 * [2017-Lifelong Learning with Dynamically Expandable Networks \(30%\)](Online-Learning/2017-Dynamically-Expandable-Networks.md)
+* [2017-PathNet: Evolution Channels Gradient Descent in Super Neural Networks](Online-Learning/2017-PathNet-Evolution-Channels-Gradient-Descent-in-Super-Neural-Networks.md)
 * [2017-Measuring Catastrophic Forgetting in Neural Networks \(80%\)](Online-Learning/2017-Measuring-Catastrophic-Forgetting-in-Neural-Networks.md)
 * [2017-Overcoming catastrophic forgetting in neural networks](Online-Learning/2017-Overcoming-catastrophic-forgetting-in-neural-networks.md)
 * [2018-Keep and Learn: Continual Learning by Constraining the Latent Space for Knowledge Preservation in Neural Networks \(30%\)](Online-Learning/2018-Keep-and-Learn-Continual-Learning-by-Constraining-the-Latent-Space-for-Knowledge-Preservation-in-Neural-Networks.md)

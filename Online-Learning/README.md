@@ -27,7 +27,7 @@ This research area integrates techniques from multiple subfields of Machine Lear
 
 ## 용어
 
-- lifelong(=continual??) learning
+
 
 - Fine-Tuning : 가장 Naive 한 방법, 
 
@@ -39,6 +39,16 @@ This research area integrates techniques from multiple subfields of Machine Lear
     - online Vs. incremental = faster than the sampling rate VS. runs slower than the sampling rate(updating every 1000 samples)
 
 - Multi-center Learning : 여러 지역(center)에 흩어져 있는 데이터를 프라이버시 이슈등으로 한곳에 모으지 못하고, 한 지역시 돌아 다니면서 학습을 진행 (eg. Incremental Learning과 유사??) 
+
+
+- Incremental learning : transferring knowledge acquired on old tasks to the new ones,  new classes are learned continually, 얼굴인식 -> 얼굴 식별 
+
+
+- Lifelong learning is akin to transferring knowledge acquired on old tasks to the new ones. 
+
+- Never-ending learning, on the other hand, focuses on continuously acquiring data to improve existing classifiers or to learn new ones.
+
+
 
 
 > [참고](https://datascience.stackexchange.com/questions/6186/is-there-a-difference-between-on-line-learning-incremental-learning-and-sequent)
