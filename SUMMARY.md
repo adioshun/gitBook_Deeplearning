@@ -52,6 +52,7 @@
 * [2017-PathNet: Evolution Channels Gradient Descent in Super Neural Networks](Online-Learning/2017-PathNet-Evolution-Channels-Gradient-Descent-in-Super-Neural-Networks.md)
 * [2017-Measuring Catastrophic Forgetting in Neural Networks \(80%\)](Online-Learning/2017-Measuring-Catastrophic-Forgetting-in-Neural-Networks.md)
 * [2017-Overcoming catastrophic forgetting in neural networks](Online-Learning/2017-Overcoming-catastrophic-forgetting-in-neural-networks.md)
+* [2017-Continual Learning with Deep Generative Replay](Online-Learning/2017-Continual-Learning-with-Deep-Generative-Replay.md)
 * [2018-Keep and Learn: Continual Learning by Constraining the Latent Space for Knowledge Preservation in Neural Networks \(30%\)](Online-Learning/2018-Keep-and-Learn-Continual-Learning-by-Constraining-the-Latent-Space-for-Knowledge-Preservation-in-Neural-Networks.md)
 * [2018-A study on sequential iterative learning for overcoming catastrophic forgetting phenomenon of artificial neural network \(100%\)](Online-Learning/2018-A-study-on-sequential-iterative-learning-for-overcoming-catastrophic-forgetting-phenomenon-of-artificial-neural-network.md)
 * [2018-End-to-End Incremental Learning](Online-Learning/2018-End-to-End-Incremental-Learning.md)
