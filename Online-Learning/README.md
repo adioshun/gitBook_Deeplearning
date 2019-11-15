@@ -29,6 +29,8 @@ This research area integrates techniques from multiple subfields of Machine Lear
 
 - lifelong(=continual??) learning
 
+- Fine-Tuning : 가장 Naive 한 방법, 
+
 - transfer learning
 
 - sequential/Online/Incremental learning : model learns one observation at a time
