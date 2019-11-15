@@ -89,3 +89,16 @@ This research area integrates techniques from multiple subfields of Machine Lear
 - [Measuring Catastrophic Forgetting in Neural Networks](https://arxiv.org/abs/1708.02072) : 2017
 
 - [Keep and Learn: Knowledge Preservation in Neural Networks](https://arxiv.org/abs/1805.10784): 2018, [[한글정리]](https://blog.lunit.io/2018/08/31/keep-and-learn-continual-learning-by-constraining-the-latent-space-for-knowledge-preservation-in-neural-networks/)
+
+#### 지속 학습 방법들 
+
+
+![](https://i.imgur.com/GG74tpz.png)
+![](https://i.imgur.com/oPnm1rU.png)
+
+
+
+- https://www.slideshare.net/JinwonLee9/deep-learning-seminarsnu161031 : ppt
+
+    - Less forgetting learning in Deep Neural Networks heechul jung 
+    - Li, Z. and Hoiem, D., Learning without forgetting, In: ECCV (2016)
