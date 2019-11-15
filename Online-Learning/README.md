@@ -101,4 +101,4 @@ This research area integrates techniques from multiple subfields of Machine Lear
 - https://www.slideshare.net/JinwonLee9/deep-learning-seminarsnu161031 : ppt
 
     - Less forgetting learning in Deep Neural Networks heechul jung 
-    - Li, Z. and Hoiem, D., Learning without forgetting, In: ECCV (2016)
+    - [LwF] Li, Z. and Hoiem, D., Learning without forgetting, In: ECCV (2016)
