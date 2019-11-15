@@ -31,16 +31,15 @@ This research area integrates techniques from multiple subfields of Machine Lear
 
 - transfer learning
 
-
 - sequential/Online/Incremental learning : model learns one observation at a time
-. sequential Vs. incremental = 데이터에 순서 법칙이 존재 할때 oder Vs. 데이터에 순서 법칙이 없을때 random
-. online Vs. incremental = Label정보 없음, 이전 내용을 잊을수 있음(Catastrophic Interference) Vs. 라벨 정보 있음, 이전 내용을 잊을 없음
+    - sequential Vs. incremental = 데이터에 순서 법칙이 존재 할때 oder Vs. 데이터에 순서 법칙이 없을때 random
+    - online Vs. incremental = Label정보 없음, 이전 내용을 잊을수 있음(Catastrophic Interference) Vs. 라벨 정보 있음, 이전 내용을 잊을 없음
+    - online Vs. incremental = faster than the sampling rate VS. runs slower than the sampling rate(updating every 1000 samples)
 
-. online Vs. incremental = faster than the sampling rate VS. runs slower than the sampling rate(updating every 1000 samples)
+- Multi-center Learning : 여러 지역(center)에 흩어져 있는 데이터를 프라이버시 이슈등으로 한곳에 모으지 못하고, 한 지역시 돌아 다니면서 학습을 진행 (eg. Incremental Learning과 유사??) 
 
 
-
-https://datascience.stackexchange.com/questions/6186/is-there-a-difference-between-on-line-learning-incremental-learning-and-sequent
+> [참고](https://datascience.stackexchange.com/questions/6186/is-there-a-difference-between-on-line-learning-incremental-learning-and-sequent)
 
 ---
 - [Online Learning](https://www.slideshare.net/queirozfcom/online-machine-learning-introduction-and-examples?from_action=save) : PPT, 60pages
