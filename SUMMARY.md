@@ -44,19 +44,17 @@
 * [README](Transfer-Learning/README.md)
 * [2009-A Survey on Transfer Learning \(0%\)](Transfer-Learning/A-Survey-on-Transfer-Learning.md)
 
-
 ## Online Learning
 
 * [README](Online-Learning/README.md)
 * [Catastrophic Forgetting](Online-Learning/Catastrophic-Forgetting.md)
-* [2017-Lifelong Learning with Dynamically Expandable Networks](Online-Learning/2017-Dynamically-Expandable-Networks.md)
-* [2017-Measuring Catastrophic Forgetting in Neural Networks](Online-Learning/2017-Measuring-Catastrophic-Forgetting-in-Neural-Networks.md)
+* [2017-Lifelong Learning with Dynamically Expandable Networks \(30%\)](Online-Learning/2017-Dynamically-Expandable-Networks.md)
+* [2017-Measuring Catastrophic Forgetting in Neural Networks \(80%\)](Online-Learning/2017-Measuring-Catastrophic-Forgetting-in-Neural-Networks.md)
 * [2017-Overcoming catastrophic forgetting in neural networks](Online-Learning/2017-Overcoming-catastrophic-forgetting-in-neural-networks.md)
-* [2018-Keep and Learn: Continual Learning by Constraining the Latent Space for Knowledge Preservation in Neural Networks](Online-Learning/2018-Keep-and-Learn-Continual-Learning-by-Constraining-the-Latent-Space-for-Knowledge-Preservation-in-Neural-Networks.md)
-* [2018-A study on sequential iterative learning for overcoming catastrophic forgetting phenomenon of artificial neural network](Online-Learning/2018-A-study-on-sequential-iterative-learning-for-overcoming-catastrophic-forgetting-phenomenon-of-artificial-neural-network.md)
-* [2019-Continual Lifelong Learning with Neural Networks: A Review](Online-Learning/2019-Continual-Lifelong-Learning-with-Neural-Networks-A-Review.md)
+* [2018-Keep and Learn: Continual Learning by Constraining the Latent Space for Knowledge Preservation in Neural Networks \(30%\)](Online-Learning/2018-Keep-and-Learn-Continual-Learning-by-Constraining-the-Latent-Space-for-Knowledge-Preservation-in-Neural-Networks.md)
+* [2018-A study on sequential iterative learning for overcoming catastrophic forgetting phenomenon of artificial neural network \(100%\)](Online-Learning/2018-A-study-on-sequential-iterative-learning-for-overcoming-catastrophic-forgetting-phenomenon-of-artificial-neural-network.md)
+* [2019-Continual Lifelong Learning with Neural Networks: A Review \(10%\)](Online-Learning/2019-Continual-Lifelong-Learning-with-Neural-Networks-A-Review.md)
 * [\(외부링크\) lifelongml](http://lifelongml.org/)
-
 
 ## Auto ML
 
