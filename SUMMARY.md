@@ -63,6 +63,7 @@
 
 * [README](Auto-ML/README.md)
 * [INTRO](Auto-ML/Intro.md)
+* [Neural Architecture Search for Object Detection in Point Cloud](Auto-ML/NAS-for-Object-Detection-in-Point-Cloud.md)
 * [2016-Neural Architecture Search with Reinforcement Learning](Auto-ML/2016-Neural-Architecture-Search-with-Reinforcement-Learning.md)
 * [2018-Learning Transferable Architectures for Scalable Image Recognition](Auto-ML/2018-Learning-Transferable-Architectures-for-Scalable-Image-Recognition.md)
 
