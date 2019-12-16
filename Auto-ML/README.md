@@ -19,7 +19,6 @@
 
 - [AutoML을 이용한 Architecture Search 소개 및 NASNet 논문 리뷰](http://research.sualab.com/review/2018/09/28/nasnet-review.html): 수아랩, 2018.09.28
 
-- [Neural Architecture Search for Object Detection in Point Cloud](NAS-for-Object-Detection-in-Point-Cloud.md) : 정리 중
 
 # Material (ppt, pdf)
 
