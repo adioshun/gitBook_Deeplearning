@@ -63,6 +63,7 @@
 
 * [README](Auto-ML/README.md)
 * [INTRO](Auto-ML/Intro.md)
+* [2017-Neural Architecture Search with Reinforcement Learning](Auto-ML/2017-Neural-Architecture-Search-with-Reinforcement-Learning.md)
 * [2018-Learning Transferable Architectures for Scalable Image Recognition](Auto-ML/2018-Learning-Transferable-Architectures-for-Scalable-Image-Recognition.md)
 
 ## Multi-Task Learning
