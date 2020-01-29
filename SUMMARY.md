@@ -66,6 +66,7 @@
 * [Neural Architecture Search for Object Detection in Point Cloud](Auto-ML/NAS-for-Object-Detection-in-Point-Cloud.md)
 * [2016-Neural Architecture Search with Reinforcement Learning](Auto-ML/2016-Neural-Architecture-Search-with-Reinforcement-Learning.md)
 * [2018-Learning Transferable Architectures for Scalable Image Recognition](Auto-ML/2018-Learning-Transferable-Architectures-for-Scalable-Image-Recognition.md)
+* [트리기반 파이프라인 최적화 툴](https://haje01.github.io/2020/01/13/evaluation-of-a-tree-based-pipeline-optimization-tool.html)
 
 ## Multi-Task Learning
 
