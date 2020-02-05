@@ -1,8 +1,11 @@
-![](https://i.imgur.com/k7wTNG5.png)
+
 
 ## What Is Federated Learning?
 
 > October 13, 2019 by NICOLA RIEKE [[출처]](https://blogs.nvidia.com/blog/2019/10/13/what-is-federated-learning/)
+
+> 모델 받아서 자신의데이터로 학습후 모델만 전달, 반복...
+![](https://i.imgur.com/k7wTNG5.png)
 
 
 - 일부 학습 데이터는 서로 다른 공간에 나누어져 있다. 
@@ -15,4 +18,7 @@
 
 https://www.youtube.com/watch?time_continue=68&v=Jy7ozgwovgg&feature=emb_logo
 
-Federated learning decentralizes deep learning by removing the need to pool data into a single location. Instead, the model is trained in multiple iterations at different sites.
+- the model is trained in multiple iterations at different sites.
+
+- 한곳에서 자신의 데이터로 학습하고 학습된 모델을 연합 서버로 전달, 다른 병원서 해당 모델을 넘겨 받아 자시의 데이터로 학습후 학습된 모델을 다시 연합 서버로 전달...반복 
+
