@@ -15,3 +15,4 @@
 
 https://www.youtube.com/watch?time_continue=68&v=Jy7ozgwovgg&feature=emb_logo
 
+Federated learning decentralizes deep learning by removing the need to pool data into a single location. Instead, the model is trained in multiple iterations at different sites.
