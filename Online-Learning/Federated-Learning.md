@@ -22,3 +22,9 @@ https://www.youtube.com/watch?time_continue=68&v=Jy7ozgwovgg&feature=emb_logo
 
 - 한곳에서 자신의 데이터로 학습하고 학습된 모델을 연합 서버로 전달, 다른 병원서 해당 모델을 넘겨 받아 자시의 데이터로 학습후 학습된 모델을 다시 연합 서버로 전달...반복 
 
+
+---
+
+- 엔비디아가 클라라 연합학습(Clara Federated Learning, 이하 클라라 FL)을 최초로 공개
+
+- [연합학습으로 방사선학의 딥러닝 간소화...엣지 컴퓨팅 플랫폼](http://www.aitimes.kr/news/articleView.html?idxno=14810)
