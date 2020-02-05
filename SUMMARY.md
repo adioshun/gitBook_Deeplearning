@@ -47,6 +47,7 @@
 ## Online Learning
 
 * [README](Online-Learning/README.md)
+* [Active Learning(Online-Learning/Active-Learning.md)
 * [Catastrophic Forgetting](Online-Learning/Catastrophic-Forgetting.md)
 * [2017-Lifelong Learning with Dynamically Expandable Networks \(30%\)](Online-Learning/2017-Dynamically-Expandable-Networks.md)
 * [2017-PathNet: Evolution Channels Gradient Descent in Super Neural Networks](Online-Learning/2017-PathNet-Evolution-Channels-Gradient-Descent-in-Super-Neural-Networks.md)
