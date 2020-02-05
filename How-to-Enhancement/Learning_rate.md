@@ -28,3 +28,8 @@ learning_rate = tf.train.exponential_decay(starter_learning_rate, global_step, 1
 - 적용유무 decayed_learning_rate = learning_rate * decay_rate ^ (global_step / decay_steps)
 """
 ```
+
+
+## Adaptive Learning Rate
+
+> [[추천] torchlars가 탄생하기까지](https://www.kakaobrain.com/blog/113)
